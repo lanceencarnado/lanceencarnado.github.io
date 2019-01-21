@@ -5,15 +5,26 @@
 <style>
 
 html,body {
-	height: 99%;
+	height: 96%;
 }
 
-div#playground {
-  height: 99%;
-  width: 90%;
-  min-height:500px;
-  min-width:500px;
-  background-color: powderblue;
+.box{
+	position: relative;
+	width: 45%;		/* desired width */
+}
+.box:before{
+	content: "";
+	display: block;
+	padding-top: 100%; 	/* initial ratio of 1:1*/
+}
+
+.content{
+	position:  absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+  	background-color: powderblue;
 }
 </style>
 <!-- using this stylesheet for the dialog -->
@@ -30,15 +41,13 @@ div#playground {
 // 	$( "#draggable" ).draggable();
 // });
 
-// this is where the dragging magic happens
+// dragging happens here
 $(function() {
 	$( ".draggable" ).draggable({ // . = class, $ = id
 		containment: "parent", // limit the dragging to within the parent container (the playground div)
-		stop: function() { // this is a listener for when the dragging has stopped
-			var pos = $( ".draggable" ).position();
-			// just report the position for now - i might want to set initial positions later for the logo
-			console.log("MOLLY: left: " + pos.left + ", top: " + pos.top); 
-  		}
+// 		stop: function() { // this is a listener for when the dragging has stopped
+// 			var pos = $( ".draggable" ).position();
+//   		}
   	});
 });
 </script>
@@ -58,24 +67,36 @@ $( function() {
   <p>drag the images around with your mouse (desktop) or finger (mobile). <br>or don't <br>who cares</p>
 </div>
 
-
-<div class="container" id="playground"> 
-
-
-<img id="molly" class="draggable" src="images/molly.jpg">
-<img id="annie" class="draggable" src="images/annie.jpg">
-<img id="uzi" class="draggable" src="images/uzidance.gif">
+<div class='box'> 
+<div class="content" id="playground"> 
 
 
-<script>
-// set a position for annie and uzi
-$( window ).on( "load", function() {
-    $( "#annie" ).offset({ top: 420, left: 400 });
-	$( "#uzi" ).offset({ top: 100, left: 600 });
-});
-</script>
+
+<img id="2yellowsquare2" class="draggable" src="images/intuitiveassets/small/2yellowsquare2.png">
+<img id="3redsquare1" class="draggable" src="images/intuitiveassets/small/3redsquare1.png">
+<img id="14greensquare3" class="draggable" src="images/intuitiveassets/small/14greensquare3.png">
+<img id="15bluesquare3" class="draggable" src="images/intuitiveassets/small/15bluesquare3.png">
 	
 </div>
+</div>
+
+<button class="ui-button ui-widget ui-corner-all" type="button" onclick="resetPositions()">RESET POSITIONS</button>
+
+<script>
+
+// TEMPORARY: click listener to get positions
+$(document).on("click",".draggable", function (event) {
+    console.log(this.id + "left: " + this.offsetLeft + ", top: " + this.offsetTop);
+});
+
+function resetPositions() {
+    $( "#2yellowsquare2" ).offset({ top: 100, left: 110 });
+    $( "#3redsquare1" ).offset({ top: 148, left: 188 });
+    $( "#14greensquare3" ).offset({ top: 243, left: 164 });
+    $( "#15bluesquare3" ).offset({ top: 213, left: 226 });
+}
+
+</script>
 
 </body>
 </html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dragging game</title>
+<style>
+
+html,body {
+	height: 99%;
+}
+
+div#playground {
+  height: 99%;
+  width: 90%;
+  min-height:500px;
+  min-width:500px;
+  background-color: powderblue;
+}
+</style>
+<!-- using this stylesheet for the dialog -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="https://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
+
+
+<!-- LOCAL SCRIPT REFERENCE right now - change in production -->
+<script src="scripts/jquery.ui.touch-punch.min.js"></script>
+
+<script>
+// $(function() {
+// 	$( "#draggable" ).draggable();
+// });
+
+// this is where the dragging magic happens
+$(function() {
+	$( ".draggable" ).draggable({ // . = class, $ = id
+		containment: "parent", // limit the dragging to within the parent container (the playground div)
+		stop: function() { // this is a listener for when the dragging has stopped
+			var pos = $( ".draggable" ).position();
+			// just report the position for now - i might want to set initial positions later for the logo
+			console.log("MOLLY: left: " + pos.left + ", top: " + pos.top); 
+  		}
+  	});
+});
+</script>
+
+<script>
+// this makes the dialog div a dialog
+$( function() {
+	$( "#dialog" ).dialog();
+} );
+</script>
+
+</head>
+
+<body>
+
+<div id="dialog" title="How to play">
+  <p>drag the images around with your mouse (desktop) or finger (mobile). <br>or don't <br>who cares</p>
+</div>
+
+
+<div class="container" id="playground"> 
+
+
+<img id="molly" class="draggable" src="images/molly.jpg">
+<img id="annie" class="draggable" src="images/annie.jpg">
+<img id="uzi" class="draggable" src="images/uzidance.gif">
+
+
+<script>
+// set a position for annie and uzi
+$( window ).on( "load", function() {
+    $( "#annie" ).offset({ top: 420, left: 400 });
+	$( "#uzi" ).offset({ top: 100, left: 600 });
+});
+</script>
+	
+</div>
+
+</body>
+</html>
