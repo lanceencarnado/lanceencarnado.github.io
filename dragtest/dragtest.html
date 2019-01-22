@@ -10,7 +10,7 @@ html,body {
 
 .box{
 	position: relative;
-	width: 45%;		/* desired width */
+	width: 70%;		/* desired width */
 }
 .box:before{
 	content: "";
@@ -42,9 +42,13 @@ html,body {
 // });
 
 // dragging happens here
+var top_z = 30;
 $(function() {
 	$( ".draggable" ).draggable({ // . = class, $ = id
 		containment: "parent", // limit the dragging to within the parent container (the playground div)
+		start: function() {
+			this.style.zIndex = ++top_z;
+		}
 // 		stop: function() { // this is a listener for when the dragging has stopped
 // 			var pos = $( ".draggable" ).position();
 //   		}
@@ -90,15 +94,28 @@ $(document).on("click",".draggable", function (event) {
 });
 
 function resetPositions() {
+    // reset zIndexes
+    $( "#2yellowsquare2" ).css("z-index", "2");
+    $( "#3redsquare1" ).css("z-index", "3");
+    $( "#14greensquare3" ).css("z-index", "14");
+    $( "#15bluesquare3" ).css("z-index", "20");
+    
     $( "#2yellowsquare2" ).offset({ top: 100, left: 110 });
     $( "#3redsquare1" ).offset({ top: 148, left: 188 });
     $( "#14greensquare3" ).offset({ top: 243, left: 164 });
     $( "#15bluesquare3" ).offset({ top: 213, left: 226 });
+    
+
 }
 
-$( document ).ready(function() {
+window.onload = function() {
 	resetPositions();
-});
+};
+
+// when clicking an image, bring it to front
+// $('.draggable').click(function(){
+//     this.style.zIndex = ++top_z;
+// });
 
 </script>
 
