@@ -36,7 +36,6 @@ html,body {
 <script src="https://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
 
 
-<!-- LOCAL SCRIPT REFERENCE right now - change in production -->
 <script src="scripts/jquery.ui.touch-punch.min.js"></script>
 
 <script>
@@ -57,10 +56,13 @@ $(function() {
 //   		}
   	});
 });
+
+$(document).on("click",".draggable", function (event) {
+	this.style.zIndex = ++top_z;
+});
 </script>
 
 <script>
-// this makes the dialog div a dialog
 $( function() {
 	$( "#dialog" ).dialog();
 } );
@@ -106,11 +108,22 @@ function resetPositions() {
     $( "#28_red_16" ).css("z-index", "28");
     $( "#32_green_phone2" ).css("z-index", "32");
     
-    $( "#4_purple1_10" ).offset({ left: 160, top: 160 });
-    $( "#16_yellow3_shop2" ).offset({ left: 220, top: 165 });
-    $( "#20_blue2_photos2" ).offset({ left: 182, top: 277 });
-    $( "#28_red_16" ).offset({ left: 436, top: 367 });
-    $( "#32_green_phone2" ).offset({ left: 314, top: 245 });
+    // origins based on purple - it's top most (but not left most)
+    // actual purple coordinates = left 380, top 314?
+    var originLeft = 100;
+    var originTop = 100;
+    
+    $( "#4_purple1_10" ).offset({ left: originLeft, top: originTop });
+    $( "#16_yellow3_shop2" ).offset({ left: originLeft + 60, top: originTop + 5 });
+    $( "#20_blue2_photos2" ).offset({ left: originLeft + 22, top: originTop + 117 });
+    $( "#28_red_16" ).offset({ left: originLeft + 276, top: originTop + 207 });
+    $( "#32_green_phone2" ).offset({ left: originLeft + 154 , top: originTop + 85 });
+    
+//     $( "#4_purple1_10" ).offset({ left: 160, top: 160 });
+//     $( "#16_yellow3_shop2" ).offset({ left: 220, top: 165 });
+//     $( "#20_blue2_photos2" ).offset({ left: 182, top: 277 });
+//     $( "#28_red_16" ).offset({ left: 436, top: 367 });
+//     $( "#32_green_phone2" ).offset({ left: 314, top: 245 });
 }
 
 
