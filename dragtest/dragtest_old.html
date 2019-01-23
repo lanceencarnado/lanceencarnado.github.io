@@ -24,9 +24,7 @@ html,body {
 	left: 0;
 	bottom: 0;
 	right: 0;
-  	/* background-color: powderblue; */
-  	border-style: solid;
-  	border-width: 2px;
+  	background-color: powderblue;
 }
 </style>
 <!-- using this stylesheet for the dialog -->
@@ -70,7 +68,7 @@ $( function() {
 <body>
 
 <div id="dialog" title="How to play">
-  <p>Drag the images around with your mouse (desktop) or finger (mobile).</p>
+  <p>drag the images around with your mouse (desktop) or finger (mobile)</p>
 </div>
 
 <div class='box'> 
@@ -78,11 +76,10 @@ $( function() {
 
 
 
-<img id="4_purple1_10" class="draggable" src="images/intuitiveassets/4_purple_10.png">
-<img id="16_yellow3_shop2" class="draggable" src="images/intuitiveassets/16_yellow_shop2.png">
-<img id="20_blue2_photos2" class="draggable" src="images/intuitiveassets/20_blue_photos2.png">
-<img id="28_red_16" class="draggable" src="images/intuitiveassets/28_red_16.png">
-<img id="32_green_phone2" class="draggable" src="images/intuitiveassets/32_green_phone2.png">
+<img id="2yellowsquare2" class="draggable" src="images/intuitiveassets_old/small/2yellowsquare2.png">
+<img id="3redsquare1" class="draggable" src="images/intuitiveassets_old/small/3redsquare1.png">
+<img id="14greensquare3" class="draggable" src="images/intuitiveassets_old/small/14greensquare3.png">
+<img id="15bluesquare3" class="draggable" src="images/intuitiveassets_old/small/15bluesquare3.png">
 	
 
 </div>
@@ -98,24 +95,29 @@ $(document).on("click",".draggable", function (event) {
 });
 
 function resetPositions() {
-    // reset zIndexes as well
-    $( "#4_purple1_10" ).css("z-index", "4");
-    $( "#16_yellow3_shop2" ).css("z-index", "16");
-    $( "#20_blue2_photos2" ).css("z-index", "20");
-    $( "#28_red_16" ).css("z-index", "28");
-    $( "#32_green_phone2" ).css("z-index", "32");
+    // reset zIndexes
+    $( "#2yellowsquare2" ).css("z-index", "2");
+    $( "#3redsquare1" ).css("z-index", "3");
+    $( "#14greensquare3" ).css("z-index", "14");
+    $( "#15bluesquare3" ).css("z-index", "20");
     
-    $( "#4_purple1_10" ).offset({ left: 160, top: 160 });
-    $( "#16_yellow3_shop2" ).offset({ left: 220, top: 165 });
-    $( "#20_blue2_photos2" ).offset({ left: 182, top: 277 });
-    $( "#28_red_16" ).offset({ left: 436, top: 367 });
-    $( "#32_green_phone2" ).offset({ left: 314, top: 245 });
-}
+    $( "#2yellowsquare2" ).offset({ top: 100, left: 110 });
+    $( "#3redsquare1" ).offset({ top: 148, left: 188 });
+    $( "#14greensquare3" ).offset({ top: 243, left: 164 });
+    $( "#15bluesquare3" ).offset({ top: 213, left: 226 });
+    
 
+}
 
 window.onload = function() {
 	resetPositions();
 };
+
+// when clicking an image, bring it to front
+// $('.draggable').click(function(){
+//     this.style.zIndex = ++top_z;
+// });
+
 </script>
 
 </body>
