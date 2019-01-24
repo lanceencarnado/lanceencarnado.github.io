@@ -78,16 +78,14 @@ $( function() {
 
 
 <div class='box'> 
-<div class="content" id="playground"> 
-
-
-<img id="4_purple1_10" class="draggable" src="images/intuitiveassets/4_purple_10.png">
-<img id="16_yellow3_shop2" class="draggable" src="images/intuitiveassets/16_yellow_shop2.png">
-<img id="20_blue2_photos2" class="draggable" src="images/intuitiveassets/20_blue_photos2.png">
-<img id="28_red_16" class="draggable" src="images/intuitiveassets/28_red_16.png">
+<div class="content" id="playground">
+<img id="2_green_15" class="draggable" src="images/intuitiveassets/2_green_15.png">
+<img id="3_purple_5" class="draggable" src="images/intuitiveassets/3_purple_5.png">
+<img id="5_purple_10" class="draggable" src="images/intuitiveassets/5_purple_10.png">
+<img id="17_yellow_shop2" class="draggable" src="images/intuitiveassets/17_yellow_shop2.png">
+<img id="21_blue2_photos2" class="draggable" src="images/intuitiveassets/21_blue_photos2.png">
+<img id="29_red_16" class="draggable" src="images/intuitiveassets/29_red_16.png">
 <img id="32_green_phone2" class="draggable" src="images/intuitiveassets/32_green_phone2.png">
-	
-
 </div>
 </div>
 <button style="font-size: 20px; font-weight: bold; padding-right: 30px; padding-left: 30px; height:150px" class="ui-button ui-widget ui-corner-all" type="button" onclick="resetPositions()">RESET POSITIONS</button>
@@ -102,10 +100,12 @@ $(document).on("click",".draggable", function (event) {
 
 function resetPositions() {
     // reset zIndexes as well
-    $( "#4_purple1_10" ).css("z-index", "4");
-    $( "#16_yellow3_shop2" ).css("z-index", "16");
-    $( "#20_blue2_photos2" ).css("z-index", "20");
-    $( "#28_red_16" ).css("z-index", "28");
+    $( "#2_green_15" ).css("z-index", "2");
+    $( "#3_purple_5" ).css("z-index", "3");
+    $( "#5_purple_10" ).css("z-index", "5");
+    $( "#17_yellow_shop2" ).css("z-index", "17");
+    $( "#21_blue2_photos2" ).css("z-index", "21");
+    $( "#29_red_16" ).css("z-index", "29");
     $( "#32_green_phone2" ).css("z-index", "32");
     
     // origins based on purple - it's top most (but not left most)
@@ -113,10 +113,12 @@ function resetPositions() {
     var originLeft = 100;
     var originTop = 100;
     
-    $( "#4_purple1_10" ).offset({ left: originLeft, top: originTop });
-    $( "#16_yellow3_shop2" ).offset({ left: originLeft + 60, top: originTop + 5 });
-    $( "#20_blue2_photos2" ).offset({ left: originLeft + 22, top: originTop + 117 });
-    $( "#28_red_16" ).offset({ left: originLeft + 276, top: originTop + 207 });
+    $( "#2_green_15" ).offset({ left: originLeft + 130, top: originTop + 188 });
+    $( "#3_purple_5" ).offset({ left: originLeft + 312, top: originTop + 98 });
+    $( "#5_purple_10" ).offset({ left: originLeft, top: originTop });
+    $( "#17_yellow_shop2" ).offset({ left: originLeft + 60, top: originTop + 5 });
+    $( "#21_blue2_photos2" ).offset({ left: originLeft + 22, top: originTop + 117 });
+    $( "#29_red_16" ).offset({ left: originLeft + 276, top: originTop + 207 });
     $( "#32_green_phone2" ).offset({ left: originLeft + 154 , top: originTop + 85 });
     
 //     $( "#4_purple1_10" ).offset({ left: 160, top: 160 });
