@@ -81,7 +81,12 @@ $( function() {
 <div class="content" id="playground">
 <img id="2_green_15" class="draggable" src="images/intuitiveassets/2_green_15.png">
 <img id="3_purple_5" class="draggable" src="images/intuitiveassets/3_purple_5.png">
+<img id="4_green_11" class="draggable" src="images/intuitiveassets/4_green_11.png">
 <img id="5_purple_10" class="draggable" src="images/intuitiveassets/5_purple_10.png">
+<img id="7_red_8" class="draggable" src="images/intuitiveassets/7_red_8.png">
+<img id="8_red_light2" class="draggable" src="images/intuitiveassets/8_red_light2.png">
+<img id="10_purple_9" class="draggable" src="images/intuitiveassets/10_purple_9.png">
+<img id="11_purple_cubes2" class="draggable" src="images/intuitiveassets/11_purple_cubes2.png">
 <img id="17_yellow_shop2" class="draggable" src="images/intuitiveassets/17_yellow_shop2.png">
 <img id="21_blue2_photos2" class="draggable" src="images/intuitiveassets/21_blue_photos2.png">
 <img id="29_red_16" class="draggable" src="images/intuitiveassets/29_red_16.png">
@@ -102,21 +107,31 @@ function resetPositions() {
     // reset zIndexes as well
     $( "#2_green_15" ).css("z-index", "2");
     $( "#3_purple_5" ).css("z-index", "3");
+    $( "#4_green_11" ).css("z-index", "4");
     $( "#5_purple_10" ).css("z-index", "5");
+    // * do 6 later *
+    $( "#7_red_8" ).css("z-index", "7");
+    $( "#8_red_light2" ).css("z-index", "8");
+    $( "#10_purple_9" ).css("z-index", "10");
+    $( "#11_purple_cubes2" ).css("z-index", "11");
     $( "#17_yellow_shop2" ).css("z-index", "17");
     $( "#21_blue2_photos2" ).css("z-index", "21");
     $( "#29_red_16" ).css("z-index", "29");
     $( "#32_green_phone2" ).css("z-index", "32");
     
     // origins based on purple - it's top most (but not left most)
-    // actual purple coordinates = left 380, top 314?
     var originLeft = 100;
     var originTop = 100;
     
     $( "#2_green_15" ).offset({ left: originLeft + 130, top: originTop + 188 });
     $( "#3_purple_5" ).offset({ left: originLeft + 312, top: originTop + 98 });
+    $( "#4_green_11" ).offset({ left: originLeft + 205, top: originTop + 243 });
     $( "#5_purple_10" ).offset({ left: originLeft, top: originTop });
-    $( "#17_yellow_shop2" ).offset({ left: originLeft + 60, top: originTop + 5 });
+    $( "#7_red_8" ).offset({ left: originLeft + 130, top: originTop + 205 });
+    $( "#8_red_light2" ).offset({ left: originLeft - 18, top: originTop + 161 });
+    $( "#10_purple_9" ).offset({ left: originLeft + 59, top: originTop + 203 });
+    $( "#11_purple_cubes2" ).offset({ left: originLeft + 176, top: originTop + 220 });
+    $( "#17_yellow_shop2" ).offset({ left: originLeft + 60, top: originTop + 3 });
     $( "#21_blue2_photos2" ).offset({ left: originLeft + 22, top: originTop + 117 });
     $( "#29_red_16" ).offset({ left: originLeft + 276, top: originTop + 207 });
     $( "#32_green_phone2" ).offset({ left: originLeft + 154 , top: originTop + 85 });
