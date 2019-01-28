@@ -2,8 +2,29 @@
 <html>
 <head>
 <title>Dragging game iframe</title>
+
+<style>
+#wrapper { width: 700px; height: 700px; padding: 0; overflow: hidden; }
+#scaled-frame { width: 1000px; height: 1000px; border: 0px; }
+#scaled-frame {
+	scrolling="no";
+    zoom: 0.70;
+    -moz-transform: scale(0.70);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(0.70);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(0.70);
+    -webkit-transform-origin: 0 0;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+ #scaled-frame  { zoom: 1;  }
+}
+</style>
+
 </head>
 <body>
-<iframe src="dragtest.html" height="800" width="800"></iframe>
+
+<div id="wrapper"><iframe id="scaled-frame" src="dragtest_nobutton.html"></iframe></div>
 </body>
 </html>
