@@ -24,24 +24,26 @@ html,body {
   flex-wrap: wrap;
   align-content: stretch;
   flex-direction: column;
-  background-color: DodgerBlue;
+  /* background-color: DodgerBlue; */
 }
 
 .flex-container > div {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   width: 99%;
   margin: 2px;
   text-align: center;
-  line-height: 75px;
-  font-size: 30px;
 }
 
 #playground {
-	flex-grow: 9;
+	flex-grow: 9.5;
 }
 #reset_div {
-	flex-grow: 1;
+	flex-grow: .5;
 }
+#reset_img {
+	cursor: pointer;
+}
+
 </style>
 </head>
 <body>
@@ -115,6 +117,7 @@ $( function() {
 		<img id="32_green_phone2" class="draggable" src="images/intuitiveassets/32_green_phone2.png">
 	</div>
 	<div id="reset_div">
+		<img src="images/intuitiveassets/reset.png" id="reset_img" alt="Reset positions" onclick="resetPositions()" width="75px" height="86px">
 	</div>
 </div>
 
@@ -156,10 +159,11 @@ function resetPositions() {
     // var originLeft = 100;
     
     // find the midpoint width of the div to place the structure in the middle
-    var widthMidpoint = $( document ).width() / 2;
-    
+    var widthMidpoint = $( "#playground" ).width() / 2;
     var originLeft =  widthMidpoint - 217; // width of full obj is 434, div by 2 is 217
-    var originTop = 100;
+    
+    var heightMidpoint = $( "#playground" ).height() / 2;
+    var originTop = heightMidpoint - 181; // height of full obj is 362
     
     $( "#2_green_15" ).offset({ left: originLeft + 130, top: originTop + 188 });
     $( "#3_purple_5" ).offset({ left: originLeft + 312, top: originTop + 98 });
