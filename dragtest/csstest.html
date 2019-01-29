@@ -1,52 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Dragging game</title>
-<style>
 
+<!-- using this stylesheet for the dialog -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="https://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
+<script src="scripts/jquery.ui.touch-punch.min.js"></script>
+
+
+<style>
 html,body {
-	height: 90%;
+	height: 98%;
 }
 
 .draggable {
 	position:absolute;
 }
 
-.box{
-	position: relative;
-	height: 100%;		/* desired width */
-}
-.box:before{
-	content: "";
-	display: block;
-	padding-top: 100%; 	/* initial ratio of 1:1*/
-}
-
-.content{
-	position:  absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-  	/* background-color: powderblue; */
-  	/*
-  	border-style: solid;
-  	border-width: 2px;
-  	*/
+.flex-container {
+  display: flex;
+  height: 100%;
+  flex-wrap: wrap;
+  align-content: stretch;
+  flex-direction: column;
+  background-color: DodgerBlue;
 }
 
-#reset_img img:hover {
-     opacity: 0.5;
+.flex-container > div {
+  background-color: #ffffff;
+  width: 99%;
+  margin: 2px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
 }
 
+#playground {
+	flex-grow: 9;
+}
+#reset_div {
+	flex-grow: 1;
+}
 </style>
-<!-- using this stylesheet for the dialog -->
-<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
-<script src="https://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
-
-
-<script src="scripts/jquery.ui.touch-punch.min.js"></script>
+</head>
+<body>
 
 <script>
 // $(function() {
@@ -79,48 +77,46 @@ $( function() {
 } );
 </script>
 
-</head>
-
-<body>
 <div id="dialog" title="How to play">
   <p>Drag the images around with your mouse (desktop) or finger (mobile).</p>
 </div>
 
 
-
-<div class='box'> 
-<div class="content" id="playground">
-<img id="2_green_15" class="draggable" src="images/intuitiveassets/2_green_15.png">
-<img id="3_purple_5" class="draggable" src="images/intuitiveassets/3_purple_5.png">
-<img id="4_green_11" class="draggable" src="images/intuitiveassets/4_green_11.png">
-<img id="5_purple_10" class="draggable" src="images/intuitiveassets/5_purple_10.png">
-<img id="7_red_8" class="draggable" src="images/intuitiveassets/7_red_8.png">
-<img id="8_red_light2" class="draggable" src="images/intuitiveassets/8_red_light2.png">
-<img id="10_purple_9" class="draggable" src="images/intuitiveassets/10_purple_9.png">
-<img id="11_purple_cubes2" class="draggable" src="images/intuitiveassets/11_purple_cubes2.png">
-<img id="13_green_3" class="draggable" src="images/intuitiveassets/13_green_3.png">
-<img id="14_blue_give2" class="draggable" src="images/intuitiveassets/14_blue_give2.png">
-<img id="16_yellow_12" class="draggable" src="images/intuitiveassets/16_yellow_12.png">
-<img id="17_yellow_shop2" class="draggable" src="images/intuitiveassets/17_yellow_shop2.png">
-<img id="19_green_ask2" class="draggable" src="images/intuitiveassets/19_green_ask2.png">
-<img id="21_blue2_photos2" class="draggable" src="images/intuitiveassets/21_blue_photos2.png">
-<img id="23_red_2" class="draggable" src="images/intuitiveassets/23_red_2.png">
-<img id="24_purple_1" class="draggable" src="images/intuitiveassets/24_purple_1.png">
-<img id="25_yellow_6" class="draggable" src="images/intuitiveassets/25_yellow_6.png">
-<img id="26_yellow_4" class="draggable" src="images/intuitiveassets/26_yellow_4.png">
-<img id="27_blue_13" class="draggable" src="images/intuitiveassets/27_blue_13.png">
-<img id="28_blue_14" class="draggable" src="images/intuitiveassets/28_blue_14.png">
-<img id="29_red_16" class="draggable" src="images/intuitiveassets/29_red_16.png">
-<img id="32_green_phone2" class="draggable" src="images/intuitiveassets/32_green_phone2.png">
-</div>
-</div>
-<div>
-<img src="images/intuitiveassets/reset.png" id="reset_img" alt="Reset positions" onclick="resetPositions()">
-</div>
 <!-- 
-<button style="font-size: 20px; font-weight: bold; padding-right: 30px; padding-left: 30px; height:150px" class="ui-button ui-widget ui-corner-all" type="button" onclick="resetPositions()">RESET POSITIONS</button>
+<div class="flex-container">
+  <div id="playground">1</div>
+  <div style="flex-grow: 0.5" >2</div>
+</div>
  -->
 
+<div class='flex-container'> 
+	<div class="content" id="playground">
+		<img id="2_green_15" class="draggable" src="images/intuitiveassets/2_green_15.png">
+		<img id="3_purple_5" class="draggable" src="images/intuitiveassets/3_purple_5.png">
+		<img id="4_green_11" class="draggable" src="images/intuitiveassets/4_green_11.png">
+		<img id="5_purple_10" class="draggable" src="images/intuitiveassets/5_purple_10.png">
+		<img id="7_red_8" class="draggable" src="images/intuitiveassets/7_red_8.png">
+		<img id="8_red_light2" class="draggable" src="images/intuitiveassets/8_red_light2.png">
+		<img id="10_purple_9" class="draggable" src="images/intuitiveassets/10_purple_9.png">
+		<img id="11_purple_cubes2" class="draggable" src="images/intuitiveassets/11_purple_cubes2.png">
+		<img id="13_green_3" class="draggable" src="images/intuitiveassets/13_green_3.png">
+		<img id="14_blue_give2" class="draggable" src="images/intuitiveassets/14_blue_give2.png">
+		<img id="16_yellow_12" class="draggable" src="images/intuitiveassets/16_yellow_12.png">
+		<img id="17_yellow_shop2" class="draggable" src="images/intuitiveassets/17_yellow_shop2.png">
+		<img id="19_green_ask2" class="draggable" src="images/intuitiveassets/19_green_ask2.png">
+		<img id="21_blue2_photos2" class="draggable" src="images/intuitiveassets/21_blue_photos2.png">
+		<img id="23_red_2" class="draggable" src="images/intuitiveassets/23_red_2.png">
+		<img id="24_purple_1" class="draggable" src="images/intuitiveassets/24_purple_1.png">
+		<img id="25_yellow_6" class="draggable" src="images/intuitiveassets/25_yellow_6.png">
+		<img id="26_yellow_4" class="draggable" src="images/intuitiveassets/26_yellow_4.png">
+		<img id="27_blue_13" class="draggable" src="images/intuitiveassets/27_blue_13.png">
+		<img id="28_blue_14" class="draggable" src="images/intuitiveassets/28_blue_14.png">
+		<img id="29_red_16" class="draggable" src="images/intuitiveassets/29_red_16.png">
+		<img id="32_green_phone2" class="draggable" src="images/intuitiveassets/32_green_phone2.png">
+	</div>
+	<div id="reset_div">
+	</div>
+</div>
 
 
 <script>
