@@ -147,7 +147,12 @@ function resetPositions() {
     $( "#32_green_phone2" ).css("z-index", "32");
     
     // origins based on purple - it's top most (but not left most)
-    var originLeft = 100;
+    // var originLeft = 100;
+    
+    // find the midpoint width of the div to place the structure in the middle
+    var widthMidpoint = $( document ).width() / 2;
+    
+    var originLeft =  widthMidpoint - 217; // width of full obj is 434, div by 2 is 217
     var originTop = 100;
     
     $( "#2_green_15" ).offset({ left: originLeft + 130, top: originTop + 188 });
