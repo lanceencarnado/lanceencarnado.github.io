@@ -17,10 +17,8 @@ by lance encarnado (2019)
 
 <style>
 body, footer, textarea {
-	background-color: #ff0000;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   	font-weight: 300;
-   	color: #ffffff;
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-weight: 300;
 }
 
 #logo {
@@ -36,27 +34,6 @@ div {
 textarea {
     padding: 6px;
     font-size: 17px;
-    border:1px solid #ffffff;
-}
-
-textarea::-webkit-input-placeholder {
-  color: #ffffff;
-}
-
-textarea:-moz-placeholder { /* Firefox 18- */
-  color: #ffffff;  
-}
-
-textarea::-moz-placeholder {  /* Firefox 19+ */
-  color: #ffffff;  
-}
-
-textarea:-ms-input-placeholder {
-  color: #ffffff;  
-}
-
-textarea::placeholder {
-  color: #ffffff;  
 }
 
 h1 {
@@ -64,7 +41,6 @@ h1 {
 	font-size: 30px;
 }
 
-/* 
 body::after  {
   	content: "";
   	background: url("./textgenimg/gunnertext.jpg");
@@ -78,14 +54,14 @@ body::after  {
 	background-position: center;
 	z-index: -2;
 }
- */
 
 .footer {
   	position: fixed;
 	right: 6px;
   	bottom: 0;
   	width: 100%;
-  	opacity: 0.4;	
+  	color: black;
+  	opacity: 0.3;	
 	text-align: right;
 	-webkit-user-select: none; /* Safari */        
 	-moz-user-select: none; /* Firefox */
@@ -251,7 +227,7 @@ function cartify() {
  -->
 
 <div id="logo">
-<img src="./textgenimg/textgenlogo_white.png" alt="Playboi Carti Text Generator" width="500px" >
+<img src="./textgenimg/textgenlogo.png" alt="Playboi Carti Text Generator" width="500px" >
 </div>
 
 <div class="footer">
@@ -269,8 +245,8 @@ playboi carti text generator by @LScorrcho (2019) 🦋
 </div>
 
 <div id="dothatshit">
-<button onclick="cartify()">dothatshit!</button>
-<!-- <a href="#" class="myButton" onclick="cartify();return false;">dothatshit!</a> -->
+<!-- <button onclick="cartify()">dothatshit!</button> -->
+<a href="#" class="myButton" onclick="cartify();return false;">dothatshit!</a>
 
 </div>
 <br>
