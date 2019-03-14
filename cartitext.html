@@ -36,18 +36,21 @@ div {
 textarea {
     padding: 6px;
     font-size: 17px;
-    border:1px solid #ffffff;
+    color: black;
+    background-color: #ffffff;
+    /* border:1px solid #ffffff; */
 }
 
+/* 
 textarea::-webkit-input-placeholder {
   color: #ffffff;
 }
 
-textarea:-moz-placeholder { /* Firefox 18- */
+textarea:-moz-placeholder {
   color: #ffffff;  
 }
 
-textarea::-moz-placeholder {  /* Firefox 19+ */
+textarea::-moz-placeholder {
   color: #ffffff;  
 }
 
@@ -58,6 +61,7 @@ textarea:-ms-input-placeholder {
 textarea::placeholder {
   color: #ffffff;  
 }
+*/
 
 h1 {
 	padding: 6px;
@@ -237,7 +241,9 @@ function cartify() {
 
 	document.getElementById("cartitext").value = cartiOutput;
 	
-	document.getElementById("cartitext").style.height = (document.getElementById("cartitext").scrollHeight)+"px";
+	document.getElementById("cartitext").style.height = "100px";
+	
+	document.getElementById("cartitext").style.height = (document.getElementById("cartitext").scrollHeight) + "px";
 }
 
 </script>
@@ -269,7 +275,7 @@ playboi carti text generator by @LScorrcho (2019) 🦋
 </div>
 
 <div id="dothatshit">
-<button onclick="cartify()">dothatshit!</button>
+<button onclick="cartify()">dothatshit!*</button>
 <!-- <a href="#" class="myButton" onclick="cartify();return false;">dothatshit!</a> -->
 
 </div>
