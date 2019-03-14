@@ -1,6 +1,22 @@
 <html>
 <head>
 
+<style>
+body::after  {
+  content: "";
+  background: url("gunnertext.jpg");
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  background-position: center;
+  z-index: -1;
+}
+</style>
+
 <script type="text/javascript">
 function cartify() {
 	// get the original text
@@ -8,6 +24,9 @@ function cartify() {
 	
 	// all caps?
 	var cartiOutput = userInput.toUpperCase();
+	
+	// split into each word based on spaces
+	parts = test.split(' ');
 	
 	// look for all the punctuation, and add a space before it
 	cartiOutput = cartiOutput.replace(/!/g, ' !')
@@ -32,7 +51,7 @@ function cartify() {
 <br><button onclick="cartify()">dothatshit!</button>
 
 <br><br><br><br>
-the * carti version !!:
+the * carti version ! :( *^:
 <div id="cartitext">
 asd
 </div>
