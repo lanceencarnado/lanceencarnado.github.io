@@ -51,12 +51,17 @@ body::after  {
 
 .footer {
 
-  	position: fixed;
+  	position: absolute;
 	left: 6px;
   	bottom: 0;
   	width: 100%;
   	color: black;
   	opacity: 0.3;
+
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
 }
 
 </style>
@@ -205,8 +210,10 @@ function cartify() {
 your ! carti text . will :( !^ appear here ++** 🦋
 </div>
 
+<!-- 
 <div class="footer">
 playboi carti text generator by @lscorrcho (2019) 🦋
 </div>
+ -->
 </body>
 </html>
