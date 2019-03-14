@@ -109,6 +109,10 @@ function cartify() {
 	for (var i = 0; i < words.length; i++) {
 		// probability 1/2 that there will be some sort of non-space separator after a word
 		// if the last word has a separator, this one won't
+		// unless there's less than 10 words
+		if (words.length < 10) {
+			lastWordSeperated = false;
+		}
 		rand = Math.floor(Math.random() * 2);
 		if (rand == 1 && !lastWordSeperated) {
 			// 16 different options of what the separator can be
