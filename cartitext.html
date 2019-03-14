@@ -74,18 +74,18 @@ function cartify() {
 	// change case (upper/lower) if necessary
 	var cartiOutput = userInput;
 	
-	// split into each word based on spaces and possibly add some seperator
+	// split into each word based on spaces and possibly add some separator
 	var words = cartiOutput.split(' ');
 	cartiOutput = "";
 	var wordSeperator = ""; // could be just a space, or *+ or !.. or :( etc....
 	var rand = 1;
 	var lastWordSeperated = false;
 	for (var i = 0; i < words.length; i++) {
-		// probability 1/2 that there will be some sort of non-space seperator after a word
-		// if the last word has a seperator, this one won't
+		// probability 1/2 that there will be some sort of non-space separator after a word
+		// if the last word has a separator, this one won't
 		rand = Math.floor(Math.random() * 2);
 		if (rand == 1 && !lastWordSeperated) {
-			// 16 different options of what the seperator can be
+			// 16 different options of what the separator can be
 			rand = Math.floor(Math.random() * 16);
 			if (rand == 0) {
 				wordSeperator = " ++** ";
@@ -147,11 +147,11 @@ function cartify() {
 		beginning = "+* ok ! 🖤"
 	}
 	
-	cartiOutput = beginning + "<br>" + cartiOutput;
+	cartiOutput = beginning + "\n" + cartiOutput;
 	
 	// 6 different endings
 	rand = Math.floor(Math.random() * 6);
-	var ending = "<br>";
+	var ending = "\n";
 	if (rand == 0) {
 		ending += "ok ! * +";
 	} else if (rand == 1) {
@@ -175,7 +175,9 @@ function cartify() {
 		cartiOutput = cartiOutput.toLowerCase();
 	}
 
-	document.getElementById("cartitext").innerHTML = cartiOutput;
+	document.getElementById("cartitext").value = cartiOutput;
+	
+	document.getElementById("cartitext").style.height = (document.getElementById("cartitext").scrollHeight)+"px";
 }
 
 </script>
@@ -201,13 +203,17 @@ function cartify() {
   	<input type="radio" id="upper" name="case" value="upper"> all uppercase
   	<input type="radio" id="nochange" name="case" value="nochange"> no case change 
 </div>
+
 <div id="dothatshit">
 <button onclick="cartify()">dothatshit!</button>
 </div>
 
-<br><br><br>
-<div id="cartitext">
-your ! carti text . will :( !^ appear here ++** 🦋
+<br>
+<div id="cartitextarea">
+<!-- your ! carti text . will :( !^ appear here ++** 🦋 -->
+
+<textarea id="cartitext" placeholder="your ! carti text . will :( !^ appear here ++** 🦋" rows="10" cols="60" readonly>
+</textarea>
 </div>
 
 <!-- 
