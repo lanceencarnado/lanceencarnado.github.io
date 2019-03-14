@@ -22,18 +22,24 @@ function cartify() {
 	// get the original text
 	var userInput = document.getElementById("userinput").value;
 	
-	// all caps?
-	var cartiOutput = userInput.toUpperCase();
+	// change case (upper/lower) if necessary
+	var cartiOutput = userInput;
+	if (document.getElementById('upper').checked) {
+  		cartiOutput = userInput.toUpperCase();
+	}
+	else if (document.getElementById('lower').checked) {
+		cartiOutput = userInput.toLowerCase();
+	}
 	
 	// split into each word based on spaces
-	parts = test.split(' ');
+	var parts = cartiOutput.split(' ');
+	//for ()
 	
 	// look for all the punctuation, and add a space before it
 	cartiOutput = cartiOutput.replace(/!/g, ' !')
 	cartiOutput = cartiOutput.replace(/\?/g, ' \?');
 	cartiOutput = cartiOutput.replace(/,/g, ' ,');
-	// replace all the periods with exclamation marks
-	cartiOutput = cartiOutput.replace(/\./g, ' !');
+	cartiOutput = cartiOutput.replace(/\./g, ' .');
 
 	document.getElementById("cartitext").innerHTML = cartiOutput;
 }
@@ -46,8 +52,13 @@ function cartify() {
 
 
 <textarea id="userinput" rows="10" cols="70">
-
 </textarea>
+<br><br>
+<div id="caseselection">
+  <input type="radio" id="upper" name="case" value="upper" checked="checked"> all uppercase
+  <input type="radio" id="lower" name="case" value="lower"> all lowercase
+  <input type="radio" id="nochange" name="case" value="no change"> no case change 
+</div>
 <br><button onclick="cartify()">dothatshit!</button>
 
 <br><br><br><br>
