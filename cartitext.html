@@ -10,7 +10,7 @@ by lance encarnado (2019)
 <head>
 
 <style>
-body {
+body, footer {
    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
    font-weight: 300;
 }
@@ -36,19 +36,28 @@ h1 {
 }
 
 body::after  {
-  content: "";
-  background: url("./textgenimg/gunnertext.jpg");
-  background-repeat: no-repeat;
-  opacity: 0.10;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  background-position: center;
-  z-index: -1;
+  	content: "";
+  	background: url("./textgenimg/gunnertext.jpg");
+  	background-repeat: no-repeat;
+	opacity: 0.10;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	background-position: center;
+	z-index: -1;
 }
 
+.footer {
+
+  	position: fixed;
+	left: 6px;
+  	bottom: 0;
+  	width: 100%;
+  	color: black;
+  	opacity: 0.3;
+}
 
 </style>
 
@@ -196,5 +205,8 @@ function cartify() {
 your ! carti text . will :( !^ appear here ++** 🦋
 </div>
 
+<div class="footer">
+playboi carti text generator by @lscorrcho (2019) 🦋
+</div>
 </body>
 </html>
