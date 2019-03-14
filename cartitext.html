@@ -13,8 +13,23 @@ by lance encarnado (2019)
 body {
    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
    font-weight: 300;
-   font-size: 16px;
 }
+
+div {
+    padding: 6px;
+    font-size: 16px;
+}
+
+textarea {
+    padding: 6px;
+    font-size: 16px;
+}
+
+h1 {
+	padding: 6px;
+	font-size: 30px;
+}
+
 body::after  {
   content: "";
   background: url("gunnertext.jpg");
@@ -152,15 +167,18 @@ function cartify() {
 <h1>a +! 🖤 playboi carti 🖤^! text generator +:)
 <br> by *+ @lscorrcho ++** ok ! </h1>
 
-<textarea id="userinput" placeholder="enter your plain text here..." rows="10" cols="70">
+<div id="plaintextarea">
+<textarea id="userinput" placeholder="enter your plain text here..." rows="10" cols="60">
 </textarea>
-<br><br>
+</div>
 <div id="caseselection">
 	<input type="radio" id="lower" name="case" value="lower" checked="checked"> all lowercase
   	<input type="radio" id="upper" name="case" value="upper"> all uppercase
   	<input type="radio" id="nochange" name="case" value="nochange"> no case change 
 </div>
-<br><button onclick="cartify()">dothatshit!</button>
+<div id="dothatshit">
+<button onclick="cartify()">dothatshit!</button>
+</div>
 
 <br><br><br>
 <div id="cartitext">
