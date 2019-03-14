@@ -46,22 +46,48 @@ body::after  {
 	right: 0;
 	position: absolute;
 	background-position: center;
-	z-index: -1;
+	z-index: -2;
 }
 
 .footer {
-
-  	position: absolute;
-	left: 6px;
+  	position: fixed;
+	right: 6px;
   	bottom: 0;
   	width: 100%;
   	color: black;
-  	opacity: 0.3;
-
+  	opacity: 0.3;	
+	text-align: right;
 	-webkit-user-select: none; /* Safari */        
 	-moz-user-select: none; /* Firefox */
 	-ms-user-select: none; /* IE10+/Edge */
 	user-select: none; /* Standard */
+	z-index: -1;
+}
+
+.myButton {
+	-moz-box-shadow:inset 0px 0px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 0px 0px 0px #ffffff;
+	box-shadow:inset 0px 0px 0px 0px #ffffff;
+	background-color:#ffffff;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:1px solid #acacac;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-size:17px;
+	font-weight:bold;
+	padding:10px 20px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.myButton:hover {
+	background-color:#f6f6f6;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
 }
 
 </style>
@@ -194,6 +220,10 @@ function cartify() {
 <img src="./textgenimg/textgenlogo.png" alt="Playboi Carti Text Generator" width="500px" >
 </div>
 
+<div class="footer">
+playboi carti text generator by @LScorrcho (2019) 🦋
+</div>
+
 <div id="plaintextarea">
 <textarea id="userinput" placeholder="enter your plain text here..." rows="10" cols="55">
 </textarea>
@@ -205,9 +235,10 @@ function cartify() {
 </div>
 
 <div id="dothatshit">
-<button onclick="cartify()">dothatshit!</button>
-</div>
+<!-- <button onclick="cartify()">dothatshit!</button> -->
+<a href="#" class="myButton" onclick="cartify();return false;">dothatshit!</a>
 
+</div>
 <br>
 <div id="cartitextarea">
 <!-- your ! carti text . will :( !^ appear here ++** 🦋 -->
@@ -215,11 +246,7 @@ function cartify() {
 <textarea id="cartitext" placeholder="your ! carti text . will :( !^ appear here ++** 🦋" rows="10" cols="55" readonly>
 </textarea>
 </div>
+<br><br><br>
 
-<!-- 
-<div class="footer">
-playboi carti text generator by @lscorrcho (2019) 🦋
-</div>
- -->
 </body>
 </html>
