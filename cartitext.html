@@ -6,7 +6,7 @@ body::after  {
   content: "";
   background: url("gunnertext.jpg");
   background-repeat: no-repeat;
-  opacity: 0.2;
+  opacity: 0.3;
   top: 0;
   left: 0;
   bottom: 0;
@@ -24,22 +24,75 @@ function cartify() {
 	
 	// change case (upper/lower) if necessary
 	var cartiOutput = userInput;
-	if (document.getElementById('upper').checked) {
-  		cartiOutput = userInput.toUpperCase();
-	}
-	else if (document.getElementById('lower').checked) {
-		cartiOutput = userInput.toLowerCase();
-	}
 	
-	// split into each word based on spaces
-	var parts = cartiOutput.split(' ');
-	//for ()
+	// split into each word based on spaces and possibly add some seperator
+	var words = cartiOutput.split(' ');
+	cartiOutput = "";
+	var wordSeperator = ""; // could be just a space, or *+ or !.. or :( etc....
+	var rand = 1;
+	for (var i = 0; i < words.length; i++) {
+		// probability 1/3 that there will be some sort of non-space seperator after a word
+		// if the last word has a seperator, this one won't
+		rand = Math.floor(Math.random() * 3);
+		if (rand == 2) {
+			// 10 different options of what the seperator can be
+			rand = Math.floor(Math.random() * 11);
+			if (rand == 0) {
+				wordSeperator = " ++** ";
+			} else if (rand == 1) {
+				wordSeperator = " *! +:) ";
+			} else if (rand == 2) {
+				wordSeperator = " +* ";
+			} else if (rand == 3) {
+				wordSeperator = "! ";
+			} else if (rand == 4) {
+				wordSeperator = " +:) ";
+			} else if (rand == 5) {
+				wordSeperator = " **!++ ";
+			} else if (rand == 6) {
+				wordSeperator = "🦋 ";
+			} else if (rand == 7) {
+				wordSeperator = " ** - ";
+			} else if (rand == 8) {
+				wordSeperator = "🖤& * ";
+			} else if (rand == 9) {
+				wordSeperator = " ..$ ";
+			} else if (rand == 10) {
+				wordSeperator = " :( 💕 ";
+			}
+		} else { // otherwise it's just a space
+			wordSeperator = " ";
+		}
+		cartiOutput += words[i] + wordSeperator;
+	}
 	
 	// look for all the punctuation, and add a space before it
 	cartiOutput = cartiOutput.replace(/!/g, ' !')
 	cartiOutput = cartiOutput.replace(/\?/g, ' \?');
 	cartiOutput = cartiOutput.replace(/,/g, ' ,');
 	cartiOutput = cartiOutput.replace(/\./g, ' .');
+	
+	// 4 different endings
+	rand = Math.floor(Math.random() * 4);
+	var ending = "<br>";
+	if (rand == 0) {
+		ending += "ok !";
+	} else if (rand == 1) {
+		ending += "*+ _ SLATT !";
+	} else if (rand == 2) {
+		ending += "+:)  🍄🍄🍄";
+	} else if (rand == 3) {
+		ending += "++** +:) love ! Lit **!++";
+	}
+	
+	cartiOutput += ending;
+	
+	if (document.getElementById('upper').checked) {
+  		cartiOutput = cartiOutput.toUpperCase();
+	}
+	else if (document.getElementById('lower').checked) {
+		cartiOutput = cartiOutput.toLowerCase();
+	}
 
 	document.getElementById("cartitext").innerHTML = cartiOutput;
 }
@@ -57,12 +110,13 @@ function cartify() {
 <div id="caseselection">
   <input type="radio" id="upper" name="case" value="upper" checked="checked"> all uppercase
   <input type="radio" id="lower" name="case" value="lower"> all lowercase
-  <input type="radio" id="nochange" name="case" value="no change"> no case change 
+  <input type="radio" id="nochange" name="case" value="nochange"> no case change 
 </div>
 <br><button onclick="cartify()">dothatshit!</button>
 
 <br><br><br><br>
-the * carti version ! :( *^:
+the * carti version ! :( *^: 
+<br><br>
 <div id="cartitext">
 asd
 </div>
