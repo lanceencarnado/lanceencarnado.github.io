@@ -9,6 +9,8 @@ by lance encarnado (2019)
 <html>
 <head>
 
+<meta name="viewport" content="width=750"/>
+
 <title>Playboi Carti Text Generator **!++</title>
 <!-- 
 
@@ -16,6 +18,24 @@ by lance encarnado (2019)
 -->
 
 <style>
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  min-height: 100%;
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  margin-bottom: -100px;
+}
+
+.footer,
+.push {
+  height: 100px;
+}
+
 body, footer, textarea {
 	background-color: #e24d4d;
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
@@ -85,12 +105,10 @@ body::after  {
  */
 
 .footer {
-  	position: fixed;
-	right: 6px;
-  	bottom: 0;
+  	/* position: fixed; */
+	padding-left: 12px;
+	padding-bottom: 20px;
   	width: 100%;
-  	opacity: 0.4;	
-	text-align: right;
 	-webkit-user-select: none; /* Safari */        
 	-moz-user-select: none; /* Firefox */
 	-ms-user-select: none; /* IE10+/Edge */
@@ -98,6 +116,14 @@ body::after  {
 	z-index: -1;
 }
 
+/* 
+button {
+	font-size: 16px;
+  	margin: 4px 2px;
+}
+ */
+
+/* 
 .myButton {
 	-moz-box-shadow:inset 0px 0px 0px 0px #ffffff;
 	-webkit-box-shadow:inset 0px 0px 0px 0px #ffffff;
@@ -123,6 +149,7 @@ body::after  {
 	position:relative;
 	top:1px;
 }
+ */
 
 </style>
 
@@ -251,21 +278,21 @@ function cartify() {
 </head>
 <body>
 
+<div class="wrapper">
+
 <!-- 
 <h1>a +! 🖤 playboi carti 🖤^! text generator +:)
 <br> by *+ @lscorrcho ++** ok ! </h1>
  -->
+ 
+ 
 
 <div id="logo">
 <img src="./textgenimg/textgenlogo_white.png" alt="Playboi Carti Text Generator" width="500px" >
 </div>
 
-<div class="footer">
-playboi carti text generator by @LScorrcho (2019) 🦋
-</div>
-
 <div id="plaintextarea">
-<textarea id="userinput" placeholder="enter your plain text here..." rows="10" cols="65">
+<textarea id="userinput" placeholder="enter your plain text here..." rows="9" cols="65">
 </textarea>
 </div>
 <div id="caseselection">
@@ -281,10 +308,17 @@ playboi carti text generator by @LScorrcho (2019) 🦋
 </div>
 <br>
 <div id="cartitextarea">
-<textarea id="cartitext" placeholder="your ! carti text . will :( !^ appear here ++** 🦋" rows="10" cols="65" readonly>
+<textarea id="cartitext" placeholder="your ! carti text . will :( !^ appear here ++** 🦋" rows="9" cols="65" readonly>
 </textarea>
 </div>
-<br><br><br>
+
+<div class="push"></div>
+</div>
+
+<footer class="footer">
+playboi carti text generator by @LScorrcho (2019) 🦋
+<br><a href="http://tacklebox.company/"><img alt="Tacklebox" src="./textgenimg/tblogo_white.png" height="38px"></a>
+</footer>
 
 </body>
 </html>
