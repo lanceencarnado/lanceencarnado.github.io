@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+
+<!--
+playboi carti text generator
+by lance encarnado (2019)
+* bring that money home, daddy waitin for it !
+-->
+
 <html>
 <head>
 
@@ -10,7 +18,7 @@ body::after  {
   content: "";
   background: url("gunnertext.jpg");
   background-repeat: no-repeat;
-  opacity: 0.3;
+  opacity: 0.2;
   top: 0;
   left: 0;
   bottom: 0;
@@ -42,8 +50,8 @@ function cartify() {
 		// if the last word has a seperator, this one won't
 		rand = Math.floor(Math.random() * 2);
 		if (rand == 1 && !lastWordSeperated) {
-			// 10 different options of what the seperator can be
-			rand = Math.floor(Math.random() * 11);
+			// 16 different options of what the seperator can be
+			rand = Math.floor(Math.random() * 16);
 			if (rand == 0) {
 				wordSeperator = " ++** ";
 			} else if (rand == 1) {
@@ -66,6 +74,16 @@ function cartify() {
 				wordSeperator = " ..$ ";
 			} else if (rand == 10) {
 				wordSeperator = " :( 💕 ";
+			} else if (rand == 11) {
+				wordSeperator = " *^! ";
+			} else if (rand == 12) {
+				wordSeperator = " :) xo! ";
+			} else if (rand == 13) {
+				wordSeperator = " ^ 🦋* !+  ";
+			} else if (rand == 14) {
+				wordSeperator = " * ok !+"
+			} else if (rand == 15) {
+				wordSeperator = " ok! "
 			}
 			lastWordSeperated = true;
 		} else { // otherwise it's just a space
@@ -81,17 +99,36 @@ function cartify() {
 	cartiOutput = cartiOutput.replace(/,/g, ' ,');
 	cartiOutput = cartiOutput.replace(/\./g, ' .');
 	
-	// 4 different endings
+	// 4 different beginnings
 	rand = Math.floor(Math.random() * 4);
+	var beginning = "";
+	if (rand == 0) {
+		beginning = "*  *";
+	} else if (rand == 1) {
+		beginning = "*+!:) !!";
+	} else if (rand == 2) {
+		beginning = "🦋🦋🦋";
+	} else if (rand == 3) {
+		beginning = "+* ok ! 🖤"
+	}
+	
+	cartiOutput = beginning + "<br>" + cartiOutput;
+	
+	// 6 different endings
+	rand = Math.floor(Math.random() * 6);
 	var ending = "<br>";
 	if (rand == 0) {
-		ending += "ok !";
+		ending += "ok ! * +";
 	} else if (rand == 1) {
 		ending += "*+ _ SLATT !";
 	} else if (rand == 2) {
 		ending += "+:)  🍄🍄🍄";
 	} else if (rand == 3) {
 		ending += "++** +:) love ! Lit **!++";
+	} else if (rand == 4) {
+		ending += "* SLATT _ !";
+	} else if (rand == 5) {
+		ending += "++ 🖤#love *";
 	}
 	
 	cartiOutput += ending;
@@ -111,8 +148,8 @@ function cartify() {
 </head>
 <body>
 
-<h1>a ! 🖤 playboi carti 🖤^! text generator +:)
-<br> by *+ @lscorrcho ++** </h1>
+<h1>a +! 🖤 playboi carti 🖤^! text generator +:)
+<br> by *+ @lscorrcho ++** ok ! </h1>
 
 <textarea id="userinput" placeholder="enter your plain text here..." rows="10" cols="70">
 </textarea>
