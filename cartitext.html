@@ -1,0 +1,41 @@
+<html>
+<head>
+
+<script type="text/javascript">
+function cartify() {
+	// get the original text
+	var userInput = document.getElementById("userinput").value;
+	
+	// all caps?
+	var cartiOutput = userInput.toUpperCase();
+	
+	// look for all the punctuation, and add a space before it
+	cartiOutput = cartiOutput.replace(/!/g, ' !')
+	cartiOutput = cartiOutput.replace(/\?/g, ' \?');
+	cartiOutput = cartiOutput.replace(/,/g, ' ,');
+	// replace all the periods with exclamation marks
+	cartiOutput = cartiOutput.replace(/\./g, ' !');
+
+	document.getElementById("cartitext").innerHTML = cartiOutput;
+}
+
+</script>
+
+</head>
+<body>
+
+
+
+<textarea id="userinput" rows="10" cols="70">
+
+</textarea>
+<br><button onclick="cartify()">dothatshit!</button>
+
+<br><br><br><br>
+the * carti version !!:
+<div id="cartitext">
+asd
+</div>
+
+</body>
+</html>
