@@ -37,9 +37,11 @@ html,body {
 #playground {
 	flex-grow: 9.5;
 }
+/* 
 #instruction_div {
 	flex-grow: .25
 }
+ */
 #reset_div {
 	flex-grow: .25;
 }
@@ -56,17 +58,17 @@ html,body {
 
 <script>
 var top_z = 100;
-var instruction_visible = true;
+// var instruction_visible = true;
 $(function() {
 	$( ".draggable" ).draggable({
 		containment: "parent", // limit the dragging to within the parent container (the playground div)
 		scroll: false,
 		start: function() {
 			this.style.zIndex = ++top_z;
-			if (instruction_visible) {
-				$( "#instruction_div" ).text( " " );
-				instruction_visible = false;
-			}
+// 			if (instruction_visible) {
+// 				$( "#instruction_div" ).text( " " );
+// 				instruction_visible = false;
+// 			}
 		}
   	});
 });
@@ -114,9 +116,11 @@ $( function() {
 		<img id="29_red_16" class="draggable" src="images/intuitiveassets/29_red_16.png">
 		<img id="32_green_phone2" class="draggable" src="images/intuitiveassets/32_green_phone2.png">
 	</div>
+<!-- 
 	<div id="instruction_div">
 		Drag the images around with your mouse (desktop) or finger (mobile).
 	</div>
+ -->
 	<div id="reset_div">
 		<img src="images/intuitiveassets/reset.png" id="reset_img" alt="Reset positions" onclick="resetPositions()" height="60px" >
 	</div>
@@ -189,8 +193,8 @@ function resetPositions() {
     $( "#32_green_phone2" ).offset({ left: originLeft + 154 , top: originTop + 85 });
     
     
-	$( "#instruction_div" ).text( "Drag the images around with your mouse (desktop) or finger (mobile)." );
-	instruction_visible = true;
+// 	$( "#instruction_div" ).text( "Drag the images around with your mouse (desktop) or finger (mobile)." );
+// 	instruction_visible = true;
 	
 }
 
