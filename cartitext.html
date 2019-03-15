@@ -178,8 +178,8 @@ function cartify() {
 		}
 		rand = Math.floor(Math.random() * 2);
 		if (rand == 1 && !lastWordSeperated) {
-			// 16 different options of what the separator can be
-			rand = Math.floor(Math.random() * 16);
+			// 21 different options of what the separator can be
+			rand = Math.floor(Math.random() * 21);
 			if (rand == 0) {
 				wordSeperator = " ++** ";
 			} else if (rand == 1) {
@@ -200,7 +200,7 @@ function cartify() {
 				wordSeperator = "🖤& * ";
 			} else if (rand == 9) {
 				wordSeperator = " ..$ ";
-			} else if (rand == 10) {
+			} else if (rand == 10 || rand == 19) {
 				wordSeperator = " :( 💕 ";
 			} else if (rand == 11) {
 				wordSeperator = " *^! ";
@@ -209,9 +209,17 @@ function cartify() {
 			} else if (rand == 13) {
 				wordSeperator = " ^ 🦋* !+  ";
 			} else if (rand == 14) {
-				wordSeperator = " * ok !+"
+				wordSeperator = " * ok !+";
 			} else if (rand == 15) {
-				wordSeperator = " ok! "
+				wordSeperator = " ok! ";
+			} else if (rand == 16) {
+				wordSeperator = " . ";
+			} else if (rand == 17) {
+				wordSeperator = " 💔 ";
+			} else if (rand == 18) {
+				wordSeperator = " :( ";
+			} else if (rand == 20) {
+				wordSeperator = " 💔 +** ";
 			}
 			lastWordSeperated = true;
 		} else { // otherwise it's just a space
