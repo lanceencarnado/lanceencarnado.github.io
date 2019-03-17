@@ -105,11 +105,14 @@ function cartify() {
 	// get the original text
 	var userInput = document.getElementById("userinput").value;
 	
-	// change case (upper/lower) if necessary
 	var cartiOutput = userInput;
+	
+	// replace line break with linebreak AND SPACE
+	cartiOutput = cartiOutput.replace(/(\r\n|\n|\r)/gm," \n");
 	
 	// split into each word based on spaces and possibly add some separator
 	var words = cartiOutput.split(' ');
+	console.log(words);
 	cartiOutput = "";
 	var wordSeperator = ""; // could be just a space, or *+ or !.. or :( etc....
 	var rand = 1;
@@ -213,6 +216,8 @@ function cartify() {
 	}
 	
 	cartiOutput += ending;
+	
+	// change case (upper/lower) if necessary
 	
 	if (document.getElementById('upper').checked) {
   		cartiOutput = cartiOutput.toUpperCase();
