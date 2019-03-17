@@ -156,6 +156,7 @@ button {
 </style>
 
 <script type="text/javascript">
+
 function cartify() {
 	// get the original text
 	var userInput = document.getElementById("userinput").value;
@@ -281,6 +282,15 @@ function cartify() {
 	document.getElementById("cartitext").style.height = "100px";
 	
 	document.getElementById("cartitext").style.height = (document.getElementById("cartitext").scrollHeight) + "px";
+	
+	document.getElementById("copytoclipboard").disabled = false;
+}
+
+function copyText() {
+	var textToCopy = document.getElementById("cartitext");
+	textToCopy.select();
+	document.execCommand("copy");
+	alert("text copied ** - to clipboard ! ");
 }
 
 </script>
@@ -313,8 +323,8 @@ function cartify() {
 </div>
 
 <div id="dothatshit">
-<button onclick="cartify()">dothatshit!*</button>
-<button>copy to clipboard</button>
+<button onclick="cartify()" id="dothatshit">dothatshit!*</button>
+<button onclick="copyText()" id="copytoclipboard" disabled>copy to clipboard</button>
 <!-- <a href="#" class="myButton" onclick="cartify();return false;">dothatshit!</a> -->
 
 </div>
