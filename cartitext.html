@@ -9,14 +9,9 @@ by lance encarnado (2019)
 <html>
 <head>
 
-<meta name="viewport" content="width=650"/>
+<meta name="viewport" content="width=650">
 
 <title>Playboi Carti Text Generator **!++</title>
-<!-- 
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
--->
-
 <style>
 
 html, body, footer {
@@ -40,6 +35,17 @@ html, body {
   height: 140px;
 }
 
+/* TESTING AREA */
+
+/* 
+input[type='text']:focus,
+input[type='number']:focus,
+textarea:focus {
+	font-size: 16px;
+}
+ */
+
+/* END TESTING AREA */
 
 body, footer, textarea {
 	background-color: #e80b0b;
@@ -60,12 +66,19 @@ div {
 
 textarea {
     padding: 6px;
-    font-size:16px;
+    font-size:13px;
     color: black;
     background-color: #ffffff;
+    width:530px;
+    height:150px;
     /* border:1px solid #ffffff; */
 }
 
+@media only screen and (max-width: 768px) {
+	textarea {
+		font-size: 16px;
+	}
+}
 
 h1 {
 	padding: 6px;
@@ -237,7 +250,7 @@ function copyText() {
 
 <br>
 <div id="plaintextarea">
-<textarea id="userinput" placeholder="enter your plain text here..." rows="8" cols="68">
+<textarea id="userinput" placeholder="enter your plain text here...">
 </textarea>
 </div>
 <div id="caseselection">
@@ -254,7 +267,7 @@ function copyText() {
 </div>
 <br>
 <div id="cartitextarea">
-<textarea id="cartitext" placeholder="your ! carti text . will :( !^ appear here ++** 🦋" rows="8" cols="68" readonly>
+<textarea id="cartitext" placeholder="your ! carti text . will :( !^ appear here ++** 🦋" readonly>
 </textarea>
 </div>
 
