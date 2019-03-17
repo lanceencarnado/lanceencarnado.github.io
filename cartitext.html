@@ -35,8 +35,18 @@ html, body {
   height: 140px;
 }
 
-#tblogo_img:hover {
-  opacity: 0.5;
+/* logo hover effect on desktop */
+@media only screen and (min-width:768px)  {
+	#tblogo_img:hover {
+  		opacity: 0.5;
+	}
+}
+
+/* logo hover effect on mobile */
+@media only screen and (max-width:768px)  {
+	#tblogo_img:active {
+  		opacity: 0.5;
+	}
 }
 
 /* TESTING AREA */
@@ -100,23 +110,6 @@ h1 {
 	line-height: 1.4;
 }
 
-/* 
-button {
-	padding: 10px;
-	font-size: 13px;
-	border-radius: 5px;
-}
-
-@media only screen and (max-width: 768px) {
-	button {
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		appearance: none;
-		background-color: #ffffff;
-	}
-}
- */
-
 .button {
   background-color: #ffffff;
   border: 2px solid #dbdbdb;
@@ -135,10 +128,20 @@ button {
   margin-left: 10px;
 }
 
-.button:hover {
-	background-color: #dbdbdb;
+/* button hover effect on desktop */
+@media only screen and (min-width:768px)  {
+	.button:hover {
+		background-color: #dbdbdb;
+	}
 }
 
+/* button hover effect on mobile */
+@media only screen and (max-width:768px)
+{
+	.button:active {
+		background-color: #dbdbdb;
+	}
+}
 
 </style>
 
@@ -161,14 +164,14 @@ function cartify() {
 	var rand = 1;
 	var lastWordSeperated = false;
 	for (var i = 0; i < words.length; i++) {
-		// probability 1/2 that there will be some sort of non-space separator after a word
+		// probability 2/3 that there will be some sort of non-space separator after a word
 		// if the last word has a separator, this one won't
-		// unless there's less than 10 words
-		if (words.length < 10) {
+		// unless there's less than 25 words
+		if (words.length < 25) {
 			lastWordSeperated = false;
 		}
-		rand = Math.floor(Math.random() * 2);
-		if (rand == 1 && !lastWordSeperated) {
+		rand = Math.floor(Math.random() * 3);
+		if (rand != 1 && !lastWordSeperated) {
 			// 21 different options of what the separator can be
 			rand = Math.floor(Math.random() * 21);
 			if (rand == 0) {
@@ -315,7 +318,7 @@ function cartify() {
 <footer class="footer">
 playboi carti text generator
 <br>by @LScorrcho & @chrisorzel (2019)
-<br><br><a href="http://tacklebox.company/"><img id="tblogo_img" alt="Tacklebox" src="./textgenimg/tblogo_bling.png" height="65px"></a>
+<br><br><a href="http://tacklebox.company/" target="_blank"><img id="tblogo_img" alt="Tacklebox" src="./textgenimg/tblogo_bling.png" height="65px"></a>
 </footer>
 
 </body>
