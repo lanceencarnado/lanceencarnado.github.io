@@ -100,6 +100,18 @@ h1 {
 	line-height: 1.4;
 }
 
+button {
+	padding: 10px;
+	font-size: 13px;
+}
+
+@media only screen and (max-width: 768px) {
+	button {
+		-webkit-appearance: none;
+		background-color: #ffffff;
+	}
+}
+
 
 </style>
 
@@ -235,15 +247,6 @@ function cartify() {
 	document.getElementById("cartitext").style.height = "100px";
 	
 	document.getElementById("cartitext").style.height = (document.getElementById("cartitext").scrollHeight) + "px";
-	
-	document.getElementById("copytoclipboard").disabled = false;
-}
-
-function copyText() {
-	var textToCopy = document.getElementById("cartitext");
-	textToCopy.select();
-	document.execCommand("copy");
-	alert("text copied ** - to clipboard ! ");
 }
 
 </script>
@@ -271,8 +274,6 @@ function copyText() {
 <div id="dothatshit">
 <button onclick="cartify()" id="dothatshit">dothatshit!*</button>
 <button onclick="cartify()" id="redothatshit">redothatshit!*</button>
-<button onclick="copyText()" id="copytoclipboard" disabled>copy to clipboard</button>
-<!-- <a href="#" class="myButton" onclick="cartify();return false;">dothatshit!</a> -->
 
 </div>
 <br>
