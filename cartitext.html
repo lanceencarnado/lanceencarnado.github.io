@@ -100,16 +100,43 @@ h1 {
 	line-height: 1.4;
 }
 
+/* 
 button {
 	padding: 10px;
 	font-size: 13px;
+	border-radius: 5px;
 }
 
 @media only screen and (max-width: 768px) {
 	button {
 		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
 		background-color: #ffffff;
 	}
+}
+ */
+
+.button {
+  background-color: #ffffff;
+  border: 2px solid #dbdbdb;
+  border-radius: 5px;
+  color: black;
+  padding: 14px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.button:hover {
+	background-color: #dbdbdb;
 }
 
 
@@ -271,11 +298,11 @@ function cartify() {
   	<input type="radio" id="nochange" name="case" value="nochange"> no case change 
 </div>
 
-<div id="dothatshit">
-<button onclick="cartify()" id="dothatshit">dothatshit!*</button>
-<button onclick="cartify()" id="redothatshit">redothatshit!*</button>
-
+<div id="buttonsarea">
+<button class="button" onclick="cartify()" id="dothatshit">dothatshit!*</button>
+<button class="button" onclick="cartify()" id="redothatshit">redothatshit!*</button>
 </div>
+
 <br>
 <div id="cartitextarea">
 <textarea id="cartitext" placeholder="your ! carti text . will :( !^ appear here ++** 🦋" readonly>
