@@ -40,6 +40,11 @@ html, body {
   height: 140px;
 }
 
+/* this is to prevent zooming in on IOS when clicking on the textarea */
+body {
+	font-size: 16px;
+}
+
 body, footer, textarea {
 	background-color: #e80b0b;
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
@@ -57,7 +62,7 @@ div {
     font-size: 13px;
 }
 
-textarea, input[type="text"] {
+textarea {
     padding: 6px;
     font-size: 16px;
     color: black;
