@@ -2,8 +2,8 @@
 
 <!--
 playboi carti text generator
-coded by @lscorrcho // design by @chrisorzel (2019)
-* bring that money home, daddy waitin for it ++ !
+by lance encarnado (2019)
+* bring that money home, daddy waitin for it !
 -->
 
 <html>
@@ -12,17 +12,6 @@ coded by @lscorrcho // design by @chrisorzel (2019)
 <meta name="viewport" content="width=650">
 
 <title>Playboi Carti Text Generator **!++</title>
-
-<!-- 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff0000">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
- -->
-
 <style>
 
 html, body, footer {
@@ -60,7 +49,6 @@ html, body {
 	}
 }
 
-
 body, footer, textarea {
 	background-color: #e80b0b;
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
@@ -90,7 +78,7 @@ textarea {
 
 @media only screen and (max-width: 768px) {
 	textarea {
-		font-size: 22px;
+		font-size: 20px;
 	}
 }
 
@@ -110,6 +98,38 @@ h1 {
 	line-height: 1.4;
 }
 
+.button {
+  background-color: #ffffff;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  color: black;
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+/* button hover effect on desktop */
+@media only screen and (min-width:768px)  {
+	.button:hover {
+		background-color: #dbdbdb;
+	}
+}
+
+/* button hover effect on mobile */
+@media only screen and (max-width:768px)
+{
+	.button:active {
+		background-color: #dbdbdb;
+	}
+}
 
 </style>
 
@@ -128,7 +148,7 @@ function cartify() {
 	var words = cartiOutput.split(' ');
 	console.log(words);
 	cartiOutput = "";
-	var wordSeperator = "";  // could be just a space, or *+ or !.. or :( etc....
+	var wordSeperator = ""; // could be just a space, or *+ or !.. or :( etc....
 	var rand = 1;
 	var lastWordSeperated = false;
 	for (var i = 0; i < words.length; i++) {
@@ -140,6 +160,7 @@ function cartify() {
 		}
 		rand = Math.floor(Math.random() * 3);
 		if (rand != 1 && !lastWordSeperated) {
+			// 21 different options of what the separator can be
 			rand = Math.floor(Math.random() * 21);
 			if (rand == 0) {
 				wordSeperator = " ++** ";
@@ -254,7 +275,7 @@ function cartify() {
 <div class="wrapper">
 
 <div id="logo">
-<img src="./textgenimg/textgenlogo_bling_1200_8.png" alt="Playboi Carti Text Generator" width="625px" >
+<img src="./textgenimg/textgenlogo_bling.png" alt="Playboi Carti Text Generator" width="625px" >
 </div>
 
 <br>
@@ -269,10 +290,10 @@ function cartify() {
 </div>
 
 <div id="buttonsarea">
-<button onclick="cartify()" id="dothatshit">dothatshit!*</button>
-<button onclick="cartify()" id="redothatshit">redothatshit!*</button>
-
+<button class="button" onclick="cartify()" id="dothatshit">dothatshit!*</button>
+<button class="button" onclick="cartify()" id="redothatshit">redothatshit!*</button>
 </div>
+
 <br>
 <div id="cartitextarea">
 <textarea id="cartitext" placeholder="your ! carti text . will :( !^ appear here ++** 🦋" readonly>
@@ -285,7 +306,7 @@ function cartify() {
 <footer class="footer">
 playboi carti text generator
 <br>by @LScorrcho & @chrisorzel (2019)
-<br><br><a href="https://tacklebox.company/" target="_blank"><img id="tblogo_img" alt="Tacklebox" src="./textgenimg/tblogo_bling_1000_8.png" height="65px"></a>
+<br><br><a href="http://tacklebox.company/" target="_blank"><img id="tblogo_img" alt="Tacklebox" src="./textgenimg/tblogo_bling.png" height="65px"></a>
 </footer>
 
 </body>
