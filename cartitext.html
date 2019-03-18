@@ -116,25 +116,19 @@ h1 {
 <script type="text/javascript">
 
 function cartify() {
-	// get the original text
 	var userInput = document.getElementById("userinput").value;
 	
 	var cartiOutput = userInput;
 	
-	// replace line break with linebreak AND SPACE
 	cartiOutput = cartiOutput.replace(/(\r\n|\n|\r)/gm," \n");
 	
-	// split into each word based on spaces and possibly add some separator
 	var words = cartiOutput.split(' ');
 	console.log(words);
 	cartiOutput = "";
-	var wordSeperator = "";  // could be just a space, or *+ or !.. or :( etc....
+	var wordSeperator = "";
 	var rand = 1;
 	var lastWordSeperated = false;
 	for (var i = 0; i < words.length; i++) {
-		// probability 2/3 that there will be some sort of non-space separator after a word
-		// if the last word has a separator, this one won't
-		// unless there's less than 25 words
 		if (words.length < 25) {
 			lastWordSeperated = false;
 		}
@@ -183,20 +177,18 @@ function cartify() {
 				wordSeperator = " 💔 +** ";
 			}
 			lastWordSeperated = true;
-		} else { // otherwise it's just a space
+		} else {
 			wordSeperator = " ";
 			lastWordSeperated = false;
 		}
 		cartiOutput += words[i] + wordSeperator;
 	}
 	
-	// look for all the punctuation, and add a space before it
 	cartiOutput = cartiOutput.replace(/!/g, ' !')
 	cartiOutput = cartiOutput.replace(/\?/g, ' \?');
 	cartiOutput = cartiOutput.replace(/,/g, ' ,');
 	cartiOutput = cartiOutput.replace(/\./g, ' .');
 	
-	// 4 different beginnings
 	rand = Math.floor(Math.random() * 4);
 	var beginning = "";
 	if (rand == 0) {
@@ -211,7 +203,6 @@ function cartify() {
 	
 	cartiOutput = beginning + "\n" + cartiOutput;
 	
-	// 6 different endings
 	rand = Math.floor(Math.random() * 6);
 	var ending = "\n";
 	if (rand == 0) {
@@ -230,7 +221,6 @@ function cartify() {
 	
 	cartiOutput += ending;
 	
-	// change case (upper/lower) if necessary
 	
 	if (document.getElementById('upper').checked) {
   		cartiOutput = cartiOutput.toUpperCase();
