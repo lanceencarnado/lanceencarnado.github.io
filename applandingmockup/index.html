@@ -36,16 +36,18 @@ html, body {
 body, footer, textarea {
 	background-color: #e80b0b;
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   	font-weight: 300;
+   	font-weight: 400;
    	color: #ffffff;
    	margin-left: 50px;
    	margin-right: 50px;
+   	font-size: 12pt;
 }
 
 h1 {
 	font-weight: 400;
 	font-size: 18pt;
 }
+
 
 .content {
 	display: flex;
@@ -70,6 +72,14 @@ h1 {
 	#tblogo_img:active {
   		opacity: 0.5;
 	}
+}
+
+/* mobile - stop text size from adjusting */
+@media only screen and (max-width:768px)  {
+  	body {
+    	-webkit-text-size-adjust: none;
+    	font-size: 14pt;
+  	}
 }
 
 img {
@@ -99,9 +109,8 @@ img {
 <div id="appstore">
 <h1> download carti voice for iOS +* ok ! 🖤</h1>
 <br><img src="./img/iosmockup.png" alt="screenshot of cartivoice" height="300px" >
-<br> ^ this would be a mockup screenshot
 <br><br>the playboi carti text generator is now available on the app store.
-<br> with new symbols, beginnings and endings, as well as the ability to copy to clipboard
+<br>new symbols, beginnings and endings, as well as the ability to copy to clipboard
 <br> - tell a friend * 🦋🦋
 </div>
 
