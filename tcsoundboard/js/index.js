@@ -71,24 +71,23 @@ class App extends React.Component {
     super(props);
     this.state = {
       sounds: [
-      { id: 1, soundName: 'TIME CRISIS INTRO', soundURL: './sounds/timecrisisintrodrop.mp3', isPlaying: false },
+      { id: 1, soundName: 'TIME CRISIS INTRO', soundURL: './sounds/tcintro.mp3', isPlaying: false },
       { id: 2, soundName: 'SEINFELD NUMBER CRUNCH', soundURL: './sounds/seinfeldnumbercrunch.mp3', isPlaying: false },
-      { id: 3, soundName: 'BUT IN MY NEIGHBOR- HOOD...', soundURL: './sounds/seinfeldnumbercrunch.mp3', isPlaying: false },
-      { id: 4, soundName: '8 MINUTE CAPE COD', soundURL: './sounds/seinfeldnumbercrunch.mp3', isPlaying: false },
-      { id: 5, soundName: 'CORPORATE FOOD HISTORY LINE LINEEEEE', soundURL: './sounds/seinfeldnumbercrunch.mp3', isPlaying: false },
-      { id: 6, soundName: 'BOOP', soundURL: './sounds/seinfeldnumbercrunch.mp3', isPlaying: false }] };
+      { id: 3, soundName: 'DIET COKE: BECAUSE I CAN', soundURL: './sounds/dietcoke.mp3', isPlaying: false },
+      { id: 4, soundName: 'TIME CRISIS MAILBAG', soundURL: './sounds/tcmailbag.mp3', isPlaying: false },
+      { id: 5, soundName: 'BORGESIAN', soundURL: './sounds/borgesian.mp3', isPlaying: false },
+      { id: 6, soundName: 'ROCK\'S PLAYED OUT, DOG', soundURL: './sounds/rocksplayedout.mp3', isPlaying: false }] };
 
 
   }
   render() {
     return (
       React.createElement("div", null,
-      React.createElement("div", {className: "logodiv"}, React.createElement('img', {className: "logoimg", src: "assets/logo.png"})),
       React.createElement(Board, { sounds: this.state.sounds, audio: this.state.audio }),
-      React.createElement("p", null, "PLACEHOLDER FOOTER INFO")));
+      React.createElement("div", {className: "footerdiv"}, "BY LANCE ENCARNADO (@LSCORRCHO) I'LL ADD SOME STUFF ABOUT THIS BEING INSPIRED BY EZRA / JAKE ETC. LATER.")));
 
 
   }}
 ;
 
-ReactDOM.render(React.createElement(App, null), document.getElementById('root'));
+ReactDOM.render(React.createElement(App, null), document.getElementById('soundboard'));

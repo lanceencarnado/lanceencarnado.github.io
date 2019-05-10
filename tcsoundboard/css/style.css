@@ -8,7 +8,7 @@ html {
 body {
   font-family: Futura, "Century Gothic", sans-serif;
   font-weight: bold;
-  font-size: 2vw;
+  font-size: 1.8vw;
   background-color: white;
 }
 
@@ -20,7 +20,6 @@ body {
 .logoimg {
   width: 100%;
   height: auto;
-  /* Magic! */
   max-width: 40vw;
   padding: 20px;
   padding-bottom: 40px;
@@ -30,23 +29,32 @@ p {
   text-align: center;
 }
 
+.footerdiv {
+  padding-top: 75px;
+  font-weight: normal;
+  width: 80vw;
+  margin: auto;
+  text-align: center;
+  font-size: 1.25vw;
+}
+
 a {
   color: white;
 }
 
 .appContainer {
   margin: auto;
-  width: 90vw;
+  width: 80vw;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-auto-rows: 18vw;
-  grid-gap: 15px;
+  grid-auto-rows: 16vw; /* this has to be appContainer width / 5 */
+  grid-gap: 1vw;
 }
 
 .sound-card {
   display: flex;
-  align-items: center;      /* new */
-  justify-content: center;  /* new */
+  align-items: center;
+  justify-content: center;
   text-align: center;
   background-color: #FFFFFF;
   color: #5BAF59;
@@ -69,7 +77,7 @@ a {
 	width: 80vw;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-auto-rows: 26vw;
+	grid-auto-rows: 26vw;  /* this has to be appContainer width / 3 */
 	grid-gap: 15px;
   }
   
@@ -88,6 +96,10 @@ a {
   
   body {
   	font-size: 2.65vw;
+  }
+  
+  .footerdiv {
+  	 font-size: 1.75vw;
   }
 
 }
