@@ -84,8 +84,11 @@ a {
   .logoimg {
     width: 100%;
     height: auto;
-    max-width: 70vw;
-    padding: 20px;
+    max-width: 75vw;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
   }
   
   .sound-card {
