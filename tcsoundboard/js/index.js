@@ -83,8 +83,7 @@ class App extends React.Component {
   render() {
     return (
       React.createElement("div", null,
-      React.createElement(Board, { sounds: this.state.sounds, audio: this.state.audio }),
-      React.createElement("div", {className: "footerdiv"}, "BY LANCE ENCARNADO (@LSCORRCHO) I'LL ADD SOME STUFF ABOUT THIS BEING INSPIRED BY EZRA / JAKE ETC. LATER.")));
+      React.createElement(Board, { sounds: this.state.sounds, audio: this.state.audio })));
 
 
   }}
