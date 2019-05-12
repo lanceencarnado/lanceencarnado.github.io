@@ -11,7 +11,7 @@ body {
 .borderdiv {
   border-left-style: solid;
   border-width: 30px;
-  border-color: orange;
+  border-color: #eb8932;
 }
 
 .logodiv {
