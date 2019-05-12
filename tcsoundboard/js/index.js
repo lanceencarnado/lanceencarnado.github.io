@@ -1,5 +1,3 @@
-// Hit the gear icon to the left of JS in the header to open JavaScript settings
-
 class Board extends React.Component {
   constructor(props) {
 	super(props);
@@ -11,7 +9,7 @@ class Board extends React.Component {
   }
 
   playSound(id) {
-	// comment this if statement out to let them overlap
+	// comment this if statement out to let the clips overlap
 	if (this.state.audio.currentlyPlaying) {
 	  let snd = this.state.audio.sound;
 	  snd.pause();
