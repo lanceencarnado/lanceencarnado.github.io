@@ -9,7 +9,7 @@ coded by @lscorrcho // design by @chrisorzel (2019)
 <html>
 <head>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=650">
 <meta name="description" content="Playboi Carti text generator. Fan-made and not affiliated with Playboi Carti.">
 <meta name="keywords" content="playboi carti text generator, carti voice, playboi, carti, text, generator">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -38,18 +38,27 @@ body, footer, textarea {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
    	font-weight: 400;
    	color: #ffffff;
-   	margin-left: 15px;
-   	margin-right: 15px;
-   	font-size: 15pt;
+   	margin-left: 50px;
+   	margin-right: 50px;
+   	font-size: 12pt;
+}
+
+h1 {
+	font-weight: 400;
+	font-size: 18pt;
 }
 
 
-/* 
 .content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	display: -webkit-flex; /* Safari */
+  	-webkit-justify-content: space-between; /* Safari 6.1+ */
+  	display: flex;
   	height: 100%;
   	min-height: 100%;
 }
- */
 
 /* logo hover effect on desktop */
 @media only screen and (min-width:768px)  {
@@ -69,14 +78,8 @@ body, footer, textarea {
 @media only screen and (max-width:768px)  {
   	body {
     	-webkit-text-size-adjust: none;
-    	font-size: 12pt;
+    	font-size: 14pt;
   	}
-}
-
-@media only screen and (max-width:768px)  {
-	#appstorelinkimg {
-		width: 150px;
-	}
 }
 
 img {
@@ -90,16 +93,6 @@ img {
 
 #tblogo {
 	padding-bottom: 15px;
-	font-size: 14px;
-}
-
-#appstorelink {
-	/* padding-bottom: 10px; */
-}
-
-#apptext {
-	padding-bottom: 15px;
-	line-height: 2;
 }
 
 </style>
@@ -115,21 +108,18 @@ img {
 
 <div id="appstore">
 <!-- <h1> download carti voice for iOS +* ok ! 🖤</h1> -->
-<div id="appstorelink">
-	<br><img src="./img/downloadappstore.png" id="appstorelinkimg" alt="Download Carti Voice on the App Store" width="200px" >
+<br><img src="./img/iosmockup.png" alt="screenshot of cartivoice" width="1200px" >
+<br><br>the playboi carti text generator is now available on the app store.
+<br>new symbols, beginnings and endings, as well as the ability to copy to clipboard
+<br> - tell a friend * 🦋🦋
 </div>
-<div id="apptext">
-	<br>• Bug fixes and performance improvements!
-	<br>• More Carti-isms!
-	<br>• Optimized for Mobile use!
-	<br>• Text like Carti *^!
-</div>
-<br><img src="./img/iosmockup.png" alt="Screenshot of Carti Voice" width="1400px" >
+
+<div id="linktoappstore">
+<img id="appstore" alt="download carti voice on the app store" src="./img/downloadapp_black.svg" width="180px"">
 </div>
 
 <div id="tblogo">
-playboi carti text generator
-<br><a href="https://tacklebox.company/" target="_blank"><img id="tblogo_img" alt="Tacklebox" src="./img/tblogo.png" height="65px"></a>
+<a href="https://tacklebox.company/" target="_blank"><img id="tblogo_img" alt="Tacklebox" src="./img/tblogo.png" height="65px"></a>
 </div>
 
 </div>
