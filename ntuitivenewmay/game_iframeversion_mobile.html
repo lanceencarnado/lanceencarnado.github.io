@@ -8,6 +8,7 @@
 <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
 <script src="https://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
 <script src="scripts/jquery.ui.touch-punch.min.js"></script>
+<meta name="viewport" content="width=750" />
 
 
 <style>
@@ -166,16 +167,10 @@ function resetPositions() {
     // find the midpoint width of the div to place the structure in the middle
     var widthMidpoint = $( "#playground" ).width() / 2;
     // var originLeft =  widthMidpoint - 193; // width of full obj is 386, div by 2 is 193
-    if (window.innerWidth > 1200) {
-    	var originLeft =  widthMidpoint - 177;
-    }
-    else {
-    	var originLeft =  407;
-    }
+    var originLeft =  widthMidpoint - 177 - 5;
     
     var heightMidpoint = $( "#playground" ).height() / 2;
-    // var originTop = heightMidpoint - 167; // height of full obj is 335
-    var originTop = 322 - 109;
+    var originTop = heightMidpoint - 167 - 42; // height of full obj is 335
     
     $( "#12_yellow_asset15" ).offset({ left: originLeft + (574 - yellowLeft), top: originTop + (359 - yellowTop) });
     $( "#14_yellow_asset8" ).offset({ left: originLeft, top: originTop });
