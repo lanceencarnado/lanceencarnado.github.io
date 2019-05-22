@@ -55,21 +55,40 @@ html,body {
   opacity: 0.5;
 }
 
+.ui-widget-header {
+	background: transparent;
+	border-style: none;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+	padding: 0px;
+}
+
+p {
+    margin-block-start: 0.2em;
+    margin-block-end: 0.2em;
+    text-align: center;
+}
+
+
 </style>
 </head>
 <body>
 
-<div id="dialog" title="How to play">
+<div id="dialog">
   <p>Hold and drag the blocks to your own understanding.</p>
 </div>
 
 <script>
 // this makes the dialog div a dialog
-$( function() {
-	$( "#dialog" ).dialog({
-		dialogClass: "no-titlebar"
-	});
-} );
+$( document ).ready(function() {
+    $( function() {
+		$( "#dialog" ).dialog({
+			height: 85,
+			position: ['center',550],
+		});
+	} );
+});
 </script>
 
 <script>
