@@ -82,12 +82,14 @@ p {
 
 <script>
 // this makes the dialog div a dialog
-$( function() {
-	$( "#dialog" ).dialog({
-		height: 85,
-		position: { my: "center", at: "center", of: window }
-	});
-} );
+$( document ).ready(function() {
+    $( function() {
+		$( "#dialog" ).dialog({
+			height: 85,
+			position: ['center',650],
+		});
+	} );
+});
 </script>
 
 <script>
