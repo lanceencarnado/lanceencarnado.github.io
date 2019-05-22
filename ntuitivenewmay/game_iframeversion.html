@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- using this stylesheet for the dialog -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="https://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
+<script src="scripts/jquery.ui.touch-punch.min.js"></script>
+
+
+<style>
+html,body {
+	height: 98%;
+}
+
+.draggable {
+	position:absolute;
+}
+
+.flex-container {
+  display: flex;
+  height: 100%;
+  flex-wrap: wrap;
+  align-content: stretch;
+  flex-direction: column;
+}
+
+.flex-container > div {
+  width: 99%;
+  margin: 2px;
+  text-align: center;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+#playground {
+	/* flex-grow: 9.5; */
+	flex-grow: 9.75;
+}
+/* 
+#instruction_div {
+	flex-grow: .25
+}
+ */
+#reset_div {
+	flex-grow: .25;
+}
+#reset_img {
+	cursor: pointer;
+}
+#reset_img:hover {
+  opacity: 0.5;
+}
+
+</style>
+</head>
+<body>
+
+<div id="dialog" title="How to play">
+  <p>Hold and drag the blocks to your own understanding.</p>
+</div>
+
+<script>
+// this makes the dialog div a dialog
+$( function() {
+	$( "#dialog" ).dialog({
+		dialogClass: "no-titlebar"
+	});
+} );
+</script>
+
+<script>
+var top_z = 100;
+// var instruction_visible = true;
+$(function() {
+	$( ".draggable" ).draggable({
+		containment: "parent", // limit the dragging to within the parent container (the playground div)
+		scroll: false,
+		start: function() {
+			this.style.zIndex = ++top_z;
+// 			if (instruction_visible) {
+// 				$( "#instruction_div" ).text( " " );
+// 				instruction_visible = false;
+// 			}
+		}
+  	});
+});
+
+$(document).on("click",".draggable", function (event) {
+	this.style.zIndex = ++top_z;
+});
+</script>
+
+<!-- 
+<script>
+$( function() {
+	$( "#dialog" ).dialog();
+} );
+</script>
+
+<div id="dialog" title="How to play">
+  <p>Drag the images around with your mouse (desktop) or finger (mobile).</p>
+</div>
+ -->
+
+
+<div class='flex-container'> 
+	<div class="content" id="playground">
+		<img id="12_yellow_asset15" class="draggable" src="images/12_yellow_asset15.svg" width="136px" height="168px">
+		<img id="14_yellow_asset8" class="draggable" src="images/14_yellow_asset8.svg" width="227px" height="252px">
+		<img id="16_green_asset22" class="draggable" src="images/16_green_asset22.svg" width="182px" height="175px">
+		<img id="17_red_asset19" class="draggable" src="images/17_red_asset19.svg" width="196px" height="201px">
+		<img id="18_purple_asset17" class="draggable" src="images/18_purple_asset17.svg" width="164px" height="161px">
+		<img id="19_blue_asset10" class="draggable" src="images/19_blue_asset10.svg" width="139px" height="165px">
+		<img id="20_yellow_asset8" class="draggable" src="images/20_yellow_asset8.svg" width="228px" height="252px">
+		<img id="21_red_asset19" class="draggable" src="images/21_red_asset19.svg" width="196px" height="201px">
+		<img id="23_green_asset4" class="draggable" src="images/23_green_asset4.svg" width="88px" height="89px">
+		<img id="24_purple_asset17" class="draggable" src="images/24_purple_asset17.svg" width="164px" height="161px">
+		<img id="26_yellow_asset24" class="draggable" src="images/26_yellow_asset24.svg" width="102px" height="84px">
+		<img id="27_blue_asset23" class="draggable" src="images/27_blue_asset23.svg" width="97px" height="78px">
+		<img id="28_red_asset5" class="draggable" src="images/28_red_asset5.svg" width="85px" height="90px">
+		<img id="29_green_asset22" class="draggable" src="images/29_green_asset22.svg" width="182px" height="175px">
+		<img id="31_blue_asset10" class="draggable" src="images/31_blue_asset10.svg" width="139px" height="165px">
+		<img id="33_purple_asset25" class="draggable" src="images/33_purple_asset25.svg" width="94px" height="96px">
+	</div>
+<!-- 
+	<div id="instruction_div">
+		Drag the images around with your mouse (desktop) or finger (mobile).
+	</div>
+ -->
+	<div id="reset_div">
+		<img src="images/reset.png" id="reset_img" alt="Reset positions" onclick="resetPositions()" height="60px" >
+	</div>
+</div>
+
+
+<script>
+
+function resetPositions() {
+    // reset zIndexes as well
+    $( "#12_yellow_asset15" ).css("z-index", "12");
+    $( "#14_yellow_asset8" ).css("z-index", "14");
+    $( "#16_green_asset22" ).css("z-index", "16");
+    $( "#17_red_asset19" ).css("z-index", "17");
+    $( "#18_purple_asset17" ).css("z-index", "18");
+    $( "#19_blue_asset10" ).css("z-index", "19");
+    $( "#20_yellow_asset8" ).css("z-index", "20");
+    $( "#21_red_asset19" ).css("z-index", "21");
+    $( "#23_green_asset4" ).css("z-index", "23");
+    $( "#24_purple_asset17" ).css("z-index", "24");
+    $( "#26_yellow_asset24" ).css("z-index", "26");
+    $( "#27_blue_asset23" ).css("z-index", "27");
+    $( "#28_red_asset5" ).css("z-index", "28");
+    $( "#29_green_asset22" ).css("z-index", "29");
+    $( "#31_blue_asset10" ).css("z-index", "31");
+    $( "#33_purple_asset25" ).css("z-index", "33");
+    
+    // yellow origins based on 14_yellow_asset8 - it's leftmost (but not topmost)
+    var yellowLeft = 407;
+    var yellowTop = 321;
+    
+    // ALL THIS GETS UNCOMMENTED WHEN EVERYTHING'S PLACED
+    // find the midpoint width of the div to place the structure in the middle
+    var widthMidpoint = $( "#playground" ).width() / 2;
+    // var originLeft =  widthMidpoint - 193; // width of full obj is 386, div by 2 is 193
+    if (window.innerWidth > 1200) {
+    	var originLeft =  widthMidpoint - 177;
+    }
+    else {
+    	var originLeft =  407;
+    }
+    
+    var heightMidpoint = $( "#playground" ).height() / 2;
+    // var originTop = heightMidpoint - 167; // height of full obj is 335
+    var originTop = 322 - 109;
+    
+    $( "#12_yellow_asset15" ).offset({ left: originLeft + (574 - yellowLeft), top: originTop + (359 - yellowTop) });
+    $( "#14_yellow_asset8" ).offset({ left: originLeft, top: originTop });
+    $( "#16_green_asset22" ).offset({ left: originLeft + (477 - yellowLeft), top: originTop + (417 - yellowTop) });
+    $( "#17_red_asset19" ).offset({ left: originLeft + (441 - yellowLeft), top: originTop + (257 - yellowTop) });
+    $( "#18_purple_asset17" ).offset({ left: originLeft + (587 - yellowLeft), top: originTop + (277 - yellowTop) });
+    $( "#19_blue_asset10" ).offset({ left: originLeft + (474 - yellowLeft), top: originTop + (418 - yellowTop) });
+    $( "#20_yellow_asset8" ).offset({ left: originLeft + (545 - yellowLeft), top: originTop + (314 - yellowTop) });
+    $( "#21_red_asset19" ).offset({ left: originLeft + (597 - yellowLeft), top: originTop + (369 - yellowTop) });
+    $( "#23_green_asset4" ).offset({ left: originLeft + (431 - yellowLeft), top: originTop + (423 - yellowTop) });
+    $( "#24_purple_asset17" ).offset({ left: originLeft + (477 - yellowLeft), top: originTop + (331 - yellowTop) });
+    $( "#26_yellow_asset24" ).offset({ left: originLeft + (464 - yellowLeft), top: originTop + (323 - yellowTop) });
+    $( "#27_blue_asset23" ).offset({ left: originLeft + (516 - yellowLeft), top: originTop + (302 - yellowTop) });
+    $( "#28_red_asset5" ).offset({ left: originLeft + (521 - yellowLeft), top: originTop + (430 - yellowTop) });
+    $( "#29_green_asset22" ).offset({ left: originLeft + (545 - yellowLeft), top: originTop + (317 - yellowTop) });
+    $( "#31_blue_asset10" ).offset({ left: originLeft + (641 - yellowLeft), top: originTop + (421 - yellowTop) });
+    $( "#33_purple_asset25" ).offset({ left: originLeft + (603 - yellowLeft), top: originTop + (381 - yellowTop) });
+    
+// 	$( "#instruction_div" ).text( "Drag the images around with your mouse (desktop) or finger (mobile)." );
+// 	instruction_visible = true;
+	
+}
+
+
+window.onload = function() {
+	resetPositions();
+};
+</script>
+
+</body>
+</html>
