@@ -79,7 +79,9 @@ class App extends React.Component {
 	  { id: 8, soundName: 'THIS SHOW RULES', soundURL: './sounds/thisshowrules.mp3', isPlaying: false }, 
 	  { id: 9, soundName: 'BUT IN MY NEIGHBOR- HOOD...', soundURL: './sounds/butinmyneighborhood.mp3', isPlaying: false },
 	  { id: 10, soundName: 'TIME CRISIS HOTLINE', soundURL: './sounds/tchotline.mp3', isPlaying: false },
-	  { id: 11, soundName: 'SWEET CHILI HEAT® WORLD PREMIERE', soundURL: './sounds/tcsweetchilipremiere.mp3', isPlaying: false }, 
+	  { id: 11, soundName: 'SWEET CHILI HEAT® WORLD PREMIERE', soundURL: './sounds/tcsweetchilipremiere.mp3', isPlaying: false },
+	  { id: 12, soundName: 'BUFF TRAFFIC SITCH', soundURL: './sounds/bufftrafficsitch.mp3', isPlaying: false },
+	  { id: 13, soundName: 'BRUTAL', soundURL: './sounds/brutal.mp3', isPlaying: false }, 
 	  ]};
 
 
