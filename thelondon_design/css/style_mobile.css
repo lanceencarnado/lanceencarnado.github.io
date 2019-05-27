@@ -47,7 +47,7 @@ figure figcaption {
 .logodiv {
 	margin: auto;
 	padding-top: 30px;
-	width: 35%;
+	width: 45%;
 }
 
 /* applies to thuginitialimg and thuggeneratedimg */
@@ -85,7 +85,7 @@ figure figcaption {
 }
 
 #tbfooter {
-	width: 200px;
+	width: 280px;
 	padding-top: 30px;
 	padding-bottom: 80px;
 	margin: auto;
@@ -146,13 +146,13 @@ figure figcaption {
 }
 
 .streaming {
-	width: 400px;
+	width: 500px;
 	margin: auto;
 	text-align: center;
 }
 
 .streamingimg {
-	width: 150px;
+	width: 200px;
 	margin: 12px 20px;
 }
  
