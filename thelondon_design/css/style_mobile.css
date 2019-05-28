@@ -92,6 +92,10 @@ figure figcaption {
 	margin: auto;
 }
 
+#tblogo_img:active {
+	opacity: 0.75;
+}
+
 /* scale the snake canvas to be 600x600 (it's 800x800 natively) */
 /* nevermind - we're gonna make the canvas invisible so it doesn't matter */
 /* 
@@ -153,9 +157,19 @@ figure figcaption {
 	padding-top: 15px;
 }
 
+.streaminglink {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
 .streamingimg {
 	width: 200px;
-	margin: 12px 20px;
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+.streamingimg:active {
+	opacity: 0.75;
 }
  
   /* adding the face as an outline */
