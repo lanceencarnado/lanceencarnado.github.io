@@ -85,9 +85,16 @@ figure figcaption {
 	width: 200px;
 }
 
+#ysl300footer {
+	width: 575px;
+	padding-top: 45px;
+	padding-bottom: 45px;
+	margin: auto;
+}
+
+
 #tbfooter {
 	width: 300px;
-	padding-top: 45px;
 	padding-bottom: 80px;
 	margin: auto;
 }

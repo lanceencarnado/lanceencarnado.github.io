@@ -97,9 +97,15 @@ figure figcaption {
 }
  */
 
-#tbfooter {
-	width: 200px;
+#ysl300footer {
+	width: 400px;
 	padding-top: 30px;
+	padding-bottom: 25px;
+	margin: auto;
+}
+
+#tbfooter {
+	width: 215px;
 	padding-bottom: 30px;
 	margin: auto;
 }
