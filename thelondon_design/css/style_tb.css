@@ -1,0 +1,198 @@
+html {
+/* 	background-color: #000000; */
+}
+
+body {
+	background-image: url("../images/bg.gif");
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: right top;
+	background-repeat: no-repeat;
+	/* height: 100%; */
+}
+
+label.cabinet{
+	display: block;
+	cursor: pointer;
+}
+
+label.cabinet input.file{
+	position: relative;
+	height: 100%;
+	width: auto;
+	opacity: 0;
+	-moz-opacity: 0;
+  	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+  	margin-top:-30px;
+}
+
+#upload-demo{
+	width: 500px;
+	height: 450px;
+  	padding-bottom:25px;
+}
+
+figure figcaption {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    width: 100%;
+    padding-left: 9px;
+    padding-bottom: 5px;
+    text-shadow: 0 0 10px #000;
+}
+
+.logodiv {
+	margin: auto;
+	padding-top: 30px;
+	width: 275px;
+}
+
+/* applies to thuginitialimg and thuggeneratedimg */
+.thugimg {
+	width: 400px;
+}
+
+.container {
+	width: 840px;
+	margin: auto;
+}
+
+.row {
+	display: flex;
+	text-align: center;
+  	justify-content: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	/* flex-wrap: wrap; */
+}
+
+.column {
+ 	/* flex: 50%; */
+ 	margin: 20px;
+}
+
+.buttonsdiv {
+	/* 	background */
+/* 
+	background-color: rgba(0, 0, 0, 0.6);
+	border: 3px solid rgba(255, 255, 255, 1);
+ */
+	
+	text-align: center;
+	margin: auto;
+	/* width: 400px; */
+	/* padding: 20px; */
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+	font-size: 20px;
+	text-align: center;
+	color: black;
+}
+
+/* 
+.button {
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 200px;
+}
+ */
+
+#tbfooter {
+	width: 200px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin: auto;
+}
+
+#tblogo_img:hover {
+	opacity: 0.75;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	background-color: #2196F3;
+	padding: 10px;
+}
+.grid-item {
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 1px solid rgba(0, 0, 0, 0.8);
+	padding: 20px;
+	font-size: 30px;
+	text-align: center;
+}
+
+.custombutton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background-color:#f9f9f9;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:16px;
+	font-weight:bold;
+	padding:12px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+	width:200px;
+ 	margin-left: 116px;
+ 	margin-right: 116px;
+	margin-bottom: 35px;
+}
+
+.custombutton:hover {
+	background-color:#e9e9e9;
+}
+.custombutton:active {
+	position:relative;
+	top:1px;
+}
+
+.streaming {
+	width: 400px;
+	margin: auto;
+	text-align: center;
+}
+
+.streaminglink {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.streamingimg {
+	width: 150px;
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+.streamingimg:hover {
+	opacity: 0.75;
+}
+
+/* scale the snake canvas to be 600x600 (it's 800x800 natively) */
+/* nevermind - we're gonna make the canvas invisible so it doesn't matter */
+/* 
+#thugcanvas {
+	transform: scale(0.625, 0.625);
+	transform-origin: top center;
+}
+ */
+
+/* 
+.thugcanvasdiv {
+	margin: auto;
+	text-align: center;
+}
+ */
+ 
+ /* adding the face as an outline */
+.cr-viewport {
+	background-image: url("../images/faceguide.png");
+	pointer-events: none;
+}

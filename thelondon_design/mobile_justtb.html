@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<!-- 
+TODO: WHEN PRESSING THE GENERATE THUG PIC BUTTON, HAVE IT SCROLL TO THE CANVAS DIV
+WITH THE "SAVE IMAGE" BUTTON UNDER IT
+ -->
+
+<!-- 
+the london
+pimp talk, church talk, i can make a brick walk
+coded by @LScorrcho (2019)
+-->
+
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>#MeetMeAtTheLondon</title>
+<link rel="stylesheet" href="css/style_mobile.css">
+<link rel='stylesheet' href='js/croppie.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+</head>
+
+<body>
+
+<div class="logodiv">
+	<img class="logoimg" src="images/logo.png" alt="Meet Me At The London" width="100%">
+</div>
+
+<div id="thuginitialdiv" class="thugimgdiv">
+	<img class="thugimg" id="thuginitialimg" src="images/thug_initial.jpg" alt="Young Thug" width="100%">
+</div>
+
+<div class="buttonsdiv">
+		<input type="file" id="selectedFace" class="uploadface-btn" name="file_photo" style="display: none;" />
+<!-- 
+		<input type="button" class="button" value="UPLOAD FACE" onclick="document.getElementById('selectedFace').click();" />
+		<input type="button" class="button" value="SAVE IMAGE" onclick="document.getElementById('selectedFace').click();" />
+ -->
+ 		<a href="#" class="custombutton" onclick="document.getElementById('selectedFace').click();return false;">UPLOAD FACE</a>
+		<a href="#" class="custombutton" onclick="document.getElementById('selectedFace').click();return false;">SAVE IMAGE</a>
+</div>
+
+<div id="thuggenerateddiv" class="thugimgdiv">
+	<img class="thugimg" id="thuggeneratedimg" src="images/thug_questionmark.jpg" alt="Young Thug">
+</div>
+
+<div class="streaming">
+	<a href="https://open.spotify.com/album/6p9Y1K9yu3ojyS8fBJXUnp" class="streaminglink" target="_blank">
+		<img class="streamingimg" id="spotify" src="images/dsp_logos/spotify.png" alt="Listen on Apple Music">
+	</a>
+	<a href="https://music.apple.com/us/album/the-london-feat-j-cole-travis-scott-single/1465154493?app=music&at=1001lwQy" class="streaminglink" target="_blank">
+		<img class="streamingimg" id="apple" src="images/dsp_logos/apple.png" alt="Listen on Apple Music">
+	</a>
+	<br><a href="http://www.tidal.com/album/109905247" class="streaminglink" target="_blank">
+		<img class="streamingimg" id="tidal" src="images/dsp_logos/tidal.png" alt="Listen on Tidal">
+	</a>
+	<a href="https://www.youtube.com/watch?v=OKhT_6XtD7I" class="streaminglink" target="_blank">
+		<img class="streamingimg" id="apple" src="images/dsp_logos/youtube.png" alt="Listen on YouTube">
+	</a>
+	<br><a href="https://soundcloud.com/youngthugworld/the-london/s-UkTTK" class="streaminglink" target="_blank">
+		<img class="streamingimg" id="soundcloud" src="images/dsp_logos/soundcloud.png" alt="Listen on Soundcloud">
+	</a>
+</div>
+
+<div id="tbfooter">
+	<a href="https://tacklebox.company/" target="_blank"><img id="tblogo_img" src="images/poweredbytacklebox.png" alt="Powered by Tacklebox" width="100%"></a>
+<div>
+
+
+<!-- start photo modal -->
+<div class="modal fade" id="cropImagePop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">
+				<?=multiLanguage( "Edit Foto" , "Edit Photo" )?></h4>
+			</div>
+			<div class="modal-body">
+				<div id="upload-demo" class="center-block"></div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" id="cropImageBtn" class="btn btn-primary">Crop</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end photo modal -->
+
+<script src='js/jquery-3.4.1.min.js'></script>
+<script src='js/croppie.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script src="js/exif-js.js"></script>
+<script src="js/thelondon.js"></script>
+</body>
+
+</html>
