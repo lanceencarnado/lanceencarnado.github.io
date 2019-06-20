@@ -81,7 +81,12 @@ class App extends React.Component {
 	  { id: 10, soundName: 'TIME CRISIS HOTLINE', soundURL: './sounds/tchotline.mp3', isPlaying: false },
 	  { id: 11, soundName: 'SWEET CHILI HEAT® WORLD PREMIERE', soundURL: './sounds/tcsweetchilipremiere.mp3', isPlaying: false },
 	  { id: 12, soundName: 'BUFF TRAFFIC SITCH', soundURL: './sounds/bufftrafficsitch.mp3', isPlaying: false },
-	  { id: 13, soundName: 'BRUTAL', soundURL: './sounds/brutal.mp3', isPlaying: false }, 
+	  { id: 13, soundName: 'BRUTAL', soundURL: './sounds/brutal.mp3', isPlaying: false },
+	  { id: 14, soundName: 'JAKE\'S TAKES', soundURL: './sounds/jakestakes.mp3', isPlaying: false }, 
+	  { id: 15, soundName: 'TASTEFUL PALETTE OF THE 1970\'S', soundURL: './sounds/tastefulpalette.mp3', isPlaying: false }, 
+	  { id: 16, soundName: 'BANKIN\' THE EPS', soundURL: './sounds/bankintheeps.mp3', isPlaying: false }, 
+	  { id: 17, soundName: 'SMALL CHARCOAL GRILL', soundURL: './sounds/smallcharcoalgrill.mp3', isPlaying: false }, 
+	  { id: 18, soundName: 'CORPORATE FOOD HISTORY', soundURL: './sounds/corporatefoodhistory.mp3', isPlaying: false }, 
 	  ]};
 
 
