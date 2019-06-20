@@ -67,6 +67,17 @@ a {
   border-color: #5BAF59;
   cursor: pointer;
   padding: 5px;
+  -webkit-transition: background-color 0.25s, color 0.25s, opacity 0.3s; /* Safari prior 6.1 */
+  transition: background-color 0.25s, color 0.25s, opacity 0.3s;
+}
+
+.sound-card:active {
+  opacity: 0.5;
+}
+
+.sound-card:hover { 
+  background-color: #5BAF59;
+  color: #FFFFFF;
 }
 
 
