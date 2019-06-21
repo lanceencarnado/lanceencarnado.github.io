@@ -75,9 +75,12 @@ a {
   opacity: 0.5;
 }
 
-.sound-card:hover { 
-  background-color: #5BAF59;
-  color: #FFFFFF;
+/* hover effect only on web - so no sticky hover on mobile */
+@media (hover: hover) { 
+	.sound-card:hover { 
+	  background-color: #5BAF59;
+	  color: #FFFFFF;
+	}
 }
 
 
