@@ -87,6 +87,7 @@ class App extends React.Component {
 	  { id: 16, soundName: 'BANKIN\' THE EPS', soundURL: './sounds/bankintheeps.mp3', isPlaying: false }, 
 	  { id: 17, soundName: 'SMALL CHARCOAL GRILL', soundURL: './sounds/smallcharcoalgrill.mp3', isPlaying: false }, 
 	  { id: 18, soundName: 'CORPORATE FOOD HISTORY', soundURL: './sounds/corporatefoodhistory.mp3', isPlaying: false }, 
+	  { id: 19, soundName: 'AWFULLY HOT COFFEE POT', soundURL: './sounds/awfullyhotcoffeepot.mp3', isPlaying: false }, 
 	  ]};
 
 
