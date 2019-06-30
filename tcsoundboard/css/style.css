@@ -23,8 +23,8 @@ body {
   width: 100%;
   height: auto;
   max-width: 65vw;
-  padding: 20px;
-  padding-bottom: 40px;
+  padding-top: 40px;
+  padding-bottom: 60px;
 }
 
 p {
