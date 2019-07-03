@@ -9,9 +9,9 @@ body {
 	color: #fff;
 	background: linear-gradient(111.5deg, rgba(228,247,255,1) 21.9%, rgba(255,216,194,1) 92.2%);
 	background-size: 400% 400%;
-	-webkit-animation: Gradient 15s ease infinite;
-	-moz-animation: Gradient 15s ease infinite;
-	animation: Gradient 15s ease infinite;
+	-webkit-animation: Gradient 10s ease infinite;
+	-moz-animation: Gradient 10s ease infinite;
+	animation: Gradient 10s ease infinite;
 }
 
 @-webkit-keyframes Gradient {
@@ -56,7 +56,12 @@ body, html {
 
 span {
 	margin: auto;
-	width: 85vw;
+}
+
+@media only screen and (max-width: 768px) {
+	span {
+		width: 80vw;
+	}
 }
 </style>
 </head>
