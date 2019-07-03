@@ -1,13 +1,63 @@
 <html>
 <head>
+<title>beep boop</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-    body, html {
-      height: 100%;
-      display: grid;
-    }
-    span {
-      margin: auto;
-    }
+body {
+	width: 100wh;
+	height: 90vh;
+	color: #fff;
+	background: linear-gradient(111.5deg, rgba(228,247,255,1) 21.9%, rgba(255,216,194,1) 92.2%);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+body, html {
+	display: grid;
+}
+
+span {
+	margin: auto;
+	width: 85vw;
+}
 </style>
 </head>
 <body>
