@@ -93,6 +93,7 @@ class App extends React.Component {
 	  { id: 22, soundName: 'PRETTY TOUGH TONE', soundURL: './sounds/prettytoughtone.mp3', isPlaying: false },
 	  { id: 23, soundName: 'OHHH!', soundURL: './sounds/boomoh.mp3', isPlaying: false },
 	  { id: 24, soundName: 'MASK OFF', soundURL: './sounds/maskoff.mp3', isPlaying: false },
+	  { id: 25, soundName: 'I\'M A VIBE GUY', soundURL: './sounds/imavibeguy.mp3', isPlaying: false },
 	  ]};
 
 

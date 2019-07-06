@@ -1,7 +1,7 @@
 body {
   font-family: Futura, "Century Gothic", sans-serif;
   font-weight: bold;
-  font-size: 1.5vw;
+  font-size: 1.35vw; /* 1.5vw for 5 */ 
   background-color: white;
   /* set padding and margin to 0 to remove default margins   */
   padding: 0; 
@@ -47,12 +47,13 @@ a {
 
 .appContainer {
   margin: auto;
-  width: 70vw;
+  width: 78vw; /* 70vw */
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-auto-rows: 14vw; /* this has to be appContainer width divided by 5 */
-  grid-gap: 1.1vw;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /* 1fr 1fr 1fr 1fr 1fr */
+  grid-auto-rows: 13vw; /* this has to be appContainer width divided by 6 (14vw if 5) */
+  grid-gap: 1vw;
 }
+
 
 .sound-card {
   display: flex;
@@ -62,7 +63,7 @@ a {
   background-color: #FFFFFF;
   color: #5BAF59;
   border-style: solid;
-  border-width: 4px;
+  border-width: 4px; /* 4px */
   border-color: #5BAF59;
   cursor: pointer;
   padding: 5px;
