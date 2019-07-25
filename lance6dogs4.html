@@ -1,0 +1,351 @@
+<html>
+<head>
+</head>
+<body>
+<div id="collection-component-ae2f320f1b2"></div>
+<script type="text/javascript">
+/*<![CDATA[*/
+
+(function () {
+  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+  if (window.ShopifyBuy) {
+    if (window.ShopifyBuy.UI) {
+      ShopifyBuyInit();
+    } else {
+      loadScript();
+    }
+  } else {
+    loadScript();
+  }
+
+  function loadScript() {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = scriptURL;
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+    script.onload = ShopifyBuyInit;
+  }
+
+  function ShopifyBuyInit() {
+	var client = ShopifyBuy.buildClient({
+	  domain: 'chapterbooks.myshopify.com',
+	  storefrontAccessToken: '5f5c1bf7a1d2de098a207a15e771c408',
+	});
+
+    ShopifyBuy.UI.onReady(client).then(function (ui) {
+      ui.createComponent('collection', {
+        id: 138463412310,
+        node: document.getElementById('collection-component-ae2f320f1b2'),
+        moneyFormat: '%24%7B%7Bamount%7D%7D',
+        options: {
+  "product": {
+    "buttonDestination": "modal",
+    "variantId": "all",
+    "contents": {
+      "imgWithCarousel": false,
+      "variantTitle": false,
+      "options": false,
+      "description": false,
+      "buttonWithQuantity": false,
+      "quantity": false
+    },
+    "text": {
+      "button": "View Product"
+    },
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+		  "min-width": "50%",
+          "margin-left": "40px",
+          "margin-bottom": "110px"
+        }
+      },
+// 	  "img": {	// LANCE custom width of images on shop main page
+// 	  	"max-width": "60% !important",
+// 	  },
+      "button": {
+        "background-color": "#ffffff",
+		"border-color": "#000000",
+		"border-style": "solid",	// LANCE border on button
+		"border-width": "2px",
+        "color": "#800000",
+        "font-family": "Nunito",
+        "font-size": "15px",
+		"font-weight": "bold",
+        "padding-top": "13px",
+        "padding-bottom": "14.5px",
+        ":hover": {
+          "background-color": "#ffffff",
+          "color": "#800000",
+		  "opacity": "0.5"
+        },
+        "border-radius": "0px",
+        ":focus": {
+		  "outline": "none",
+          "background-color": "#ffffff"
+        }
+      },
+      "variantTitle": {
+        "font-family": "Helvetica",
+        "font-weight": "normal"
+      },
+      "title": {
+        "font-family": "Helvetica",
+        "font-weight": "bold"
+      },
+      "description": {
+        "font-family": "Helvetica",
+        "font-weight": "normal"
+      },
+      "price": {
+        "font-family": "Helvetica",
+        "font-weight": "normal"
+      },
+      "quantityInput": {
+        "font-size": "13px",
+        "padding-top": "14.5px",
+        "padding-bottom": "14.5px"
+      },
+      "compareAt": {
+        "font-family": "Helvetica",
+        "font-weight": "normal"
+      }
+    },
+    "googleFonts":[		// LANCE: custom google fonts
+      "Nunito:900"
+    ]
+  },
+  "cart": {
+    "contents": {
+      "button": true
+    },
+    "styles": {
+      "cart": {
+        "background-color": "#fbe453"
+      },
+      "button": {
+        "background-color": "#ffffff",
+        "color": "#000000",
+        "font-family": "Helvetica",
+        "font-size": "13px",
+        "padding-top": "14.5px",
+        "padding-bottom": "14.5px",
+        ":hover": {
+          "background-color": "#ffffff",
+          "color": "#000000",
+		  "opacity": "0.5"
+        },
+        "border-radius": "0px",
+        ":focus": {
+          "background-color": "#ffffff"
+        },
+        "font-weight": "normal"
+      },
+      "title": {
+		"font-family": "Helvetica",
+        "color": "#000000"
+      },
+      "footer": {
+        "background-color": "#fbe453"
+      },
+      "header": {
+        "color": "#000000"
+      },
+      "lineItems": {
+		"font-family": "Helvetica",
+        "color": "#000000"
+      },
+      "subtotalText": {
+		"font-family": "Helvetica",
+        "color": "#000000"
+      },
+      "subtotal": {
+		"font-family": "Helvetica",
+        "color": "#000000"
+      },
+      "notice": {
+		"font-family": "Helvetica",
+        "color": "#000000"
+      },
+      "currency": {
+        "color": "#000000"
+      },
+      "close": {
+		":focus": {
+		  "outline": "none",
+		},
+        ":hover": {
+          "color": "#000000"
+        },
+        "color": "#000000"
+      },
+      "emptyCart": {
+		"font-family": "Helvetica",
+        "color": "#000000"
+      }
+    }
+  },
+  "modalProduct": {
+	"width" : "1000px",
+    "contents": {
+      "img": false,
+      "imgWithCarousel": true,
+      "variantTitle": false,
+      "buttonWithQuantity": false,
+      "quantity": false
+    },
+    "text": {
+      "button": "Add to Cart"
+    },
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "100%",
+          "margin-left": "0px",
+          "margin-bottom": "0px"
+        }
+      },
+      "button": {
+        "background-color": "#ffffff",
+        "font-family": "Helvetica",
+        "padding-top": "14.5px",
+        "padding-bottom": "14.5px",
+        ":hover": {
+          "background-color": "#ffffff",
+          "color": "#000000",
+		  "opacity": "0.5"
+        },
+        "border-radius": "0px",
+        ":focus": {
+		  "outline": "none",
+          "background-color": "#ffffff"
+        },
+        "font-weight": "bold",
+      },
+      "variantTitle": {
+        "font-family": "Helvetica",
+        "color": "#000000",
+        "font-weight": "normal"
+      },
+      "title": {
+        "font-family": "Helvetica",
+        "font-weight": "normal",
+        "color": "#000000"
+      },
+      "description": {
+        "color": "#000000",
+        "font-family": "Helvetica",
+        "font-weight": "normal"
+      },
+      "price": {
+        "font-family": "Helvetica",
+        "color": "#000000",
+        "font-weight": "normal"
+      },
+      "quantityInput": {
+        "font-size": "13px",
+        "padding-top": "14.5px",
+        "padding-bottom": "14.5px"
+      },
+      "compareAt": {
+        "font-family": "Helvetica",
+        "font-weight": "normal"
+      }
+    }
+  },
+  "toggle": {
+    "styles": {
+      "toggle": {
+        "font-family": "Helvetica",
+        "background-color": "transparent",
+        ":hover": {
+		  "opacity": "0.5",
+          "background-color": "transparent"
+        },
+        ":focus": {
+          "background-color": "#ffffff"
+        },
+        "font-weight": "normal"
+      },
+      "count": {
+        "color": "#000000",
+        ":hover": {
+          "color": "#000000"
+        },
+        "font-size": "13px"
+      },
+      "iconPath": {
+        "fill": "#000000"
+      }
+    }
+  },
+  "modal": {
+    "styles": {
+      "modal": {
+        "background-color": "#ffffff"
+      },
+	  "close": {
+	  	":focus": {
+	  	  "outline": "none"
+	  	}
+	  }
+    }
+  },
+  "option": {
+    "styles": {
+      "label": {
+        "font-family": "Helvetica",
+        "color": "#000000"
+      },
+      "select": {
+        "font-family": "Helvetica"
+      }
+    }
+  },
+  "productSet": {
+    "styles": {
+      "products": {
+        "@media (min-width: 601px)": {
+          "margin-left": "-40px"
+        }
+      }
+    }
+  },
+  "lineItem": {
+    "styles": {
+      "variantTitle": {
+        "color": "#000000"
+      },
+      "title": {
+        "color": "#000000"
+      },
+      "price": {
+        "color": "#000000"
+      },
+      "quantity": {
+        "color": "#000000"
+      },
+      "quantityIncrement": {
+        "color": "#000000",
+        "border-color": "#000000"
+      },
+      "quantityDecrement": {
+        "color": "#000000",
+        "border-color": "#000000"
+      },
+      "quantityInput": {
+		"font-family": "Helvetica",
+        "color": "#000000",
+        "border-color": "#000000"
+      }
+    }
+  }
+}
+      });
+    });
+  }
+})();
+/*]]>*/
+</script>
+</body>
+</html>
