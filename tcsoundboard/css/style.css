@@ -97,10 +97,10 @@ a {
   }
   
   .appContainer {
-	width: 75vw;
+	width: 81vw;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-auto-rows: 25vw;  /* this has to be appContainer width divided by 3 */
+	grid-auto-rows: 27vw;  /* this has to be appContainer width divided by 3 */
 	grid-gap: 10px;
   }
   
