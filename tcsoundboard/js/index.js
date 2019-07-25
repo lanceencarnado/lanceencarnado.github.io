@@ -77,6 +77,7 @@ class App extends React.Component {
 			{ id: 14, soundName: 'JAKE\'S TAKES (DROP)', soundURL: './sounds/jakestakes.mp3', isPlaying: false }, 
 			{ id: 15, soundName: 'TASTEFUL PALETTE OF THE 1970\'S (DROP)', soundURL: './sounds/tastefulpalette.mp3', isPlaying: false }, 
 			{ id: 18, soundName: 'CORPORATE FOOD HISTORY (DROP)', soundURL: './sounds/corporatefoodhistory.mp3', isPlaying: false }, 
+			{ id: 20, soundName: 'ROUGH STUFF FOLKS', soundURL: './sounds/roughstufffolks.mp3', isPlaying: false },
 			{ id: 2, soundName: 'SEINFELD NUMBER CRUNCH', soundURL: './sounds/seinfeldnumbercrunch.mp3', isPlaying: false },
 			{ id: 6, soundName: 'ROCK\'S PLAYED OUT, DOG', soundURL: './sounds/rocksplayedout.mp3', isPlaying: false },
 			{ id: 8, soundName: 'THIS SHOW RULES', soundURL: './sounds/thisshowrules.mp3', isPlaying: false }, 
@@ -90,8 +91,6 @@ class App extends React.Component {
 			{ id: 22, soundName: 'PRETTY TOUGH TONE', soundURL: './sounds/prettytoughtone.mp3', isPlaying: false },
 			{ id: 17, soundName: 'SMALL CHARCOAL GRILL', soundURL: './sounds/smallcharcoalgrill.mp3', isPlaying: false }, 
 			{ id: 19, soundName: 'AWFULLY HOT COFFEE POT', soundURL: './sounds/awfullyhotcoffeepot.mp3', isPlaying: false }, 
-			{ id: 20, soundName: 'ROUGH STUFF FOLKS 1', soundURL: './sounds/roughstufffolks1.mp3', isPlaying: false }, 
-			{ id: 21, soundName: 'ROUGH STUFF FOLKS 2', soundURL: './sounds/roughstufffolks2.mp3', isPlaying: false },
 			{ id: 23, soundName: 'OHHH!', soundURL: './sounds/boomoh.mp3', isPlaying: false },
 			{ id: 25, soundName: 'I\'M A VIBE GUY', soundURL: './sounds/imavibeguy.mp3', isPlaying: false },
 	  	]};
