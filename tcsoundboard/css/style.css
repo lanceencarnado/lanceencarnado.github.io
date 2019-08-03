@@ -37,7 +37,7 @@ p {
   width: 80vw;
   margin: auto;
   text-align: center;
-  font-size: 1.2vw;
+  font-size: 14px;		/* 1.2vw */
 }
 
 a {
@@ -125,7 +125,7 @@ a {
   }
   
   .footerdiv {
-  	 font-size: 1.75vw;
+  	 font-size: 13px;		/* 1.75vw */
   	 padding-top: 50px;
   }
 
