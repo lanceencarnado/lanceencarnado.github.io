@@ -14,13 +14,15 @@ class Board extends React.Component {
 	  var snd = this.state.audio.sound;
 	  snd.pause();
 	}
-	var sound = this.props.sounds.find(sound => {return sound.id === id;});
+	// var sound = this.props.sounds.find(sound => {return sound.id === id;});
+	var sound = this.props.sounds.find(function(sound){return sound.id === id;});
 	var snd = new Audio(sound.soundURL);
 	this.setState({ audio: { sound: snd, soundName: sound.soundName, currentlyPlaying: true } });
 	snd.play();
 
 	var data = [...this.props.sounds];
-	const index = data.findIndex(obj => obj.soundName === sound.soundName);
+	//const index = data.findIndex(obj => obj.soundName === sound.soundName);
+	const index = data.findIndex(function(obj){return obj.soundName === sound.soundName});
 	data[index].isPlaying = true;
 	this.setState(data);
 
@@ -35,9 +37,12 @@ class Board extends React.Component {
   }
 
   renderSounds() {
-	return this.props.sounds.map(sound => {
+// 	return this.props.sounds.map(sound => {
+// 	  return React.createElement(Sound, { key: sound.id, sound: sound, audio: this.state.audio, playSound: this.playSound.bind(this) });
+// 	});
+	return this.props.sounds.map(function(sound) {
 	  return React.createElement(Sound, { key: sound.id, sound: sound, audio: this.state.audio, playSound: this.playSound.bind(this) });
-	});
+	}.bind(this));
   }
   render() {
 	return (
@@ -55,8 +60,11 @@ class Sound extends React.Component {
 	  speakerStyle += 'fa fa-volume-up fa-3x';
 	}
 	return (
+// 	  React.createElement("div", { className: "sound-card",
+// 		onClick: () => this.props.playSound(this.props.sound.id) },
+// 	  React.createElement("div", { className: "sound-card-text" }, this.props.sound.soundName)));
 	  React.createElement("div", { className: "sound-card",
-		onClick: () => this.props.playSound(this.props.sound.id) },
+		onClick: function() {return this.props.playSound(this.props.sound.id) }.bind(this)},
 	  React.createElement("div", { className: "sound-card-text" }, this.props.sound.soundName)));
 
 
@@ -79,7 +87,7 @@ class App extends React.Component {
 			{ id: 27, soundName: 'SEINFELD NUMBER CRUNCH (DROP)', soundURL: './sounds/seinfeldnumbercrunchdrop.mp3', isPlaying: false }, 
 			{ id: 10, soundName: 'TIME CRISIS HOTLINE (DROP)', soundURL: './sounds/tchotline.mp3', isPlaying: false }, 
 			{ id: 28, soundName: 'TIME CRISIS CORRESPON- DENT (DROP)', soundURL: './sounds/tccorrespondent.mp3', isPlaying: false },
-			{ id: 30, soundName: 'TOP 5 ON ITUNES (DROP)', soundURL: './sounds/ladydoritostownhall.mp3', isPlaying: false },
+			{ id: 30, soundName: 'TOP 5 ON ITUNES (DROP)', soundURL: './sounds/top5itunes.mp3', isPlaying: false },
 			{ id: 29, soundName: 'LADY DORITOS TOWN HALL (DROP)', soundURL: './sounds/ladydoritostownhall.mp3', isPlaying: false },
 			{ id: 8, soundName: 'THIS SHOW RULES', soundURL: './sounds/thisshowrules.mp3', isPlaying: false }, 
 			{ id: 20, soundName: 'ROUGH STUFF FOLKS', soundURL: './sounds/roughstufffolks.mp3', isPlaying: false },
