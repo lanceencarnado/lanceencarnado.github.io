@@ -11,15 +11,15 @@ class Board extends React.Component {
   playSound(id) {
 	// comment this if statement out to let the clips overlap
 	if (this.state.audio.currentlyPlaying) {
-	  let snd = this.state.audio.sound;
+	  var snd = this.state.audio.sound;
 	  snd.pause();
 	}
-	let sound = this.props.sounds.find(sound => {return sound.id === id;});
-	let snd = new Audio(sound.soundURL);
+	var sound = this.props.sounds.find(sound => {return sound.id === id;});
+	var snd = new Audio(sound.soundURL);
 	this.setState({ audio: { sound: snd, soundName: sound.soundName, currentlyPlaying: true } });
 	snd.play();
 
-	let data = [...this.props.sounds];
+	var data = [...this.props.sounds];
 	const index = data.findIndex(obj => obj.soundName === sound.soundName);
 	data[index].isPlaying = true;
 	this.setState(data);
@@ -50,7 +50,7 @@ class Board extends React.Component {
 
 class Sound extends React.Component {
   render() {
-	let speakerStyle = 'fa fa-volume-off fa-3x';
+	var speakerStyle = 'fa fa-volume-off fa-3x';
 	if (this.props.sound.isPlaying && this.props.sound.soundName === this.props.audio.soundName && this.props.audio.currentlyPlaying) {
 	  speakerStyle += 'fa fa-volume-up fa-3x';
 	}
