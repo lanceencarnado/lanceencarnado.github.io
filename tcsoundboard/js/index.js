@@ -22,7 +22,7 @@ class Board extends React.Component {
 
 	var data = [...this.props.sounds];
 	//const index = data.findIndex(obj => obj.soundName === sound.soundName);
-	const index = data.findIndex(function(obj){return obj.soundName === sound.soundName});
+	var index = data.findIndex(function(obj){return obj.soundName === sound.soundName});
 	data[index].isPlaying = true;
 	this.setState(data);
 
@@ -30,7 +30,8 @@ class Board extends React.Component {
   }
 
   soundListener(data, index, snd) {
-	const newData = [...data];
+	// const newData = [...data];
+	var newData = [...data];
 	newData[index].isPlaying = false;
 	this.setState(newData);
 	snd.removeEventListener('ended', this.soundListener);
