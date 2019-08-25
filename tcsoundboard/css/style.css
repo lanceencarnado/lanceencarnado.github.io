@@ -56,6 +56,7 @@ a {
 
 
 .sound-card {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,6 +80,15 @@ a {
 
 .sound-card-text {
   padding: 3px;
+}
+
+.new-badge {
+  position: absolute;
+  width: 3.4vw;
+  top: -20px;
+  right: -20px;
+  pointer-events: none;
+  z-index: 0;
 }
 
 /* hover effect only on web - so no sticky hover on mobile */

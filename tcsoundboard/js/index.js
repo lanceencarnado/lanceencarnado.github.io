@@ -60,13 +60,23 @@ class Sound extends React.Component {
 	if (this.props.sound.isPlaying && this.props.sound.soundName === this.props.audio.soundName && this.props.audio.currentlyPlaying) {
 	  speakerStyle += 'fa fa-volume-up fa-3x';
 	}
+	if (this.props.sound.isNew != null) {
 	return (
 // 	  React.createElement("div", { className: "sound-card",
 // 		onClick: () => this.props.playSound(this.props.sound.id) },
 // 	  React.createElement("div", { className: "sound-card-text" }, this.props.sound.soundName)));
 	  React.createElement("div", { className: "sound-card",
 		onClick: function() {return this.props.playSound(this.props.sound.id) }.bind(this)},
-	  React.createElement("div", { className: "sound-card-text" }, this.props.sound.soundName)));
+	  React.createElement("div", { className: "sound-card-text" }, this.props.sound.soundName),
+	  React.createElement("div", { className: "new-badge" }, 
+	  	React.createElement("img", { src: "assets/new_badge_fill.svg" }))));
+	}
+	else {
+	  return (
+	  	React.createElement("div", { className: "sound-card",
+		  onClick: function() {return this.props.playSound(this.props.sound.id) }.bind(this)},
+	    React.createElement("div", { className: "sound-card-text" }, this.props.sound.soundName)));
+	}
 
 
 
@@ -80,10 +90,10 @@ class App extends React.Component {
 	  	sounds: [
 	  	 	{ id: 1, soundName: 'TIME CRISIS INTRO (DROP)', soundURL: './sounds/tcintro.mp3', isPlaying: false },
 	  	 	{ id: 2, soundName: '8 MINUTE CAPE COD (DROP)', soundURL: './sounds/8minutecapecod.mp3', isPlaying: false },
-	  	 	{ id: 3, soundName: 'SWEET CHILI HEAT® WORLD PREMIERE (DROP)', soundURL: './sounds/tcsweetchilipremiere.mp3', isPlaying: false },
+	  	 	{ id: 3, soundName: 'SWEET CHILI HEAT® WORLD PREMIERE (DROP)', soundURL: './sounds/tcsweetchilipremiere.mp3', isPlaying: false, isNew: true },
 	  	 	{ id: 4, soundName: 'TASTEFUL PALETTE OF THE 1970\'S (DROP)', soundURL: './sounds/tastefulpalette.mp3', isPlaying: false }, 
 			{ id: 5, soundName: 'TIME CRISIS MAILBAG (DROP)', soundURL: './sounds/tcmailbag.mp3', isPlaying: false },
-			{ id: 6, soundName: 'JAKE\'S TAKES (DROP)', soundURL: './sounds/jakestakes.mp3', isPlaying: false }, 
+			{ id: 6, soundName: 'JAKE\'S TAKES (DROP)', soundURL: './sounds/jakestakes.mp3', isPlaying: false, isNew: true }, 
 			{ id: 7, soundName: 'CORPORATE FOOD HISTORY (DROP)', soundURL: './sounds/corporatefoodhistory.mp3', isPlaying: false }, 
 			{ id: 8, soundName: 'SEINFELD NUMBER CRUNCH (DROP)', soundURL: './sounds/seinfeldnumbercrunchdrop.mp3', isPlaying: false }, 
 			{ id: 9, soundName: 'TIME CRISIS HOTLINE (DROP)', soundURL: './sounds/tchotline.mp3', isPlaying: false }, 
