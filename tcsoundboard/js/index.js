@@ -125,6 +125,7 @@ class App extends React.Component {
 			{ id: 35, soundName: 'THAT\'S A PORTMAN- TEAU', soundURL: './sounds/thatsaportmanteau.mp3', isPlaying: false, isNew: true },
 			{ id: 36, soundName: '#THEBIG3 THAT MAKEMEME', soundURL: './sounds/thebig3thatmakememe.mp3', isPlaying: false, isNew: true },
 			{ id: 37, soundName: 'WANGS', soundURL: './sounds/wangs.mp3', isPlaying: false, isNew: true },
+			{ id: 38, soundName: 'NO FAP SUMMER', soundURL: './sounds/nofapsummer.mp3', isPlaying: false, isNew: true },
 	  	]};
 
 
