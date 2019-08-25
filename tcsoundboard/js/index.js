@@ -89,7 +89,7 @@ class App extends React.Component {
 		this.state = {
 	  	sounds: [
 	  	 	{ id: 1, soundName: 'TIME CRISIS INTRO (DROP)', soundURL: './sounds/tcintro.mp3', isPlaying: false },
-	  	 	{ id: 2, soundName: '8 MINUTE CAPE COD (DROP)', soundURL: './sounds/8minutecapecod.mp3', isPlaying: false },
+	  	 	{ id: 2, soundName: '8 MINUTE CAPE COD (DROP)', soundURL: './sounds/8minutecapecod.mp3', isPlaying: false, isNew: true },
 	  	 	{ id: 3, soundName: 'SWEET CHILI HEAT® WORLD PREMIERE (DROP)', soundURL: './sounds/tcsweetchilipremiere.mp3', isPlaying: false, isNew: true },
 	  	 	{ id: 4, soundName: 'TASTEFUL PALETTE OF THE 1970\'S (DROP)', soundURL: './sounds/tastefulpalette.mp3', isPlaying: false }, 
 			{ id: 5, soundName: 'TIME CRISIS MAILBAG (DROP)', soundURL: './sounds/tcmailbag.mp3', isPlaying: false },
