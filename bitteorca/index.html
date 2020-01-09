@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>BITTE ORCA</title>
+        <style>
+            html {
+                background-color: #f4f6f3;
+            }
+
+            #bitteorca {
+                position: absolute;
+                z-index: 3;
+                opacity: 70%;
+                transform: translateZ(20px);
+            }
+
+            #parentdiv {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #amber {
+                position: sticky;
+                height: calc(633px / 1.5);
+                top: 20%;
+                left: 33%;
+                z-index: 1;
+            }
+
+            /* #angel {
+                position: absolute;
+                top: 59%;
+                left: 63%;
+                width: calc(686px / 1.5);
+                height: calc(650px / 1.5);
+                margin-top: calc((-686px / 1.5) / 2);
+                margin-left: calc((-650px / 1.5) / 2);
+                z-index: 2;
+            } */
+        </style>
+    </head>
+    <body>
+        <div id="parentdiv">
+            <div id="maindiv" data-tilt data-tilt-perspective="1500">
+                <img src="bitteorca.png" id="bitteorca">
+                <img src="amber.png" id="amber">
+                <!-- <img src="angel.png" id="angel"> -->
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#parentdiv").height(window.innerHeight);
+                $("#parentdiv").width(window.innerWidth);
+            });
+        </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+    </body>
+</html>
