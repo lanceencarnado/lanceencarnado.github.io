@@ -137,9 +137,9 @@ class App extends React.Component {
             { id: 47, soundName: 'BUT THIS WAS A FANTASY', soundURL: './sounds/thiswasafantasy.mp3', isPlaying: false, isNew: true },
             { id: 48, soundName: 'WHAT\'S WRONG WITH BEING FAT', soundURL: './sounds/whatswrongwithbeingfat.mp3', isPlaying: false, isNew: true },
             { id: 49, soundName: 'AS A MUSIC INDUSTRY PROFESS- IONAL', soundURL: './sounds/musicindustryprofessional.mp3', isPlaying: false, isNew: true },
-            { id: 50, soundName: 'DOWN MEXICO WAY', soundURL: './sounds/downmexicoway.mp3', isPlaying: false, isNew: true },
-            { id: 51, soundName: 'WHOA, HOLD UP GIRL...', soundURL: './sounds/whoaholdupgirl.mp3', isPlaying: false, isNew: true },
-            { id: 52, soundName: 'AND IT\'S EASY TO SEE', soundURL: './sounds/anditseasytosee.mp3', isPlaying: false, isNew: true },
+            { id: 50, soundName: 'WHOA, HOLD UP GIRL...', soundURL: './sounds/whoaholdupgirl.mp3', isPlaying: false, isNew: true },
+            { id: 51, soundName: 'AND IT\'S EASY TO SEE', soundURL: './sounds/anditseasytosee.mp3', isPlaying: false, isNew: true },
+            { id: 52, soundName: 'DOWN MEXICO WAY', soundURL: './sounds/downmexicoway.mp3', isPlaying: false, isNew: true },
 	  	]};
 
 
