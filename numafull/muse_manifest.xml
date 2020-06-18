@@ -1,0 +1,94 @@
+<manifest alg="2" build="2018.1.1.386" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="numaarch.com" resolutions="1x" timestamp="1592504020575">
+  <folder name="css">
+    <file name="site_global.css" crc="444006867"/>
+    <file name="meet-numa.css" crc="105598260" ref="meet-numa"/>
+    <file name="contact.css" crc="469284831" ref="contact"/>
+    <file name="services.css" crc="480832987" ref="services"/>
+    <file name="index.css" crc="4056949833" ref="index"/>
+  </folder>
+  <folder name="assets">
+    <folder name="home_mobile">
+      <folder name="images">
+        <file name="home_atlas_.png" crc="4070036001" mt="1591907477000"/>
+      </folder>
+      <file name="home.js" crc="231912749" mt="1591907477000"/>
+      <file name="home.html" crc="324175781" mt="1591907477000"/>
+    </folder>
+    <folder name="home">
+      <folder name="images">
+        <file name="home_atlas_.png" crc="4070036001" mt="1591907136000"/>
+      </folder>
+      <file name="home.js" crc="314384295" mt="1591907136000"/>
+      <file name="home.html" crc="3774371587" mt="1591907136000"/>
+    </folder>
+    <folder name="contact2">
+      <folder name="images">
+        <file name="NUMAContact.jpg" crc="108978931" mt="1591305026000"/>
+      </folder>
+      <file name="contact.js" crc="308140310" mt="1591305026000"/>
+      <file name="contact.html" crc="4277817639" mt="1591305026000"/>
+    </folder>
+    <folder name="services2">
+      <folder name="images">
+        <file name="services_atlas_.png" crc="135159199" mt="1591306046000"/>
+      </folder>
+      <file name="services.js" crc="120190130" mt="1591306046000"/>
+      <file name="services.html" crc="4244792189" mt="1591306046000"/>
+    </folder>
+    <folder name="meetnuma">
+      <folder name="images">
+        <file name="meetnuma_atlas_.png" crc="288197147" mt="1591305092000"/>
+      </folder>
+      <file name="meetnuma.js" crc="4153442080" mt="1591305092000"/>
+      <file name="meetnuma.html" crc="161178459" mt="1591305092000"/>
+    </folder>
+    <folder name="contact">
+      <folder name="images">
+        <file name="NUMAContact.jpg" crc="3855556977" mt="1583693658000"/>
+      </folder>
+      <file name="contact.js" crc="222779892" mt="1583693658000"/>
+      <file name="contact.html" crc="3834514461" mt="1583693658000"/>
+    </folder>
+    <folder name="meet-numa">
+      <folder name="images">
+        <file name="Face.png" crc="21734861" mt="1583693656000"/>
+      </folder>
+      <file name="meet-numa.js" crc="4280273203" mt="1583693656000"/>
+      <file name="meet-numa.html" crc="3898753161" mt="1583693656000"/>
+    </folder>
+    <folder name="services">
+      <folder name="images">
+        <file name="services_atlas_.png" crc="3916042106" mt="1583693664000"/>
+      </folder>
+      <file name="services.js" crc="305399154" mt="1583693664000"/>
+      <file name="services.html" crc="340013271" mt="1583693664000"/>
+    </folder>
+    <file name="numa-final.mp4" crc="148486126" seo="true" mt="1592500605000"/>
+    <file name="numa-final2.webm" crc="3860970971" seo="true" mt="1592503861000"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="209076791" ref="phone>index:phone>services:phone>meet-numa:phone>contact:index:meet-numa:services:contact"/>
+    <file name="museutils.js" crc="3939489907" ref="phone>index:phone>services:phone>meet-numa:phone>contact:index:meet-numa:services:contact"/>
+    <file name="whatinput.js" crc="86476730" ref="phone>index:phone>services:phone>meet-numa:phone>contact:index:meet-numa:services:contact"/>
+    <file name="museconfig.js" crc="3936894949" ref="phone>index:phone>services:phone>meet-numa:phone>contact:index:meet-numa:services:contact"/>
+    <file name="jquery.watch.js" crc="522499760" ref="phone>index:phone>services:phone>meet-numa:phone>contact:index:meet-numa:services:contact"/>
+    <file name="jquery.scrolleffects.js" crc="312044820" ref="phone>index:phone>services:phone>meet-numa:phone>contact"/>
+    <file name="require.js" crc="4177726516" ref="phone>index:phone>services:phone>meet-numa:phone>contact:index:meet-numa:services:contact"/>
+  </folder>
+  <folder name="phone">
+    <folder name="css">
+      <file name="index.css" crc="3775806028" ref="phone>index"/>
+      <file name="meet-numa.css" crc="4151040423" ref="phone>meet-numa"/>
+      <file name="services.css" crc="245200552" ref="phone>services"/>
+      <file name="contact.css" crc="4158126236" ref="phone>contact"/>
+    </folder>
+    <file name="index.html" crc="4040463214" seo="true" mt="1592503974418" redirect="true"/>
+    <file name="services.html" crc="3889212901" seo="true" mt="1583704680804" redirect="true"/>
+    <file name="meet-numa.html" crc="428748213" seo="true" mt="1583704779443" redirect="true"/>
+    <file name="contact.html" crc="4197571570" seo="true" mt="1583704738943" redirect="true"/>
+  </folder>
+  <file name="index.html" crc="4211505281" seo="true" mt="1592503983388" redirect="true"/>
+  <file name="meet-numa.html" crc="3779603867" seo="true" mt="1591834329227" redirect="true"/>
+  <file name="services.html" crc="3873228453" seo="true" mt="1591834351377" redirect="true"/>
+  <file name="contact.html" crc="241127332" seo="true" mt="1591834374252" redirect="true"/>
+</manifest>

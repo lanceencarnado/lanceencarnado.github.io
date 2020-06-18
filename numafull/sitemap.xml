@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://numaarch.com/index.html</loc>
+    <lastmod>2020-06-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="http://numaarch.com/phone/index.html"/>
+  </url>
+  <url>
+    <loc>http://numaarch.com/meet-numa.html</loc>
+    <lastmod>2020-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="http://numaarch.com/phone/meet-numa.html"/>
+  </url>
+  <url>
+    <loc>http://numaarch.com/services.html</loc>
+    <lastmod>2020-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="http://numaarch.com/phone/services.html"/>
+  </url>
+  <url>
+    <loc>http://numaarch.com/contact.html</loc>
+    <lastmod>2020-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="http://numaarch.com/phone/contact.html"/>
+  </url>
+  <url>
+    <loc>http://numaarch.com/assets/numa-final.mp4</loc>
+    <lastmod>2020-06-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://numaarch.com/assets/numa-final2.webm</loc>
+    <lastmod>2020-06-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>
