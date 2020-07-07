@@ -119,8 +119,14 @@ canvas {
   background: #DDD;
   margin: 5px;
   padding: 10px;
+  
+  /*  LANCE smaller level list boxes  */
+  /* 
   width: 80px;
   height: 80px;
+  */
+  width: 70px;
+  height: 70px;
   text-align: center;
   border-radius: 10px;
   position: relative;
@@ -139,8 +145,11 @@ canvas {
 
 .level-list__item__number {
   display: block;
-  font-size: 30px;
-  line-height: 35px;
+  /*	LANCE smaller font size for level number    */
+  /* font-size: 30px; */
+  font-size: 25px;
+  /* line-height: 35px; */
+  line-height: 30px;
 }
 
 .level-list__item__blurb {
