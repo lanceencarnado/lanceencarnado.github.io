@@ -22,9 +22,9 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
   <title>Games</title>
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/site_global.css?crc=444006867"/>
-  <link rel="stylesheet" type="text/css" href="css/games.css?crc=3793197102" id="pagesheet"/>
+  <link rel="stylesheet" type="text/css" href="css/games.css?crc=3854927137" id="pagesheet"/>
     <!--custom head HTML-->
-  <style>#cubpupcontainer {  margin: auto;  text-align: center;  min-width: 400px;  height: 620px;}</style>
+  <style>#cubpupcontainer {  margin: auto;  text-align: center;  min-width: 400px;}#puzzlecontainer {  margin: auto;  text-align: center;  min-width: 400px;}iframe {  border: none;  overflow: hidden;}</style>
   <!--/*
 
 */
@@ -59,11 +59,28 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
     <!-- /m_editable -->
     <div class="ose_pre_init" id="u1602"><!-- content --></div>
    </div>
-   <div class="clearfix grpelem" id="pu1613"><!-- column -->
+   <div class="clearfix grpelem" id="pu1704-4"><!-- column -->
+    <!-- m_editable region-id="editable-static-tag-U1704-BP_infinity" template="games.html" data-type="html" data-ice-options="disableImageResize,link,txtStyleTarget" -->
+    <div class="clearfix colelem" id="u1704-4" data-muse-uid="U1704" data-muse-type="txt_frame" data-IBE-flags="txtStyleSrc"><!-- content -->
+     <p>Cub and Pup</p>
+    </div>
+    <!-- /m_editable -->
     <div class="browser_width colelem" id="u1613-bw">
      <div id="u1613"><!-- custom html -->
       <div id="cubpupcontainer">
 <iframe id="cubpupiframe" src="./cubpup/index.html" width="80%" height="620"></iframe>
+</div>
+     </div>
+    </div>
+    <!-- m_editable region-id="editable-static-tag-U1707-BP_infinity" template="games.html" data-type="html" data-ice-options="disableImageResize,link,txtStyleTarget" -->
+    <div class="clearfix colelem" id="u1707-4" data-muse-uid="U1707" data-muse-type="txt_frame" data-IBE-flags="txtStyleSrc"><!-- content -->
+     <p>Puzzle</p>
+    </div>
+    <!-- /m_editable -->
+    <div class="browser_width colelem" id="u1685-bw">
+     <div id="u1685"><!-- custom html -->
+      <div id="puzzlecontainer">
+<iframe id="puzzleiframe" src="./puzzle_responsive/index.html" width="80%" height="700"></iframe>
 </div>
      </div>
     </div>
@@ -73,10 +90,10 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
     </div>
     <!-- /m_editable -->
     <!-- m_editable region-id="editable-static-tag-U1603-BP_infinity" template="games.html" data-type="html" data-ice-options="clickable" data-ice-editable="link" -->
-    <a class="nonblock nontext clip_frame colelem" id="u1603" href="http://www.tacklebox.company" data-muse-uid="U1603"><!-- svg --><img class="svg" id="u1604" src="images/tacklebox-black-01.svg?crc=507190392" width="215" height="62" alt="" data-mu-svgfallback="images/tacklebox%20black-01_poster_.png?crc=400686630"/></a>
+    <a class="nonblock nontext clip_frame colelem" id="u1603" href="http://www.tacklebox.company" data-muse-uid="U1603"><!-- svg --><img class="svg" id="u1604" src="images/tacklebox-black-01.svg?crc=507190392" width="215" height="62" alt="" data-mu-svgfallback="images/tacklebox%20black-01_poster_.png?crc=419504502"/></a>
     <!-- /m_editable -->
    </div>
-   <div class="verticalspacer" data-offset-top="1873" data-content-above-spacer="1873" data-content-below-spacer="0"></div>
+   <div class="verticalspacer" data-offset-top="2003" data-content-above-spacer="2003" data-content-below-spacer="40"></div>
   </div>
   <!-- Other scripts -->
   <script type="text/javascript">
@@ -97,7 +114,7 @@ Muse.Utils.resizeHeight('.browser_width');/* resize height */
 Muse.Utils.requestAnimationFrame(function() { $('body').addClass('initialized'); });/* mark body as initialized */
 Muse.Utils.makeButtonsVisibleAfterSettingMinWidth();/* body */
 Muse.Utils.fullPage('#page');/* 100% height page */
-$('#u1602').registerOpacityScrollEffect([{"in":[-Infinity,0],"fade":0,"opacity":0},{"opacity":0,"in":[0,0]},{"in":[0,Infinity],"fade":50,"opacity":100}]);/* scroll effect */
+$('#u1602').registerOpacityScrollEffect([{"fade":0,"in":[-Infinity,0],"opacity":0},{"opacity":0,"in":[0,0]},{"fade":50,"in":[0,Infinity],"opacity":100}]);/* scroll effect */
 Muse.Utils.showWidgetsWhenReady();/* body */
 Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
 }catch(b){if(b&&"function"==typeof b.notify?b.notify():Muse.Assert.fail("Error calling selector function: "+b),false)throw b;}})})};
