@@ -1,0 +1,56 @@
+<manifest alg="2" build="2018.1.0.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="https://tackleboxing.000webhostapp.com" resolutions="1x" timestamp="1594160871089">
+  <folder name="css">
+    <file name="site_global.css" crc="444006867"/>
+    <file name="index.css" crc="4232231100" ref="index"/>
+    <file name="games.css" crc="3793197102" ref="games"/>
+    <file name="gallery.css" crc="4083368271" ref="gallery"/>
+    <file name="about-us.css" crc="4009855840" ref="about-us"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="209076791" ref="phone>index:phone>gallery:phone>about-us:index:gallery:about-us:games:phone>games"/>
+    <file name="museutils.js" crc="340535759" ref="phone>index:phone>gallery:phone>about-us:index:gallery:about-us:games:phone>games"/>
+    <file name="whatinput.js" crc="86476730" ref="phone>index:phone>gallery:phone>about-us:index:gallery:about-us:games:phone>games"/>
+    <file name="museconfig.js" crc="310584261" ref="phone>index:phone>gallery:phone>about-us:index:gallery:about-us:games:phone>games"/>
+    <file name="jquery.musepolyfill.bgsize.js" crc="4260645839" ref="phone>index:phone>gallery:phone>about-us:index:gallery:about-us:games:phone>games"/>
+    <file name="jquery.watch.js" crc="51536988" ref="phone>index:phone>gallery:phone>about-us:index:gallery:about-us:games:phone>games"/>
+    <file name="jquery.scrolleffects.js" crc="39568856" ref="phone>index:phone>gallery:phone>about-us:index:gallery:about-us:games:phone>games"/>
+    <file name="require.js" crc="7928878" ref="phone>index:phone>gallery:phone>about-us:index:gallery:about-us:games:phone>games"/>
+  </folder>
+  <folder name="images">
+    <file name="instagram.svg" crc="3952376017" ref="phone>index:phone>gallery:phone>about-us:index:gallery:about-us:games:phone>games"/>
+    <file name="instagram_poster_u283.png" crc="4095329575" ref="phone>index:phone>gallery:phone>about-us:index:gallery:about-us:games:phone>games"/>
+    <file name="facebook.svg" crc="119352249" ref="phone>index:phone>gallery:phone>about-us:index:gallery:about-us:games:phone>games"/>
+    <file name="facebook_poster_u275.png" crc="3975954786" ref="phone>index:phone>gallery:phone>about-us:index:gallery:about-us:games:phone>games"/>
+    <file name="twitter.svg" crc="4168479296" ref="phone>index:phone>gallery:phone>about-us:index:gallery:about-us:games:phone>games"/>
+    <file name="twitter_poster_u294.png" crc="207644653" ref="phone>index:phone>gallery:phone>about-us:index:gallery:about-us:games:phone>games"/>
+    <file name="gk logo.svg" crc="326002583" ref="phone>index:phone>gallery:phone>about-us:index:gallery:about-us:games:phone>games"/>
+    <file name="gk logo_poster_u261.png" crc="279979942" ref="phone>index:phone>gallery:phone>about-us:index:gallery:about-us:games:phone>games"/>
+    <file name="tacklebox black-01.svg" crc="507190392" ref="phone>index:phone>gallery:phone>about-us:phone>games"/>
+    <file name="tacklebox black-01_poster_u538.png" crc="400686630" ref="phone>index:phone>gallery:phone>about-us:phone>games"/>
+    <file name="gods kid full logo black.svg" crc="4162524413" ref="phone>about-us:about-us"/>
+    <file name="gods kid full logo black_poster_u1434.png" crc="491120514" ref="phone>about-us:about-us"/>
+    <file name="tacklebox-black-01.svg" crc="507190392" seo="true" ref="index:gallery:about-us:games">
+      <caption webpage="index" alt=""/>
+      <caption webpage="gallery" alt=""/>
+      <caption webpage="games" alt=""/>
+      <caption webpage="about-us" alt=""/>
+    </file>
+    <file name="tacklebox black-01_poster_.png" crc="400686630" ref="index:games"/>
+  </folder>
+  <folder name="phone">
+    <folder name="css">
+      <file name="about-us.css" crc="4270760998" ref="phone>about-us"/>
+      <file name="gallery.css" crc="4211197705" ref="phone>gallery"/>
+      <file name="index.css" crc="207341842" ref="phone>index"/>
+      <file name="games.css" crc="3836835108" ref="phone>games"/>
+    </folder>
+    <file name="index.html" crc="4084858163" seo="true" mt="1594098844656" redirect="true"/>
+    <file name="gallery.html" crc="4056428581" seo="true" mt="1594098795716" redirect="true"/>
+    <file name="about-us.html" crc="4174378741" seo="true" mt="1594098854863" redirect="true"/>
+    <file name="games.html" crc="141300976" seo="true" mt="1594158322307" redirect="true"/>
+  </folder>
+  <file name="index.html" crc="3765568416" seo="true" mt="1594100134705" redirect="true"/>
+  <file name="gallery.html" crc="4062665357" seo="true" mt="1594096589204" redirect="true"/>
+  <file name="about-us.html" crc="3943783860" seo="true" mt="1594098395628" redirect="true"/>
+  <file name="games.html" crc="4039595773" seo="true" mt="1594160846911" redirect="true"/>
+</manifest>
