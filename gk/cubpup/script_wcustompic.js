@@ -697,10 +697,10 @@ cub.render = function( ctx, mazeCenter, gridSize, angle, isHovered ) {
     ctx.closePath();
   }
 
-  // LANCE custom pic - see scriptwcustompic.js
+  // LANCE custom pic
 
-//   var poopImg = new Image;
-//   poopImg.src = 'poop.png';
+  var poopImg = new Image;
+  poopImg.src = 'poop.png';
 
   var x = this.peg.x * gridSize + this.offset.x;
   var y = this.peg.y * gridSize + this.offset.y;
@@ -712,10 +712,10 @@ cub.render = function( ctx, mazeCenter, gridSize, angle, isHovered ) {
   ctx.fillStyle = 'hsla(330, 100%, 40%, 1)';
   var scale = isHovered ? 1.15 : 1;
   ctx.scale( scale, scale );
-  circle( 0, 0, gridSize * 0.6 );
-  circle( gridSize * -0.45, gridSize * -0.35, gridSize * 0.3 );
-  circle( gridSize * 0.45, gridSize * -0.35, gridSize * 0.3 );
-//   ctx.drawImage(poopImg, gridSize * -0.6, gridSize * -0.6, gridSize * 1.3, gridSize * 1.3);
+  // circle( 0, 0, gridSize * 0.6 );
+  // circle( gridSize * -0.45, gridSize * -0.35, gridSize * 0.3 );
+  // circle( gridSize * 0.45, gridSize * -0.35, gridSize * 0.3 );
+  ctx.drawImage(poopImg, gridSize * -0.6, gridSize * -0.6, gridSize * 1.3, gridSize * 1.3);
   ctx.restore();
 };
 
