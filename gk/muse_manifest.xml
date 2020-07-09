@@ -1,4 +1,4 @@
-<manifest alg="2" build="2018.1.0.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="https://tackleboxing.000webhostapp.com" resolutions="1x" timestamp="1594180494403">
+<manifest alg="2" build="2018.1.0.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="https://tackleboxing.000webhostapp.com" resolutions="1x" timestamp="1594259452578">
   <folder name="fonts">
     <file name="crimson-text-v10-latin-regular.woff" crc="4174528253"/>
     <file name="crimson-text-v10-latin-regular.eot" crc="79393289"/>
@@ -47,12 +47,12 @@
       <file name="about-us.css" crc="4270760998" ref="phone>about-us"/>
       <file name="gallery.css" crc="4211197705" ref="phone>gallery"/>
       <file name="index.css" crc="207341842" ref="phone>index"/>
-      <file name="games.css" crc="509910167" ref="phone>games"/>
+      <file name="games.css" crc="4000386329" ref="phone>games"/>
     </folder>
     <file name="index.html" crc="4084858163" seo="true" mt="1594098844656" redirect="true"/>
     <file name="gallery.html" crc="4056428581" seo="true" mt="1594098795716" redirect="true"/>
     <file name="about-us.html" crc="4174378741" seo="true" mt="1594098854863" redirect="true"/>
-    <file name="games.html" crc="469359773" seo="true" mt="1594180481493" redirect="true"/>
+    <file name="games.html" crc="512531494" seo="true" mt="1594259426187" redirect="true"/>
   </folder>
   <file name="index.html" crc="3765568416" seo="true" mt="1594100134705" redirect="true"/>
   <file name="gallery.html" crc="4062665357" seo="true" mt="1594096589204" redirect="true"/>
