@@ -1742,6 +1742,9 @@ function completeLevel() {
   if ( getNextLevel() ) {
     setTimeout( function() {
       nextLevelButton.classList.add('is-open');
+	  // LANCE: clear instructions once level completed and "Next Level" button is up
+	  var instructElem = document.querySelector('.instruction');
+	  instructElem.innerHTML = '';
     }, 1000 );
   }
 }
