@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: 'Avenir Next', Avenir, sans-serif;
+  font-family: 'Avenir Next', Avenir, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 20px;
   color: #555;
@@ -40,7 +40,7 @@ canvas {
 }
 
 .button {
-  font-family: 'Avenir Next', Avenir, sans-serif;
+  font-family: 'Avenir Next', Avenir, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 20px;
   padding: 5px 15px;
@@ -73,7 +73,9 @@ canvas {
   -webkit-transform: translateX(-110px) scale(0.5);
   transform: translateX(-110px) scale(0.5);
   opacity: 0;
-  background: #09F;
+  /* LANCE change next level button color from blue to gray  */
+  /* background: #09F; */
+  background: #737373;
   width: 200px;
   height: 80px;
   pointer-events: none;
@@ -82,7 +84,8 @@ canvas {
 }
 
 .next-level-button:hover {
-  background: #2BF;
+  /* LANCE change next level button color from blue to gray  */
+  background: #8f8f8f;
 }
 
 .next-level-button.is-open {

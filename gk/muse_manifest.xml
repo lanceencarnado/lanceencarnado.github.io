@@ -1,4 +1,4 @@
-<manifest alg="2" build="2018.1.0.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="https://tackleboxing.000webhostapp.com" resolutions="1x" timestamp="1594273738425">
+<manifest alg="2" build="2018.1.0.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="https://tackleboxing.000webhostapp.com" resolutions="1x" timestamp="1594603755931">
   <folder name="fonts">
     <file name="crimson-text-v10-latin-regular.woff" crc="4174528253"/>
     <file name="crimson-text-v10-latin-regular.eot" crc="79393289"/>
@@ -10,7 +10,7 @@
   <folder name="css">
     <file name="site_global.css" crc="444006867"/>
     <file name="index.css" crc="516789985" ref="index"/>
-    <file name="games.css" crc="3934081774" ref="games"/>
+    <file name="games.css" crc="3957660911" ref="games"/>
     <file name="gallery.css" crc="4271170824" ref="gallery"/>
     <file name="about-us.css" crc="169349590" ref="about-us"/>
   </folder>
@@ -43,22 +43,22 @@
       <caption webpage="games" alt=""/>
       <caption webpage="gallery" alt=""/>
     </file>
-    <file name="tacklebox black-01_poster_.png" crc="400686630" ref="index"/>
+    <file name="tacklebox black-01_poster_.png" crc="419504502" ref="index:games"/>
   </folder>
   <folder name="phone">
     <folder name="css">
       <file name="about-us.css" crc="256485853" ref="phone>about-us"/>
       <file name="gallery.css" crc="46749072" ref="phone>gallery"/>
       <file name="index.css" crc="277817460" ref="phone>index"/>
-      <file name="games.css" crc="431025171" ref="phone>games"/>
+      <file name="games.css" crc="484073545" ref="phone>games"/>
     </folder>
     <file name="index.html" crc="70938826" seo="true" mt="1594273414868" redirect="true"/>
     <file name="gallery.html" crc="4286331993" seo="true" mt="1594273358932" redirect="true"/>
     <file name="about-us.html" crc="4245433059" seo="true" mt="1594273343910" redirect="true"/>
-    <file name="games.html" crc="3978073289" seo="true" mt="1594273727376" redirect="true"/>
+    <file name="games.html" crc="339084821" seo="true" mt="1594603734206" redirect="true"/>
   </folder>
   <file name="index.html" crc="503092548" seo="true" mt="1594272799939" redirect="true"/>
   <file name="gallery.html" crc="393032304" seo="true" mt="1594272811419" redirect="true"/>
   <file name="about-us.html" crc="83004224" seo="true" mt="1594272844382" redirect="true"/>
-  <file name="games.html" crc="4203427549" seo="true" mt="1594272875383" redirect="true"/>
+  <file name="games.html" crc="3942181720" seo="true" mt="1594603715101" redirect="true"/>
 </manifest>

@@ -443,7 +443,9 @@ proto.render = function( ctx, center, gridSize ) {
   var ay = this.a.y * gridSize;
   var bx = this.b.x * gridSize;
   var by = this.b.y * gridSize;
-  ctx.strokeStyle = 'hsla(200, 80%, 50%, 0.7)';
+  // LANCE change blue line color
+  // ctx.strokeStyle = 'hsla(200, 80%, 50%, 0.7)';
+  ctx.strokeStyle = 'hsla(192, 46%, 81%, 0.8)';
   ctx.lineWidth = gridSize * 0.6;
   ctx.lineCap = 'round';
   ctx.beginPath();
@@ -472,7 +474,9 @@ proto.render = function( ctx, center, gridSize ) {
   var ay = this.a.y * gridSize;
   var bx = this.b.x * gridSize;
   var by = this.b.y * gridSize;
-  ctx.strokeStyle = 'hsla(30, 100%, 40%, 0.6)';
+  // LANCE changing normal line brown color to gray
+  // ctx.strokeStyle = 'hsla(30, 100%, 40%, 0.6)';
+  ctx.strokeStyle = 'hsla(0, 0%, 45%, 0.5)';
   ctx.lineWidth = gridSize * 0.8;
   ctx.lineCap = 'round';
   ctx.beginPath();
@@ -697,10 +701,10 @@ cub.render = function( ctx, mazeCenter, gridSize, angle, isHovered ) {
     ctx.closePath();
   }
 
-  // LANCE custom pic - see scriptwcustompic.js
+  // LANCE custom pic for cub / cherub
 
-//   var poopImg = new Image;
-//   poopImg.src = 'poop.png';
+  var cherubImg = new Image;
+  cherubImg.src = 'cherub.png';
 
   var x = this.peg.x * gridSize + this.offset.x;
   var y = this.peg.y * gridSize + this.offset.y;
@@ -712,10 +716,10 @@ cub.render = function( ctx, mazeCenter, gridSize, angle, isHovered ) {
   ctx.fillStyle = 'hsla(330, 100%, 40%, 1)';
   var scale = isHovered ? 1.15 : 1;
   ctx.scale( scale, scale );
-  circle( 0, 0, gridSize * 0.6 );
-  circle( gridSize * -0.45, gridSize * -0.35, gridSize * 0.3 );
-  circle( gridSize * 0.45, gridSize * -0.35, gridSize * 0.3 );
-//   ctx.drawImage(poopImg, gridSize * -0.6, gridSize * -0.6, gridSize * 1.3, gridSize * 1.3);
+//   circle( 0, 0, gridSize * 0.6 );
+//   circle( gridSize * -0.45, gridSize * -0.35, gridSize * 0.3 );
+//   circle( gridSize * 0.45, gridSize * -0.35, gridSize * 0.3 );
+  ctx.drawImage(cherubImg, gridSize * -0.8, gridSize * -0.8, gridSize * 1.6, gridSize * 1.6);
   ctx.restore();
 };
 
@@ -1103,7 +1107,9 @@ proto.render = function( ctx, center, gridSize, angle ) {
   ctx.strokeRect( -gridSize/5, -gridSize/5, gridSize*2/5, gridSize*2/5 );
   ctx.restore();
   // start position
-  ctx.strokeStyle = 'hsla(330, 100%, 50%, 0.3)';
+  // LANCE change the color of the start position circle
+  // ctx.strokeStyle = 'hsla(330, 100%, 50%, 0.3)';
+  ctx.strokeStyle = 'hsla(194, 100%, 37%, 0.4)';
   ctx.lineWidth = gridSize * 0.15;
   var startX = this.startPosition.x * gridSize;
   var startY = this.startPosition.y * gridSize;
@@ -1132,7 +1138,9 @@ proto.render = function( ctx, center, gridSize, angle ) {
   ctx.lineWidth = gridSize * 0.3;
   ctx.fillStyle = 'hsla(50, 100%, 50%, 1)';
   ctx.strokeStyle = 'hsla(50, 100%, 50%, 1)';
-  renderGoal( ctx, goalX, goalY, angle, gridSize * 0.6, gridSize * 0.3 );
+  // LANCE call new render goal / star function
+  // renderGoal( ctx, goalX, goalY, angle, gridSize * 0.6, gridSize * 0.3 );
+  renderGoalLance( ctx, goalX, goalY, angle, gridSize * 0.6, gridSize * 0.3 );
 
   ctx.restore();
 };
@@ -1151,6 +1159,7 @@ function strokeCircle( ctx, x, y, radius ) {
   ctx.closePath();
 }
 
+// LANCE not using this function - see renderGoalLance
 function renderGoal( ctx, x, y, mazeAngle, radiusA, radiusB ) {
   ctx.save();
   ctx.translate( x, y );
@@ -1165,6 +1174,29 @@ function renderGoal( ctx, x, y, mazeAngle, radiusA, radiusB ) {
   }
   ctx.fill();
   ctx.stroke();
+  ctx.closePath();
+  ctx.restore();
+}
+
+// LANCE new function for drawing goal / star image
+function renderGoalLance( ctx, x, y, mazeAngle, radiusA, radiusB ) {
+  var starImg = new Image;
+  starImg.src = 'star.png';
+
+  ctx.save();
+  ctx.translate( x, y );
+  ctx.rotate( -mazeAngle );
+  // ctx.beginPath();
+  // for ( var i=0; i<11; i++ ) {
+  //   var theta = Math.PI*2 * i/10 + Math.PI/2;
+  //   var radius = i % 2 ? radiusA : radiusB;
+  //   var dx = Math.cos( theta ) * radius;
+  //   var dy = Math.sin( theta ) * radius;
+  //   ctx[ i ? 'lineTo' : 'moveTo' ]( dx, dy );
+  // }
+  ctx.drawImage(starImg, gridSize * -0.78, gridSize * -0.85, gridSize * 1.55, gridSize * 1.55);
+  // ctx.fill();
+  // ctx.stroke();
   ctx.closePath();
   ctx.restore();
 }
@@ -1232,11 +1264,15 @@ proto.renderBurst = function( ctx ) {
 };
 
 function renderStar( ctx ) {
+
   ctx.lineWidth = 8;
   ctx.lineJoin = 'round';
   ctx.lineCap = 'round';
-  ctx.fillStyle = 'hsla(50, 100%, 50%, 1)';
-  ctx.strokeStyle = 'hsla(50, 100%, 50%, 1)';
+  // LANCE change floating star colors after level completion to match new star
+  // ctx.fillStyle = 'hsla(50, 100%, 50%, 1)';
+  // ctx.strokeStyle = 'hsla(50, 100%, 50%, 1)';
+  ctx.fillStyle = 'hsla(50, 100%, 63%, 1)';
+  ctx.strokeStyle = 'hsla(50, 100%, 63%, 1)';
   ctx.beginPath();
   for ( var i=0; i<11; i++ ) {
     var theta = Math.PI*2 * i/10 + Math.PI/2;
@@ -1743,8 +1779,8 @@ function completeLevel() {
     setTimeout( function() {
       nextLevelButton.classList.add('is-open');
 	  // LANCE: clear instructions once level completed and "Next Level" button is up
-	  var instructElem = document.querySelector('.instruction');
-	  instructElem.innerHTML = '';
+      var instructElem = document.querySelector('.instruction');
+      instructElem.innerHTML = '';
     }, 1000 );
   }
 }
