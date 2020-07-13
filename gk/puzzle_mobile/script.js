@@ -11,7 +11,9 @@ $(document).ready(function() {
 		mm = 0,
 		ss = 0,
 		upIMG,
-		images = ["https://preview.ibb.co/kMdsfm/kfp.png","https://preview.ibb.co/kWOEt6/minion.png","https://preview.ibb.co/e0Rv0m/ab.jpg"]
+		// LANCE only 1 photo now
+		//images = ["https://preview.ibb.co/kMdsfm/kfp.png","https://preview.ibb.co/kWOEt6/minion.png","https://preview.ibb.co/e0Rv0m/ab.jpg"]
+		images = ["godskidpuzzle.jpg"],
 		img = 0;
 
 
@@ -133,7 +135,9 @@ $(document).ready(function() {
 
 
 	function changeBG(img){
-		if(img != 3){
+		// LANCE changing uploaded photo index from 3 to 1 b/c there's only 2 photos now
+		// if(img != 3){
+		if(img != 1){
 		$('.me').css({
 			"background-image" : "url("+images[img]+")"
 		});
@@ -153,7 +157,7 @@ $(document).ready(function() {
 		$('#min').html(mm);
 		$('#sec').html(ss);
 		$('#moves').html(moves);
-		// LANCE: COUPON CODE STUFF
+		// LANCE c code stuff
 // 		if (mm < 2) {
 // 			$('#c_code').html("You completed the puzzle in less than 1 minute!<br>Your coupon code: CODEHERE");
 // 		}
@@ -194,8 +198,11 @@ $(document).ready(function() {
 
             reader.onload = function (e) {
                upIMG =  e.target.result;
-               img = 3;
-               changeBG(3);
+			   // LANCE changing uploaded photo index from 3 to 1 b/c there's only 2 photos now
+               // img = 3;
+               // changeBG(3);
+               img = 1;
+               changeBG(1);
             }
             reader.readAsDataURL(input.files[0]);
         }
