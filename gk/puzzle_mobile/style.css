@@ -184,7 +184,7 @@ body, html {
   position: absolute;
   /*   LANCE shift things over - there's only 2 pics now  */
   /* left: 100px; */
-  left: 260px;
+  left: 250px;
 }
 
 .pre_img li {
@@ -258,7 +258,7 @@ body, html {
 .start {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 48%;
   transform: translate(-50%, -50%);
   padding: 18px 45px;
 }
@@ -267,7 +267,7 @@ body, html {
   position: absolute;
   margin: 0 auto;
   padding: 18px 45px;
-  left: 50%;
+  left: 48%;
   transform: translate(-50%, 120px);
 }
 
