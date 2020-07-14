@@ -22,7 +22,9 @@ $(document).ready(function() {
 	$('.me').css({"background-image" : 'url('+images[0]+')'});
 
 	$(".start").click(function() {
-		$(".start").delay(100).slideUp(500);
+		// slideUp brings the page to the top of the iframe - don't want that
+		// $(".start").delay(100).slideUp(500);
+		$(".start").delay(100).hide();
 		$(".full").hide();
 		$(".pre_img").addClass("prevent_click");
 
@@ -147,7 +149,9 @@ $(document).ready(function() {
 			$('.me').css({"background-image" : "url("+upIMG+")"});
 	}
 
-	$('.pre_img li').hover(function(){
+	// LANCE change from hover to click to change puzzle to avoid accidental blank upload puzzle
+	// $('.pre_img li').hover(function(){
+	$('.pre_img li').click(function(){
 			img = $(this).attr("data-bid");
 			changeBG(img);
 
