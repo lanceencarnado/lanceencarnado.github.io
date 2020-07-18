@@ -187,7 +187,7 @@ canvas {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 999; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  padding-top: 150px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -201,9 +201,17 @@ canvas {
 .modal-content {
   background-color: #fefefe;
   margin: auto;
-  padding: 20px;
+  padding: 10px;
   border: 1px solid #888;
   width: 40%;
+  text-align: center;
+}
+
+/* Modal Text */
+.ccode {
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 @media only screen and (max-width: 600px) {

@@ -1786,7 +1786,7 @@ function completeLevel() {
   }
 }
 
-// LANCE function to display modal with c code
+// LANCE function to generate c code text and display modal
 function displayCCode() {
   var levelForCode = "intro-fixed1";
   var cCodeElem = document.querySelector('.ccode');
