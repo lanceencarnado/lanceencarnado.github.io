@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://tackleboxing.000webhostapp.com/index.html</loc>
+    <lastmod>2020-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="https://tackleboxing.000webhostapp.com/phone/index.html"/>
+    <image:image>
+      <image:loc>https://tackleboxing.000webhostapp.com/images/tacklebox-black-01.svg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tackleboxing.000webhostapp.com/gallery.html</loc>
+    <lastmod>2020-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="https://tackleboxing.000webhostapp.com/phone/gallery.html"/>
+    <image:image>
+      <image:loc>https://tackleboxing.000webhostapp.com/images/tacklebox-black-01.svg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tackleboxing.000webhostapp.com/about-us.html</loc>
+    <lastmod>2020-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="https://tackleboxing.000webhostapp.com/phone/about-us.html"/>
+    <image:image>
+      <image:loc>https://tackleboxing.000webhostapp.com/images/tacklebox-black-01.svg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://tackleboxing.000webhostapp.com/games.html</loc>
+    <lastmod>2020-07-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="https://tackleboxing.000webhostapp.com/phone/games.html"/>
+    <image:image>
+      <image:loc>https://tackleboxing.000webhostapp.com/images/tacklebox-black-01.svg</image:loc>
+    </image:image>
+  </url>
+</urlset>
