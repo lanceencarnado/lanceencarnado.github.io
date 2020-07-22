@@ -81,7 +81,7 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 	this.instance.parent = this;
 	this.instance.setTransform(620,541.5);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).to({y:-472.1},60).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance).to({y:-472.1},55).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(620,500,1240,1083);
