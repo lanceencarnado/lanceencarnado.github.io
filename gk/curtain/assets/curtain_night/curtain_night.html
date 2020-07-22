@@ -11,17 +11,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="authoring-tool" content="Adobe_Animate_CC">
-<title>curtainmobile</title>
+<title>curtain_night</title>
 <!-- write your code here -->
+<style>
+  body {
+	overflow:hidden;
+  }
+  #animation_container {
+	position:absolute;
+	margin:auto;
+	left:-100%;right:-100%;
+  }
+</style>
 <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-<script src="curtainmobile.js"></script>
+<script src="curtain_night.js"></script>
 <script>
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 function init() {
 	canvas = document.getElementById("canvas");
 	anim_container = document.getElementById("animation_container");
 	dom_overlay_container = document.getElementById("dom_overlay_container");
-	var comp=AdobeAn.getComposition("45B5934A940F4B998078F0E3090F9F4D");
+	var comp=AdobeAn.getComposition("35362CDEABD343A98292BA71B2DA1A19");
 	var lib=comp.getLibrary();
 	var loader = new createjs.LoadQueue(false);
 	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
@@ -42,7 +52,7 @@ function handleComplete(evt,comp) {
 	for(i=0; i<ssMetadata.length; i++) {
 		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
 	}
-	exportRoot = new lib.curtainmobile();
+	exportRoot = new lib.curtain_night();
 	stage = new lib.Stage(canvas);	
 	//Registers the "tick" event listener.
 	fnStartAnimation = function() {
@@ -94,9 +104,9 @@ function handleComplete(evt,comp) {
 <!-- write your code here -->
 </head>
 <body onload="init();" style="margin:0px;">
-	<div id="animation_container" style="background-color:rgba(255, 255, 255, 0.00); width:380px; height:1200px">
-		<canvas id="canvas" width="380" height="1200" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 0.00);"></canvas>
-		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:380px; height:1200px; position: absolute; left: 0px; top: 0px; display: block;">
+	<div id="animation_container" style="background-color:rgba(255, 255, 255, 0.00); width:1240px; height:1000px">
+		<canvas id="canvas" width="1240" height="1000" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 0.00);"></canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1240px; height:1000px; position: absolute; left: 0px; top: 0px; display: block;">
 		</div>
 	</div>
 </body>

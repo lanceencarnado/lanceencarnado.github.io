@@ -1,43 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://lanceencarnado.github.io/gk/curtain/index.html</loc>
-    <lastmod>2020-07-17</lastmod>
+    <loc>https://tackleboxing.000webhostapp.com/index.html</loc>
+    <lastmod>2020-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="https://lanceencarnado.github.io/gk/curtain/phone/index.html"/>
+    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="https://tackleboxing.000webhostapp.com/phone/index.html"/>
     <image:image>
-      <image:loc>https://lanceencarnado.github.io/gk/curtain/images/tacklebox-black-01.svg</image:loc>
+      <image:loc>https://tackleboxing.000webhostapp.com/images/tacklebox-black-01.svg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://lanceencarnado.github.io/gk/curtain/gallery.html</loc>
-    <lastmod>2020-07-15</lastmod>
+    <loc>https://tackleboxing.000webhostapp.com/gallery.html</loc>
+    <lastmod>2020-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="https://lanceencarnado.github.io/gk/curtain/phone/gallery.html"/>
+    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="https://tackleboxing.000webhostapp.com/phone/gallery.html"/>
     <image:image>
-      <image:loc>https://lanceencarnado.github.io/gk/curtain/images/tacklebox-black-01.svg</image:loc>
+      <image:loc>https://tackleboxing.000webhostapp.com/images/tacklebox-black-01.svg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://lanceencarnado.github.io/gk/curtain/about-us.html</loc>
-    <lastmod>2020-07-17</lastmod>
+    <loc>https://tackleboxing.000webhostapp.com/about-us.html</loc>
+    <lastmod>2020-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="https://lanceencarnado.github.io/gk/curtain/phone/about-us.html"/>
+    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="https://tackleboxing.000webhostapp.com/phone/about-us.html"/>
     <image:image>
-      <image:loc>https://lanceencarnado.github.io/gk/curtain/images/tacklebox-black-01.svg</image:loc>
+      <image:loc>https://tackleboxing.000webhostapp.com/images/tacklebox-black-01.svg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://lanceencarnado.github.io/gk/curtain/games.html</loc>
-    <lastmod>2020-07-15</lastmod>
+    <loc>https://tackleboxing.000webhostapp.com/games.html</loc>
+    <lastmod>2020-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="https://lanceencarnado.github.io/gk/curtain/phone/games.html"/>
+    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="https://tackleboxing.000webhostapp.com/phone/games.html"/>
     <image:image>
-      <image:loc>https://lanceencarnado.github.io/gk/curtain/images/tacklebox-black-01.svg</image:loc>
+      <image:loc>https://tackleboxing.000webhostapp.com/images/tacklebox-black-01.svg</image:loc>
     </image:image>
+  </url>
+  <url>
+    <loc>https://tackleboxing.000webhostapp.com/home-dark.html</loc>
+    <lastmod>2020-07-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="https://tackleboxing.000webhostapp.com/phone/home-dark.html"/>
+  </url>
+  <url>
+    <loc>https://tackleboxing.000webhostapp.com/gallery-dark.html</loc>
+    <lastmod>2020-07-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="https://tackleboxing.000webhostapp.com/phone/gallery-dark.html"/>
+  </url>
+  <url>
+    <loc>https://tackleboxing.000webhostapp.com/about-us-dark.html</loc>
+    <lastmod>2020-07-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="https://tackleboxing.000webhostapp.com/phone/about-us-dark.html"/>
+  </url>
+  <url>
+    <loc>https://tackleboxing.000webhostapp.com/games-dark.html</loc>
+    <lastmod>2020-07-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="https://tackleboxing.000webhostapp.com/phone/games-dark.html"/>
   </url>
 </urlset>
