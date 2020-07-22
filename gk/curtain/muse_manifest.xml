@@ -1,4 +1,4 @@
-<manifest alg="2" build="2018.1.0.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="https://tackleboxing.000webhostapp.com" resolutions="1x" timestamp="1595392944933">
+<manifest alg="2" build="2018.1.0.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="https://tackleboxing.000webhostapp.com" resolutions="1x" timestamp="1595437381059">
   <folder name="css">
     <file name="site_global.css" crc="444006867"/>
     <file name="gallery-dark.css" crc="75099818" ref="gallery-dark"/>
@@ -28,10 +28,10 @@
     </folder>
     <folder name="curtain_mobile">
       <folder name="images">
-        <file name="curtain_mobile_atlas_.png" crc="490674233" mt="1595391168000"/>
+        <file name="curtain_mobile_atlas_.png" crc="3843084598" mt="1595437193000"/>
       </folder>
-      <file name="curtain_mobile.js" crc="122414101" mt="1595391168000"/>
-      <file name="curtain_mobile.html" crc="41048773" mt="1595391168000"/>
+      <file name="curtain_mobile.js" crc="46263284" mt="1595437193000"/>
+      <file name="curtain_mobile.html" crc="205282663" mt="1595437193000"/>
     </folder>
     <folder name="curtain">
       <folder name="components">
@@ -174,11 +174,11 @@
       <file name="gallery-dark.css" crc="4018714035" ref="phone>gallery-dark"/>
       <file name="about-us-dark.css" crc="4132715629" ref="phone>about-us-dark"/>
       <file name="games.css" crc="3877949935" ref="phone>games"/>
-      <file name="about-us.css" crc="24131468" ref="phone>about-us"/>
+      <file name="about-us.css" crc="60634718" ref="phone>about-us"/>
     </folder>
     <file name="index.html" crc="504283447" seo="true" mt="1595391253214" redirect="true"/>
     <file name="gallery.html" crc="4211304248" seo="true" mt="1595303950588" redirect="true"/>
-    <file name="about-us.html" crc="401175759" seo="true" mt="1595392310650" redirect="true"/>
+    <file name="about-us.html" crc="3937628001" seo="true" mt="1595437304245" redirect="true"/>
     <file name="games.html" crc="207499445" seo="true" mt="1595304065295" redirect="true"/>
     <file name="home-dark.html" crc="406707648" seo="true" mt="1595391253216" redirect="true"/>
     <file name="gallery-dark.html" crc="165567737" seo="true" mt="1595305086963" redirect="true"/>

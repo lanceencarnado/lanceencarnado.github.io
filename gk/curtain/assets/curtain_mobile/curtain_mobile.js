@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"curtain_mobile_atlas_", frames: [[0,0,1600,818],[0,820,1600,818],[0,1640,1600,818]]}
+		{name:"curtain_mobile_atlas_", frames: [[0,0,1000,511],[0,513,1000,511],[0,1026,1000,511]]}
 ];
 
 
@@ -32,35 +32,35 @@ lib.ssMetadata = [
 
 
 
-(lib.cherubs = function(mode,startPosition,loop) {
+(lib.cherubssmall = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Layer_1
 	this.instance = new lib.Transition_B1();
 	this.instance.parent = this;
-	this.instance.setTransform(-805,-384);
+	this.instance.setTransform(-499,-283);
 
 	this.instance_1 = new lib.Transition_B2();
 	this.instance_1.parent = this;
-	this.instance_1.setTransform(-805,-384);
+	this.instance_1.setTransform(-499,-283);
 
 	this.instance_2 = new lib.Transition_B3();
 	this.instance_2.parent = this;
-	this.instance_2.setTransform(-805,-384);
+	this.instance_2.setTransform(-499,-283);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance_1}]},3).to({state:[{t:this.instance_2}]},3).wait(3));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-805,-384,1600,818);
+p.nominalBounds = new cjs.Rectangle(-499,-283,1000,511);
 
 
 (lib.Tween1 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Layer_1
-	this.instance = new lib.cherubs();
+	this.instance = new lib.cherubssmall();
 	this.instance.parent = this;
-	this.instance.setTransform(0,360.8,0.237,0.237,0,0,0,-5,25.1);
+	this.instance.setTransform(0,365.6,0.38,0.38,0,0,0,0.9,-27.5);
 
 	this.shape = new cjs.Shape();
 	this.shape.graphics.f("#FFFFFF").s().p("EgdrA7iMAAAh3DMA7XAAAMAAAB3Dg");
@@ -69,7 +69,7 @@ p.nominalBounds = new cjs.Rectangle(-805,-384,1600,818);
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape},{t:this.instance}]}).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-190,-457.9,380,915.8);
+p.nominalBounds = new cjs.Rectangle(-190,-457.9,380,920.6);
 
 
 // stage content:
@@ -81,10 +81,10 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 	this.instance.parent = this;
 	this.instance.setTransform(190,457.9);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).to({y:-440.4},59).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance).to({y:-452.4},59).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(190,450,380,915.8);
+p.nominalBounds = new cjs.Rectangle(190,450,380,920.5);
 // library properties:
 lib.properties = {
 	id: 'E276715C7F2E4603AB89C66C3520008E',
