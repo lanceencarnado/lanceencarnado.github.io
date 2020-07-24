@@ -18,7 +18,7 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
   <title>About Us</title>
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="../css/site_global.css?crc=444006867"/>
-  <link rel="stylesheet" type="text/css" href="css/about-us.css?crc=4106538882" id="pagesheet"/>
+  <link rel="stylesheet" type="text/css" href="css/about-us.css?crc=124617097" id="pagesheet"/>
     <!--custom head HTML-->
   <style>#u5587 {  pointer-events: none;}</style>
   <!--/*
@@ -127,9 +127,9 @@ Muse.Utils.prepHyperlinks(true);/* body */
 Muse.Utils.initializeAnimations();/* animations */
 Muse.Utils.makeButtonsVisibleAfterSettingMinWidth();/* body */
 Muse.Utils.fullPage('#page');/* 100% height page */
-$('#u1480').registerPositionScrollEffect([{"speed":[0,0],"in":[-Infinity,0]},{"speed":[0,0],"in":[0,Infinity]}]);/* scroll effect */
-$('#u1480').registerOpacityScrollEffect([{"in":[-Infinity,0],"opacity":0,"fade":0},{"opacity":0,"in":[0,0]},{"in":[0,Infinity],"opacity":100,"fade":25}]);/* scroll effect */
-$('#u5587').registerPositionScrollEffect([{"speed":[0,0],"in":[-Infinity,0]},{"speed":[0,0],"in":[0,Infinity]}]);/* scroll effect */
+$('#u1480').registerPositionScrollEffect([{"in":[-Infinity,0],"speed":[0,0]},{"in":[0,Infinity],"speed":[0,0]}]);/* scroll effect */
+$('#u1480').registerOpacityScrollEffect([{"in":[-Infinity,0],"opacity":0,"fade":0},{"in":[0,0],"opacity":0},{"in":[0,Infinity],"opacity":100,"fade":25}]);/* scroll effect */
+$('#u5587').registerPositionScrollEffect([{"in":[-Infinity,0],"speed":[0,0]},{"in":[0,Infinity],"speed":[0,0]}]);/* scroll effect */
 Muse.Utils.showWidgetsWhenReady();/* body */
 Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
 }catch(b){if(b&&"function"==typeof b.notify?b.notify():Muse.Assert.fail("Error calling selector function: "+b),false)throw b;}})})};

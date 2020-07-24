@@ -1,14 +1,14 @@
-<manifest alg="2" build="2018.1.0.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="https://tackleboxing.000webhostapp.com" resolutions="1x" timestamp="1595472419197">
+<manifest alg="2" build="2018.1.0.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="https://tackleboxing.000webhostapp.com" resolutions="1x" timestamp="1595604914369">
   <folder name="css">
     <file name="site_global.css" crc="444006867"/>
-    <file name="home-dark.css" crc="496286928" ref="home-dark"/>
-    <file name="index.css" crc="4180303766" ref="index"/>
-    <file name="gallery-dark.css" crc="371798699" ref="gallery-dark"/>
-    <file name="gallery.css" crc="4049858888" ref="gallery"/>
-    <file name="about-us-dark.css" crc="4124987962" ref="about-us-dark"/>
-    <file name="about-us.css" crc="3807470292" ref="about-us"/>
-    <file name="games-dark.css" crc="4125279147" ref="games-dark"/>
-    <file name="games.css" crc="3797513779" ref="games"/>
+    <file name="home-dark.css" crc="4062648449" ref="home-dark"/>
+    <file name="index.css" crc="262828835" ref="index"/>
+    <file name="gallery-dark.css" crc="4036630873" ref="gallery-dark"/>
+    <file name="gallery.css" crc="94612793" ref="gallery"/>
+    <file name="about-us-dark.css" crc="67226514" ref="about-us-dark"/>
+    <file name="about-us.css" crc="4017600870" ref="about-us"/>
+    <file name="games-dark.css" crc="209790116" ref="games-dark"/>
+    <file name="games.css" crc="130333373" ref="games"/>
   </folder>
   <folder name="fonts">
     <file name="crimson-text-v10-latin-regular.woff" crc="4174528253"/>
@@ -81,8 +81,7 @@
     <file name="cloud 5_poster_u1710.png" crc="3880914089" ref="phone>index:index"/>
     <file name="5 cloud.svg" crc="3830769583" ref="phone>index"/>
     <file name="5 cloud_poster_u3271.png" crc="3801987090" ref="phone>index"/>
-    <file name="sun_1.svg" crc="3893458391" ref="phone>index:index"/>
-    <file name="sun_1_poster_u2555.png" crc="3879093036" ref="phone>index:index"/>
+    <file name="sun_1.svg" crc="302081909" ref="phone>index:index"/>
     <file name="cloud 2.svg" crc="4262255348" ref="phone>index:index"/>
     <file name="cloud 2_poster_u2006.png" crc="375476356" ref="phone>index:index"/>
     <file name="2 cloud.svg" crc="254982094" ref="phone>index"/>
@@ -156,40 +155,41 @@
     <file name="tacklebox-black-01.svg" crc="507190392" seo="true" ref="index:gallery:about-us:games">
       <caption webpage="index" alt=""/>
       <caption webpage="about-us" alt=""/>
-      <caption webpage="gallery" alt=""/>
       <caption webpage="games" alt=""/>
+      <caption webpage="gallery" alt=""/>
     </file>
     <file name="tacklebox black-01_poster_.png" crc="400686630" ref="index"/>
     <file name="moon final.png" crc="360994595" ref="home-dark">
       <caption webpage="home-dark" alt=""/>
     </file>
+    <file name="sun_1_poster_u5656.png" crc="3830918690" ref="phone>index:index"/>
   </folder>
   <folder name="phone">
     <folder name="css">
-      <file name="gallery.css" crc="4009150571" ref="phone>gallery"/>
-      <file name="index.css" crc="138024387" ref="phone>index"/>
-      <file name="about-us.css" crc="4106538882" ref="phone>about-us"/>
-      <file name="games.css" crc="385776067" ref="phone>games"/>
-      <file name="home-dark.css" crc="3945906816" ref="phone>home-dark"/>
-      <file name="gallery-dark.css" crc="3952270418" ref="phone>gallery-dark"/>
-      <file name="about-us-dark.css" crc="512776453" ref="phone>about-us-dark"/>
-      <file name="games-dark.css" crc="3997547819" ref="phone>games-dark"/>
+      <file name="gallery.css" crc="3832443227" ref="phone>gallery"/>
+      <file name="index.css" crc="3840670373" ref="phone>index"/>
+      <file name="about-us.css" crc="124617097" ref="phone>about-us"/>
+      <file name="games.css" crc="3844276847" ref="phone>games"/>
+      <file name="home-dark.css" crc="484416239" ref="phone>home-dark"/>
+      <file name="gallery-dark.css" crc="3864972460" ref="phone>gallery-dark"/>
+      <file name="about-us-dark.css" crc="3798648200" ref="phone>about-us-dark"/>
+      <file name="games-dark.css" crc="184211464" ref="phone>games-dark"/>
     </folder>
-    <file name="index.html" crc="96019515" seo="true" mt="1595471872551" redirect="true"/>
-    <file name="gallery.html" crc="3964142831" seo="true" mt="1595471872551" redirect="true"/>
-    <file name="about-us.html" crc="3900929310" seo="true" mt="1595471872552" redirect="true"/>
-    <file name="games.html" crc="464154866" seo="true" mt="1595471872553" redirect="true"/>
-    <file name="home-dark.html" crc="477879015" seo="true" mt="1595471872555" redirect="true"/>
-    <file name="gallery-dark.html" crc="251810100" seo="true" mt="1595471872557" redirect="true"/>
-    <file name="about-us-dark.html" crc="4287243142" seo="true" mt="1595471872559" redirect="true"/>
-    <file name="games-dark.html" crc="452029950" seo="true" mt="1595471872563" redirect="true"/>
+    <file name="index.html" crc="4180550286" seo="true" mt="1595604737151" redirect="true"/>
+    <file name="gallery.html" crc="3881369779" seo="true" mt="1595604737152" redirect="true"/>
+    <file name="about-us.html" crc="4077984670" seo="true" mt="1595604737153" redirect="true"/>
+    <file name="games.html" crc="3825098915" seo="true" mt="1595604737155" redirect="true"/>
+    <file name="home-dark.html" crc="90518051" seo="true" mt="1595604737156" redirect="true"/>
+    <file name="gallery-dark.html" crc="205701796" seo="true" mt="1595604737158" redirect="true"/>
+    <file name="about-us-dark.html" crc="4142594796" seo="true" mt="1595604737160" redirect="true"/>
+    <file name="games-dark.html" crc="4205981337" seo="true" mt="1595604737161" redirect="true"/>
   </folder>
-  <file name="index.html" crc="317332215" seo="true" mt="1595471872528" redirect="true"/>
-  <file name="gallery.html" crc="503913833" seo="true" mt="1595471872529" redirect="true"/>
-  <file name="about-us.html" crc="3835492484" seo="true" mt="1595471872532" redirect="true"/>
-  <file name="games.html" crc="490777633" seo="true" mt="1595471872534" redirect="true"/>
-  <file name="home-dark.html" crc="4032302266" seo="true" mt="1595471872542" redirect="true"/>
-  <file name="gallery-dark.html" crc="3914504393" seo="true" mt="1595471872543" redirect="true"/>
-  <file name="about-us-dark.html" crc="4082653775" seo="true" mt="1595471872544" redirect="true"/>
-  <file name="games-dark.html" crc="3977183173" seo="true" mt="1595471872546" redirect="true"/>
+  <file name="index.html" crc="181803971" seo="true" mt="1595604737146" redirect="true"/>
+  <file name="gallery.html" crc="4114363328" seo="true" mt="1595604737147" redirect="true"/>
+  <file name="about-us.html" crc="3989022216" seo="true" mt="1595604737147" redirect="true"/>
+  <file name="games.html" crc="181494680" seo="true" mt="1595604737148" redirect="true"/>
+  <file name="home-dark.html" crc="286516306" seo="true" mt="1595604737148" redirect="true"/>
+  <file name="gallery-dark.html" crc="3816530294" seo="true" mt="1595604737149" redirect="true"/>
+  <file name="about-us-dark.html" crc="491157102" seo="true" mt="1595604737150" redirect="true"/>
+  <file name="games-dark.html" crc="488444706" seo="true" mt="1595604737150" redirect="true"/>
 </manifest>
