@@ -22,7 +22,7 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
   <title>God's Kid</title>
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/site_global.css?crc=444006867"/>
-  <link rel="stylesheet" type="text/css" href="css/index.css?crc=262828835" id="pagesheet"/>
+  <link rel="stylesheet" type="text/css" href="css/index.css?crc=357821376" id="pagesheet"/>
     <!--custom head HTML-->
   <style>#u5614 {  pointer-events: none;}</style>
   <!--HTML Widget code-->
@@ -220,11 +220,6 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
     <div class="museBGSize CLOUD4 mse_pre_init" id="u2172"><!-- content --></div>
     <div class="museBGSize CLOUD7 mse_pre_init" id="u2173"><!-- content --></div>
     <div class="museBGSize CLOUD9 mse_pre_init" id="u2174"><!-- content --></div>
-    <div class="browser_width" id="u5614-bw">
-     <div id="u5614"><!-- animation -->
-      <iframe class="animationContainer an_invi" id="U5617_animation" src="assets/curtain/curtain.html" scrolling="no"></iframe>
-     </div>
-    </div>
    </div>
    <div class="clearfix grpelem" id="pgk"><!-- column -->
     <a class="anchor_item colelem" id="gk"></a>
@@ -553,15 +548,14 @@ var muse_init=function(){require.config({baseUrl:""});require(["jquery","museuti
 window.Muse.assets.check($);/* body */
 Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
 Muse.Utils.prepHyperlinks(true);/* body */
-Muse.Utils.initializeAnimations();/* animations */
 Muse.Utils.makeButtonsVisibleAfterSettingMinWidth();/* body */
 Muse.Utils.fullPage('#page');/* 100% height page */
-$('#u2581').registerOpacityScrollEffect([{"in":[-Infinity,509],"opacity":0,"fade":0},{"in":[509,509],"opacity":0},{"in":[509,Infinity],"opacity":100,"fade":50}]);/* scroll effect */
+$('#u2581').registerOpacityScrollEffect([{"fade":0,"in":[-Infinity,509],"opacity":0},{"in":[509,509],"opacity":0},{"fade":50,"in":[509,Infinity],"opacity":100}]);/* scroll effect */
 $('#u2158').registerPositionScrollEffect([{"in":[-Infinity,100],"speed":[0,0]},{"in":[100,Infinity],"speed":[0,2]}]);/* scroll effect */
-$('#u2158').registerOpacityScrollEffect([{"in":[-Infinity,100],"opacity":100,"fade":0},{"in":[100,100],"opacity":100},{"in":[100,Infinity],"opacity":0,"fade":100}]);/* scroll effect */
+$('#u2158').registerOpacityScrollEffect([{"fade":0,"in":[-Infinity,100],"opacity":100},{"in":[100,100],"opacity":100},{"fade":100,"in":[100,Infinity],"opacity":0}]);/* scroll effect */
 $('#u2159').registerPositionScrollEffect([{"in":[-Infinity,0],"speed":[0,0]},{"in":[0,Infinity],"speed":[4.5,0]}]);/* scroll effect */
 $('#u2160').registerPositionScrollEffect([{"in":[-Infinity,0],"speed":[0,0]},{"in":[0,Infinity],"speed":[0,0]}]);/* scroll effect */
-$('#u2160').registerOpacityScrollEffect([{"in":[-Infinity,0],"opacity":100,"fade":0},{"in":[0,0],"opacity":100},{"in":[0,Infinity],"opacity":0,"fade":50}]);/* scroll effect */
+$('#u2160').registerOpacityScrollEffect([{"fade":0,"in":[-Infinity,0],"opacity":100},{"in":[0,0],"opacity":100},{"fade":50,"in":[0,Infinity],"opacity":0}]);/* scroll effect */
 $('#u2162').registerPositionScrollEffect([{"in":[-Infinity,0],"speed":[0,0]},{"in":[0,Infinity],"speed":[-7,0]}]);/* scroll effect */
 $('#u2163').registerPositionScrollEffect([{"in":[-Infinity,0],"speed":[0,0]},{"in":[0,Infinity],"speed":[6.5,0]}]);/* scroll effect */
 $('#u2164').registerPositionScrollEffect([{"in":[-Infinity,0],"speed":[0,0]},{"in":[0,Infinity],"speed":[-4,0]}]);/* scroll effect */
