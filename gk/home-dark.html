@@ -22,9 +22,9 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
   <title>God's Kid Dark</title>
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/site_global.css?crc=444006867"/>
-  <link rel="stylesheet" type="text/css" href="css/home-dark.css?crc=522991797" id="pagesheet"/>
+  <link rel="stylesheet" type="text/css" href="css/home-dark.css?crc=4170102051" id="pagesheet"/>
     <!--custom head HTML-->
-  <style>#u5637 {  pointer-events: none;}</style>
+  <style>#u5637 {  pointer-events: none;}body  {  opacity:0;}</style><script>  window.onload = function() { setTimeout(function() {    document.body.style.opacity="100";}    ,200);  };</script>
   <!--HTML Widget code-->
   
 <style>
@@ -559,12 +559,12 @@ Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
 Muse.Utils.prepHyperlinks(true);/* body */
 Muse.Utils.makeButtonsVisibleAfterSettingMinWidth();/* body */
 Muse.Utils.fullPage('#page');/* 100% height page */
-$('#u3839').registerOpacityScrollEffect([{"fade":0,"in":[-Infinity,509],"opacity":0},{"in":[509,509],"opacity":0},{"fade":50,"in":[509,Infinity],"opacity":100}]);/* scroll effect */
-$('#u3921').registerPositionScrollEffect([{"in":[-Infinity,0],"speed":[0,0]},{"in":[0,Infinity],"speed":[0,0]}]);/* scroll effect */
-$('#u3921').registerOpacityScrollEffect([{"fade":0,"in":[-Infinity,0],"opacity":100},{"in":[0,0],"opacity":100},{"fade":100,"in":[0,Infinity],"opacity":0}]);/* scroll effect */
-$('#u3913').registerPositionScrollEffect([{"in":[-Infinity,0],"speed":[0,0]},{"in":[0,Infinity],"speed":[0,0]}]);/* scroll effect */
-$('#u3913').registerOpacityScrollEffect([{"fade":0,"in":[-Infinity,0],"opacity":100},{"in":[0,0],"opacity":100},{"fade":50,"in":[0,Infinity],"opacity":0}]);/* scroll effect */
-$('#u3920').registerPositionScrollEffect([{"in":[-Infinity,0],"speed":[0,0]},{"in":[0,Infinity],"speed":[0,5]}]);/* scroll effect */
+$('#u3839').registerOpacityScrollEffect([{"fade":0,"in":[-Infinity,509],"opacity":0},{"opacity":0,"in":[509,509]},{"fade":50,"in":[509,Infinity],"opacity":100}]);/* scroll effect */
+$('#u3921').registerPositionScrollEffect([{"speed":[0,0],"in":[-Infinity,0]},{"speed":[0,0],"in":[0,Infinity]}]);/* scroll effect */
+$('#u3921').registerOpacityScrollEffect([{"fade":0,"in":[-Infinity,0],"opacity":100},{"opacity":100,"in":[0,0]},{"fade":100,"in":[0,Infinity],"opacity":0}]);/* scroll effect */
+$('#u3913').registerPositionScrollEffect([{"speed":[0,0],"in":[-Infinity,0]},{"speed":[0,0],"in":[0,Infinity]}]);/* scroll effect */
+$('#u3913').registerOpacityScrollEffect([{"fade":0,"in":[-Infinity,0],"opacity":100},{"opacity":100,"in":[0,0]},{"fade":50,"in":[0,Infinity],"opacity":0}]);/* scroll effect */
+$('#u3920').registerPositionScrollEffect([{"speed":[0,0],"in":[-Infinity,0]},{"speed":[0,5],"in":[0,Infinity]}]);/* scroll effect */
 Muse.Utils.showWidgetsWhenReady();/* body */
 Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
 }catch(b){if(b&&"function"==typeof b.notify?b.notify():Muse.Assert.fail("Error calling selector function: "+b),false)throw b;}})})};

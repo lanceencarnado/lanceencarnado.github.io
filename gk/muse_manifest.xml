@@ -1,8 +1,8 @@
-<manifest alg="2" build="2018.1.0.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="https://tackleboxing.000webhostapp.com" resolutions="1x" timestamp="1595641741382">
+<manifest alg="2" build="2018.1.0.386" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="https://tackleboxing.000webhostapp.com" resolutions="1x" timestamp="1595898771329">
   <folder name="css">
     <file name="site_global.css" crc="444006867"/>
-    <file name="home-dark.css" crc="522991797" ref="home-dark"/>
-    <file name="index.css" crc="357821376" ref="index"/>
+    <file name="home-dark.css" crc="4170102051" ref="home-dark"/>
+    <file name="index.css" crc="59457261" ref="index"/>
     <file name="gallery-dark.css" crc="4036630873" ref="gallery-dark"/>
     <file name="gallery.css" crc="94612793" ref="gallery"/>
     <file name="about-us-dark.css" crc="67226514" ref="about-us-dark"/>
@@ -69,8 +69,8 @@
     <file name="require.js" crc="7928878" ref="phone>index:phone>gallery:phone>about-us:phone>games:phone>home-dark:phone>gallery-dark:phone>about-us-dark:phone>games-dark:index:gallery:about-us:games:home-dark:gallery-dark:about-us-dark:games-dark"/>
   </folder>
   <folder name="images">
-    <file name="gk logo.svg" crc="326002583" ref="phone>index"/>
-    <file name="gk logo_poster_u2823.png" crc="279979942" ref="phone>index:phone>gallery:phone>about-us:phone>games:index:gallery:about-us:games"/>
+    <file name="gk logo.svg" crc="326002583" ref="phone>index:index"/>
+    <file name="gk logo_poster_u2823.png" crc="279979942" ref="phone>index:phone>gallery:phone>about-us:phone>games:gallery:about-us:games"/>
     <file name="facebook.svg" crc="119352249" ref="phone>index:phone>gallery:phone>about-us:phone>games:index:gallery:about-us:games"/>
     <file name="facebook_poster_u275.png" crc="3975954786" ref="phone>index:phone>gallery:phone>about-us:phone>games:index:gallery:about-us:games"/>
     <file name="twitter.svg" crc="4168479296" ref="phone>index:phone>gallery:phone>about-us:phone>games:index:gallery:about-us:games"/>
@@ -116,14 +116,11 @@
     <file name="8 cloud_poster_u3279.png" crc="200035156" ref="phone>index"/>
     <file name="banner-cherub-1.gif" crc="157554604" ref="phone>index:phone>home-dark:index:home-dark">
       <caption webpage="index" alt=""/>
-      <caption webpage="index" alt=""/>
-      <caption webpage="index" alt=""/>
-      <caption webpage="home-dark" alt=""/>
       <caption webpage="home-dark" alt=""/>
     </file>
     <file name="tacklebox black-01.svg" crc="507190392" ref="phone>index:phone>gallery:phone>about-us:phone>games"/>
     <file name="tacklebox black-01_poster_u538.png" crc="400686630" ref="phone>index:phone>gallery:phone>about-us:phone>games"/>
-    <file name="gk logo2.svg" crc="326002583" ref="phone>gallery:phone>about-us:phone>games:index:gallery:about-us:games"/>
+    <file name="gk logo2.svg" crc="326002583" ref="phone>gallery:phone>about-us:phone>games:gallery:about-us:games"/>
     <file name="gods kid full logo black.svg" crc="4162524413" ref="phone>about-us:about-us"/>
     <file name="gods kid full logo black_poster_u1434.png" crc="491120514" ref="phone>about-us:about-us"/>
     <file name="facebook white.svg" crc="3793083129" ref="phone>home-dark:phone>gallery-dark:phone>about-us-dark:phone>games-dark:home-dark:gallery-dark:about-us-dark:games-dark"/>
@@ -135,7 +132,6 @@
     <file name="gk logo white.svg" crc="339527449" ref="phone>home-dark:phone>gallery-dark:phone>about-us-dark:phone>games-dark:home-dark:gallery-dark:about-us-dark:games-dark"/>
     <file name="gk logo white_poster_u4170.png" crc="496310128" ref="phone>home-dark:phone>gallery-dark:phone>about-us-dark:phone>games-dark:home-dark:gallery-dark:about-us-dark:games-dark"/>
     <file name="stars.jpg" crc="4067422626" ref="phone>home-dark:home-dark">
-      <caption webpage="home-dark" alt=""/>
       <caption webpage="home-dark" alt=""/>
     </file>
     <file name="moon final-u4424-fr.png" crc="3829007153" ref="phone>home-dark"/>
@@ -154,15 +150,16 @@
     <file name="cloud 9_poster_u1773.png" crc="3877357168" ref="index"/>
     <file name="tacklebox-black-01.svg" crc="507190392" seo="true" ref="index:gallery:about-us:games">
       <caption webpage="index" alt=""/>
+      <caption webpage="games" alt=""/>
       <caption webpage="gallery" alt=""/>
       <caption webpage="about-us" alt=""/>
-      <caption webpage="games" alt=""/>
     </file>
     <file name="tacklebox black-01_poster_.png" crc="400686630" ref="index"/>
     <file name="moon final.png" crc="360994595" ref="home-dark">
       <caption webpage="home-dark" alt=""/>
     </file>
     <file name="sun_1_poster_u5656.png" crc="3830918690" ref="phone>index:index"/>
+    <file name="gk logo_poster_u261.png" crc="279979942" ref="index"/>
   </folder>
   <folder name="phone">
     <folder name="css">
@@ -184,11 +181,11 @@
     <file name="about-us-dark.html" crc="3798684014" seo="true" mt="1595641417708" redirect="true"/>
     <file name="games-dark.html" crc="3996353819" seo="true" mt="1595641417708" redirect="true"/>
   </folder>
-  <file name="index.html" crc="456020289" seo="true" mt="1595641421256" redirect="true"/>
+  <file name="index.html" crc="4243238883" seo="true" mt="1595898723112" redirect="true"/>
   <file name="gallery.html" crc="4196040725" seo="true" mt="1595641417702" redirect="true"/>
   <file name="about-us.html" crc="3806664157" seo="true" mt="1595641417703" redirect="true"/>
   <file name="games.html" crc="100126797" seo="true" mt="1595641417703" redirect="true"/>
-  <file name="home-dark.html" crc="3921453414" seo="true" mt="1595641426315" redirect="true"/>
+  <file name="home-dark.html" crc="4208569564" seo="true" mt="1595898715992" redirect="true"/>
   <file name="gallery-dark.html" crc="3965522595" seo="true" mt="1595641417705" redirect="true"/>
   <file name="about-us-dark.html" crc="308331963" seo="true" mt="1595641417706" redirect="true"/>
   <file name="games-dark.html" crc="305897719" seo="true" mt="1595641417706" redirect="true"/>
