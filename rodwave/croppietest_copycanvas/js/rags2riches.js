@@ -217,16 +217,17 @@ function createFinalBillCanvas() {
 	drawRotatedImage(initialBillCanvas, ctx, 0, 0, 20, 600, 255);
 	drawRotatedImage(initialBillCanvas, ctx, 200, 200, -20, 600, 255);
 	drawRotatedImage(initialBillCanvas, ctx, 700, 700, -60, 600, 255);
-	drawRotatedImage(initialBillCanvas, ctx, 50, 650, 70, 600, 255);
+	drawRotatedImage(initialBillCanvas, ctx, 0, 650, 70, 600, 255);
+	drawRotatedImage(initialBillCanvas, ctx, 100, 750, -5, 600, 255);
 
 	// shadow on the final bill
-	ctx.shadowColor = 'rgba(0, 0, 0, 0.69)';
-	ctx.shadowBlur = 10;
-	ctx.shadowOffsetX = 5;
-	ctx.shadowOffsetY = 5;
+	ctx.shadowColor = 'rgba(0, 0, 0, 0.5)';
+	ctx.shadowBlur = 13;
+	ctx.shadowOffsetX = 8;
+	ctx.shadowOffsetY = 8;
 
 	// draw the final bill
-	drawRotatedImage(initialBillCanvas, ctx, 100, 300, 5, 850, 361);
+	drawRotatedImage(initialBillCanvas, ctx, 80, 300, -5, 850, 361);
 	console.log("called?");
 
 	// clear drop shadow
