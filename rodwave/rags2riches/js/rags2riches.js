@@ -90,6 +90,7 @@ $('#cropImageBtn').on('click', function (ev) {
 	$uploadCrop.croppie('result', {
 		type: 'base64',
 		format: 'png',
+		backgroundColor: '#FFFFFF',
 		size: {width: 402, height: 402}
 	}).then(function (resp) {
 		$('#faceimg').attr('src', resp);
@@ -205,28 +206,43 @@ function createFinalBillCanvas() {
 	var initialBillCanvas = document.getElementById("initialbillcanvas");
 	var ctx = c.getContext('2d');
 
-	var xOffset = 29;
-	var yOffset = 67;
+	var billBackground = new Image();
+	billBackground.onload = function() {
+		// draw flat bill background
+		ctx.drawImage(billBackground, 0, 0);
 
-	// draw background bills
-	// drawRotatedImage(initialBillCanvas, ctx, 0, 0, 20, 600, 255);
-	// drawRotatedImage(initialBillCanvas, ctx, 200, 200, -20, 600, 255);
-	// drawRotatedImage(initialBillCanvas, ctx, 700, 700, -60, 600, 255);
-	// drawRotatedImage(initialBillCanvas, ctx, 0, 650, 70, 600, 255);
-	// drawRotatedImage(initialBillCanvas, ctx, 100, 750, -5, 600, 255);
+		// draw background bills
+		drawRotatedImage(initialBillCanvas, ctx, -46, 91, -4.47, 945, 402); // "Photo 4"
+		drawRotatedImage(initialBillCanvas, ctx, 765, 798, -13.01, 945, 402); // "Photo 3"
+		drawRotatedImage(initialBillCanvas, ctx, 44, 812, 15.38, 945, 402); // "Photo 2"
 
-	// shadow on the final bill
-	ctx.shadowColor = 'rgba(0, 0, 0, 0.4)';
-	ctx.shadowBlur = 10;
-	ctx.shadowOffsetX = 8;
-	ctx.shadowOffsetY = 8;
+		var billMidground = new Image();
+		billMidground.onload = function() {
+			// draw flat bill midground (between generated background bills and final bill)
+			ctx.drawImage(billMidground, 0, 0);
 
-	// draw the final bill
-	drawRotatedImage(initialBillCanvas, ctx, 106 + xOffset, 343 + yOffset, -7.53, 945, 402);
-	console.log("called?");
+			// shadow on the final bill
+			ctx.shadowColor = 'rgba(0, 0, 0, 0.4)';
+			ctx.shadowBlur = 10;
+			ctx.shadowOffsetX = 8;
+			ctx.shadowOffsetY = 8;
 
-	// clear drop shadow
-	ctx.shadowBlur = 0;
+			// draw the final bill
+			drawRotatedImage(initialBillCanvas, ctx, 129, 403, -7.53, 945, 402);
+
+			// clear drop shadow
+			ctx.shadowColor = 'rgba(0, 0, 0, 0)';
+
+			// draw the frame
+			var outerFrame = new Image();
+			outerFrame.onload = function() {
+				ctx.drawImage(outerFrame, 0, 0);
+			}
+			outerFrame.src = "assets/frame.png";
+		}
+		billMidground.src = "assets/bill_midground_OPTIMIZETHISLANCE.png";
+	}
+	billBackground.src = "assets/bill_background.jpg";
 }
 
 
