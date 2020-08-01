@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Rags2Riches</title>
+
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="header">
+			<img src="assets/rags2richeslogo.png" alt="Rags2Riches" width="100%">
+		</div>
+
+		<div class="row">
+			<div id="billinitialdiv" class="column">
+				<img class="billimg" id="billinitialimg" src="assets/bill_rod.jpg" alt="Rags2Riches Bill">
+
+				<br>
+				<input type="file" id="selectedFace" class="uploadface-btn" name="file_photo" style="display: none;" />
+				<a href="#" id="upload-btn" class="rodbutton" onclick="document.getElementById('selectedFace').click();return false;">
+					<img class="rodbuttonimg" id="uploadbtnimg" src="assets/btn_uploadimage.png" alt="Upload Image">
+				</a>
+			</div>
+
+			<div id="billgenerateddiv" class="column">
+				<img class="billimg" id="billgeneratedimg" src="assets/bill_question.jpg" alt="Rags2Riches Bill">
+				<br>
+				<a href="#" id="download-btn" download="Rags2Riches.jpg" class="rodbutton disabled" onclick="download_canvas_img(this);">
+					<img class="rodbuttonimg" src="assets/btn_saveimage.png" alt="Save Image">
+				</a>
+			</div>
+		</div>
+
+		<div class="calltoaction">
+			<img src="assets/pray4love.png" alt="Pray 4 Love Deluxe out now!" width="100%">
+		</div>
+
+		<div class="streaming">
+			<a href="#" class="streaminglink" target="_blank">
+				<img class="streamingimg" id="spotify" src="assets/dsp/spotify.png" alt="Listen on Spotify">
+			</a>
+			<a href="#" class="streaminglink" target="_blank">
+				<img class="streamingimg" id="apple" src="assets/dsp/apple.png" alt="Listen on Apple Music">
+			</a>
+			<br><a href="#" class="streaminglink" target="_blank">
+				<img class="streamingimg" id="tidal" src="assets/dsp/tidal.png" alt="Listen on Tidal">
+			</a>
+			<a href="#" class="streaminglink" target="_blank">
+				<img class="streamingimg" id="soundcloud" src="assets/dsp/soundcloud.png" alt="Listen on Soundcloud">
+			</a>
+			<br><a href="#" class="streaminglink" target="_blank">
+				<img class="streamingimg" id="apple" src="assets/dsp/youtube.png" alt="Listen on YouTube">
+			</a>
+		</div>
+
+		<div class="footer">
+			<a href="https://tacklebox.company" class="footerlink" target="_blank">
+				<img class="footerlogoimg alignleft" src="assets/tackleboxlogo.png" alt="Powered by Tacklebox">
+			</a>
+			<a href="#" class="footerlink" target="_blank">
+				<img class="footerlogoimg alignright" src="assets/rodwavelogo.png" alt="Rod Wave">
+			</a>
+			<div style="clear: both;"></div>
+		</div>
+
+	</body>
+</html>

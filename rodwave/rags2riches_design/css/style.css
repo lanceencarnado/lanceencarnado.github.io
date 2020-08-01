@@ -1,0 +1,99 @@
+body {
+	background-image: url("../assets/background.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: left bottom;
+	background-repeat: no-repeat;
+}
+
+.header {
+	margin: auto;
+	padding-top: 30px;
+	width: 21vw;
+	min-width: 300px;
+}
+
+.container {
+	margin: auto;
+}
+
+.row {
+	margin: auto;
+	display: flex;
+	text-align: center;
+  	justify-content: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+}
+
+.billimg {
+	width: 21vw;
+	min-width: 300px;
+}
+
+#billinitialdiv {
+ 	/* flex: 50%; */
+ 	margin-right: 4vw;
+}
+
+.rodbuttonimg {
+	padding-top: 20px;
+	width: 9vw;
+	min-width: 120px;
+}
+
+.rodbuttonimg:hover {
+	opacity: 0.75;
+	transition: opacity 0.3s;
+	-webkit-transition: opacity 0.3s;
+}
+
+.calltoaction {
+	margin: auto;
+	padding-top: 16px;
+	width: 28vw;
+	min-width: 400px;
+}
+
+.streaming {
+	margin: auto;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.streamingimg {
+	width: 9vw;
+	min-width: 125px;
+	margin-top: 14px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.streamingimg:hover {
+	opacity: 0.75;
+	transition: opacity 0.3s;
+	-webkit-transition: opacity 0.3s;
+}
+
+.footerlogoimg {
+	padding-top: 25px;
+	width: 11vw;
+	min-width: 140px;
+	margin-bottom: 15px;
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+.footerlogoimg:hover {
+	opacity: 0.7;
+	transition: opacity 0.3s;
+	-webkit-transition: opacity 0.3s;
+}
+
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}
