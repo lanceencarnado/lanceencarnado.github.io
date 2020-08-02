@@ -29,7 +29,7 @@ function readFile(input) {
 		reader.readAsDataURL(input.files[0]);
 	}
 	else {
-		swal("Sorry - your browser doesn't support the FileReader API");
+		swal("Sorry - either there was an error, or your browser doesn't support the FileReader API. Please try again.");
 	}
 }
 
@@ -131,7 +131,7 @@ function createInitialBillCanvas() {
 	var faceXOffset = 209;
 	var faceYOffset = 0;
 
-	// clear out the createCanvas
+	// clear out the canvas
 	ctx.clearRect(0, 0, c.width, c.height);
 
 	var face = new Image();
@@ -206,41 +206,45 @@ function createFinalBillCanvas() {
 	var initialBillCanvas = document.getElementById("initialbillcanvas");
 	var ctx = c.getContext('2d');
 
+	// clear out the canvas
+	ctx.clearRect(0, 0, c.width, c.height);
+
 	var billBackground = new Image();
 	billBackground.onload = function() {
 		// draw flat bill background
 		ctx.drawImage(billBackground, 0, 0);
 
+		// shadow on the bills
+		ctx.shadowColor = 'rgba(0, 0, 0, 0.4)';
+		ctx.shadowBlur = 8;
+		ctx.shadowOffsetX = 4;
+		ctx.shadowOffsetY = 4;
+
 		// draw background bills
-		drawRotatedImage(initialBillCanvas, ctx, -46, 91, -4.47, 945, 402); // "Photo 4"
-		drawRotatedImage(initialBillCanvas, ctx, 765, 798, -13.01, 945, 402); // "Photo 3"
-		drawRotatedImage(initialBillCanvas, ctx, 44, 812, 15.38, 945, 402); // "Photo 2"
+		drawRotatedImage(initialBillCanvas, ctx, -46, 91, -4.47, 945, 402); // "Photo 4" - visible face
+		drawRotatedImage(initialBillCanvas, ctx, 765, 798, -13.01, 945, 402); // "Photo 3" - visible face
 
-		var billMidground = new Image();
-		billMidground.onload = function() {
-			// draw flat bill midground (between generated background bills and final bill)
-			ctx.drawImage(billMidground, 0, 0);
+		drawRotatedImage(initialBillCanvas, ctx, -149, 329, -14.61, 945, 402); // hidden face
 
-			// shadow on the final bill
-			ctx.shadowColor = 'rgba(0, 0, 0, 0.4)';
-			ctx.shadowBlur = 10;
-			ctx.shadowOffsetX = 8;
-			ctx.shadowOffsetY = 8;
+		drawRotatedImage(initialBillCanvas, ctx, 44, 812, 15.38, 945, 402); // "Photo 2" - visible face
 
-			// draw the final bill
-			drawRotatedImage(initialBillCanvas, ctx, 129, 403, -7.53, 945, 402);
+		drawRotatedImage(initialBillCanvas, ctx, -430, 1094, -66, 945, 402); // hidden face
+		drawRotatedImage(initialBillCanvas, ctx, 469, 1215, -102.3, 945, 402); // hidden face
+		drawRotatedImage(initialBillCanvas, ctx, -565, 142, 18, 945, 402); // hidden face
+		drawRotatedImage(initialBillCanvas, ctx, 423, 400, 102.2, 945, 402); // hidden face
 
-			// clear drop shadow
-			ctx.shadowColor = 'rgba(0, 0, 0, 0)';
+		// draw the final bill
+		drawRotatedImage(initialBillCanvas, ctx, 129, 403, -7.53, 945, 402);
 
-			// draw the frame
-			var outerFrame = new Image();
-			outerFrame.onload = function() {
-				ctx.drawImage(outerFrame, 0, 0);
-			}
-			outerFrame.src = "assets/frame.png";
+		// clear drop shadow
+		ctx.shadowColor = 'rgba(0, 0, 0, 0)';
+
+		// draw the frame
+		var outerFrame = new Image();
+		outerFrame.onload = function() {
+			ctx.drawImage(outerFrame, 0, 0);
 		}
-		billMidground.src = "assets/bill_midground_OPTIMIZETHISLANCE.png";
+		outerFrame.src = "assets/frame.png";
 	}
 	billBackground.src = "assets/bill_background.jpg";
 }
