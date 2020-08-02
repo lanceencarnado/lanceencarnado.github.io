@@ -99,7 +99,8 @@ body {
 
 @media only screen and (max-width: 768px) {
 	body {
-		background-position: center bottom;
+		background-size: cover;
+		background-position: right;
 	}
 
 	.header {
