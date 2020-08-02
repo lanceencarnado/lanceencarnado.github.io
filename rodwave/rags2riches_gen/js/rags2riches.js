@@ -160,7 +160,7 @@ function createInitialBillCanvas() {
 				// bill ends here - create the final bill canvas
 				createFinalBillCanvas();
 			}
-			rodbill.src = 'assets/billcutout_biggest_dontuse.png';
+			rodbill.src = 'assets/billcutout.png';
 		}
 		noiseFilter.src = "assets/noisefilter.jpg";
 	}
@@ -184,16 +184,16 @@ function faceFilter(img, ctx, x, y) {
 	}
 	ctx.putImageData(imageData, x, y);
 
+	// multiply
+	ctx.globalCompositeOperation = 'multiply';
+
+	ctx.fillStyle = '#ffffe1';
+	ctx.fillRect(x, y, img.width, img.height);
+
 	// screen
 	ctx.globalCompositeOperation = 'screen';
 
 	ctx.fillStyle = '#505a51';
-	ctx.fillRect(x, y, img.width, img.height);
-
-	// multiply
-	ctx.globalCompositeOperation = 'multiply';
-
-	ctx.fillStyle = '#ffffe5';
 	ctx.fillRect(x, y, img.width, img.height);
 
 	// reset blend mode
