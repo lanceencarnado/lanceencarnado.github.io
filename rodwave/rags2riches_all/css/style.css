@@ -158,9 +158,9 @@ a.disabled {
 	/* GENERATED IMG OUTER FRAME CSS */
 
 	#cameraflash {
-		width: 90vw;
-		height: 90vw;
-		transform: translate(5vw, -5vw);
+		width: 92vw;
+		height: 92vw;
+		transform: translate(4vw, -6vw);
 		min-width: 0;
 		min-height: 0;
 	}
