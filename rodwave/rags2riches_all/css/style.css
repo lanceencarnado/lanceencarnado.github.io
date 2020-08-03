@@ -246,10 +246,24 @@ figure figcaption {
    pointer-events: none;
 }
 
-/* .modal-content {
-	background-color: #4f4f4f;
+/* overwrite croppie button color */
+.btn-primary {
+	background-color: #DEA82E;
+	border-color: #906400;
 }
 
-.cr-slider {
-	color: #FFF;
-} */
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+	background-color: #906400 !important;
+	border-color: #6B4A00 !important;
+}
+
+@font-face {
+  font-family: 'Monaco';
+  src: url('fonts/monaco.woff') format('woff'),
+       url('fonts/monaco.ttf') format('truetype');
+}
+
+.btn {
+	font-family: 'Monaco', Helvetica, Arial, sans-serif;
+	font-size: 13px;
+}
