@@ -217,25 +217,33 @@ function faceFilter(img, ctx, x, y) {
 }
 
 function playCameraFlashAnimation() {
-	var cameraflash = document.getElementById("cameraflash");
-	var frameNum = 0;
-	var id = setInterval(frame, 5);
-	var fadingIn = true;
-	function frame() {
-		if (frameNum == 300) {
-			cameraflash.style.opacity = 0;
-			clearInterval(id);
-		} else if (frameNum > 100) {
-			frameNum++;
-			cameraflash.style.opacity = 1 - ((frameNum - 100) / 200);
-		} else if (frameNum > 35 && frameNum <= 100) {
-			frameNum++;
-			// hold for 65 frames
-		} else {
-			frameNum++;
-			cameraflash.style.opacity = frameNum / 35;
+	// STRAIGHT JAVASCRIPT VERSION AKA A WASTE OF TIME
+	// var cameraflash = document.getElementById("cameraflash");
+	// var frameNum = 0;
+	// var id = setInterval(frame, 5);
+	// var fadingIn = true;
+	// function frame() {
+	// 	if (frameNum == 300) {
+	// 		cameraflash.style.opacity = 0;
+	// 		clearInterval(id);
+	// 	} else if (frameNum > 100) {
+	// 		frameNum++;
+	// 		cameraflash.style.opacity = 1 - ((frameNum - 100) / 200);
+	// 	} else if (frameNum > 35 && frameNum <= 100) {
+	// 		frameNum++;
+	// 		// hold for 65 frames
+	// 	} else {
+	// 		frameNum++;
+	// 		cameraflash.style.opacity = frameNum / 35;
+	// 	}
+	// }
+
+	// JQUERY VERSION
+	$("#cameraflash").animate(
+		{opacity: "1"}, 200, "linear", function(){
+			$("#cameraflash").animate({opacity: "0"}, 1400, "linear");
 		}
-	}
+	);
 }
 
 // creating the final image w/ multiple bills
@@ -289,6 +297,7 @@ function createFinalBillCanvas() {
 			// play the camera flash animation
 			playCameraFlashAnimation();
 
+
 			// enable the "save image button"
 			$('#download-btn').attr("class","rodbutton");
 		}
@@ -302,6 +311,3 @@ download_canvas_img = function(el) {
   	var image = c.toDataURL("image/jpeg");
   	el.href = image;
 };
-
-// createInitialBillCanvas();
-// playCameraFlashAnimation();
