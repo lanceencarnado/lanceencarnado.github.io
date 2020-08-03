@@ -259,9 +259,9 @@ figure figcaption {
 
 @font-face {
   	font-family: 'MyMonaco';
-  	src: url('fonts/monaco.woff2') format('woff2'),
-		 url('fonts/monaco.woff') format('woff'),
-		 url('fonts/monaco.ttf') format('truetype');
+  	src: url('fonts/Monaco.woff2') format('woff2'),
+		 url('fonts/Monaco.woff') format('woff'),
+		 url('fonts/Monaco.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
