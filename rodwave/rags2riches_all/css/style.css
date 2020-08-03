@@ -37,6 +37,25 @@ body {
  	margin-right: 4vw;
 }
 
+/* GENERATED IMG OUTER FRAME CSS */
+#cameraflash {
+	position: absolute;
+	pointer-events: none;
+	width: 41.5vw;
+	height: 41.5vw;
+	z-index: 2;
+	transform: translate(-2.5vw, -2.5vw);
+	min-width: 398px;
+	min-height: 398px;
+	opacity: 0;
+}
+
+#cameraflashimg {
+	width: 100%;
+}
+
+/* END GENERATED IMG OUTER FRAME CSS */
+
 .rodbuttonimg {
 	margin-top: 25px;
 	width: 8vw;
@@ -124,17 +143,29 @@ a.disabled {
 	}
 
 	#billgenerateddiv {
-		margin-top: 10px;
+		margin-top: 35px;
 	}
 
 	.billdiv {
-		padding-top: 25px;
+		margin-top: 25px;
 	}
 
 	.billimg {
 		width: 80vw;
 		min-width: 0;
 	}
+
+	/* GENERATED IMG OUTER FRAME CSS */
+
+	#cameraflash {
+		width: 90vw;
+		height: 90vw;
+		transform: translate(5vw, -5vw);
+		min-width: 0;
+		min-height: 0;
+	}
+
+	/* END GENERATED IMG OUTER FRAME CSS */
 
 	.calltoaction {
 		width: 65vw;
@@ -214,3 +245,11 @@ figure figcaption {
    background-size:100% 100%;
    pointer-events: none;
 }
+
+/* .modal-content {
+	background-color: #4f4f4f;
+}
+
+.cr-slider {
+	color: #FFF;
+} */

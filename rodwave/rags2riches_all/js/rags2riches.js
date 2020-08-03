@@ -85,17 +85,61 @@ $('.uploadface-btn').on('change', function () {
 	}
 );
 
-// flipping the image
+// flipping the image - https://github.com/Foliotek/Croppie/issues/506
+function croppieOrientFlipHorizontal(or) {
+    switch (or) {
+        case 1: or = 2; break;
+        case 2: or = 1; break;
+        case 3: or = 4; break;
+        case 4: or = 3; break;
+        case 5: or = 6; break;
+        case 6: or = 5; break;
+        case 7: or = 8; break;
+        case 8: or = 7; break;
+    }
+    return or;
+}
+
 $('#flipImageBtn').on('click', function () {
-	if (croppieOrientation == NORMAL) {
-		croppieOrientation = FLIP;
-	} else if (croppieOrientation == FLIP) {
-		croppieOrientation = NORMAL;
-	} else if (croppieOrientation == IPHONE_PORTRAIT_NORMAL) {
-		croppieOrientation = IPHONE_PORTRAIT_FLIP;
-	} else if (croppieOrientation == IPHONE_PORTRAIT_FLIP) {
-		croppieOrientation = IPHONE_PORTRAIT_NORMAL;
-	}
+	// if (croppieOrientation == NORMAL) {
+	// 	croppieOrientation = FLIP;
+	// } else if (croppieOrientation == FLIP) {
+	// 	croppieOrientation = NORMAL;
+	// } else if (croppieOrientation == IPHONE_PORTRAIT_NORMAL) {
+	// 	croppieOrientation = IPHONE_PORTRAIT_FLIP;
+	// } else if (croppieOrientation == IPHONE_PORTRAIT_FLIP) {
+	// 	croppieOrientation = IPHONE_PORTRAIT_NORMAL;
+	// }
+	// $uploadCrop.croppie('bind', {
+	// 	url: rawImg,
+	// 	orientation: croppieOrientation
+	// });
+
+	croppieOrientation = croppieOrientFlipHorizontal(croppieOrientation);
+
+	$uploadCrop.croppie('bind', {
+		url: rawImg,
+		orientation: croppieOrientation
+	});
+});
+
+// rotating the image - https://github.com/Foliotek/Croppie/issues/506
+function croppieOrientRotateRight(or) {
+    switch (or) {
+        case 1: or = 6; break;
+        case 2: or = 7; break;
+        case 3: or = 8; break;
+        case 4: or = 5; break;
+        case 5: or = 2; break;
+        case 6: or = 3; break;
+        case 7: or = 4; break;
+        case 8: or = 1; break;
+    }
+    return or;
+}
+
+$('#rotateBtn').on('click', function(ev) {
+	croppieOrientation = croppieOrientRotateRight(croppieOrientation);
 	$uploadCrop.croppie('bind', {
 		url: rawImg,
 		orientation: croppieOrientation
@@ -217,6 +261,36 @@ function faceFilter(img, ctx, x, y) {
 	ctx.globalCompositeOperation = 'source-over';
 }
 
+function playCameraFlashAnimation() {
+	// STRAIGHT JAVASCRIPT VERSION AKA A WASTE OF TIME
+	// var cameraflash = document.getElementById("cameraflash");
+	// var frameNum = 0;
+	// var id = setInterval(frame, 5);
+	// var fadingIn = true;
+	// function frame() {
+	// 	if (frameNum == 300) {
+	// 		cameraflash.style.opacity = 0;
+	// 		clearInterval(id);
+	// 	} else if (frameNum > 100) {
+	// 		frameNum++;
+	// 		cameraflash.style.opacity = 1 - ((frameNum - 100) / 200);
+	// 	} else if (frameNum > 35 && frameNum <= 100) {
+	// 		frameNum++;
+	// 		// hold for 65 frames
+	// 	} else {
+	// 		frameNum++;
+	// 		cameraflash.style.opacity = frameNum / 35;
+	// 	}
+	// }
+
+	// JQUERY VERSION
+	$("#cameraflash").animate(
+		{opacity: "1"}, 200, "linear", function(){
+			$("#cameraflash").animate({opacity: "0"}, 1400, "linear");
+		}
+	);
+}
+
 // creating the final image w/ multiple bills
 function createFinalBillCanvas() {
 	var c = document.getElementById("finalrodcanvas");
@@ -265,6 +339,10 @@ function createFinalBillCanvas() {
 			var generatedImgUrl = c.toDataURL('image/jpeg', 1.0);
 			$('#billgeneratedimg').attr('src', generatedImgUrl);
 
+			// play the camera flash animation
+			playCameraFlashAnimation();
+
+
 			// enable the "save image button"
 			$('#download-btn').attr("class","rodbutton");
 		}
@@ -278,5 +356,3 @@ download_canvas_img = function(el) {
   	var image = c.toDataURL("image/jpeg");
   	el.href = image;
 };
-
-// createInitialBillCanvas();
