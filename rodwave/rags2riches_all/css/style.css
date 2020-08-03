@@ -258,9 +258,12 @@ figure figcaption {
 }
 
 @font-face {
-  font-family: 'Monaco';
-  src: url('fonts/monaco.woff') format('woff'),
-       url('fonts/monaco.ttf') format('truetype');
+  	font-family: 'Monaco';
+  	src: url('fonts/monaco.woff2') format('woff2'),
+		 url('fonts/monaco.woff') format('woff'),
+		 url('fonts/monaco.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
 }
 
 .btn {
