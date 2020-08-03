@@ -258,7 +258,7 @@ figure figcaption {
 }
 
 @font-face {
-  	font-family: 'Monaco';
+  	font-family: 'MyMonaco';
   	src: url('fonts/monaco.woff2') format('woff2'),
 		 url('fonts/monaco.woff') format('woff'),
 		 url('fonts/monaco.ttf') format('truetype');
@@ -267,6 +267,6 @@ figure figcaption {
 }
 
 .btn {
-	font-family: 'Monaco', Helvetica, Arial, sans-serif;
+	font-family: 'MyMonaco', Monaco, Helvetica, Arial, sans-serif;
 	font-size: 13px;
 }
