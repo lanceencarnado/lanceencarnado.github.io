@@ -216,6 +216,28 @@ function faceFilter(img, ctx, x, y) {
 	ctx.globalCompositeOperation = 'source-over';
 }
 
+function playCameraFlashAnimation() {
+	var cameraflash = document.getElementById("cameraflash");
+	var frameNum = 0;
+	var id = setInterval(frame, 5);
+	var fadingIn = true;
+	function frame() {
+		if (frameNum == 300) {
+			cameraflash.style.opacity = 0;
+			clearInterval(id);
+		} else if (frameNum > 100) {
+			frameNum++;
+			cameraflash.style.opacity = 1 - ((frameNum - 100) / 200);
+		} else if (frameNum > 35 && frameNum <= 100) {
+			frameNum++;
+			// hold for 65 frames
+		} else {
+			frameNum++;
+			cameraflash.style.opacity = frameNum / 35;
+		}
+	}
+}
+
 // creating the final image w/ multiple bills
 function createFinalBillCanvas() {
 	var c = document.getElementById("finalrodcanvas");
@@ -264,8 +286,8 @@ function createFinalBillCanvas() {
 			var generatedImgUrl = c.toDataURL('image/jpeg', 1.0);
 			$('#billgeneratedimg').attr('src', generatedImgUrl);
 
-			// OUTER FRAME - make the frame visible
-			$('#generatedouterframe').css("opacity", "1");
+			// play the camera flash animation
+			playCameraFlashAnimation();
 
 			// enable the "save image button"
 			$('#download-btn').attr("class","rodbutton");
@@ -282,3 +304,4 @@ download_canvas_img = function(el) {
 };
 
 // createInitialBillCanvas();
+// playCameraFlashAnimation();
