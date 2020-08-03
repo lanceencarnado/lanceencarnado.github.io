@@ -36,10 +36,10 @@ function readFile(input) {
 if (window.innerWidth <= 768) {
 	$uploadCrop = $('#upload-demo').croppie({
 		viewport: {
-			width: "75vw",
-			height: "75vw",
+			width: "min(70vw, 380px)",
+			height: "min(70vw, 380px)",
 		},
-		boundary: { width: "80vw", height: "80vw" },
+		boundary: { width: "min(80vw, 420px)", height: "min(80vw, 420px)" },
 		enforceBoundary: false,
 		enableExif: true,
 		enableOrientation: true,
@@ -47,10 +47,10 @@ if (window.innerWidth <= 768) {
 } else {
 	$uploadCrop = $('#upload-demo').croppie({
 		viewport: {
-			width: 402,
-			height: 402,
+			width: 380,
+			height: 380,
 		},
-		boundary: { width: 450, height: 450 },
+		boundary: { width: 420, height: 420 },
 		enforceBoundary: false,
 		enableExif: true,
 		enableOrientation: true,
