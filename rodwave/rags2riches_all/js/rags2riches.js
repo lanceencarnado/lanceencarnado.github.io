@@ -286,7 +286,7 @@ function playCameraFlashAnimation() {
 	// JQUERY VERSION
 	$("#cameraflash").animate(
 		{opacity: "1"}, 200, "linear", function(){
-			$("#cameraflash").animate({opacity: "0"}, 1400, "linear");
+			$("#cameraflash").animate({opacity: "0"}, 1200, "linear");
 		}
 	);
 }
