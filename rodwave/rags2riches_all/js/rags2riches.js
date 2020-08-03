@@ -25,6 +25,7 @@ function readFile(input) {
 			$('#upload-demo').addClass('ready');
 			$('#cropImagePop').modal('show');
 			rawImg = e.target.result;
+			input.value = null; // fix to allow the same image to be chosen two times in a row
 		}
 		reader.readAsDataURL(input.files[0]);
 	}
