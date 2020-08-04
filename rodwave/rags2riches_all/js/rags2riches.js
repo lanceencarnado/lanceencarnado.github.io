@@ -351,8 +351,17 @@ function createFinalBillCanvas() {
 	billBackground.src = "assets/bill_background.jpg";
 }
 
+// detect iOS
+let isIOS = /iPad|iPhone|iPod/.test(navigator.platform);
+
 download_canvas_img = function(el) {
 	var c = document.getElementById("finalrodcanvas");
-  	var image = c.toDataURL("image/jpeg");
+	var image = c.toDataURL("image/jpeg");
+	if (isIOS) {
+		// don't let iOS 13 download the image - open in a new tab
+		var downloadBtn = document.getElementById("download-btn");
+		downloadBtn.removeAttribute("download");
+		downloadBtn.setAttribute("target", "_blank");
+	}
   	el.href = image;
 };
