@@ -33,11 +33,9 @@ body {
 }
 
 #billinitialdiv {
- 	/* flex: 50%; */
  	margin-right: 4vw;
 }
 
-/* GENERATED IMG OUTER FRAME CSS */
 #cameraflash {
 	position: absolute;
 	pointer-events: none;
@@ -53,8 +51,6 @@ body {
 #cameraflashimg {
 	width: 100%;
 }
-
-/* END GENERATED IMG OUTER FRAME CSS */
 
 .rodbuttonimg {
 	margin-top: 25px;
@@ -155,8 +151,6 @@ a.disabled {
 		min-width: 0;
 	}
 
-	/* GENERATED IMG OUTER FRAME CSS */
-
 	#cameraflash {
 		width: 92vw;
 		height: 92vw;
@@ -164,8 +158,6 @@ a.disabled {
 		min-width: 0;
 		min-height: 0;
 	}
-
-	/* END GENERATED IMG OUTER FRAME CSS */
 
 	.calltoaction {
 		width: 65vw;
@@ -192,7 +184,6 @@ a.disabled {
 	}
 
 	.footerlogoimg {
-		/* padding-top: 25px; */
 		width: 25vw;
 		min-width: 0;
 		margin-bottom: 20px;
