@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Andrewfont-Regular';
+    src: url('Andrewfont-Regular.ttf');
+}
+
+body {
+	font-family: Helvetica
+}
+
+.test {
+	font-family: Andrewfont-Regular
+}
+
+#myCanvas {
+	transform: scale(0.8);
+}
