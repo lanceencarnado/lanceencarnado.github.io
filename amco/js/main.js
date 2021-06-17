@@ -14,7 +14,7 @@ function onYouTubeIframeAPIReady() {
 
         videoId: "",
         // playerVars: { 'autoplay': 1, 'playsinline': 1, 'showinfo': 0, 'controls': 0, 'rel': 0, 'modestbranding': 1, 'start': 5, 'loop':1, 'playlist':['AYPdJixNl-o','XUxb05_hBPE','KTzEVH4f434','fNRPiXes7OQ','7m8wWx66bzE','PyZI4v2PBLg','hRNxlztVs1M','JHlEkrsmxS4','fNRPiXes7OQ','eUsu9M0gi0A','-7LtIlQRwBg']},
-        playerVars: { rel:0, enablejsapi:1, modestbranding: 1, showinfo: 0, ecver: 2, playsinline:1, autoplay:1 },
+        playerVars: { rel:0, enablejsapi:1, modestbranding: 1, showinfo: 0, ecver: 2, controls:0 },
         events: {
             onReady: onPlayerReady,
         },
