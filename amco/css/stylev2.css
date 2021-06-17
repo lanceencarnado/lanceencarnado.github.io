@@ -182,11 +182,13 @@ html {
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
+/* LANCE remove most button hover effects on mobile */
 .button:hover{
     transition: 0.1s;
-    color: #fff;
+	opacity: 0.7;
+    /* color: #fff;
     background-color: #000;
-    border: 1px solid #000;
+    border: 1px solid #000; */
 }
 
 .playing{
@@ -552,8 +554,9 @@ a{
         font-size: 2em;
         display: inline-block;
         background-color: rgba(0,0,0,0.1);
-        -webkit-backdrop-filter: blur(15px);
-        backdrop-filter: blur(15px);
+		/* LANCE remove blur from "watch on youtube" button */
+        /* -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px); */
     }
     #social a, #socialFooter a{
         background-size: contain;
