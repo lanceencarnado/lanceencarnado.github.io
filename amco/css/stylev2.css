@@ -242,6 +242,8 @@ html {
 .sticky #mnue {
   right: 25px !important;
   top: 24px !important;
+  /* lance unset bottom when sticky menu to get rid of unclickable glitch on artist */
+  bottom: unset;
   position: fixed;
   z-index: 99;
 }
@@ -604,6 +606,17 @@ a{
 	  padding: 45px 35px !important;
 	}
 
+	.col-lg-3 {
+		padding-left: 3px !important;
+		padding-right: 3px !important;
+		margin-bottom: -14px !important;
+	}
+
+	.artname {
+		font-size: 11px !important;
+		margin-top: -36px !important;
+	}
+
   .apparitionVideo{
       -webkit-animation: APPARITIONVIDEO 1.6s ease-in-out; /* Safari 4+ */
       -moz-animation:    APPARITIONVIDEO 1.6s ease-in-out; /* Fx 5+ */
@@ -687,8 +700,9 @@ a{
   z-index: 1;
   position: relative;
   background: #ea3827;
-  box-shadow: 0px 0px 84px 39px rgba(0,0,0,1);
-      margin-bottom: 40px;
+  box-shadow: 0px -40px 84px 39px rgba(0,0,0,1);
+  /* lance change margin under "artist  title" */
+  margin-bottom: 10px;
 }
 .artis-title2 {
   font-family: 'Poppins Bold',sans-serif;
@@ -708,23 +722,46 @@ a{
 }
 .artist-cont {
   margin: 0 auto;
-  padding: 0px 50px 50px 50px;
+  padding: 0px 20px 50px 20px;
 }
 .artphoto img {
-  width: 100%
+  width: 100%;
+  /* LANCE artist photo is 30% opacity when not hovered */
+  opacity: 0.3;
+  z-index: 2;
 }
+
+/* LANCE artist photo 100% opacity on hover */
+.artphoto img:hover {
+	opacity: 1;
+}
+
+
 .artname {
-  background: #000;
+  /* LANCE no background on artist pics, font bigger */
+  /* background: #000; */
   position: absolute;
-  margin-top: -35px;
-  padding: 5px 10px;
+  /* margin-top: -35px; */
+  margin-top: -50px;
+  /* padding: 5px 10px; */
+  padding: 10px 10px;
   font-weight: 600;
   letter-spacing: 1px;
-  font-size: 18px;
+  /* font-size: 18px; */
+  font-size: 21px;
   font-family: 'Poppins Bold',sans-serif;
   color: #fff;
   text-transform: uppercase;
+  /* LANCE no pointer events on artname to avoid it from blocking artphoto hover events */
+  pointer-events: none;
 }
+
+/* lance artist name text has background on hover */
+.artphoto:hover .artname {
+  /* opacity: .6; */
+  background: #ea3827;
+}
+
 .artphoto {
   margin-bottom: 25px;
 }
@@ -743,9 +780,21 @@ a{
   margin: 0 auto;
 }
 @media (min-width: 1115px) {
-  .about-cont, .artist-cont {
+  /* LANCE make artist grid responsive */
+
+  /* .about-cont, .artist-cont {
     width: 1100px;
+  } */
+
+  .about-cont {
+	  width: 1100px;
   }
+
+  /* LANCE this is the artist grid */
+  .artist-cont {
+	  width: 100vw;
+  }
+
   .fieue {
     display: unset;
   }
@@ -861,14 +910,21 @@ a{
     z-index: 1;
   }
   .artist-cont {
-    padding: 30px 37px 50px 37px !important;
+	/* lance remove top padding */
+    padding: 0px 20px 50px 20px !important;
   }
   .artname {
-    margin-top: -29px !important;
-    font-size: 13px !important;
+	/* lance fixing artname for minimal width */
+    margin-top: -39px;
+    font-size: 13px;
   }
   .artname2 {
     font-size: 13px !important;
+  }
+
+  .col-lg-3 {
+	  padding-left: 4px !important;
+	  padding-right: 4px !important;
   }
 }
 .artname2 {
@@ -962,9 +1018,7 @@ a{
 	/* LANCE: no underline on artist names */
   /* text-decoration: underline !important; */
 }
-.artphoto:hover .artname span {
-  opacity: .6;
-}
+
 #mnue a:hover {
   opacity: .7;
   /* lance: remove underline from menu */
@@ -1125,6 +1179,12 @@ a{
     width: 34px !important;
   }
 }
+/* LANCE hide mobile menu's black box on resizing */
+@media (min-width: 1116px) {
+	.shownav {
+		display: none !important;
+	}
+}
 @media (min-width: 360px) and (max-width: 1115px) {
   #logo {
     width: 290px;
@@ -1184,4 +1244,12 @@ a{
 }
 .shnav .vfee {
   display: initial !important;
+}
+
+/* lance column in artist page margins */
+
+.col-lg-3 {
+	padding-left: 6px;
+	padding-right: 6px;
+	margin-bottom: -12px;
 }
