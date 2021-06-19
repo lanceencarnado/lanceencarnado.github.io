@@ -167,7 +167,7 @@ html {
     letter-spacing: -0.02em;
     font-weight: 700;
     line-height: 1em;
-    font-size: 24px;
+    font-size: 30px;
 }
 .button{
     transition: 0.3s;
@@ -613,7 +613,7 @@ a{
 	}
 
 	.artname {
-		font-size: 11px !important;
+		font-size: 10px !important;
 		margin-top: -36px !important;
 	}
 
@@ -736,11 +736,23 @@ a{
 	opacity: 1;
 }
 
+.artphoto img:active {
+	opacity: 1;
+}
+
+.artphoto:active {
+	opacity: 1;
+}
+
+
 
 .artname {
   /* LANCE no background on artist pics, font bigger */
   /* background: #000; */
   position: absolute;
+  vertical-align: bottom;
+  /* LANCE add a bottom to have the text grow upwards */
+  bottom: 25px;
   /* margin-top: -35px; */
   margin-top: -50px;
   /* padding: 5px 10px; */
@@ -758,6 +770,11 @@ a{
 
 /* lance artist name text has background on hover */
 .artphoto:hover .artname {
+  /* opacity: .6; */
+  background: #ea3827;
+}
+
+.artphoto:active .artname {
   /* opacity: .6; */
   background: #ea3827;
 }
@@ -801,11 +818,11 @@ a{
 }
 @media (max-width: 1114px) {
   .about-big {
-    font-size: 40px;
+    font-size: 45px;
     line-height: 1.3;
   }
   .about-desc {
-    font-size: 17px;
+    font-size: 20px;
     line-height: 1.5;
     margin-top: 22px;
   }
@@ -916,6 +933,7 @@ a{
   .artname {
 	/* lance fixing artname for minimal width */
     margin-top: -39px;
+	bottom: 20px;
     font-size: 13px;
   }
   .artname2 {
@@ -1180,7 +1198,7 @@ a{
   }
 }
 /* LANCE hide mobile menu's black box on resizing */
-@media (min-width: 1116px) {
+@media (min-width: 768px) {
 	.shownav {
 		display: none !important;
 	}
