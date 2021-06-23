@@ -63,7 +63,7 @@ html {
 .videoWrapper {
     position: relative;
     top:0;
-    height: 100vh;
+    height: 105vh;
     overflow: hidden;
 }
 
@@ -152,6 +152,7 @@ html {
   font-weight: 600;
   font-family: 'Poppins Bold',sans-serif;
   margin-left: 10px;
+  white-space: nowrap;
 }
 
 #content{
@@ -159,8 +160,9 @@ html {
     z-index: 52;
     color: white;
     text-align: left;
-    bottom: 20px;
-    left: 25px;
+	/* LANCE changing margins on "AMCO HIGHLIGHTS" */
+    bottom: 40px;
+    left: 100px;
 }
 #content h2{
     font-family: 'Poppins Bold',sans-serif;
@@ -194,10 +196,12 @@ html {
 .playing{
     display: inline-block;
     height: 30px;
-    font-size:10px;
+    font-size:14px;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     line-height: 26px;
+	margin-bottom: 10px;
+	margin-left: 15px;
 }
 .red{
     display: inline-block;
@@ -210,11 +214,13 @@ html {
 }
 
 #mnue a {
-  font-size: 24px;
+  /* LANCE increase font size of about/artists but not when it's on sticky menu */
+  font-size: 32px;
   font-weight: 700;
   text-transform: uppercase;
   font-family: 'Poppins Bold', 'Gotham Book',sans-serif;
   color: #fff;
+  white-space: nowrap;
 }
 
 .sticky .navsec {
@@ -240,21 +246,27 @@ html {
 }
 
 .sticky #mnue {
-  right: 25px !important;
+  right: 0px !important;
   top: 24px !important;
   /* lance unset bottom when sticky menu to get rid of unclickable glitch on artist */
   bottom: unset;
   position: fixed;
   z-index: 99;
+  width: 280px;
+}
+
+.sticky #mnue a {
+	font-size: 24px;
 }
 
 #mnue{
     position: absolute;
     z-index: 52;
-    right: 39px;
-    bottom: 15px;
+	/* lance change margins on about/artists */
+    right: 100px;
+    bottom: 40px;
     text-align: center;
-    width: 250px;
+    width: 300px;
     display: inline-block;
     margin-bottom: 8px;
 }
@@ -331,10 +343,11 @@ input[type = "checkbox"]:checked ~ #sound {
 #social{
     position: absolute;
     z-index: 52;
-    right: 44px;
-    bottom: 60px;
-    height: 40px;
-    width: 200px;
+	/* lance change margins on social buttons */
+    right: 110px;
+    bottom: 110px;
+    height: 45px;
+    width: 260px;
 }
 
     .icon:hover{
@@ -344,15 +357,18 @@ input[type = "checkbox"]:checked ~ #sound {
     cursor:pointer;
     transition:0.2s;
     border-radius: 3px;
-    width:40px;
-	height: 40px;
+    width: 45px;
+	height: 45px;
     transition:0.2s;
     display:inline-block;
     text-decoration:none;
     background-position:center center;
-    background-size: 32px;
+	/* LANCE change icon size */
+    background-size: 42px;
     background-repeat:no-repeat;
     display: inline-block;
+	margin-left: 5px;
+	margin-right: 5px;
 }
 
 
@@ -514,7 +530,7 @@ a{
         display: none;
     }
     #content{
-        top: 54vh;
+        top: 50vh;
         transform: translateY(-50%);
         left: 0;
         width: 100%;
@@ -528,7 +544,7 @@ a{
         width: 100%;
         text-align: center;
         right: 0;
-        bottom: 12vh;
+        bottom: 14vh;
     }
     #subscribe{
         left: 0;
@@ -538,7 +554,7 @@ a{
         border-radius: 2vw;
     }
     #content h2{
-        font-size: 10vw !important;
+        font-size: 30px !important;
     }
 
     .playing {
@@ -617,6 +633,14 @@ a{
 		margin-top: -36px !important;
 	}
 
+	#mnue a {
+		font-size: 25px !important;
+	}
+
+	#mnue {
+		bottom: 20px;
+	}
+
   .apparitionVideo{
       -webkit-animation: APPARITIONVIDEO 1.6s ease-in-out; /* Safari 4+ */
       -moz-animation:    APPARITIONVIDEO 1.6s ease-in-out; /* Fx 5+ */
@@ -644,7 +668,6 @@ a{
       50%   { opacity: 0; }
       100%   { opacity: 0.6; }
     }
-
 }
 
 
@@ -736,11 +759,11 @@ a{
 	opacity: 1;
 }
 
-.artphoto img:active {
+.artphoto:active {
 	opacity: 1;
 }
 
-.artphoto:active {
+.artphoto img:active {
 	opacity: 1;
 }
 
@@ -858,7 +881,7 @@ a{
 	}
 
 	#content h2{
-		font-size: 45px;
+		font-size: 8vw;
 	}
 
 	.playing {
@@ -970,7 +993,7 @@ a{
   display: block;
 }
 .abt {
-  margin-right: 25px;
+  margin-right: 35px;
 }
 
 @media (max-width: 768px) {
@@ -1159,7 +1182,8 @@ a{
 }
 @media (min-width: 1921px){
     .fieue {
-        display: none !important;
+		/* lance don't let it hide "an Atlanta Music Company" at  different sizes */
+        /* display: none !important; */
     }
     .sticky .navsec #logo {
         left: 50% !important;
@@ -1191,10 +1215,23 @@ a{
 }
 @media (min-width: 768px) and (max-width: 1075px) {
   .fieue {
-    display: none !important;
+	/* lance don't let it hide "an Atlanta Music Company" at  different sizes */
+    /* display: none !important; */
+	font-size: 14px;
   }
   #logo {
     width: 34px !important;
+  }
+  .abt {
+	  margin-right: 20px;
+  }
+  .sticky #mnue a {
+	  font-size: 20px;
+  }
+  .sticky .icon {
+	  width: 40px;
+	  height: 40px;
+	  background-size: 36px;
   }
 }
 /* LANCE hide mobile menu's black box on resizing */
