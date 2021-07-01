@@ -48,6 +48,7 @@ svg{
 html {
   scroll-padding-top: 82px;
 }
+/* LANCE fix scroll behavior for safari - take this out of css */
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
@@ -161,8 +162,8 @@ html {
     color: white;
     text-align: left;
 	/* LANCE changing margins on "AMCO HIGHLIGHTS" */
-    bottom: 40px;
-    left: 100px;
+    bottom: 30px;
+    left: 85px;
 }
 #content h2{
     font-family: 'Poppins Bold',sans-serif;
@@ -188,9 +189,16 @@ html {
 .button:hover{
     transition: 0.1s;
 	opacity: 0.7;
+	color: #fff;
+	text-decoration: none;
     /* color: #fff;
     background-color: #000;
     border: 1px solid #000; */
+}
+
+.button:active {
+	color: #fff;
+	text-decoration: none;
 }
 
 .playing{
@@ -201,7 +209,7 @@ html {
     letter-spacing: 0.2em;
     line-height: 26px;
 	margin-bottom: 10px;
-	margin-left: 15px;
+	/* margin-left: 15px; */
 }
 .red{
     display: inline-block;
@@ -231,10 +239,10 @@ html {
   background: #000;
   height: 82px;
   /* LANCE sticky header fade-in */
-  -webkit-animation: sticky-header-appear 1s ease-in-out; /* Safari 4+ */
-  -moz-animation:    sticky-header-appear 1s ease-in-out; /* Fx 5+ */
-  -o-animation:      sticky-header-appear 1s ease-in-out; /* Opera 12+ */
-  animation:         sticky-header-appear 1s ease-in-out; /* IE 10+, Fx 29+ */
+  -webkit-animation: sticky-header-appear 0.7s ease-in-out; /* Safari 4+ */
+  -moz-animation:    sticky-header-appear 0.7s ease-in-out; /* Fx 5+ */
+  -o-animation:      sticky-header-appear 0.7s ease-in-out; /* Opera 12+ */
+  animation:         sticky-header-appear 0.7s ease-in-out; /* IE 10+, Fx 29+ */
 
 }
 
@@ -243,6 +251,11 @@ html {
   top: 20px !important;
   position: fixed;
   z-index: 99;
+  /* LANCE sticky social icons fade-in */
+  -webkit-animation: sticky-header-appear 0.7s ease-in-out; /* Safari 4+ */
+  -moz-animation:    sticky-header-appear 0.7s ease-in-out; /* Fx 5+ */
+  -o-animation:      sticky-header-appear 0.7s ease-in-out; /* Opera 12+ */
+  animation:         sticky-header-appear 0.7s ease-in-out; /* IE 10+, Fx 29+ */
 }
 
 .sticky #mnue {
@@ -263,8 +276,8 @@ html {
     position: absolute;
     z-index: 52;
 	/* lance change margins on about/artists */
-    right: 100px;
-    bottom: 40px;
+    right: 85px;
+    bottom: 30px;
     text-align: center;
     width: 300px;
     display: inline-block;
@@ -310,6 +323,7 @@ html {
     min-width: 270px;
     margin-top: 2px;
     text-align: left;
+	margin-left: 3px;
 }
 
 #previous{
@@ -344,8 +358,8 @@ input[type = "checkbox"]:checked ~ #sound {
     position: absolute;
     z-index: 52;
 	/* lance change margins on social buttons */
-    right: 110px;
-    bottom: 110px;
+    right: 95px;
+    bottom: 100px;
     height: 45px;
     width: 260px;
 }
@@ -426,8 +440,8 @@ a{
     #socialFooter a{
         transition:0.5s;
         border-radius: 3px;
-        width:40px;
-        height:35px;
+        width:42px;
+        height:42px;
         transition:0.2s;
         display:inline-block;
         text-decoration:none;
@@ -554,7 +568,7 @@ a{
         border-radius: 2vw;
     }
     #content h2{
-        font-size: 30px !important;
+        font-size: 34px !important;
     }
 
     .playing {
@@ -638,7 +652,12 @@ a{
 	}
 
 	#mnue {
-		bottom: 20px;
+		bottom: 10px;
+	}
+
+	.sticky #mnue a {
+		font-size: 20px !important;
+		padding-right: 31px !important;
 	}
 
   .apparitionVideo{
@@ -687,6 +706,8 @@ a{
   background-color: #242627;
   display: flex;
   position: relative;
+  /* LANCE add shadow here */
+  box-shadow: 0px 150px 84px -84px rgba(0,0,0,1) inset;
 }
 .about-cont {
   margin: 0 auto;
@@ -745,13 +766,15 @@ a{
 }
 .artist-cont {
   margin: 0 auto;
-  padding: 0px 20px 50px 20px;
+  padding: 0px 20px 0px 20px;
 }
 .artphoto img {
   width: 100%;
   /* LANCE artist photo is 30% opacity when not hovered */
   opacity: 0.3;
   z-index: 2;
+  /* LANCE fade in on artist  photo hovers */
+  transition: 0.3s;
 }
 
 /* LANCE artist photo 100% opacity on hover */
@@ -789,6 +812,8 @@ a{
   text-transform: uppercase;
   /* LANCE no pointer events on artname to avoid it from blocking artphoto hover events */
   pointer-events: none;
+  /* LANCE fade in on artname background */
+  transition: 0.2s;
 }
 
 /* lance artist name text has background on hover */
@@ -881,12 +906,7 @@ a{
 	}
 
 	#content h2{
-		font-size: 8vw;
-	}
-
-	.playing {
-		height: 2vh;
-		font-size: 4em;
+		font-size: 45px;
 	}
 
 	#controls{
@@ -917,8 +937,8 @@ a{
     width: 330vw;
   }
   .playing {
-    height: 6vh !important;
-    font-size: .8em !important;
+    height: 4vh !important;
+    font-size: 1em !important;
   }
   .button {
     font-size: 1em !important
@@ -950,8 +970,8 @@ a{
     z-index: 1;
   }
   .artist-cont {
-	/* lance remove top padding */
-    padding: 0px 20px 50px 20px !important;
+	/* lance remove top and bottom padding */
+    padding: 0px 20px 0px 20px !important;
   }
   .artname {
 	/* lance fixing artname for minimal width */
@@ -966,6 +986,10 @@ a{
   .col-lg-3 {
 	  padding-left: 4px !important;
 	  padding-right: 4px !important;
+  }
+  .sticky #mnue a {
+	  font-family: 'Gotham Book', sans-serif;
+	  padding-right: 29px;
   }
 }
 .artname2 {
@@ -1178,6 +1202,7 @@ a{
   }
   .sticky.navc #social a {
     margin-bottom: 20px;
+	margin-right: -3px;
   }
 }
 @media (min-width: 1921px){
@@ -1246,7 +1271,7 @@ a{
     margin-top: 8px;
   }
   #logo img {
-    height: 25px !important;
+    height: 30px !important;
   }
   .fieue {
     font-size: 17px;
