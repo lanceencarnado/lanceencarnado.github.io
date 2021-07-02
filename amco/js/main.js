@@ -81,3 +81,27 @@ function myFunction() {
     header.classList.remove("sticky");
   }
 }
+
+// LANCE resize video iframe to ensure no black bars on resize
+$(document).ready(function(){
+	var aspectRatio = 1.78;
+	var video = $('.videoWrapper iframe');
+	var videoHeight = video.outerHeight();
+	var newWidth = videoHeight*aspectRatio;
+	var halfNewWidth = newWidth/2;
+
+	video.css({"width":newWidth+"px"});
+});
+
+$(window).on('resize', function() {
+
+    // Same code as on load
+    var aspectRatio = 1.78;
+    var video = $('.videoWrapper iframe');
+    var videoHeight = video.outerHeight();
+    var newWidth = videoHeight*aspectRatio;
+    var halfNewWidth = newWidth/2;
+
+    video.css({"width":newWidth+"px"});
+
+});
