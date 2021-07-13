@@ -105,3 +105,6 @@ $(window).on('resize', function() {
     video.css({"width":newWidth+"px"});
 
 });
+
+// LANCE open all links in new tab
+$("a").attr("target", "_blank");
