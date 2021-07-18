@@ -282,6 +282,7 @@ html {
   position: fixed;
   z-index: 99;
   width: 280px;
+  padding-right: 16px;
 }
 
 .sticky #mnue a {
