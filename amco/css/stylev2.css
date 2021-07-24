@@ -706,7 +706,7 @@ a{
 
 	.sticky #mnue a {
 		font-size: 20px !important;
-		padding-right: 31px !important;
+		padding-right: 18px !important;
 	}
 
   .apparitionVideo{
@@ -869,18 +869,20 @@ a{
   /* LANCE no pointer events on artname to avoid it from blocking artphoto hover events */
   pointer-events: none;
   /* LANCE fade in on artname background */
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 /* lance artist name text has background on hover */
 .artphoto:hover .artname {
   /* opacity: .6; */
   background: #ffea00;
+  color: #000000;
 }
 
 .artphoto:active .artname {
   /* opacity: .6; */
   background: #ffea00;
+  color: #000000;
 }
 
 .artphoto {
@@ -991,7 +993,7 @@ a{
 @media (min-width: 360px) and (max-width: 767px) {
 	/* LANCE move content to center of page like mobile */
 	#content{
-		top: 50vh;
+		top: 54vh;
 		transform: translateY(-50%);
 		left: 0;
 		width: 100%;
@@ -1011,7 +1013,7 @@ a{
         width: 100%;
         text-align: center;
         right: 0;
-        bottom: 17vh;
+        bottom: 18.5vh;
     }
 	/* END */
   .dsj {
