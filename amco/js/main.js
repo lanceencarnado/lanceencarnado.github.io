@@ -70,7 +70,7 @@ window.onscroll = function() {myFunction()};
 
 var header = document.getElementById("headfix");
 // var sticky = header.offsetTop;
-// LANCE sticky header appears later
+// sticky header appears later
 var sticky = header.offsetTop + 50;
 
 function myFunction() {
@@ -82,7 +82,7 @@ function myFunction() {
   }
 }
 
-// LANCE resize video iframe to ensure no black bars on resize
+// resize video iframe to ensure no black bars on resize
 $(document).ready(function(){
 	var aspectRatio = 1.78;
 	var video = $('.videoWrapper iframe');
@@ -106,5 +106,5 @@ $(window).on('resize', function() {
 
 });
 
-// LANCE open all links in new tab
+// open all links in new tab
 $("a").attr("target", "_blank");

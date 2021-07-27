@@ -595,7 +595,7 @@ a{
         display: none;
     }
     #content{
-        top: 50vh;
+        top: 48vh !important;
         transform: translateY(-50%);
         left: 0;
         width: 100%;
@@ -711,9 +711,12 @@ a{
 		padding-right: 4px !important;
 	}
 
-	.fttex {
-		margin-left: 15px;
-		margin-right: 15px;
+	#bfooter {
+		padding-top: 30px !important;
+		padding-bottom: 30px !important;
+		padding-left: 25px !important;
+		padding-right: 25px !important;
+
 	}
 
   .apparitionVideo{
