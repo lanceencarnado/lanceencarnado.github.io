@@ -1,0 +1,196 @@
+body {
+	background-image: url("../assets/background.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: right top;
+	background-repeat: no-repeat;
+
+	font-family: Times New Roman, serif;
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 21px;
+	font-weight: 300;
+}
+
+.testimonials {
+	width: auto;
+	margin: auto;
+}
+
+label {
+	font-weight: 400;
+}
+
+input, select {
+	font-size: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+	padding-right: 25px;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	margin-left: 10px;
+	margin-right: 10px;
+	color: #000000;
+	border: 3px solid #d0c8aa;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	box-shadow: 0px 0px 10px #d0c8aa;
+}
+
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: url("../assets/arrow.png") no-repeat;
+	background-position: right center;
+	background-size: 18px;
+	background-color: #FFFFFF;
+}
+
+#soundcloudembed {
+	margin: auto;
+	padding-top: 30px;
+}
+
+.header {
+	margin: auto;
+	padding-top: 25px;
+	width: 40vw;
+	min-width: 400px;
+}
+
+.container {
+	margin: auto;
+}
+
+.row {
+	margin: auto;
+	display: flex;
+	text-align: center;
+  	justify-content: center;
+	margin-top: 25px;
+	margin-bottom: 20px;
+
+}
+
+
+
+a.disabled {
+	pointer-events: none;
+	cursor: default;
+	opacity: 0.5;
+}
+
+.calltoaction {
+	margin: auto;
+	margin-top: 40px;
+	width: 28vw;
+	min-width: 400px;
+}
+
+.streaming {
+	margin: auto;
+	text-align: center;
+	margin-top: 17px;
+}
+
+.streamingimg {
+	width: 8vw;
+	min-width: 120px;
+	margin-top: 18px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.footerlogoimg {
+	padding-top: 25px;
+	width: 11vw;
+	min-width: 140px;
+	margin-bottom: 25px;
+	margin-left: 32px;
+	margin-right: 32px;
+}
+
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}
+
+.sticky_sc_footer {
+     position: sticky;
+     bottom: -8px;
+}
+
+/* #sc_embed {
+	transform: scale(0.8);
+} */
+
+/* hover effects only on web - so no sticky hover on mobile */
+@media (hover: hover) {
+	.footerlogoimg:hover, .streamingimg:hover, .rodbuttonimg:hover {
+		opacity: 0.7;
+		transition: opacity 0.3s;
+		-webkit-transition: opacity 0.3s;
+	}
+}
+
+.footerlogoimg:active, .streamingimg:active, .rodbuttonimg:active {
+	opacity: 0.5;
+	transition: opacity 0.3s;
+	-webkit-transition: opacity 0.3s;
+}
+
+/* MOBILE */
+
+@media only screen and (max-width: 768px) {
+	body {
+		background-size: cover;
+		background-position: right;
+	}
+
+	.header {
+		padding-top: 27px;
+		width: 60vw;
+		min-width: 0;
+	}
+
+	.row {
+		display: initial;
+	}
+
+	.calltoaction {
+		width: 65vw;
+		min-width: 150px;
+		margin-top: 33px;
+	}
+
+	.rodbuttonimg {
+		margin-top: 18px;
+		width: 25vw;
+		min-width: 0;
+	}
+
+	.streaming {
+		margin-top: 12px;
+	}
+
+	.streamingimg {
+		width: 23vw;
+		min-width: 0;
+		margin-top: 14px;
+		margin-left: 8px;
+		margin-right: 8px;
+	}
+
+	.footerlogoimg {
+		width: 25vw;
+		min-width: 0;
+		margin-bottom: 20px;
+		margin-left: 5vw;
+		margin-right: 5vw;
+	}
+}
