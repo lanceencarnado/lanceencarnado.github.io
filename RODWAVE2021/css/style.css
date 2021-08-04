@@ -130,10 +130,11 @@ a.disabled {
 
 .sticky_sc_footer {
      position: sticky;
-     bottom: -8px;
+     bottom: 0;
+	 background-color: #FFFFFF;
 }
 
-/* #sc_embed {
+/* #sc_footer_embed {
 	transform: scale(0.8);
 } */
 
