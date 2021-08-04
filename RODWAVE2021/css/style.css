@@ -134,6 +134,10 @@ a.disabled {
 	 background-color: #FFFFFF;
 }
 
+.content {
+	margin: 30px;
+}
+
 /* #sc_footer_embed {
 	transform: scale(0.8);
 } */
@@ -201,5 +205,10 @@ a.disabled {
 		margin-bottom: 20px;
 		margin-left: 5vw;
 		margin-right: 5vw;
+	}
+
+	#soundcloudembed {
+		width: 70vw;
+		height: 500px;
 	}
 }
