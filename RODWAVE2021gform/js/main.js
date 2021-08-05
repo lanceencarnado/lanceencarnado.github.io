@@ -27,6 +27,10 @@ function populateYears() {
 // DISABLE THE SPLASH PAGE ON CLICK
 $( ".splash" ).click(function() {
 	$(".splash").fadeOut(300);
+
+	// REFRESH THE SOUNDCLOUD FOOTER
+	$('#sc_footer_embed').attr('src', "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1231902859&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false");
+	$('#sc_footer_embed').attr('allow', "autoplay");
 });
 
 populateDays();
