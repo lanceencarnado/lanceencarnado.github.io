@@ -55,76 +55,96 @@ by tacklebox / coded by @LScorrcho (2021)
 		<link rel="stylesheet" href="css/style.css?rnd=80">
 	</head>
 	<body>
+		
+		<div class="splash">
+			<div class="splashcontent">
+				<img src="assets/header.png" alt="SoulFly Challenge" width="100%">
+				<p><u>Continue ></u></p>
+			</div>
+		</div>
+
+
 		<div class="header">
 			<img src="assets/header.png" alt="SoulFly Challenge" width="100%">
 		</div>
 
 			<div class="content">
 
-			<div class="entry_submission">
-				<form class="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe6v8RUHwlUG5GbSMDbW_kE6mcybiTJNKOxoXr69ifEiNIRQA/formResponse">
-					<label>1. WHAT IS YOUR NAME?</label>
-					<br><input name="entry.751129695" type="text" placeholder="First Name">
-					<input name="entry.894702586" type="text" placeholder="Last Name">
+				<p>WHAT MAKES YOU ROD WAVE'S BIGGEST FAN? 5 WINNERS WILL BE GIVEN 2 TICKETS TO ATTEND THE SOULFLY TOUR AT ONE OF THE CITIES CLOSEST TO THEM! IN ORDER TO QUALIFY:</p>
+				<p>1. ENTRANTS MUST RECORD AND SUBMIT A VOICE MEMO UP TO 60 SECONDS ON THEIR SOUNDCLOUD PROFILE ON WHY THEY ARE ROD WAVE’S BIGGEST FAN.</p>
+				<p>2. AFTER THE VOICE MEMO IS UPLOADED, APPLICANTS MUST TITLE THEIR UPLOAD ROD WAVE DAY 1 CONTEST AND INCLUDE THEIR IG HANDLE (EX: “ROD WAVE DAY 1 CONTEST - @RODWAVE”).</p>
+				<p>3. APPLICANTS MUST ADD THE HASHTAG <b>#RODWAVEDAY1</b> FOR THEIR UPLOAD.</p>
 
+				<div class="entry_submission">
+					<form class="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfaR66XVPLjgKzaf9O_Z-3r9SPusq8hLo3nwzZe_O5YVLz9xg/formResponse">
+						<p>
+							<label>4. APPLICANTS MUST SUBMIT THE SOUNDCLOUD LINK TO THE VOICE MEMO BELOW.</label>
+							<br><input name="entry.1619314826" type="text" placeholder="SoundCloud Link">
+						</p>
+
+						<p>
+							<label>5. SUBMIT YOUR FIRST AND LAST NAME.</label>
+							<br><input name="entry.2092726799" type="text" placeholder="First Name">
+							<input name="entry.1450099878" type="text" placeholder="Last Name">
+						</p>
+
+						<p>
+							<label>6. WHEN IS YOUR BIRTHDAY?</label>
+							<div class="birthdate_picker">
+								<span>
+									<select id="month" name="entry.1003999951">
+										<option disabled selected hidden>Month</option>
+										<option>January</option>
+										<option>February</option>
+										<option>March</option>
+										<option>April</option>
+										<option>May</option>
+										<option>June</option>
+										<option>July</option>
+										<option>August</option>
+										<option>September</option>
+										<option>October</option>
+										<option>November</option>
+										<option>December</option>
+									</select>
+								</span>
+								<span>
+									<select id="day" name="entry.638240958">
+										<option disabled selected hidden>Day  </option>
+									</select>
+								</span>
+								<span>
+									<select id="year" name="entry.1258954455">
+										<option disabled selected hidden>Year  </option>
+									</select>
+								</span>
+							</div>
+						</p>
+
+						<p>
+							<label>7. WHAT IS YOUR EMAIL?</label>
+							<br><input name="entry.1451817724" type="email" placeholder="Email">
+						</p>
+
+						<p>
+							<label>8. WHAT IS YOUR PHONE NUMBER?</label>
+							<br><input name="entry.119122662" type="tel" placeholder="Phone Number">
+						<p>
+							<input type="submit" value="SUBMIT">
+						</p>
+					</form>
+
+				</div>
+
+				<iframe src=”assets/12231.mp3″ type=”audio/mp3″ allow=”autoplay” id=”audio” style="display:none; width: 1px; height: 1px;"></iframe>
+
+				<div class="testimonials">
+					<br>LISTEN TO MORE FAN VOICE MEMOS BELOW:
 					<br>
-					<label>2. WHEN IS YOUR BIRTHDAY?</label>
-					<div class="birthdate_picker">
-						<span>
-							<select id="month" name="entry.45826830">
-								<option disabled selected hidden>Month</option>
-								<option>January</option>
-								<option>February</option>
-								<option>March</option>
-								<option>April</option>
-								<option>May</option>
-								<option>June</option>
-								<option>July</option>
-								<option>August</option>
-								<option>September</option>
-								<option>October</option>
-								<option>November</option>
-								<option>December</option>
-							</select>
-						</span>
-						<span>
-							<select id="day" name="entry.1803953155">
-								<option disabled selected hidden>Day  </option>
-							</select>
-						</span>
-						<span>
-							<select id="year" name="entry.1677342208">
-								<option disabled selected hidden>Year  </option>
-							</select>
-						</span>
-					</div>
-
-					<label>3. WHAT IS YOUR EMAIL?</label>
-					<br><input name="entry.199825512" type="email" placeholder="Email">
-
-					<br>
-					<label>4. WHAT MAKES YOU ROD WAVE'S BIGGEST FAN?
-					<br>RECORD YOUR ANSWER AND INCLUDE
-					<br>A SOUNDCLOUD LINK BELOW.</label>
-					<br><input name="entry.1223314916" type="text" placeholder="SoundCloud Link">
-
-					<br>
-					<input type="submit" value="SUBMIT">
-				</form>
-
-				<br>5. WIN TICKETS TO ROD WAVE'S
-				<br>SOULFLY TOUR IN YOUR CITY!
+					<iframe id="testimonialembed" width="600px" height="350px" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1231902859&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false&visual=true"></iframe>
+				</div>
 
 			</div>
-
-			<iframe src=”assets/12231.mp3″ type=”audio/mp3″ allow=”autoplay” id=”audio” style="display:none; width: 1px; height: 1px;"></iframe>
-
-			<div class="testimonials">
-				<br>LISTEN TO MORE FAN TESTIMONIALS BELOW:
-				<br>
-				<iframe id="soundcloudembed" width="600px" height="300px" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1231902859&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false&visual=true"></iframe>
-			</div>
-		</div>
 
 		<!-- <div class="calltoaction">
 			<img src="assets/pray4love.png" alt="Pray 4 Love Deluxe out now!" width="100%">

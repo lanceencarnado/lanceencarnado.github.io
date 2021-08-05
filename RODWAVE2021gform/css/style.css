@@ -17,6 +17,10 @@ body {
 	margin: auto;
 }
 
+p {
+	margin: 0px 0px 25px;
+}
+
 label {
 	font-weight: 400;
 }
@@ -61,7 +65,7 @@ select {
 	background-color: #FFFFFF;
 }
 
-#soundcloudembed {
+#testimonialembed {
 	margin: auto;
 	padding-top: 30px;
 }
@@ -140,11 +144,43 @@ a.disabled {
 
 .content {
 	margin: 30px;
+	width: 80vw;
+	max-width: 700px;
+	margin: auto;
 }
 
 /* #sc_footer_embed {
 	transform: scale(0.8);
 } */
+
+/* SPLASH */
+.splash {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+
+	background-image: url("../assets/background.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: right top;
+	background-repeat: no-repeat;
+	z-index: 10;
+
+	cursor: pointer;
+}
+
+.splashcontent {
+	width: 40vw;
+	max-width: 800px;
+	min-width: 350px;
+	margin: 0;
+    position: absolute;
+    top: 50%;
+	left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+	text-align: center;
+}
 
 /* hover effects only on web - so no sticky hover on mobile */
 @media (hover: hover) {
@@ -216,7 +252,7 @@ a.disabled {
 		margin-right: 5vw;
 	}
 
-	#soundcloudembed {
+	#testimonialembed {
 		width: 70vw;
 		height: 500px;
 	}

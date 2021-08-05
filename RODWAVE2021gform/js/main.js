@@ -1,3 +1,5 @@
+// POPULATE SELECTOR FOR DAYS AND YEARS
+
 var daySelect = document.querySelector('#day');
 var yearSelect = document.querySelector('#year');
 
@@ -21,6 +23,11 @@ function populateYears() {
 		yearSelect.appendChild(option);
  	}
 }
+
+// DISABLE THE SPLASH PAGE ON CLICK
+$( ".splash" ).click(function() {
+	$(".splash").fadeOut(300);
+});
 
 populateDays();
 populateYears();
