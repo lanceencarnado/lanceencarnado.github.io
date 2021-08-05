@@ -79,19 +79,19 @@ by tacklebox / coded by @LScorrcho (2021)
 				<form class="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfaR66XVPLjgKzaf9O_Z-3r9SPusq8hLo3nwzZe_O5YVLz9xg/formResponse">
 					<p>
 						<label>4. APPLICANTS MUST SUBMIT THE SOUNDCLOUD LINK TO THE VOICE MEMO BELOW.</label>
-						<br><input name="entry.1619314826" type="text" placeholder="SoundCloud Link">
+						<br><input class="fullwidth" name="entry.1619314826" type="text" placeholder="SoundCloud Link">
 					</p>
 
 					<p>
 						<label>5. SUBMIT YOUR FIRST AND LAST NAME.</label>
-						<br><input name="entry.2092726799" type="text" placeholder="First Name">
-						<input name="entry.1450099878" type="text" placeholder="Last Name">
+						<br><input id="fname" name="entry.2092726799" type="text" placeholder="First Name">
+						<input id="lname" name="entry.1450099878" type="text" placeholder="Last Name">
 					</p>
 
 					<p>
 						<label>6. WHEN IS YOUR BIRTHDAY?</label>
-						<div class="birthdate_picker">
-							<span>
+						<span class="birthdate_picker">
+							<br><span>
 								<select id="month" name="entry.1003999951">
 									<option disabled selected hidden>Month</option>
 									<option>January</option>
@@ -118,17 +118,17 @@ by tacklebox / coded by @LScorrcho (2021)
 									<option disabled selected hidden>Year  </option>
 								</select>
 							</span>
-						</div>
+						</span>
 					</p>
 
 					<p>
 						<label>7. WHAT IS YOUR EMAIL?</label>
-						<br><input name="entry.1451817724" type="email" placeholder="Email">
+						<br><input class="fullwidth" name="entry.1451817724" type="email" placeholder="Email">
 					</p>
 
 					<p>
 						<label>8. WHAT IS YOUR PHONE NUMBER?</label>
-						<br><input name="entry.119122662" type="tel" placeholder="Phone Number">
+						<br><input class="fullwidth" name="entry.119122662" type="tel" placeholder="Phone Number">
 					<p>
 						<input type="submit" value="SUBMIT">
 					</p>
@@ -139,7 +139,8 @@ by tacklebox / coded by @LScorrcho (2021)
 			<div class="testimonials">
 				<br>LISTEN TO MORE FAN VOICE MEMOS BELOW:
 				<br>
-				<iframe id="testimonialembed" width="600px" height="350px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1231902859&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false&visual=true"></iframe>
+				<!-- <iframe id="testimonialembed" width="600px" height="500px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1231902859&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false&visual=true"></iframe> -->
+				<iframe id="testimonialembed" width="600px" height="450px" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1231902859&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"></iframe>
 			</div>
 
 		</div>

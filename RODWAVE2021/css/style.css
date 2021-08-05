@@ -32,8 +32,8 @@ input, select, button {
 	font-size: 20px;
 	margin-top: 10px;
 	margin-bottom: 30px;
-	margin-left: 10px;
-	margin-right: 10px;
+	margin-left: 15px;
+	margin-right: 15px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	color: #000000;
@@ -45,8 +45,8 @@ input, select, button {
 }
 
 input, select {
-	padding-left: 15px;
-	padding-right: 25px;
+	padding-left: 25px;
+	padding-right: 35px;
 }
 
 input[type=submit] {
@@ -180,6 +180,13 @@ a.disabled {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 	text-align: center;
+}
+
+.fullwidth {
+	width: 99%;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 30px;
 }
 
 /* hover effects only on web - so no sticky hover on mobile */
