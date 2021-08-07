@@ -1,0 +1,46 @@
+<manifest alg="2" build="2018.1.1.386" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="chinocappin.com" resolutions="1x" timestamp="1628285498668">
+  <folder name="css">
+    <file name="site_global.css" crc="444006867"/>
+    <file name="index.css" crc="18499471" ref="index"/>
+    <file name="nomq_index.css" crc="18755091" ref="index"/>
+  </folder>
+  <folder name="fonts">
+    <file name="poppins-bold.woff" crc="3904316003"/>
+    <file name="poppins-bold.eot" crc="52152631"/>
+    <file name="poppins-bold.svg" crc="270903221"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="209076791" ref="index"/>
+    <file name="museutils.js" crc="3939489907" ref="index"/>
+    <file name="whatinput.js" crc="86476730" ref="index"/>
+    <file name="museconfig.js" crc="3936894949" ref="index"/>
+    <file name="jquery.musepolyfill.bgsize.js" crc="85124417" ref="index"/>
+    <file name="jquery.museresponsive.js" crc="95814420" ref="index"/>
+    <file name="require.js" crc="4177726516" ref="index"/>
+  </folder>
+  <folder name="images">
+    <file name="background.png" crc="3856094655" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="stream.png" crc="4198402161" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="music videos.png" crc="348292789" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="store.png" crc="3776077163" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="chino cappin logo white.svg" crc="8672134" ref="index"/>
+    <file name="chino cappin logo white_poster_u673.png" crc="26614060" ref="index"/>
+    <file name="background-u807-fr.png" crc="400623409" ref="index"/>
+    <file name="stream-u645-fr.png" crc="39319065" ref="index"/>
+    <file name="music videos-u706-fr.png" crc="15879859" ref="index"/>
+    <file name="store-u837-fr.png" crc="55114797" ref="index"/>
+    <file name="background-u807-fr2.png" crc="4030791335" ref="index"/>
+    <file name="stream-u645-fr2.png" crc="3882488888" ref="index"/>
+    <file name="music videos-u706-fr2.png" crc="3779985383" ref="index"/>
+    <file name="store-u837-fr2.png" crc="4163156226" ref="index"/>
+  </folder>
+  <file name="index.html" crc="480106610" seo="true" mt="1628283030205" redirect="true"/>
+</manifest>
