@@ -1,27 +1,42 @@
-<manifest alg="2" build="2018.1.1.386" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="chinocappin.com" resolutions="1x" timestamp="1628285498668">
+<manifest alg="2" build="2018.1.1.386" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="chinocappin.com" resolutions="1x" timestamp="1628482025547">
+  <folder name="phone">
+    <folder name="css">
+      <file name="index.css" crc="4294143447" ref="phone>index"/>
+      <file name="music-videos.css" crc="30570188" ref="phone>music-videos"/>
+      <file name="nomq_music-videos.css" crc="3824530138" ref="phone>music-videos"/>
+    </folder>
+    <file name="index.html" crc="4182173304" seo="true" mt="1628481801891" redirect="true"/>
+    <file name="music-videos.html" crc="4167011138" seo="true" mt="1628481791986" redirect="true"/>
+  </folder>
   <folder name="css">
     <file name="site_global.css" crc="444006867"/>
-    <file name="index.css" crc="18499471" ref="index"/>
-    <file name="nomq_index.css" crc="18755091" ref="index"/>
+    <file name="index.css" crc="4143789780" ref="index"/>
+    <file name="nomq_index.css" crc="205976244" ref="index"/>
+    <file name="music-videos.css" crc="89330958" ref="music-videos"/>
+    <file name="nomq_music-videos.css" crc="4216846409" ref="music-videos"/>
   </folder>
   <folder name="fonts">
     <file name="poppins-bold.woff" crc="3904316003"/>
     <file name="poppins-bold.eot" crc="52152631"/>
     <file name="poppins-bold.svg" crc="270903221"/>
+    <file name="poppins-regular.woff" crc="351996039"/>
+    <file name="poppins-regular.eot" crc="382942316"/>
+    <file name="poppins-regular.svg" crc="263527553"/>
+    <file name="poppins-black.woff" crc="320746181"/>
+    <file name="poppins-black.eot" crc="424943838"/>
+    <file name="poppins-black.svg" crc="4003855044"/>
   </folder>
   <folder name="scripts">
-    <file name="jquery-1.8.3.min.js" crc="209076791" ref="index"/>
-    <file name="museutils.js" crc="3939489907" ref="index"/>
-    <file name="whatinput.js" crc="86476730" ref="index"/>
-    <file name="museconfig.js" crc="3936894949" ref="index"/>
-    <file name="jquery.musepolyfill.bgsize.js" crc="85124417" ref="index"/>
-    <file name="jquery.museresponsive.js" crc="95814420" ref="index"/>
-    <file name="require.js" crc="4177726516" ref="index"/>
+    <file name="jquery-1.8.3.min.js" crc="209076791" ref="index:phone>index:phone>music-videos:music-videos"/>
+    <file name="museutils.js" crc="3939489907" ref="index:phone>index:phone>music-videos:music-videos"/>
+    <file name="whatinput.js" crc="86476730" ref="index:phone>index:phone>music-videos:music-videos"/>
+    <file name="museconfig.js" crc="3936894949" ref="index:phone>index:phone>music-videos:music-videos"/>
+    <file name="jquery.musepolyfill.bgsize.js" crc="85124417" ref="index:phone>index:phone>music-videos:music-videos"/>
+    <file name="jquery.museresponsive.js" crc="95814420" ref="index:music-videos"/>
+    <file name="require.js" crc="4177726516" ref="index:phone>index:phone>music-videos:music-videos"/>
+    <file name="jquery.watch.js" crc="522499760" ref="phone>index:phone>music-videos"/>
   </folder>
   <folder name="images">
-    <file name="background.png" crc="3856094655" ref="index">
-      <caption webpage="index" alt=""/>
-    </file>
     <file name="stream.png" crc="4198402161" ref="index">
       <caption webpage="index" alt=""/>
     </file>
@@ -31,16 +46,74 @@
     <file name="store.png" crc="3776077163" ref="index">
       <caption webpage="index" alt=""/>
     </file>
-    <file name="chino cappin logo white.svg" crc="8672134" ref="index"/>
-    <file name="chino cappin logo white_poster_u673.png" crc="26614060" ref="index"/>
-    <file name="background-u807-fr.png" crc="400623409" ref="index"/>
+    <file name="chino cappin logo white.svg" crc="8672134" ref="index:phone>index:phone>music-videos:music-videos"/>
+    <file name="chino cappin logo white_poster_u673.png" crc="26614060" ref="index:phone>index:phone>music-videos:music-videos"/>
     <file name="stream-u645-fr.png" crc="39319065" ref="index"/>
     <file name="music videos-u706-fr.png" crc="15879859" ref="index"/>
     <file name="store-u837-fr.png" crc="55114797" ref="index"/>
-    <file name="background-u807-fr2.png" crc="4030791335" ref="index"/>
     <file name="stream-u645-fr2.png" crc="3882488888" ref="index"/>
     <file name="music videos-u706-fr2.png" crc="3779985383" ref="index"/>
-    <file name="store-u837-fr2.png" crc="4163156226" ref="index"/>
+    <file name="store-u837-fr2.png" crc="4173152139" ref="index"/>
+    <file name="layer 4 copy 5.png" crc="407296420" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="instagram.svg" crc="4180544540" ref="index:phone>index"/>
+    <file name="instagram_poster_u971.png" crc="4113175795" ref="index:phone>index"/>
+    <file name="tiktok.png" crc="125185011" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="twitter.png" crc="108748762" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="facebook.png" crc="4261913052" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="spotify.png" crc="4207167030" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="soundcloud.png" crc="4124944009" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="apple music.png" crc="61973469" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="layer 4 copy 5-u807-fr.png" crc="368946248" ref="index"/>
+    <file name="tiktok-u1123-fr.png" crc="3805414082" ref="index"/>
+    <file name="twitter-u1092-fr.png" crc="4078669988" ref="index"/>
+    <file name="facebook-u1061-fr.png" crc="4256135754" ref="index"/>
+    <file name="spotify-u1030-fr.png" crc="329388571" ref="index"/>
+    <file name="soundcloud-u998-fr.png" crc="4244856446" ref="index"/>
+    <file name="apple music-u979-fr.png" crc="3910835288" ref="index"/>
+    <file name="layer 4 copy 5-u807-fr2.png" crc="213291607" ref="index"/>
+    <file name="tiktok-u1123-fr2.png" crc="4282469940" ref="index"/>
+    <file name="twitter-u1092-fr2.png" crc="112872324" ref="index"/>
+    <file name="facebook-u1061-fr2.png" crc="334180553" ref="index"/>
+    <file name="spotify-u1030-fr2.png" crc="207255110" ref="index"/>
+    <file name="soundcloud-u998-fr2.png" crc="270038380" ref="index"/>
+    <file name="apple music-u979-fr2.png" crc="159005431" ref="index"/>
+    <file name="layer 4 copy 5-u807-fr3.png" crc="200433940" ref="index"/>
+    <file name="stream-u645-fr3.png" crc="141746705" ref="index"/>
+    <file name="music videos-u706-fr3.png" crc="3789947874" ref="index"/>
+    <file name="store-u837-fr3.png" crc="390096861" ref="index"/>
+    <file name="tiktok-u1123-fr3.png" crc="4134756675" ref="index"/>
+    <file name="twitter-u1092-fr3.png" crc="4095643680" ref="index"/>
+    <file name="facebook-u1061-fr3.png" crc="3990003888" ref="index"/>
+    <file name="spotify-u1030-fr3.png" crc="4240006370" ref="index"/>
+    <file name="soundcloud-u998-fr3.png" crc="16978690" ref="index"/>
+    <file name="apple music-u979-fr3.png" crc="4094479541" ref="index"/>
+    <file name="layer 4 copy 5-u2595-fr.png" crc="3952151979" ref="phone>index"/>
+    <file name="stream-u2596-fr.png" crc="3905036966" ref="phone>index"/>
+    <file name="music videos-u2597-fr.png" crc="483383360" ref="phone>index"/>
+    <file name="store-u2598-fr.png" crc="426660797" ref="phone>index"/>
+    <file name="tiktok-u2610-fr.png" crc="4099500592" ref="phone>index"/>
+    <file name="twitter-u2611-fr.png" crc="4154502789" ref="phone>index"/>
+    <file name="facebook-u2612-fr.png" crc="363989656" ref="phone>index"/>
+    <file name="spotify-u2606-fr.png" crc="4235929491" ref="phone>index"/>
+    <file name="soundcloud-u2607-fr.png" crc="53693698" ref="phone>index"/>
+    <file name="apple music-u2608-fr.png" crc="276045189" ref="phone>index"/>
+    <file name="tacklebox white.svg" crc="461178488" ref="phone>index:phone>music-videos:index:music-videos"/>
+    <file name="tacklebox white_poster_u1333.png" crc="4071395336" ref="phone>index:phone>music-videos:index:music-videos"/>
   </folder>
-  <file name="index.html" crc="480106610" seo="true" mt="1628283030205" redirect="true"/>
+  <file name="index.html" crc="139206404" seo="true" mt="1628481893373" redirect="true"/>
+  <file name="music-videos.html" crc="4149853345" seo="true" mt="1628481846569" redirect="true"/>
 </manifest>
