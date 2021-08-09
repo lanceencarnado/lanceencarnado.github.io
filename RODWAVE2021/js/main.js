@@ -43,3 +43,12 @@ $( ".splash" ).click(function() {
 
 populateDays();
 populateYears();
+
+// form validation
+$("#entryform").validate({
+	messages: {
+		"entry.1619314826": "Enter a valid Soundcloud link.",
+		"entry.1451817724": "Enter a valid email address.",
+		"entry.119122662": "Enter a valid phone number.",
+	}
+});

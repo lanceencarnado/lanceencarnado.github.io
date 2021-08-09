@@ -2,7 +2,7 @@ body {
 	background-image: url("../assets/background.jpg");
 	background-size: cover;
 	background-attachment: fixed;
-	background-position: right top;
+	background-position: center top;
 	background-repeat: no-repeat;
 
 	font-family: Times New Roman, serif;
@@ -153,6 +153,11 @@ a.disabled {
 	opacity: 0.5;
 }
 
+a, a:hover, a:visited, a:active {
+ 	color: inherit;
+ 	text-decoration: none;
+ }
+
 .streamingimg {
 	width: 8vw;
 	min-width: 120px;
@@ -196,7 +201,7 @@ a.disabled {
 	background-image: url("../assets/background.jpg");
 	background-size: cover;
 	background-attachment: fixed;
-	background-position: right top;
+	background-position: center top;
 	background-repeat: no-repeat;
 	z-index: 10;
 
@@ -245,6 +250,12 @@ a.disabled {
 	padding-top: 50px;
 }
 
+/* form error styling */
+label.error {
+	color: #FF0000;
+	display: block;
+}
+
 /* hover effects only on web - so no sticky hover on mobile */
 @media (hover: hover) {
 	.footerlogoimghover:hover, .streamingimg:hover, .rodbuttonimg:hover {
@@ -266,6 +277,9 @@ a.disabled {
 	}
 	.alignleft {
 		float: none;
+
+		/* seperate sizes for tacklebox logo on mobile */
+		width: 38vw;
 	}
 	.alignright {
 		float: none;
@@ -275,10 +289,13 @@ a.disabled {
 		text-align: center;
 		padding-top: 45px;
 		padding-bottom: 60px;
+
+		/* seperate sizes for tacklebox logo on mobile */
+		width: 42vw;
 	}
 
 	.footerlogoimg {
-		width: 30vw;
+		/* width: 38vw; */
 		min-width: 120px;
 		margin: auto;
 	}
@@ -291,13 +308,21 @@ a.disabled {
 @media only screen and (max-width: 768px) {
 	body {
 		background-size: cover;
-		background-position: center center;
+		background-position: background-position: left 43% top;
 		font-size: 19px;
+	}
+
+	body:after{
+		background-position: left 43% top;
+	}
+
+	.splash:after{
+		background-position: left 43% top;
 	}
 
 	.content {
 		font-size: 17px;
-		width: 85vw;
+		width: 90vw;
 	}
 
 	#openingparagraph {
@@ -334,7 +359,7 @@ a.disabled {
 	}
 
 	.entry_submission {
-		padding-left: 30px;
-		padding-right: 30px;
+		padding-left: 25px;
+		padding-right: 25px;
 	}
 }
