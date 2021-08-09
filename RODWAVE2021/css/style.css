@@ -254,6 +254,7 @@ a, a:hover, a:visited, a:active {
 label.error {
 	color: #FF0000;
 	display: block;
+	margin-top: -10px;
 }
 
 /* hover effects only on web - so no sticky hover on mobile */
