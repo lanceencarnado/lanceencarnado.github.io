@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Lil Durk Nickname Generator</title>
+		<link rel="stylesheet" href="css/style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<div class="header">
+			<img class="logo" src="img/title.png" alt="Lil Durk Nickname Generator">
+		</div>
+		<div class="info_entry">
+			<p><label>ENTER YOUR NAME BELOW</label>
+			<br><input required id="fname" name="fname" type="text" placeholder="First Name">
+			<input required id="lname" name="lname" type="text" placeholder="Last Name">
+
+			<p><label>SELECT YOUR ZODIAC SIGN</label>
+			<br>
+			<select required id="zodiac" name="zodiac">
+				<option value="" disabled selected hidden>- Select -</option>
+				<option>Aquarius</option>
+				<option>Pisces</option>
+				<option>Aries</option>
+				<option>Taurus</option>
+				<option>Gemini</option>
+				<option>Cancer</option>
+				<option>Leo</option>
+				<option>Virgo</option>
+				<option>Libra</option>
+				<option>Scorpio</option>
+				<option>Sagittarius</option>
+				<option>Capricorn</option>
+			</select>
+
+			<p>
+			<input type="submit" value="Let's get it" onclick="generateNickname();">
+		</div>
+		<div class="footer">
+			<img id="otf_logo" src="img/otf.png" alt="OTF">
+			<br><a href="https://tacklebox.company/"><img id="tacklebox_logo" src="img/tacklebox.png" alt="Powered by Tacklebox"></a>
+		</div>
+		<script src="js/main.js" charset="utf-8"></script>
+	</body>
+</html>

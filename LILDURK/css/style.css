@@ -1,0 +1,131 @@
+body {
+	background-image: url("../img/background.jpg");
+	background-size: cover;
+	width: 100%;
+	text-align: center;
+	font-family: "Dharma Gothic Regular";
+	font-size: 22px;
+	letter-spacing: 0.15em;
+}
+
+.header {
+	width: 100%;
+	margin: auto;
+	padding-top: 50px;
+}
+
+.logo {
+	width: 45vw;
+	max-width: 600px;
+	margin: auto;
+}
+
+.info_entry, .result {
+	padding-top: 35px;
+}
+
+.footer {
+	width: 100%;
+	margin: auto;
+	padding-top: 50px;
+	padding-bottom: 40px;
+}
+
+.nickname {
+	font-family: "Dharma Gothic Extra Bold";
+	font-size: 90px;
+	letter-spacing: normal;
+}
+
+#otf_logo {
+	width: 125px;
+}
+
+#tacklebox_logo {
+	padding-top: 30px;
+	width: 225px;
+	transition: opacity 0.3s;
+}
+
+#tacklebox_logo:hover {
+	opacity: 0.5;
+}
+
+input, select {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	padding-left: 10px;
+	padding-right: 15px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	margin-left: 8px;
+	margin-right: 8px;
+	border: 2px solid #b29f6b;
+	border-radius: 2px;
+	margin-top: 20px;
+}
+
+select {
+	padding-left: 10px;
+	padding-right: 55px;
+}
+
+/* FOR DISABLED/GREY STYLE ON BIRTHDATE SELECTOR TEXT */
+
+select:required:invalid {
+  color: gray;
+}
+option[value=""][disabled] {
+  display: none;
+}
+option {
+  color: black;
+}
+
+/* END DISABLED/GREY STYLE */
+
+p {
+	padding-top: 10px;
+}
+
+input[type="submit"] {
+	background: #fff;
+	border: 2px solid #b29f6b;
+	border-radius: 10px;
+	padding: 6px 20px;
+	background: -moz-linear-gradient(top, #fff 0%, #fff 50%, #ededed 51%, #ededed 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(50%,#fff), color-stop(51%,#ededed), color-stop(100%,#ededed));
+	background: -webkit-linear-gradient(top, #fff 0%,#fff 50%,#ededed 51%,#ededed 100%);
+	background: -o-linear-gradient(top, #fff 0%,#fff 50%,#ededed 51%,#ededed 100%);
+	background: linear-gradient(to bottom, #fff 0%,#fff 50%,#ededed 51%,#ededed 100%);
+
+	-webkit-box-shadow: inset 0 0 0 1px #fff;
+		    box-shadow: inset 0 0 0 1px #fff;
+
+	transition: opacity 0.25s;
+}
+
+input[type="submit"]:hover {
+	opacity: 0.7;
+}
+
+input[type="submit"]:active, input[type="submit"]:focus {
+	opacity: 0.4;
+}
+
+@media only screen and (max-width: 768px) {
+	.logo {
+		width: 80vw;
+		margin: auto;
+	}
+}
+
+@font-face {
+  	font-family: "Dharma Gothic Regular";
+  	src: url("fonts/DharmaGothicE_Regular_R.otf");
+}
+
+@font-face {
+  	font-family: "Dharma Gothic Extra Bold";
+  	src: url("fonts/DharmaGothicE_ExBold_R.otf");
+}
