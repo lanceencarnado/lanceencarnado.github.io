@@ -10,7 +10,7 @@
 		<div class="header">
 			<img class="logo" src="img/title.png" alt="Lil Durk Nickname Generator">
 		</div>
-		<div class="info_entry">
+		<div id="info_entry" class="info_entry">
 			<p><label>ENTER YOUR NAME BELOW</label>
 			<br><input required id="fname" name="fname" type="text" placeholder="First Name">
 			<input required id="lname" name="lname" type="text" placeholder="Last Name">
@@ -36,10 +36,24 @@
 			<p>
 			<input type="submit" value="Let's get it" onclick="generateNickname();">
 		</div>
+		<div class="result">
+			<p>YOUR LIL DURK NICKNAME IS...
+			<p><div class="nickname"></div>
+			<p><input type="submit" value="Try Again" onclick="location.reload();">
+
+			<div class="socials">
+				<p>SHARE YOUR NICKNAME:
+				<br><br><img class="socialimg" src="img/social/instagram.png" alt="Instagram">
+				<img class="socialimg" src="img/social/twitter.png" alt="Twitter">
+				<img class="socialimg" src="img/social/snapchat.png" alt="Snapchat">
+				<img class="socialimg" src="img/social/facebook.png" alt="Facebook">
+			</div>
+		</div>
 		<div class="footer">
 			<img id="otf_logo" src="img/otf.png" alt="OTF">
 			<br><a href="https://tacklebox.company/"><img id="tacklebox_logo" src="img/tacklebox.png" alt="Powered by Tacklebox"></a>
 		</div>
 		<script src="js/main.js" charset="utf-8"></script>
+		<script src="js/jquery-3.6.0.min.js" charset="utf-8"></script>
 	</body>
 </html>
