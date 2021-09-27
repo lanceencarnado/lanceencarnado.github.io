@@ -32,6 +32,10 @@ function generateNickname() {
 
 	$('.nickname').text(nickname);
 
+	// set twitter share link
+	var twitterLink = "https://twitter.com/intent/tweet?text=My Lil Durk nickname is \"" + nickname + "\". Find yours at INSERTFINALURLHERE!";
+	$("#twitter_share_btn").attr("href", twitterLink);
+
 	$('.info_entry').hide();
 	$('.result').fadeIn("slow");
 }
