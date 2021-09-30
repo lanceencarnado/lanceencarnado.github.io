@@ -129,10 +129,17 @@ input[type="submit"]:active, input[type="submit"]:focus {
 	padding-right: 8px;
 }
 
+#sharetext {
+	padding-left: 6px;
+}
+
 @media only screen and (max-width: 768px) {
 	.logo {
 		width: 80vw;
 		margin: auto;
+	}
+	#sharetext {
+		padding-left: 15px;
 	}
 }
 
