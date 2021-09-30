@@ -48,12 +48,12 @@ body {
 #tacklebox_logo {
 	margin-top: 30px;
 	width: 225px;
-	transition: opacity 0.3s;
+	/* transition: opacity 0.3s; */
 }
 
-#tacklebox_logo:hover {
+/* #tacklebox_logo:hover {
 	opacity: 0.5;
-}
+} */
 
 input, select {
 	font-family: Arial, sans-serif;
@@ -111,12 +111,12 @@ input[type="submit"] {
 	cursor: pointer;
 }
 
-input[type="submit"]:hover {
+/* input[type="submit"]:hover {
 	opacity: 0.7;
-}
+} */
 
 input[type="submit"]:active, input[type="submit"]:focus {
-	opacity: 0.4;
+	opacity: 0.7;
 }
 
 .socials {
