@@ -1,21 +1,27 @@
 <!DOCTYPE html>
+
+<!--
+lil durk nickname generator
+by tacklebox / coded by @LScorrcho (2021)
+-->
+
 <html lang="en" dir="ltr">
 	<head>
 		<meta charset="utf-8">
 		<title>Lil Durk Nickname Generator</title>
 		<link rel="stylesheet" href="css/style.css">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	</head>
-	<body>
+	<body ontouchstart="">
 		<div class="header">
 			<a href=""><img class="logo" src="img/title.png" alt="Lil Durk Nickname Generator"></a>
 		</div>
 		<div id="info_entry" class="info_entry">
-			<p><label>ENTER YOUR NAME BELOW</label>
+			<p><label>ENTER YOUR <span style="font-weight: bold">NAME</span> BELOW</label>
 			<br><input required id="fname" name="fname" type="text" placeholder="First Name">
 			<input required id="lname" name="lname" type="text" placeholder="Last Name">
 
-			<p><label>SELECT YOUR ZODIAC SIGN</label>
+			<p><label>SELECT YOUR <span style="font-weight: bold">ZODIAC SIGN</span></label>
 			<br>
 			<select required id="zodiac" name="zodiac">
 				<option value="" disabled selected hidden>- Select -</option>
@@ -34,10 +40,10 @@
 			</select>
 
 			<p>
-			<input type="submit" value="Let's get it" onclick="generateNickname();">
+			<input type="submit" value="MAN WHAT?!" onclick="generateNickname();">
 		</div>
 		<div class="result">
-			<p>YOUR LIL DURK NICKNAME IS...
+			<p>YOUR <span style="font-weight: bold">LIL DURK NICKNAME</span> IS...
 			<p><div class="nickname"></div>
 			<p><input type="submit" value="Try Again" onclick="resetPage();">
 
@@ -50,8 +56,17 @@
 			</div>
 		</div>
 		<div class="footer">
-			<img id="otf_logo" src="img/otf.png" alt="OTF">
-			<br><a href="https://tacklebox.company/"><img id="tacklebox_logo" src="img/tacklebox.png" alt="Powered by Tacklebox"></a>
+			<div class="single_promo">
+				<p>NEW SINGLE “PISSED ME OFF” OUT NOW
+				<div id="streaming_icons">
+						<img class="music_icon_img" id="applemusic" src="img/social/applemusic.png" alt="Apple Music">
+						<img class="music_icon_img" id="spotify" src="img/social/spotify.png" alt="Spotify">
+						<img class="music_icon_img" id="youtube" src="img/social/youtube.png" alt="Youtube">
+					</div>
+				</div>
+			</div>
+			<p><img id="otf_logo" src="img/otf.png" alt="OTF">
+			<br><a href="https://tacklebox.company/" target="_blank"><img id="tacklebox_logo" src="img/tacklebox.png" alt="Powered by Tacklebox"></a>
 		</div>
 		<script src="js/main.js" charset="utf-8"></script>
 		<script src="js/jquery-3.6.0.min.js" charset="utf-8"></script>
