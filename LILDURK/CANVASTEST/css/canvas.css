@@ -1,6 +1,9 @@
 /* needed for loading font for canvas */
 .load { font-family:"Circular Standard" }
 .nickname { font-family:"Heading Pro Heavy" }
+button {
+	font-family:"Circular Standard";
+}
 #rectangle_canvas {
 	width: 600px;
 	height: 315px;
