@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<!--
+lil durk nickname generator
+by tacklebox / coded by @LScorrcho (2021)
+-->
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Lil Durk Nickname Generator</title>
+		<link rel="stylesheet" href="css/style.css?rnd=20">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	</head>
+	<body ontouchstart="">
+		<div class="header">
+			<a href=""><img class="logo" src="img/title.png" alt="Lil Durk Nickname Generator"></a>
+		</div>
+		<div id="info_entry" class="info_entry">
+			<p><label>ENTER YOUR <span style="font-weight: bold">NAME</span> BELOW</label>
+			<br><input required id="fname" name="fname" type="text" placeholder="First Name">
+			<input required id="lname" name="lname" type="text" placeholder="Last Name">
+
+			<p><label>SELECT YOUR <span style="font-weight: bold">ZODIAC SIGN</span></label>
+			<br>
+			<select required id="zodiac" name="zodiac">
+				<option value="" disabled selected hidden>- Select -</option>
+				<option>Aquarius</option>
+				<option>Pisces</option>
+				<option>Aries</option>
+				<option>Taurus</option>
+				<option>Gemini</option>
+				<option>Cancer</option>
+				<option>Leo</option>
+				<option>Virgo</option>
+				<option>Libra</option>
+				<option>Scorpio</option>
+				<option>Sagittarius</option>
+				<option>Capricorn</option>
+			</select>
+
+			<p>
+			<input type="submit" value="MAN WHAT?!" onclick="generateNickname();">
+		</div>
+		<div class="result">
+			<p>YOUR <span style="font-weight: bold">LIL DURK NICKNAME</span> IS...
+			<p><div class="nickname"></div>
+			<p><input type="submit" value="Try Again" onclick="resetPage();">
+
+			<div class="socials">
+				<p><span id="sharetext">SHARE YOUR NICKNAME:</span>
+				<br><br><img class="socialimg" src="img/social/instagram.png" alt="Instagram">
+				<a id="twitter_share_btn" href="" target="_blank"><img class="socialimg" src="img/social/twitter.png" alt="Twitter"></a>
+				<img class="socialimg" src="img/social/snapchat.png" alt="Snapchat">
+				<img class="socialimg" src="img/social/facebook.png" alt="Facebook">
+			</div>
+		</div>
+		<div class="footer">
+			<div class="single_promo">
+				<p>NEW SINGLE “PISSED ME OFF” OUT NOW
+				<div id="streaming_icons">
+						<img class="music_icon_img" id="applemusic" src="img/social/applemusic.png" alt="Apple Music">
+						<img class="music_icon_img" id="spotify" src="img/social/spotify.png" alt="Spotify">
+						<img class="music_icon_img" id="youtube" src="img/social/youtube.png" alt="Youtube">
+					</div>
+				</div>
+			</div>
+			<p><img id="otf_logo" src="img/otf.png" alt="OTF">
+			<br><a href="https://tacklebox.company/" target="_blank"><img id="tacklebox_logo" src="img/tacklebox.png" alt="Powered by Tacklebox"></a>
+		</div>
+		<script src="js/main.js" charset="utf-8"></script>
+		<script src="js/jquery-3.6.0.min.js" charset="utf-8"></script>
+	</body>
+</html>

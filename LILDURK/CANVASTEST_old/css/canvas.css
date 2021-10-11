@@ -1,0 +1,40 @@
+/* needed for loading font for canvas */
+.load { font-family:"Circular Standard" }
+.nickname { font-family:"Heading Pro Heavy" }
+button {
+	font-family:"Circular Standard";
+}
+#rectangle_canvas {
+	width: 600px;
+	height: 315px;
+	/* width: 960px;
+	height: 504px; */
+}
+
+#square_canvas {
+	width: 600px;
+	height: 600px;
+	/* width: 960px;
+	height: 504px; */
+}
+
+#igstory_canvas {
+	width: 600px;
+	height: 1066.5px;
+	/* width: 960px;
+	height: 504px; */
+}
+
+@font-face {
+  	font-family: "Circular Standard";
+  	src: url("fonts/CircularStd-Book.otf") format("opentype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+  	font-family: "Heading Pro Heavy";
+  	src: url("fonts/Heading-Pro-Heavy-trial.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
