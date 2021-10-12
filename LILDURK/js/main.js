@@ -17,7 +17,7 @@ function generateNickname() {
 	share_api_link = 'https://lil-durk-nickname-image.herokuapp.com/' + nickname.toLowerCase().replace(/ /g, '-');
 	share_api_file = 'https://lil-durk-nickname-image.herokuapp.com/image-square/' + nickname.toLowerCase().replace(/ /g, '-');
 
-	var share_text = "My Lil Durk nickname is \"" + nickname + "\". Find yours here:"
+	var share_text = "My Lil Durk nickname is \"" + nickname + "\". Find yours here:";
 
 	if (window.navigator && window.navigator.share) {
 	    $("#native_share_btn").click(() => {
