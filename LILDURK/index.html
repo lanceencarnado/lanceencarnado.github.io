@@ -2,7 +2,7 @@
 
 <!--
 lil durk nickname generator
-by tacklebox / coded by @LScorrcho (2021)
+by tacklebox (2021)
 -->
 
 <html lang="en" dir="ltr">
@@ -49,10 +49,11 @@ by tacklebox / coded by @LScorrcho (2021)
 
 			<div class="socials">
 				<p><span id="sharetext">SHARE YOUR NICKNAME:</span>
-				<br><br><img class="socialimg" src="img/social/instagram.png" alt="Instagram">
-				<a id="twitter_share_btn" href="" target="_blank"><img class="socialimg" src="img/social/twitter.png" alt="Twitter"></a>
-				<img class="socialimg" src="img/social/snapchat.png" alt="Snapchat">
-				<img class="socialimg" src="img/social/facebook.png" alt="Facebook">
+				<br><br><a id="instagram_share_btn" href="" target="_blank"><img class="socialimg" src="img/social/instagram.png" alt="Instagram" /></a>
+				<a id="twitter_share_btn" href="" target="_blank"><img class="socialimg" src="img/social/twitter.png" alt="Twitter" /></a>
+				<a id="snapchat_share_btn" class="snapchat-share-button" href="" data-url="" target="_blank"><img class="socialimg" src="img/social/snapchat.png" alt="Snapchat" /></a>
+				<a id="facebook_share_btn" href="" target="_blank"><img class="socialimg" src="img/social/facebook.png" alt="Facebook" /></a>
+				<span id="native_share_btn"><img class="socialimg" src="img/social/nativeshare.png" alt="Native Share" /></span>
 			</div>
 		</div>
 		<div class="footer">
@@ -70,5 +71,25 @@ by tacklebox / coded by @LScorrcho (2021)
 		</div>
 		<script src="js/main.js" charset="utf-8"></script>
 		<script src="js/jquery-3.6.0.min.js" charset="utf-8"></script>
+
+		<!-- for snapchat -->
+		<script>
+			// Load the SDK asynchronously
+			(function (d, s, id) {
+			  var js,
+				sjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s);
+			  js.id = id;
+			  js.src = "https://sdk.snapkit.com/js/v1/create.js";
+			  sjs.parentNode.insertBefore(js, sjs);
+			})(document, "script", "snapkit-creative-kit-sdk");
+	  
+			window.snapKitInit = function () {
+			  snap.creativekit.initalizeShareButtons(
+				document.getElementsByClassName("snapchat-share-button")
+			  );
+			};
+		</script>
 	</body>
 </html>

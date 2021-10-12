@@ -14,9 +14,31 @@ function generateNickname() {
 
 	$('.nickname').text(nickname);
 
+	share_api_link = 'https://lil-durk-nickname-image.herokuapp.com/' + nickname.toLowerCase().replace(/ /g, '-');
+	share_api_file = 'https://lil-durk-nickname-image.herokuapp.com/image-story/' + nickname.toLowerCase().replace(/ /g, '-');
+
+	if (window.navigator && window.navigator.share) {
+		$("#native_share_btn").click(() => {
+			window.navigator.share({url: share_api_link, text: 'Find out what your Lil Durk nickname would be', title: 'Lil Durk Nicknames'});
+		});
+	} else {
+		$("#native_share_btn").hide();
+	}
+
 	// set twitter share link
-	var twitterLink = "https://twitter.com/intent/tweet?text=My Lil Durk nickname is \"" + nickname + "\". Find yours at INSERTFINALURLHERE!";
+	var twitterLink = "https://twitter.com/intent/tweet?text=My Lil Durk nickname is \"" + nickname + "\". Find yours at &url=" + share_api_link;
 	$("#twitter_share_btn").attr("href", twitterLink);
+
+	//facebook
+	var facebookLink = "https://www.facebook.com/sharer/sharer.php?u=" + share_api_link;
+	$("#facebook_share_btn").attr("href", facebookLink);
+
+	//instagram
+	$("#instagram_share_btn").attr("href", share_api_file);
+
+	//snapchat
+	$("#snapchat_share_btn").attr("data-url", share_api_link);
+
 
 	$('.info_entry').hide();
 	$('.result').fadeIn("slow");
