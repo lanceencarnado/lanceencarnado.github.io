@@ -19,8 +19,8 @@ function generateNickname() {
 
 	if (window.navigator && window.navigator.share) {
 	    $("#native_share_btn").click(() => {
-
-	        window.navigator.share({url: share_api_link, text: 'Find out what your Lil Durk nickname would be', title: 'Lil Durk Nicknames' });
+			var share_text = "My Lil Durk nickname is \"" + nickname + "\". Find yours here:"
+	        window.navigator.share({url: share_api_link, text: share_text, title: 'Lil Durk Nicknames' });
 
 	    });
 	    $("#snapchat_share_btn").hide();
