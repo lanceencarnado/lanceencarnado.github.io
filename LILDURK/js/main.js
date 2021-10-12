@@ -17,48 +17,15 @@ function generateNickname() {
 	share_api_link = 'https://lil-durk-nickname-image.herokuapp.com/' + nickname.toLowerCase().replace(/ /g, '-');
 	share_api_file = 'https://lil-durk-nickname-image.herokuapp.com/image-square/' + nickname.toLowerCase().replace(/ /g, '-');
 
-	// if (window.navigator && window.navigator.share) {
-	// 	$("#native_share_btn").click(() => {
-	// 		window.navigator.share({url: share_api_link, text: 'Find out what your Lil Durk nickname would be', title: 'Lil Durk Nicknames'});
-	// 	});
-	// } else {
-	// 	$("#native_share_btn").hide();
-	// }
-
 	if (window.navigator && window.navigator.share) {
-		$("#native_share_btn").click(() => {
+	    $("#native_share_btn").click(() => {
 
-			var c = document.createElement('canvas');
-			c.width = 1200;
-			c.height = 1200;
-			var ctx = c.getContext("2d");
+	        window.navigator.share({url: share_api_link, text: 'Find out what your Lil Durk nickname would be', title: 'Lil Durk Nicknames' });
 
-			ctx.fillStyle = "#dd0905";
-			ctx.fillRect(0, 0, c.width, c.height);
-
-			var w_center = c.width / 2;
-			var h_center = c.height / 2;
-
-			var bg = new Image();
-			bg.onload = function() {
-				// x, y, width, height
-				ctx.drawImage(bg, 0, 0);
-
-				ctx.textAlign = 'center';
-				ctx.fillStyle = "#000000";
-				ctx.textBaseline = "middle";
-				ctx.font = '160px Heading Pro Heavy';
-				ctx.fillText(nickname, w_center, h_center + 50);
-			}
-			bg.src = "img/square.png";
-
-			window.navigator.share({url: share_api_link, text: 'Find out what your Lil Durk nickname would be', title: 'Lil Durk Nicknames', files: [new File([c.toDataURL('image/png').split(';base64,')[1]],'lildurknickname.png',{ type: "image/png" })]});
-
-		});
-		$("#snapchat_share_btn").hide();
-		// $("#facebook_share_btn").hide();
-	} else {
-		$("#native_share_btn").hide();
+	    });
+	    $("#snapchat_share_btn").hide();
+	    $("#facebook_share_btn").hide();
+		$("#twitter_share_btn").hide();
 	}
 
 
