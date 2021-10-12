@@ -9,8 +9,6 @@ function generateNickname() {
 }
 
 function generateRectangleCanvas(nickname) {
-	// var nickname = generateNickname();
-
 	var c = document.getElementById("rectangle_canvas");
 	var ctx = c.getContext("2d");
 
@@ -20,48 +18,21 @@ function generateRectangleCanvas(nickname) {
 	var w_center = c.width / 2;
 	var h_center = c.height / 2;
 
-	var title = new Image();
-	title.onload = function() {
+	var bg = new Image();
+	bg.onload = function() {
 		// x, y, width, height
-		ctx.drawImage(title, 435, 28, 331, 135);
+		ctx.drawImage(bg, 0, 0);
 
-		ctx.fillStyle = "#ffffff";
-		ctx.font = '24px Circular Standard';
 		ctx.textAlign = 'center';
-		// needed for spacing
-		var durktext = "YOUR LIL DURK NICKNAME IS...".split("").join(String.fromCharCode(8202));
-		ctx.fillText(durktext, w_center, 220);
-
 		ctx.fillStyle = "#000000";
 		ctx.textBaseline = "middle";
 		ctx.font = '150px Heading Pro Heavy';
 		ctx.fillText(nickname, w_center, h_center + 40);
-
-		ctx.textBaseline = "alphabetic"; // reset to default
-		ctx.fillStyle = "#ffffff";
-		ctx.font = '24px Circular Standard';
-		// needed for spacing
-		var urltext = "GET YOURS AT WWW.LILDURKNICKNAME.COM".split("").join(String.fromCharCode(8202));
-		ctx.fillText(urltext, w_center, 490);
-
-		var otf = new Image();
-		otf.onload = function() {
-			ctx.drawImage(otf, 458, 533, 92, 69);
-		}
-		otf.src = "img/otf.png"
-
-		var tacklebox = new Image();
-		tacklebox.onload = function() {
-			ctx.drawImage(tacklebox, 583, 543, 159, 48);
-		}
-		tacklebox.src = "img/tacklebox.png"
 	}
-	title.src = "img/title.png";
+	bg.src = "img/canvasbgs/rectangle.png";
 }
 
 function generateSquareCanvas(nickname) {
-	// var nickname = generateNickname();
-
 	var c = document.getElementById("square_canvas");
 	var ctx = c.getContext("2d");
 
@@ -71,43 +42,18 @@ function generateSquareCanvas(nickname) {
 	var w_center = c.width / 2;
 	var h_center = c.height / 2;
 
-	var title = new Image();
-	title.onload = function() {
+	var bg = new Image();
+	bg.onload = function() {
 		// x, y, width, height
-		ctx.drawImage(title, 273, 54, 632, 256);
+		ctx.drawImage(bg, 0, 0);
 
-		ctx.fillStyle = "#ffffff";
-		ctx.font = '30px Circular Standard';
 		ctx.textAlign = 'center';
-		// needed for spacing
-		var durktext = "YOUR LIL DURK NICKNAME IS...".split("").join(String.fromCharCode(8202));
-		ctx.fillText(durktext, w_center, 405);
-
 		ctx.fillStyle = "#000000";
 		ctx.textBaseline = "middle";
 		ctx.font = '160px Heading Pro Heavy';
 		ctx.fillText(nickname, w_center, h_center + 50);
-
-		ctx.textBaseline = "alphabetic"; // reset to default
-		ctx.fillStyle = "#ffffff";
-		ctx.font = '30px Circular Standard';
-		// needed for spacing
-		var urltext = "GET YOURS AT WWW.LILDURKNICKNAME.COM".split("").join(String.fromCharCode(8202));
-		ctx.fillText(urltext, w_center, 920);
-
-		var otf = new Image();
-		otf.onload = function() {
-			ctx.drawImage(otf, 318, 1015, 175, 132);
-		}
-		otf.src = "img/otf.png"
-
-		var tacklebox = new Image();
-		tacklebox.onload = function() {
-			ctx.drawImage(tacklebox, 557, 1035, 303, 91);
-		}
-		tacklebox.src = "img/tacklebox.png"
 	}
-	title.src = "img/title.png";
+	bg.src = "img/canvasbgs/square.png";
 }
 
 function generateIGStoryCanvas(nickname) {
@@ -122,41 +68,16 @@ function generateIGStoryCanvas(nickname) {
 	var w_center = c.width / 2;
 	var h_center = c.height / 2;
 
-	var title = new Image();
-	title.onload = function() {
+	var bg = new Image();
+	bg.onload = function() {
 		// x, y, width, height
-		ctx.drawImage(title, 168, 105, 860, 349);
+		ctx.drawImage(bg, 0, 0);
 
-		ctx.fillStyle = "#ffffff";
-		ctx.font = '37px Circular Standard';
 		ctx.textAlign = 'center';
-		// needed for spacing
-		var durktext = "YOUR LIL DURK NICKNAME IS...".split("").join(String.fromCharCode(8202));
-		ctx.fillText(durktext, w_center, 877);
-
 		ctx.fillStyle = "#000000";
 		ctx.textBaseline = "middle";
 		ctx.font = '160px Heading Pro Heavy';
-		ctx.fillText(nickname, w_center, h_center + 60);
-
-		ctx.textBaseline = "alphabetic"; // reset to default
-		ctx.fillStyle = "#ffffff";
-		ctx.font = '37px Circular Standard';
-		// needed for spacing
-		var urltext = "GET YOURS AT WWW.LILDURKNICKNAME.COM".split("").join(String.fromCharCode(8202));
-		ctx.fillText(urltext, w_center, 1645);
-
-		var otf = new Image();
-		otf.onload = function() {
-			ctx.drawImage(otf, 512, 1745, 177, 134);
-		}
-		otf.src = "img/otf.png"
-
-		var tacklebox = new Image();
-		tacklebox.onload = function() {
-			ctx.drawImage(tacklebox, 447, 1936, 307, 92);
-		}
-		tacklebox.src = "img/tacklebox.png"
+		ctx.fillText(nickname, w_center, h_center + 90);
 	}
-	title.src = "img/title.png";
+	bg.src = "img/canvasbgs/igstory.png";
 }
