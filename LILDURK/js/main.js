@@ -25,7 +25,7 @@ function generateNickname() {
 	    });
 	    // $("#snapchat_share_btn").hide();
 	    $("#facebook_share_btn").hide();
-		// $("#twitter_share_btn").hide();
+		$("#twitter_share_btn").hide();
 	} else {
 		$("#native_share_btn").hide();
 	}
