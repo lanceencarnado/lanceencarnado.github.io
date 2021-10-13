@@ -17,13 +17,13 @@ function generateNickname() {
 	share_api_link = 'https://lil-durk-nickname-image.herokuapp.com/' + nickname.toLowerCase().replace(/ /g, '-');
 	share_api_file = 'https://lil-durk-nickname-image.herokuapp.com/image-square/' + nickname.toLowerCase().replace(/ /g, '-');
 
-	var share_text = "My Lil Durk nickname is \"" + nickname + "\". Find yours here:";
+	var share_text = "My Lil Durk nickname is \"" + nickname + "\" 💯 Find yours here:";
 
 	if (window.navigator && window.navigator.share) {
 	    $("#native_share_btn").click(() => {
 	        window.navigator.share({url: share_api_link, text: share_text, title: 'Lil Durk Nicknames' });
 	    });
-	    $("#snapchat_share_btn").hide();
+	    // $("#snapchat_share_btn").hide();
 	    $("#facebook_share_btn").hide();
 		// $("#twitter_share_btn").hide();
 	} else {
@@ -32,7 +32,7 @@ function generateNickname() {
 
 
 	// set twitter share link
-	var twitterLink = "https://twitter.com/intent/tweet?text=My Lil Durk nickname is \"" + nickname + "\". Find yours at &url=" + share_api_link;
+	var twitterLink = "https://twitter.com/intent/tweet?text=My Lil Durk nickname is \"" + nickname + "\" 💯 " + share_api_link;
 	$("#twitter_share_btn").attr("href", twitterLink);
 
 	//facebook
@@ -43,7 +43,7 @@ function generateNickname() {
 	$("#instagram_share_btn").attr("href", share_api_file);
 
 	//snapchat
-	$("#snapchat_share_btn").attr("data-url", share_api_link);
+	// $("#snapchat_share_btn").attr("data-url", share_api_link);
 
 
 	$('.info_entry').hide();
