@@ -27,7 +27,7 @@ function generateRectangleCanvas(nickname) {
 		ctx.fillStyle = "#000000";
 		ctx.textBaseline = "middle";
 		ctx.font = '150px Heading Pro Heavy';
-		ctx.fillText(nickname, w_center, h_center + 40);
+		ctx.fillText(nickname, w_center, h_center + 30);
 	}
 	bg.src = "img/canvasbgs/rectangle.png";
 }
