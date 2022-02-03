@@ -23,12 +23,11 @@
 
 
 ::selection {
-	/* LANCE change highlight colour to yellow */
-    background: #d6c504; /* WebKit/Blink Browsers */
+    background: #808080; /* WebKit/Blink Browsers */
     color:#fff;
 }
 ::-moz-selection {
-    background: #d6c504; /* WebKit/Blink Browsers */
+    background: #808080; /* WebKit/Blink Browsers */
     color:#fff;
 }
 
@@ -762,7 +761,8 @@ a{
   display: flex;
 }
 #about {
-  background-color: #ffea00;
+  /* LANCE change artist bg color to white */
+  background-color: #ffffff;
   display: flex;
   position: relative;
   /* LANCE add shadow here */
