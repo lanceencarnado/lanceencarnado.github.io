@@ -761,8 +761,8 @@ a{
   display: flex;
 }
 #about {
-  /* LANCE change artist bg color to white */
-  background-color: #ffffff;
+  /* LANCE change artist bg color to black */
+  background-color: #000000;
   display: flex;
   position: relative;
   /* LANCE add shadow here */
@@ -770,7 +770,7 @@ a{
 }
 .about-cont {
   margin: 0 auto;
-  color: #000;
+  color: #ffffff;
   z-index: 11;
   text-align: center;
   /* LANCE: fix margins for about section to match mockup */

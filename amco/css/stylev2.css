@@ -762,9 +762,9 @@ a{
   display: flex;
 }
 #about {
-  /* LANCE change about bg to white  */
+  /* LANCE change about bg to black  */
   /* background-color: #ffea00; */
-  background-color: #ffffff;
+  background-color: #000000;
   display: flex;
   position: relative;
   /* LANCE add shadow here */
@@ -772,7 +772,7 @@ a{
 }
 .about-cont {
   margin: 0 auto;
-  color: #000;
+  color: #fff;
   z-index: 11;
   text-align: center;
   /* LANCE: fix margins for about section to match mockup */
