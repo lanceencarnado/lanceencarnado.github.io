@@ -43,19 +43,11 @@ class Window {
 			el.classList.toggle('resized');
 		});
 
-		resize.addEventListener('touchend', (e) => {
-			el.classList.toggle('resized');
-		});
-
 		close.addEventListener('click', (e) => {
 			delete el.dataset.isOpen;
 			delete icon.dataset.isOpen;
 		});
 
-		close.addEventListener('touchend', (e) => {
-			delete el.dataset.isOpen;
-			delete icon.dataset.isOpen;
-		});
 	}
 }
 
@@ -64,8 +56,4 @@ for (var w of windows) {
 }
 for (var i of icons) {
 	new DesktopIcon(i);
-}
-
-function createWindow() {
-
 }

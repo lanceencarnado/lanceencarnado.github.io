@@ -13,7 +13,7 @@ coded by @lscorrcho // design by @chrisorzel (2019)
 
 <title>Playboi Carti Text Generator **!++</title>
 
-<!-- 
+<!--
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -63,7 +63,7 @@ html, body {
 
 body, footer, textarea {
 	background-color: #e80b0b;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
    	font-weight: 300;
    	color: #ffffff;
 }
@@ -134,11 +134,11 @@ h1 {
 
 function cartify() {
 	var userInput = document.getElementById("userinput").value;
-	
+
 	var cartiOutput = userInput;
-	
+
 	cartiOutput = cartiOutput.replace(/(\r\n|\n|\r)/gm," \n");
-	
+
 	var words = cartiOutput.split(' ');
 	console.log(words);
 	cartiOutput = "";
@@ -200,12 +200,12 @@ function cartify() {
 		}
 		cartiOutput += words[i] + wordSeperator;
 	}
-	
+
 	cartiOutput = cartiOutput.replace(/!/g, ' !')
 	cartiOutput = cartiOutput.replace(/\?/g, ' \?');
 	cartiOutput = cartiOutput.replace(/,/g, ' ,');
 	cartiOutput = cartiOutput.replace(/\./g, ' .');
-	
+
 	rand = Math.floor(Math.random() * 4);
 	var beginning = "";
 	if (rand == 0) {
@@ -217,9 +217,9 @@ function cartify() {
 	} else if (rand == 3) {
 		beginning = "+* ok ! 🖤"
 	}
-	
+
 	cartiOutput = beginning + "\n" + cartiOutput;
-	
+
 	rand = Math.floor(Math.random() * 6);
 	var ending = "\n";
 	if (rand == 0) {
@@ -235,10 +235,10 @@ function cartify() {
 	} else if (rand == 5) {
 		ending += "++ 🖤#love *";
 	}
-	
+
 	cartiOutput += ending;
-	
-	
+
+
 	if (document.getElementById('upper').checked) {
   		cartiOutput = cartiOutput.toUpperCase();
 	}
@@ -247,9 +247,9 @@ function cartify() {
 	}
 
 	document.getElementById("cartitext").value = cartiOutput;
-	
+
 	document.getElementById("cartitext").style.height = "100px";
-	
+
 	document.getElementById("cartitext").style.height = (document.getElementById("cartitext").scrollHeight) + "px";
 }
 
@@ -272,7 +272,7 @@ function cartify() {
 <div id="caseselection">
 	<input type="radio" id="lower" name="case" value="lower" checked="checked"> all lowercase
   	<input type="radio" id="upper" name="case" value="upper"> all uppercase
-  	<input type="radio" id="nochange" name="case" value="nochange"> no case change 
+  	<input type="radio" id="nochange" name="case" value="nochange"> no case change
 </div>
 
 <div id="buttonsarea">
