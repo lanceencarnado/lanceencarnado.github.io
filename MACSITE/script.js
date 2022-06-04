@@ -11,6 +11,8 @@ class DesktopIcon {
 		const windowID = el.dataset.window;
 		const window = document.querySelector('#' + windowID);
 
+		// const draggableIcon = new Draggabilly(el, {containment: true, grid: [ 30, 30 ]});
+
 		el.addEventListener('click', function(e){
 			el.dataset.isOpen = true;
 			window.dataset.isOpen = true;
@@ -22,7 +24,7 @@ class Window {
 
 	constructor(el) {
 
-		const draggableWindow = new Draggabilly(el, { handle: '.title-bar', containment: true});
+		const draggableWindow = new Draggabilly(el, { handle: '.title-bar', containment: false});
 		const resize = document.querySelector('div#' + el.id + ' .resize', el);
 		const close = document.querySelector('div#' + el.id + ' .close', el);
 
