@@ -340,6 +340,11 @@ html {
 		letter-spacing: -0.03em;
 	}
 
+	.desktop-icons .icon-label {
+		font-size: 16px;
+		letter-spacing: 0;
+	}
+
 	.menu-items li {
 		padding: 0.5rem 0.5rem;
 		font-size: 1rem;
