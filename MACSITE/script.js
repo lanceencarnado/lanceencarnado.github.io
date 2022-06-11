@@ -71,3 +71,10 @@ for (var i of icons) {
 function createWindow() {
 
 }
+
+function time() {
+	var timeElement = document.getElementById('menu-time');
+	timeElement.textContent = new Date().toLocaleTimeString();
+}
+
+setInterval(time, 1000);
