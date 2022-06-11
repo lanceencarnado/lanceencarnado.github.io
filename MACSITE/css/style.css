@@ -383,6 +383,16 @@ html {
 		color: #4444ff;
 	}
 
+	.desktop-icons .icon-label {
+		background-color: #000;
+		color: #fff;
+	}
+
+	.desktop-icons .icon[data-is-open=true] .icon-label {
+	  background-color: #fff;
+	  color: #000;
+	}
+
 	.title-bar {
 		background: linear-gradient(#fff 50%, transparent 50%);
 		background-size: 6.6666666667% 13.3333333333%;
