@@ -10,10 +10,19 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'FindersKeepers';
+    src: url('font/FindersKeepers.woff2') format('woff2'),
+         url('font/FindersKeepers.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
 	/* colour constants */
+	--background: #ffd8c2;
 	--darkgrey: #202225;
-	--darkbackground1: #2b3640;
+	--darkbackground1: #000;
 	--darkbackground2: #607b91;
 }
 
@@ -26,7 +35,7 @@ html {
 }
 
 .desktop {
-  background: linear-gradient(45deg, #94bee2 25%, transparent 25%, transparent 75%, #94bee2 75%, #94bee2), linear-gradient(45deg, #94bee2 25%, transparent 25%, transparent 75%, #94bee2 75%, #94bee2);
+  background: linear-gradient(45deg, var(--background) 25%, transparent 25%, transparent 75%, var(--background) 75%, var(--background)), linear-gradient(45deg, var(--background) 25%, transparent 25%, transparent 75%, var(--background) 75%, var(--background));
   background-color: white;
   background-size: 3px 3px;
   background-position: 0 0, 1.5px 1.5px;
@@ -58,8 +67,13 @@ html {
   width: 2rem;
   height: 2rem;
   margin: 1rem 2rem;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   cursor: pointer;
+}
+.desktop-icons .icon img {
+  	width: 100%;
+  	height: 100%;
+  	/* image-rendering: pixelated; */
 }
 .desktop-icons .icon[data-is-open=true] {
   background: linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000), linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000);
@@ -82,7 +96,8 @@ html {
   max-width: 6rem;
   overflow: hidden;
   transform: translateX(-50%);
-  font-size: 0.75em;
+  font-size: 18px;
+  font-family: 'FindersKeepers', monospace;
   text-align: center;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -97,6 +112,31 @@ html {
      -moz-user-select: auto;
       -ms-user-select: auto;
           user-select: auto;
+}
+
+.window-icons {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding-bottom: 1em;
+  flex: none;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.window-icons .icon-label {
+	top: 1.5rem;
+	margin-top: 8px;
+	overflow: auto;
+}
+
+.window-icons .icon {
+  width: 2rem;
+  height: 2rem;
+  /* border: 2px solid black; */
+  cursor: pointer;
 }
 
 .menu-bar {
@@ -149,6 +189,7 @@ html {
   width: 600px;
   min-width: 320px;
   min-height: 100px;
+  max-height: 700px;
   resize: both;
   overflow: hidden;
   background-color: #fff;
@@ -181,6 +222,11 @@ html {
   border: 2px solid black;
   border-right: none;
 }
+
+.icon_window_pane {
+	padding: 0;
+}
+
 .window.resized {
   max-width: 90%;
   width: 90vw;
