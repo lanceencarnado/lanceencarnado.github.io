@@ -65,6 +65,7 @@ for (var w of windows) {
 	new Window(w);
 }
 for (var i of icons) {
+	if (i.id != "contact")
 	new DesktopIcon(i);
 }
 
