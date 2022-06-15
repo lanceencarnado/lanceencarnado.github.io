@@ -86,6 +86,9 @@ html {
   background-color: #000;
   color: #fff;
 }
+.desktop-icons .icon[data-is-open=true] img {
+	filter: invert(1);
+}
 .desktop-icons .icon-label {
   display: inline-block;
   position: absolute;
@@ -186,10 +189,10 @@ html {
 	color: inherit;
 }
 
-.menu-items li:hover {
+/* .menu-items li:hover {
 	opacity: 1;
 	background-color:rgba(0, 0, 0, 0.2)
-}
+} */
 
 #menu-time {
 	margin-left: auto;
