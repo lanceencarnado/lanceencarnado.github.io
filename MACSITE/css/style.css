@@ -21,6 +21,7 @@
 :root {
 	/* colour constants */
 	--background: #ffd8c2;
+	/* --background: #f3f1df; */
 	--darkgrey: #202225;
 	--darkbackground1: #000;
 	--darkbackground2: #607b91;
@@ -198,6 +199,39 @@ html {
 	margin-left: auto;
 }
 
+/* DROPDOWN MENU STUFF */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: #fff;
+  min-width: 160px;
+  border: 2px solid;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #000;
+  padding: 6px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+	color: #fff;
+	background-color: #000;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+/* END DROPDOWN MENU STUFF */
 
 .window {
   display: none;
@@ -359,6 +393,11 @@ html {
 		letter-spacing: -0.03em;
 	}
 
+	.desktop-icons {
+		flex-direction: row;
+		align-items: flex-start;
+	}
+
 	.desktop-icons .icon-label {
 		font-size: 16px;
 		letter-spacing: 0;
@@ -393,10 +432,6 @@ html {
 		color: #fff;
 	}
 
-	.menu-items li:hover {
-		background-color:rgba(255, 255, 255, 0.2)
-	}
-
 	.window {
 		background-color: var(--darkgrey);
 		color: #fff;
@@ -405,6 +440,11 @@ html {
 
 	.window a, .window a:visited {
 		color: #4444ff;
+	}
+
+	.details-bar {
+		border: 0.1rem solid #fff;
+		border-width: 0.1rem 0;
 	}
 
 	.desktop-icons .icon-label {

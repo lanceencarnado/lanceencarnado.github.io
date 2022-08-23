@@ -24,7 +24,7 @@ class Window {
 
 	constructor(el) {
 
-		const draggableWindow = new Draggabilly(el, { handle: '.title-bar', containment: false});
+		const draggableWindow = new Draggabilly(el, { handle: '.title-bar', containment: true});
 		const resize = document.querySelector('div#' + el.id + ' .resize', el);
 		const close = document.querySelector('div#' + el.id + ' .close', el);
 
