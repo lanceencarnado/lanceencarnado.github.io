@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>lance encarnado</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel="stylesheet" href="js/lightbox/css/lightbox.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="time()">
+	<!-- <div class="crt menu-bar"> -->
+	<div class="menu-bar">
+		<ul class="menu-items">
+			<li class="apple"><a href="index.html">lance encarnado</a></li>
+			<div class="dropdown">
+				<li class="dropdown-tab">File</li>
+				<div class="dropdown-content">
+				    <a id="bg1" href="#">Background 1</a>
+				    <a id="bg2" href="#">Background 2</a>
+				    <a id="bg3" href="#">Background 3</a>
+				</div>
+			</div>
+			<li id="menu-time"></li>
+		</ul>
+	</div>
+	<!-- <div class="crt desktop"> -->
+	<div class="desktop">
+		<div class="desktop-icons">
+			<div class="icon disk" data-window="twitter" data-is-open="false"><img src="img/icons/twitter.png" alt="Twitter"><span class="icon-label">Twitter</span></div>
+			<div class="icon disk" data-window="work" data-is-open="false"><img src="img/icons/folder.png" alt="Work"><span class="icon-label">Work</span></div>
+			<div class="icon disk" id="contact"><a href="mailto:lance.encarnado@gmail.com"><img src="img/icons/contact.png" alt="Work"><span class="icon-label">Contact</span></a></div>
+		</div>
+
+		<div class="window" id="twitter" data-is-open="false">
+			<div class="title-bar">
+				<button class="close"><span class="hidden">Close</span></button>
+				<h1 class="title">Twitter</h1>
+				<button class="resize"><span class="hidden">Resize</span></button>
+			</div>
+			<div class="details-bar"><span>21 items</span><span>1,227K in disk</span><span>189K available</span></div>
+			<div class="window__pane">
+				<blockquote class="twitter-tweet" data-lang="en">
+					<p lang="en" dir="ltr">
+						“it is traumatic to be born and have to live” -<a href="https://twitter.com/lucydacus?ref_src=twsrc%5Etfw">@lucydacus</a>
+					</p>&mdash; Julien Baker (@julienrbaker) <a href="https://twitter.com/julienrbaker/status/1082128199348375552?ref_src=twsrc%5Etfw">January 7, 2019</a>
+				</blockquote>
+				<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			</div>
+		</div>
+
+		<div class="window" id="work" data-is-open=false>
+			<div class="title-bar">
+				<button class="close"><span class="hidden">Close</span></button>
+				<h1 class="title">Work</h1>
+				<button class="resize"><span class="hidden">Resize</span></button>
+			</div>
+			<div class="details-bar"><span>10 items</span><span>1,227K in disk</span><span>189K available</span></div>
+			<div class="window__pane icon_window_pane">
+				<div class="desktop-icons window-icons">
+					<div class="icon disk" data-window="tacklebox" data-is-open=false><img src="img/icons/tacklebox.png" alt="Tacklebox"><span class="icon-label">Tacklebox</span></div>
+					<div class="icon disk" data-window="cartivoice" data-is-open=false><img src="img/icons/cartivoice.png" alt="cartivoice"><span class="icon-label">carti voice</span></div>
+					<div class="icon disk" data-window="thisshowrules" data-is-open=false><img src="img/icons/thisshowrules.png" alt="This Show Rules"><span class="icon-label">This Show<br>Rules</span></div>
+					<div class="icon disk" data-window="amco" data-is-open=false><img src="img/icons/amco.png" alt="AMCO"><span class="icon-label">AMCO</span></div>
+					<div class="icon disk" data-window="hoodbabysurf" data-is-open=false><img src="img/icons/hoodbabysurf2.png" alt="#HoodBabySurf"><span class="icon-label">#HoodBabySurf</span></div>
+					<div class="icon disk" data-window="yachtclub" data-is-open=false><img src="img/icons/yachtclub.png" alt="Yacht Club: Wave Runna"><span class="icon-label">Yacht Club</span></div>
+					<div class="icon disk" data-window="trappedoncleveland" data-is-open=false><img src="img/icons/trappedoncleveland.png" alt="Trapped On Cleveland"><span class="icon-label">Trapped on<br>Cleveland</span></div>
+					<div class="icon disk" data-window="meetmeatthelondon" data-is-open=false><img src="img/icons/meetmeatthelondon1.png" alt="#MeetMeAtTheLondon"><span class="icon-label">#MeetMeAt<br>TheLondon</span></div>
+					<div class="icon disk" data-window="lildurknickname" data-is-open=false><img src="img/icons/lildurknickname.png" alt="Lil Durk Nickname Generator"><span class="icon-label">Lil Durk <br>Nickname</span></div>
+					<div class="icon disk" data-window="rags2riches" data-is-open=false><img src="img/icons/rags2riches.png" alt="Rags2Riches"><span class="icon-label">Rags2Riches</span></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="window" id="cartivoice" data-is-open=false>
+			<div class="title-bar">
+				<button class="close"><span class="hidden">Close</span></button>
+				<h1 class="title">carti voice</h1>
+				<button class="resize"><span class="hidden">Resize</span></button>
+			</div>
+			<div class="details-bar"><span>2019</span><span></span><span><a href="https://cartivoice.com" target="_blank">cartivoice.com</a></span></div>
+			<div class="window__pane">
+				<a href="https://cartivoice.com" target="_blank"><img src="img/logos/cartivoice.png" class="logo-img" alt="carti voice"></a>
+				<br> =======================
+				<p><strong>Role</strong>: Concept, design, coding
+				<p><strong>carti voice</strong> is a meme generator that takes user-input text and translates it into the unique typing style of rapper Playboi Carti.
+				<p>I came up with the idea one day in March of 2019, and four days later, <a href="https://twitter.com/LScorrcho/status/1107341327182651394" data-type="URL" data-id="https://twitter.com/LScorrcho/status/1107341327182651394">the site was live.</a> It went viral immediately after release, with thousands of Carti fans using the site to create tweets and Instagram captions. The site still receives thousands of page views weekly.
+				<p><a href="img/screenshots/cartivoice.png" data-lightbox="cartivoice"><img class="screenshot-img" src="img/screenshots/cartivoice.png" alt="carti voice screenshot"></a>
+				<p><a href="img/screenshots/cartivoice2.png" data-lightbox="cartivoice"><img class="screenshot-img" src="img/screenshots/cartivoice2.png" alt="carti voice screenshot" data-lightbox="cartivoice"></a>
+				<p><a href="img/screenshots/cartivoice3.png" data-lightbox="cartivoice"><img class="screenshot-img" src="img/screenshots/cartivoice3.png" alt="carti voice screenshot" data-lightbox="cartivoice"></a>
+				<p><a href="img/screenshots/cartivoice4.png" data-lightbox="cartivoice"><img class="screenshot-img" src="img/screenshots/cartivoice4.png" alt="carti voice screenshot" data-lightbox="cartivoice"></a>
+			</div>
+		</div>
+
+		<div class="window" id="thisshowrules" data-is-open=false>
+			<div class="title-bar">
+				<button class="close"><span class="hidden">Close</span></button>
+				<h1 class="title">This Show Rules</h1>
+				<button class="resize"><span class="hidden">Resize</span></button>
+			</div>
+			<div class="details-bar"><span>2019</span><span></span><span><a href="https://thisshowrules.com" target="_blank">thisshowrules.com</a></span></div>
+			<div class="window__pane">
+				<a href="https://thisshowrules.com" target="_blank"><img src="img/logos/thisshowrules.png" class="logo-img" alt="This Show Rules"></a>
+				<br>=======================
+				<p><strong>Role</strong>: Concept, design, coding
+				<p><strong>This Show Rules</strong> is a soundboard based on clips from <i>Time Crisis</i>, an Apple Music 1 radio show hosted by Vampire Weekend frontman Ezra Koenig & American painter Jake Longstreth.
+				<p>Users can click on the different squares to play iconic “drops” from the show, including “8 Minute Cape Cod” and “Corporate Food History,” as well as classic quotes.
+				<p><img class="screenshot-img" src="img/screenshots/thisshowrules1.png" alt="This Show Rules screenshot">
+				<p><img class="screenshot-img" src="img/screenshots/thisshowrules2.png" alt="This Show Rules screenshot">
+			</div>
+		</div>
+
+		<div class="window" id="amco" data-is-open=false>
+			<div class="title-bar">
+				<button class="close"><span class="hidden">Close</span></button>
+				<h1 class="title">AMCO</h1>
+				<button class="resize"><span class="hidden">Resize</span></button>
+			</div>
+			<div class="details-bar"><span>2021</span><span></span><span><a href="https://amcosounds.com" target="_blank">amcosounds.com</a></span></div>
+			<div class="window__pane">
+				<a href="https://amcosounds.com" target="_blank"><img src="img/logos/amco.png" class="logo-img" alt="AMCO"></a>
+				<br>=======================
+				<p><strong>Role</strong>: Coding
+				<p><strong>Client</strong>: AMCO
+				<p><strong>AMCO</strong> is a distribution, publishing and management company founded by the team behind the renowned independent music collective Awful Records, known for artists such as Father, Playboi Carti, Zack Fox, and Faye Webster, amongst others.
+				<p><img class="screenshot-img" src="img/screenshots/amco1.jpg" alt="AMCO screenshot">
+				<p><img class="screenshot-img" src="img/screenshots/amco2.jpg" alt="AMCO screenshot">
+			</div>
+		</div>
+
+		<div class="window" id="hoodbabysurf" data-is-open=false>
+			<div class="title-bar">
+				<button class="close"><span class="hidden">Close</span></button>
+				<h1 class="title">#HoodBabySurf</h1>
+				<button class="resize"><span class="hidden">Resize</span></button>
+			</div>
+			<div class="details-bar"><span>2019</span><span></span><span><a href="https://apps.apple.com/us/app/hoodbabysurf/id1469347552" target="_blank">Download (iOS App Store)</a></span></div>
+			<div class="window__pane">
+				<a href="https://apps.apple.com/us/app/hoodbabysurf/id1469347552" target="_blank"><img src="img/logos/hoodbabysurf.png" class="logo-img" alt="#HoodBabySurf"></a>
+				<br>=======================
+				<p><strong>Role</strong>: iOS development, distribution
+				<p><strong>Client</strong>: Alamo Records
+				<p><strong>#HoodBabySurf</strong> is an iOS game in which the player controls rapper Lil Gotit as he surfs the seas saving mermaids and collecting powerups.
+				<p>The game features a soundtrack comprised of Lil Gotit's biggest hits, and is often updated to promote his new album and single releases. An iMessage sticker pack with Lil Gotit-related illustrations is included with the app.
+				<p><img class="screenshot-img" src="img/screenshots/hoodbabysurf-1.png" alt="#HoodBabySurf screenshot">
+				<p><img class="screenshot-img" src="img/screenshots/hoodbabysurf-2.png" alt="#HoodBabySurf screenshot">
+				<p><img class="screenshot-img" src="img/screenshots/hoodbabysurf-3.png" alt="#HoodBabySurf screenshot">
+				<p><img class="screenshot-img" src="img/screenshots/hoodbabysurf-4.jpg" alt="#HoodBabySurf screenshot">
+			</div>
+		</div>
+
+		<div class="window" id="yachtclub" data-is-open=false>
+			<div class="title-bar">
+				<button class="close"><span class="hidden">Close</span></button>
+				<h1 class="title">Yacht Club: Wave Runna</h1>
+				<button class="resize"><span class="hidden">Resize</span></button>
+			</div>
+			<div class="details-bar"><span>2020</span><span></span><span><a href="https://apps.apple.com/ca/app/yacht-club-wave-runna/id1471445776" target="_blank">Download (iOS App Store)</a></span></div>
+			<div class="window__pane">
+				<a href="https://apps.apple.com/ca/app/yacht-club-wave-runna/id1471445776" target="_blank"><img src="img/logos/yachtclub.png" class="logo-img" alt="Yacht Club: Wave Runna"></a>
+				<br>=======================
+				<p><strong>Role</strong>: iOS development, distribution
+				<p><strong>Client</strong>: 300 Entertainment / YSL Records
+				<p><strong>Yacht Club: Wave Runna</strong> is an iOS game in which the player controls rapper Strick and friends as they ride jetskis, doing stunts and collecting nitros to beat the clock and obtain the highest score possible.
+				<p>The app was commissioned to promote Strick’s 2020 single “Yacht Club” featuring Young Thug and Ty Dolla $ign.
+				<p><img class="screenshot-img" src="img/screenshots/yachtclub1.jpg" alt="Yacht Club: Wave Runna screenshot">
+				<p><img class="screenshot-img" src="img/screenshots/yachtclub2.jpg" alt="Yacht Club: Wave Runna screenshot">
+				<p><img class="screenshot-img" src="img/screenshots/yachtclub3.jpg" alt="Yacht Club: Wave Runna screenshot">
+			</div>
+		</div>
+
+		<div class="window" id="trappedoncleveland" data-is-open=false>
+			<div class="title-bar">
+				<button class="close"><span class="hidden">Close</span></button>
+				<h1 class="title">Trapped On Cleveland</h1>
+				<button class="resize"><span class="hidden">Resize</span></button>
+			</div>
+			<div class="details-bar"><span>2020</span><span></span><span><a href="https://apps.apple.com/us/app/trapped-on-cleveland/id1527010393" target="_blank">Download (iOS App Store)</a></span></div>
+			<div class="window__pane">
+				<a href="https://apps.apple.com/us/app/trapped-on-cleveland/id1527010393" target="_blank"><img src="img/logos/trappedoncleveland.png" class="logo-img" alt="Trapped On Cleveland"></a>
+				<br>=======================
+				<p><strong>Role</strong>: iOS development, distribution
+				<p><strong>Client</strong>: 300 Entertainment / YSL Records
+				<p><strong>Trapped On Cleveland</strong> is a Friday the 13th-inspired iOS game in which the player controls rapper Lil Keed as he fights off hordes of zombies using a chainsaws, shotguns, and dynamite.
+				<p>The app was commisioned to promote Lil Keed's 2020 mixtape "Trapped On Cleveland 3," and the game features songs from that mixtape as well as some of his other hits.
+				<p><img class="screenshot-img" src="img/screenshots/trappedoncleveland1.jpg" alt="Trapped On Cleveland screenshot">
+				<p><img class="screenshot-img" src="img/screenshots/trappedoncleveland2.jpg" alt="Trapped On Cleveland screenshot">
+				<p><img class="screenshot-img" src="img/screenshots/trappedoncleveland3.jpg" alt="Trapped On Cleveland screenshot">
+				<p><img class="screenshot-img" src="img/screenshots/trappedoncleveland4.jpg" alt="Trapped On Cleveland screenshot">
+			</div>
+		</div>
+
+		<div class="window" id="meetmeatthelondon" data-is-open=false>
+			<div class="title-bar">
+				<button class="close"><span class="hidden">Close</span></button>
+				<h1 class="title">#MeetMeAtTheLondon</h1>
+				<button class="resize"><span class="hidden">Resize</span></button>
+			</div>
+			<div class="details-bar"><span>2019</span><span></span><span><a href="work/meetmeatthelondon/index.html" target="_blank">meetmeatthelondon.com (Archive)</a></span></div>
+			<div class="window__pane">
+				<a href="work/meetmeatthelondon/index.html" target="_blank"><img src="img/logos/meetmeatthelondon.png" class="logo-img" alt="#MeetMeAtTheLondon"></a>
+				<br>=======================
+				<p><strong>Role</strong>: Coding
+				<p><strong>Client</strong>: 300 Entertainment / YSL Records
+				<p><strong>#MeetMeAtTheLondon</strong> is a meme generator where users can upload a photo of their face and insert it into a cutout of Young Thug.
+				<p>The site was commissioned as a digital activation to promote Young Thug’s 2019 single “The London” featuring Travis Scott & J. Cole, which peaked at #12 on the Billboard Hot 100 and is certified 3x Platinum.
+				<p><img class="screenshot-img" src="img/screenshots/meetmeatthelondon.jpg" alt="#MeetMeAtTheLondon screenshot">
+				<p><img class="screenshot-img" src="img/screenshots/meetmeatthelondon2.jpg" alt="#MeetMeAtTheLondon screenshot">
+			</div>
+		</div>
+
+		<div class="window" id="lildurknickname" data-is-open=false>
+			<div class="title-bar">
+				<button class="close"><span class="hidden">Close</span></button>
+				<h1 class="title">Lil Durk Nickname Generator</h1>
+				<button class="resize"><span class="hidden">Resize</span></button>
+			</div>
+			<div class="details-bar"><span>2021</span><span></span><span><a href="https://lildurknickname.com/" target="_blank">lildurknickname.com</a></span></div>
+			<div class="window__pane">
+				<a href="https://lildurknickname.com/" target="_blank">l<img src="img/logos/lildurknickname.png" class="logo-img" alt="Lil Durk Nickname Generator"></a>
+				<br>=======================
+				<p><strong>Role</strong>: Coding
+				<p><strong>Client</strong>: Alamo Records
+				<p><strong>Lil Durk Nickname Generator</strong>
+				<p><img class="screenshot-img" src="img/screenshots/lildurknickname1.png" alt="Lil Durk Nickname Generator screenshot">
+				<p><img class="screenshot-img" src="img/screenshots/lildurknickname2.png" alt="Lil Durk Nickname Generator screenshot">
+				<p><img class="screenshot-img" src="img/screenshots/lildurknickname3.png" alt="Lil Durk Nickname Generator screenshot">
+			</div>
+		</div>
+
+		<div class="window" id="rags2riches" data-is-open=false>
+			<div class="title-bar">
+				<button class="close"><span class="hidden">Close</span></button>
+				<h1 class="title">Rags2Riches</h1>
+				<button class="resize"><span class="hidden">Resize</span></button>
+			</div>
+			<div class="details-bar"><span>2020</span><span></span><span><a href="work/rags2riches/index.html" target="_blank">rags-2-riches.com (Archive)</a></span></div>
+			<div class="window__pane">
+				<a href="work/rags2riches/index.html" target="_blank"><img src="img/logos/rags2riches.png" class="logo-img" alt="Rags2Riches"></a>
+				<br>=======================
+				<p><strong>Role</strong>: Coding
+				<p><strong>Client</strong>: Alamo Records
+				<p><strong>Rags2Riches</strong> is a meme generator where users can upload photos of themselves to create their own custom Rod Wave $100 bill, with their picture being the presidential portrait in the middle.
+				<p>This digital activation was created to promote the deluxe edition of Rod Wave’s album Pray 4 Love. The site itself is inspired by Rod Wave’s viral TikTok song “Rags2Riches.”
+			</div>
+		</div>
+	</div>
+
+	<script src='https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js'></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="js/lightbox/js/lightbox.js"></script>
+	<script  src="./script.js"></script>
+
+</body>
+</html>

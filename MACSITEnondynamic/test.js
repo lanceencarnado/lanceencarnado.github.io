@@ -1,0 +1,5 @@
+{
+windows:[
+	{id: "cartivoice"}
+]
+}
