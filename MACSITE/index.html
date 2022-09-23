@@ -31,6 +31,7 @@
 			<div class="icon disk" data-window="twitter" data-is-open="false"><img src="img/icons/twitter.png" alt="Twitter"><span class="icon-label">Twitter</span></div>
 			<div class="icon disk" data-window="work" data-is-open="false"><img src="img/icons/folder.png" alt="Work"><span class="icon-label">Work</span></div>
 			<div class="icon disk" id="contact"><a href="mailto:lance.encarnado@gmail.com"><img src="img/icons/contact.png" alt="Work"><span class="icon-label">Contact</span></a></div>
+			<div class="icon disk" data-window="todo" data-is-open="false"><img src="img/icons/todo.png" alt="To-Do"><span class="icon-label">To-Do</span></div>
 		</div>
 
 		<div class="window" id="twitter" data-is-open="false">
@@ -56,13 +57,30 @@
 				<h1 class="title">Work</h1>
 				<button class="resize"><span class="hidden">Resize</span></button>
 			</div>
-			<div class="details-bar"><span>10 items</span><span>1,227K in disk</span><span>189K available</span></div>
+			<div class="details-bar"><span id="num-items">0 items</span><span>1,227K in disk</span><span>189K available</span></div>
 			<div class="window__pane icon_window_pane">
 				<div id="work-folder" class="desktop-icons window-icons">
 					<!-- icons here -->
 				</div>
 			</div>
 		</div>
+
+		<div class="window" id="todo" data-is-open="false">
+			<div class="title-bar">
+				<button class="close"><span class="hidden">Close</span></button>
+				<h1 class="title">To-Do</h1>
+				<button class="resize"><span class="hidden">Resize</span></button>
+			</div>
+			<div class="details-bar"><span>21 items</span><span>1,227K in disk</span><span>189K available</span></div>
+			<div class="window__pane">
+				- make windows 100% width and height on mobile
+				<br> - make windows overlap instead of flex
+				<br> - have windows appear in order of opening instead of pre-ordered according to html
+				<br> - add more projects
+				<br> - replace twitter with about me
+			</div>
+		</div>
+
 		<!-- work windows here -->
 	</div>
 

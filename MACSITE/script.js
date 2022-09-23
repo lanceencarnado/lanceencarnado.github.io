@@ -166,6 +166,9 @@ function createWorkWindow(workWindow) {
 		$windowHtml.attr("data-is-open", true);
 	});
 
+	// make window draggable
+	let draggableWindow = $windowHtml.draggabilly({ handle: '.title-bar', containment: true});
+
 	$(".desktop").append($windowHtml);
 
 	$windowHtml.css("zIndex", zCount);
@@ -210,8 +213,10 @@ lightbox.option({
 
 setBackgroundButtons();
 
+var numItems = 1;
 for (i in workWindows) {
 	createWorkWindow(workWindows[i]);
+	$('#num-items').text(numItems++ + " items");
 }
 
 setInterval(time, 1000);

@@ -35,4 +35,21 @@ var workWindows = [
 		iconTitle: "This Show<br>Rules",
 		iconSrc: "img/icons/thisshowrules.png"
 	},
+	{
+		windowId: "amco",
+		title: "AMCO",
+		year: "2021",
+		url: "https://amcosounds.com",
+		displayUrl: "amcosounds.com",
+		logoSrc: "img/logos/amco.png",
+		role: "Coding",
+		client: "AMCO",
+		description: "AMCO is a distribution, publishing and management company founded by the team behind the renowned independent music collective Awful Records, known for artists such as Father, Playboi Carti, Zack Fox, ABRA, Tommy Genesis, Faye Webster, and Danger Incorporated, amongst others.",
+		screenshots: [
+			"img/screenshots/amco1.jpg",
+			"img/screenshots/amco2.jpg",
+		],
+		iconTitle: "AMCO",
+		iconSrc: "img/icons/amco.png"
+	},
 ];
