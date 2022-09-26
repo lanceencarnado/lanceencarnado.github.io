@@ -142,7 +142,7 @@ function createWorkWindow(workWindow) {
 	var $logoImg = $("<img>", {"class": "logo-img", "src": workWindow.logoSrc, "alt": workWindow.title});
 	$logoLink.append($logoImg);
 	$windowPane.append($logoLink);
-	$windowPane.append("<br>=======================");
+	$windowPane.append("<p>=======================");
 	// window pane content
 	$windowPane.append("<p><strong><u>Role</u></strong>: " + workWindow.role);
 	if (workWindow.client != null && workWindow.client != "none") {
@@ -164,6 +164,9 @@ function createWorkWindow(workWindow) {
 	$draggable.on('staticClick', function(e){
 		$iconDiv.attr("data-is-open", true);
 		$windowHtml.attr("data-is-open", true);
+
+		// change the zCount
+		$windowHtml.css("zIndex", zCount++);
 	});
 
 	// make window draggable
@@ -171,9 +174,7 @@ function createWorkWindow(workWindow) {
 
 	$(".desktop").append($windowHtml);
 
-	$windowHtml.css("zIndex", zCount);
-
-	zCount = zCount + 1;
+	$windowHtml.css("zIndex", zCount++);
 }
 
 function time() {
@@ -201,7 +202,7 @@ function setBackgroundButtons() {
 		document.getElementsByClassName("desktop")[0].style.backgroundRepeat = "no-repeat";
 		document.getElementsByClassName("desktop")[0].style.backgroundPosition = "center";
 		document.getElementsByClassName("desktop")[0].style.backgroundColor = "#1886ff";
-		document.getElementsByClassName("desktop")[0].style.backgroundSize = "18vw 18vw";
+		document.getElementsByClassName("desktop")[0].style.backgroundSize = "20vw 20vw";
 	});
 }
 

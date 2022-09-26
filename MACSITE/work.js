@@ -52,4 +52,93 @@ var workWindows = [
 		iconTitle: "AMCO",
 		iconSrc: "img/icons/amco.png"
 	},
+	{
+		windowId: "hoodbabysurf",
+		title: "#HoodBabySurf",
+		year: "2019",
+		url: "https://apps.apple.com/us/app/hoodbabysurf/id1469347552",
+		displayUrl: "Download (iOS App Store)",
+		logoSrc: "img/logos/hoodbabysurf.png",
+		role: "iOS development, distribution",
+		client: "Alamo Records",
+		description: "<strong>#HoodBabySurf</strong> is an iOS game in which the player controls rapper Lil Gotit as he surfs the seas saving mermaids and collecting powerups.<p>The game features a soundtrack comprised of Lil Gotit's biggest hits, and is often updated to promote his new album and single releases. An iMessage sticker pack with Lil Gotit-related illustrations is included with the app.",
+		screenshots: [
+			"img/screenshots/hoodbabysurf-1.png",
+			"img/screenshots/hoodbabysurf-2.png",
+			"img/screenshots/hoodbabysurf-3.png",
+			"img/screenshots/hoodbabysurf-4.jpg",
+		],
+		iconTitle: "#HoodBabySurf",
+		iconSrc: "img/icons/hoodbabysurf2.png"
+	},
+	{
+		windowId: "yachtclub",
+		title: "Yacht Club: Wave Runna",
+		year: "2020",
+		url: "https://apps.apple.com/ca/app/yacht-club-wave-runna/id1471445776",
+		displayUrl: "Download (iOS App Store)",
+		logoSrc: "img/logos/yachtclub.png",
+		role: "iOS development, distribution",
+		client: "300 Entertainment / YSL Records",
+		description: "<strong>Yacht Club: Wave Runna</strong> is an iOS game in which the player controls rapper Strick and friends as they ride jetskis, doing stunts and collecting nitros to beat the clock and obtain the highest score possible.<p>The app was commissioned to promote Strick’s 2020 single \"Yacht Club\" featuring Young Thug and Ty Dolla $ign.",
+		screenshots: [
+			"img/screenshots/yachtclub1.jpg",
+			"img/screenshots/yachtclub2.jpg",
+			"img/screenshots/yachtclub3.jpg",
+		],
+		iconTitle: "Yacht Club:<br>Wave Runna",
+		iconSrc: "img/icons/yachtclub.png"
+	},
+	{
+		windowId: "trappedoncleveland",
+		title: "Trapped On Cleveland",
+		year: "2020",
+		url: "https://apps.apple.com/us/app/trapped-on-cleveland/id1527010393",
+		displayUrl: "Download (iOS App Store)",
+		logoSrc: "img/logos/trappedoncleveland.png",
+		role: "iOS development, distribution",
+		client: "300 Entertainment / YSL Records",
+		description: "<strong>Trapped On Cleveland</strong> is an iOS game inspired by <i>Friday the 13th</i> in which the player controls rapper Lil Keed as he fights off hordes of zombies using a chainsaws, shotguns, and dynamite.<p>The app was commisioned to promote Lil Keed's 2020 mixtape \"Trapped On Cleveland 3,\" and the game features songs from that mixtape as well as some of his other hits.",
+		screenshots: [
+			"img/screenshots/trappedoncleveland1.jpg",
+			"img/screenshots/trappedoncleveland2.jpg",
+			"img/screenshots/trappedoncleveland3.jpg",
+			"img/screenshots/trappedoncleveland4.jpg",
+		],
+		iconTitle: "Trapped On<br>Cleveland",
+		iconSrc: "img/icons/trappedoncleveland.png"
+	},
+	{
+		windowId: "meetmeatthelondon",
+		title: "#MeetMeAtTheLondon",
+		year: "2019",
+		url: "work/meetmeatthelondon/index.html",
+		displayUrl: "meetmeatthelondon.com (Archive)",
+		logoSrc: "img/logos/meetmeatthelondon.png",
+		role: "Coding",
+		client: "300 Entertainment / YSL Records",
+		description: "<strong>#MeetMeAtTheLondon</strong> is a meme generator where users can upload a photo of their face and insert it into a cutout of Young Thug.<p>The site was commissioned as a digital activation to promote Young Thug’s 2019 single \"The London\" featuring Travis Scott & J. Cole, which peaked at #12 on the Billboard Hot 100 and is certified 3x Platinum.",
+		screenshots: [
+			"img/screenshots/meetmeatthelondon.jpg",
+			"img/screenshots/meetmeatthelondon2.jpg",
+		],
+		iconTitle: "#MeetMeAt<br>TheLondon",
+		iconSrc: "img/icons/meetmeatthelondon1.png"
+	},
+	{
+		windowId: "rags2riches",
+		title: "Rags2Riches",
+		year: "2020",
+		url: "work/rags2riches/index.html",
+		displayUrl: "rags-2-riches.com (Archive)",
+		logoSrc: "img/logos/rags2riches.png",
+		role: "Coding",
+		client: "Alamo Records",
+		description: "<strong>Rags2Riches</strong> is a meme generator where users can upload photos of themselves to create their own custom Rod Wave $100 bill, with their picture being the presidential portrait in the middle.<p>This digital activation was created to promote the deluxe edition of Rod Wave’s album Pray 4 Love. The site itself is inspired by Rod Wave’s viral TikTok song \"Rags2Riches.\"",
+		screenshots: [
+			"img/screenshots/rags2riches1.jpg",
+		],
+		iconTitle: "Rags2Riches",
+		iconSrc: "img/icons/rags2riches.png"
+	},
 ];
