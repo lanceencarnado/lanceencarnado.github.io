@@ -1,5 +1,23 @@
 var workWindows = [
 	{
+		windowId: "tacklebox",
+		title: "Tacklebox",
+		year: "2019 - present",
+		url: "https://tacklebox.company",
+		displayUrl: "tacklebox.company",
+		logoSrc: "img/logos/tacklebox.png",
+		role: "Coding",
+		client: "none",
+		description: "<strong>Tacklebox</strong> is an Ottawa-based multimedia production company specializing in web and mobile development, graphic design, and video production.",
+		screenshots: [
+			"img/screenshots/tacklebox1.png",
+			"img/screenshots/tacklebox2.jpg",
+			"img/screenshots/tacklebox3.png",
+		],
+		iconTitle: "Tacklebox",
+		iconSrc: "img/icons/tacklebox.png"
+	},
+	{
 		windowId: "cartivoice",
 		title: "carti voice",
 		year: "2019",
@@ -126,6 +144,23 @@ var workWindows = [
 		iconSrc: "img/icons/meetmeatthelondon1.png"
 	},
 	{
+		windowId: "numa",
+		title: "NUMA Architect",
+		year: "2020",
+		url: "xx",
+		displayUrl: "xx",
+		logoSrc: "img/logos/rodwavecontest.png",
+		role: "Coding, HTML5 animation",
+		client: "Ruriko Numazawa",
+		description: "<strong>NUMA Architect</strong> is the website for Ottawa-based architect Ruriko Numazawa. The site notably features an animated homepage, where over time, the site navigation and house blueprints fade in over a forest, culminating in the appearance of the final house.",
+		screenshots: [
+			"img/screenshots/rodwavecontest1.jpg",
+			"img/screenshots/rodwavecontest2.jpg",
+		],
+		iconTitle: "NUMA<br>Architect",
+		iconSrc: "img/icons/rags2riches.png"
+	},
+	{
 		windowId: "rags2riches",
 		title: "Rags2Riches",
 		year: "2020",
@@ -139,6 +174,23 @@ var workWindows = [
 			"img/screenshots/rags2riches1.jpg",
 		],
 		iconTitle: "Rags2Riches",
+		iconSrc: "img/icons/rags2riches.png"
+	},
+	{
+		windowId: "rodwavecontest",
+		title: "Rod Wave - Day 1 Contest",
+		year: "2021",
+		url: "work/rodwavecontest/index.html",
+		displayUrl: "rodwavecontest.com (Archive)",
+		logoSrc: "img/logos/rodwavecontest.png",
+		role: "Coding, contest design",
+		client: "Alamo Records / SoundCloud",
+		description: "<strong>Rod Wave - Day 1 Contest</strong> was an online activation that rewarded Rod Wave's biggest fans in various cities with tickets to his 2021 SoulFly Tour. To enter, fans would submit a short voice memo explaining why they are Rod Wave's biggest fan.<p>This site featured the contest form as well as a SoundCloud player that played voice memos that fans had previously submitted.",
+		screenshots: [
+			"img/screenshots/rodwavecontest1.jpg",
+			"img/screenshots/rodwavecontest2.jpg",
+		],
+		iconTitle: "Day 1 Contest",
 		iconSrc: "img/icons/rags2riches.png"
 	},
 ];
