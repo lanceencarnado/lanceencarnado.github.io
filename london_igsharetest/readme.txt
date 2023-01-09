@@ -1,1 +1,1 @@
-rotation on thug_facehole for preview modal: -20 degrees
+rotation on thug_facehole for preview modal: -20 degrees.
