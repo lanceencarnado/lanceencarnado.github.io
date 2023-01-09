@@ -1,0 +1,201 @@
+html {
+/* 	background-color: #000000; */
+}
+
+body {
+	background-image: url("../images/bg_mobile.gif");
+	background-size: cover;
+	/* background-attachment: fixed; */
+	background-position: right top;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+}
+
+label.cabinet{
+	display: block;
+	cursor: pointer;
+}
+
+label.cabinet input.file{
+	position: relative;
+	height: 100%;
+	width: auto;
+	opacity: 0;
+	-moz-opacity: 0;
+  	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+  	margin-top:-30px;
+}
+
+#upload-demo{
+	width: 600px;
+	height: 500px;
+  	padding-bottom:25px;
+}
+
+figure figcaption {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    width: 100%;
+    padding-left: 9px;
+    padding-bottom: 5px;
+    text-shadow: 0 0 10px #000;
+}
+
+.logodiv {
+	margin: auto;
+	padding-top: 30px;
+	padding-bottom: 25px;
+	width: 45%;
+}
+
+/* applies to thuginitialimg and thuggeneratedimg */
+.thugimg {
+	width: 400px;
+}
+
+.thugimgdiv {
+	margin: auto;
+	width: 400px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.buttonsdiv {
+	/* 	background */
+/* 
+	background-color: rgba(0, 0, 0, 0.6);
+	border: 3px solid rgba(255, 255, 255, 1);
+ */
+	
+	text-align: center;
+	margin: auto;
+	/* width: 400px; */
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+	font-size: 20px;
+	text-align: center;
+	color: black;
+}
+
+#tbfooter {
+	width: 300px;
+	padding-top: 45px;
+	padding-bottom: 80px;
+	margin: auto;
+}
+
+/* 
+#ysl300footer {
+	width: 575px;
+	padding-top: 45px;
+	padding-bottom: 45px;
+	margin: auto;
+}
+
+
+#tbfooter {
+	width: 300px;
+	padding-bottom: 80px;
+	margin: auto;
+}
+ */
+
+#tblogo_img:active {
+	opacity: 0.75;
+}
+
+/* scale the snake canvas to be 600x600 (it's 800x800 natively) */
+/* nevermind - we're gonna make the canvas invisible so it doesn't matter */
+/* 
+#thugcanvas {
+	transform: scale(0.625, 0.625);
+	transform-origin: top center;
+}
+ */
+ 
+.custombutton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background-color:#f9f9f9;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:18px;
+	font-weight:bold;
+	padding:12px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+	width:200px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.custombutton:hover {
+	background-color:#e9e9e9;
+}
+.custombutton:active {
+	position:relative;
+	top:1px;
+}
+
+.streaming {
+	width: 500px;
+	margin: auto;
+	text-align: center;
+	padding-top: 15px;
+}
+
+.streaminglink {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.streamingimg {
+	width: 200px;
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+.streamingimg:active {
+	opacity: 0.75;
+}
+
+a.disabled {
+	pointer-events: none;
+	cursor: default;
+	opacity: 0.5;
+}
+
+/* invisible divs = magic */
+.invisiblediv {
+	display: none;
+}
+
+/* MORE PHOTO MODAL CSS BEGIN */
+ 
+  /* adding the face as an outline */
+.cr-viewport {
+	background-image: url("../images/faceguide.png");
+	pointer-events: none;
+}
+
+/* making the modal zoom slider bigger for mobile */
+
+.cr-slider::-webkit-slider-runnable-track {
+	height: 6px !important;
+}
+
+.cr-slider::-webkit-slider-thumb {
+	height: 35px !important;
+	width: 35px !important;
+}
+
+/* MORE PHOTO MODAL CSS END */

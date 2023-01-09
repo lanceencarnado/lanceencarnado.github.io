@@ -47,7 +47,7 @@ html {
   align-items: center;
   width: 100%;
   height: 100%;
-  min-height: 100vh;
+  min-height: 97vh;
   margin: auto;
 
   /* background-image: url('../img/wallpaper/frankoceanisland.jpg');
@@ -128,6 +128,10 @@ html {
      -moz-user-select: auto;
       -ms-user-select: auto;
           user-select: auto;
+}
+
+.desktop-icons .icon:active {
+	opacity: 0.5;
 }
 
 .window-icons {
@@ -391,6 +395,22 @@ html {
 	width: 100%;
 	border-style: dashed;
 	border-width: 2px;
+}
+
+.about-portrait {
+	width: 40%;
+	max-width: 400px;
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 15px;
+}
+
+#about {
+	font-size: 18px;
+}
+
+.emphasis {
+	color: #f53636;
 }
 
 @media only screen and (max-width: 768px) {
