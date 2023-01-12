@@ -1,0 +1,117 @@
+:root {
+ 	--stack-distance: 20px;
+}
+
+@font-face {
+  font-family: SpaceGrotesk;
+  src: url(SpaceGrotesk-Medium.ttf);
+}
+
+body {
+	width: 100%;
+	margin: auto;
+}
+
+.container {
+	margin-left: 40px;
+	margin-right: 40px;
+	height: 100vh;
+	font-size: 40px;
+	font-family: SpaceGrotesk, sans-serif;
+}
+
+p {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+p:hover {
+	color: blue;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 100%;
+	flex: 1;
+}
+
+.c2 {
+	text-align: right;
+}
+
+/* STACK */
+
+.stack {
+	margin: auto;
+	width: 400px;
+	padding: 0;
+	position: relative;
+	max-width: 100%;
+	top: -50px;
+}
+
+.stack img {
+	max-width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	outline: 1px solid transparent;
+}
+
+.stack img:first-child {
+	position: relative;
+	z-index: 1;
+}
+
+.active-img {
+	z-index: 2 !important;
+}
+
+/* Individual effects */
+
+/* Simple Spread */
+.stack-spread img:nth-child(2) {
+	-webkit-transform: translate(var(--stack-distance) ,var(--stack-distance));
+	transform: translate(var(--stack-distance), var(--stack-distance));
+	z-index: -2;
+}
+.stack-spread img:nth-child(3) {
+	-webkit-transform: translate(calc(var(--stack-distance) * 2), calc(var(--stack-distance) * 2));
+	transform: translate(calc(var(--stack-distance) * 2), calc(var(--stack-distance) * 2));
+	z-index: -3;
+}
+.stack-spread img:nth-child(4) {
+	-webkit-transform: translate(calc(var(--stack-distance) * 3), calc(var(--stack-distance) * 3));
+	transform: translate(calc(var(--stack-distance) * 3), calc(var(--stack-distance) * 3));
+	z-index: -4;
+}
+.stack-spread img:nth-child(5) {
+	-webkit-transform: translate(calc(var(--stack-distance) * 4), calc(var(--stack-distance) * 4));
+	transform: translate(calc(var(--stack-distance) * 4), calc(var(--stack-distance) * 4));
+	z-index: -5;
+}
+.stack-spread img:nth-child(6) {
+	-webkit-transform: translate(calc(var(--stack-distance) * 5), calc(var(--stack-distance) * 5));
+	transform: translate(calc(var(--stack-distance) * 5), calc(var(--stack-distance) * 5));
+	z-index: -6;
+}
+.stack-spread img:nth-child(7) {
+	-webkit-transform: translate(calc(var(--stack-distance) * 6), calc(var(--stack-distance) * 6));
+	transform: translate(calc(var(--stack-distance) * 6), calc(var(--stack-distance) * 6));
+	z-index: -7;
+}
+
+
+/* END STACK */

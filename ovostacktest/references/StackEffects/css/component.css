@@ -1,0 +1,47 @@
+:root {
+ 	--stack-distance: 15px;
+}
+
+.stack {
+	margin: 20px auto;
+	width: 400px;
+	padding: 0;
+	position: relative;
+	max-width: 100%;
+}
+
+.stack img {
+	max-width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	outline: 1px solid transparent;
+}
+
+.stack img:first-child {
+	position: relative;
+	z-index: 1;
+}
+
+/* Individual effects */
+
+/* Simple Spread */
+.stack-spread img:nth-child(2) {
+	-webkit-transform: translate(var(--stack-distance) ,var(--stack-distance));
+	transform: translate(var(--stack-distance), var(--stack-distance));
+	z-index: 0;
+}
+.stack-spread img:nth-child(3) {
+	-webkit-transform: translate(calc(var(--stack-distance) * 2), calc(var(--stack-distance) * 2));
+	transform: translate(calc(var(--stack-distance) * 2), calc(var(--stack-distance) * 2));
+	z-index: -1;
+}
+/* .stack-spread img:nth-child(2) {
+	-webkit-transform: translate(-15px,15px);
+	transform: translate(-15px,15px);
+}
+
+.stack-spread img:first-child {
+	-webkit-transform: translate(15px,-15px);
+	transform: translate(15px,-15px);
+} */
