@@ -1,0 +1,22 @@
+- Website creation with new assets - 6 hours
+- Create the new "filter" to be applied to the user's uploaded image - 5 hours
+- Create new image upload procedure according to new image design - 5 hours
+- Add instagram + twitter share capability (mobile only) - 2 hours
+- Acquire URL and set up website hosting - 2 hours
+- Add contest functionality tied to sharing image - 4 hours
+- Set up contest data collector (google form and spreadsheet) - 3 hours
+
+Total: 27 hours - $1600 CAD
+
+
+TODO:
+xx Fix modal for mobile
+xx use whole background image from psd instead of the cropped version
+- make sure share works
+- make sure camera flash is right on mobile
+
+WAITING ON DETAILS FOR THIS:
+- change out videos on home page
+- change out album link on home page
+- change out streaming links on generator page
+- attach contest forms to a google form (wait for confirmation on details first)
