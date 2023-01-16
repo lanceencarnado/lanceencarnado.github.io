@@ -348,7 +348,8 @@ body {
 	}
 
 	.calltoaction {
-		width: 65vw;
+		width: 85vw;
+		font-size: 18px;
 		min-width: 150px;
 		margin-top: 33px;
 	}
