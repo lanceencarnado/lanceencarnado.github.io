@@ -150,6 +150,10 @@ body {
 	margin-right: 32px;
 }
 
+.mobileonlybreak {
+	display: none;
+}
+
 .alignleft {
 	float: left;
 }
@@ -382,19 +386,14 @@ body {
 		margin-right: 8px;
 	}
 
-	.footerlogoimg {
-		margin-bottom: 20px;
-		margin-left: 5vw;
-		margin-right: 5vw;
-	}
-
 	.popbutton {
 		font-size: 12px;
 		width: 150px;
 	}
 
 	.albumart {
-		width: 85vw;
+		width: 80vw;
+		margin-top: 45px;
 	}
 
 	.popcaanvideo {
@@ -440,6 +439,29 @@ body {
 		font-size: 12px;
 		padding: 7px;
 		background-color: #ffffff;
+	}
+
+	/* mobile: have the footer logos stack and change the order of the logos */
+	.alignleft {
+		float: none;
+	}
+	.alignright {
+		float: none;
+	}
+	.mobileonlybreak {
+		display: initial !important;
+	}
+	.footer {
+		text-align: center;
+		margin-top: 20px;
+	}
+
+	.footerlogoimg {
+		margin-bottom: 15px;
+	}
+
+	#ovosoundlogo {
+		height: 90px;
 	}
 }
 
