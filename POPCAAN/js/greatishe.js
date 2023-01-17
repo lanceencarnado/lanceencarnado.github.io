@@ -326,20 +326,30 @@ let isIOS = /iPad|iPhone|iPod/.test(navigator.platform);
 async function share_canvas_img() {
 	var c = document.getElementById("initialcanvas");
 	const dataUrl = c.toDataURL();
-	const b1 = await fetch(dataUrl);
-	const b2 = await (b1).blob();
-	const filesArray = [
-		new File(
-			[b2],
-			'GreatIsHe.png',
-			{
-				type: b2.type,
-				lastModified: new Date().getTime()
-			}
-		)
-	];
-	const shareData = {
-	  files: filesArray,
-	};
-	navigator.share(shareData);
+	if (navigator.share === undefined) {
+		// navigator.share is not supported - download image instead
+		var link = document.createElement('a');
+		link.download = 'GreatIsHe.png';
+		link.href = dataUrl;
+		link.click();
+	}
+	else {
+		const b1 = await fetch(dataUrl);
+		const b2 = await (b1).blob();
+		const filesArray = [
+			new File(
+				[b2],
+				'GreatIsHe.png',
+				{
+					type: b2.type,
+					lastModified: new Date().getTime()
+				}
+			)
+		];
+		const shareData = {
+		  files: filesArray,
+		};
+		navigator.share(shareData);
+	}
+
 };
