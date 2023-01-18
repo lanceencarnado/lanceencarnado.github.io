@@ -236,8 +236,8 @@ body {
 .enter {
 	text-align: center;
 	font-family: Arial, sans-serif;
-	font-size: 22px;
-	letter-spacing: 0.25rem;
+	font-size: 19px;
+	/* letter-spacing: 0.25rem; */
 	/* margin-top: 5px; */
 	margin-bottom: 10px;
 }
@@ -368,10 +368,14 @@ body {
 	}
 
 	.calltoaction {
-		width: 85vw;
-		font-size: 18px;
+		width: 80vw;
+		font-size: 19px;
 		min-width: 150px;
 		margin-top: 33px;
+	}
+
+	.webonlybreak {
+		display: none;
 	}
 
 	.streaming {
