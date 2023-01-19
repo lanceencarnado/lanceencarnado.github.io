@@ -44,7 +44,7 @@ by tacklebox / coded by lance encarnado (2023)
 		<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
 		<link rel="stylesheet" href="css/style.css?rnd=80">
 	</head>
-	<body>
+	<body ontouchstart="">
 		<div class="header">
 			<img src="assets/greatishe.png" alt="Popcaan - Great is He">
 		</div>
@@ -56,12 +56,6 @@ by tacklebox / coded by lance encarnado (2023)
 		<div class="row">
 			<div class="generatordiv column" id="generatorinitialdiv">
 				<img class="generatorimg" id="generatorinitialimg" src="assets/greatishe_initial.jpg" alt="Great is He cover">
-
-				<!-- <br>
-				<input type="file" id="selectedFace" class="uploadface-btn" name="file_photo" style="display: none;" />
-				<button class="popbutton" id="upload-btn" onclick="document.getElementById('selectedFace').click();return false;">
-					UPLOAD IMAGE
-				</button> -->
 			</div>
 
 			<div class="generatordiv column" id="generateddiv">
@@ -69,10 +63,6 @@ by tacklebox / coded by lance encarnado (2023)
 					<img id="cameraflashimg" src="assets/cameraflash.png" alt="">
 				</div>
 				<img class="generatorimg" id="generatedimg" src="assets/placeholder.jpg" alt="Great is He image">
-				<!-- <br>
-				<button class="popbutton disabled" id="download-btn" onclick="share_canvas_img();">
-					SHARE IMAGE
-				</button> -->
 			</div>
 
 			<div class="break"></div>
@@ -90,42 +80,31 @@ by tacklebox / coded by lance encarnado (2023)
 			</div>
 		</div>
 
-		<!-- <div class="buttonsrow">
-			<div class="column">
-				<input type="file" id="selectedFace" class="uploadface-btn" name="file_photo" style="display: none;" />
-				<button class="popbutton" id="upload-btn" onclick="document.getElementById('selectedFace').click();return false;">
-					UPLOAD IMAGE
-				</button>
-			</div>
-			<div class="column">
-				<button class="popbutton disabled" id="download-btn" onclick="share_canvas_img();">
-					SHARE IMAGE
-				</button>
-			</div>
-		</div> -->
-
 		<div class="calltoaction">
-			SHARE YOUR IMAGE FOR <br class="mobileonlybreak">A CHANCE TO
-			<br class="webonlybreak">WIN A VIRTUAL MEET & GREET WITH POPCAAN!
+			<p>NEW ALBUM <i>GREAT IS HE</i> OUT 1/27.
+			<br>PRE-SAVE <a href="https://ovo-popcaan.ffm.to/greatishe" target="_blank">HERE</a>.</p>
 		</div>
 
-		<div class="streaming">
+		<!-- <div class="streaming">
 			<a href="#" class="streaminglink" target="_blank"><img class="streamingimg" id="spotify" src="assets/dsp/spotify.png" alt="Listen on Spotify"></a>
 			<a href="#" class="streaminglink" target="_blank"><img class="streamingimg" id="apple" src="assets/dsp/apple.png" alt="Listen on Apple Music"></a>
 			<br><a href="#" class="streaminglink" target="_blank"><img class="streamingimg" id="tidal" src="assets/dsp/tidal.png" alt="Listen on Tidal"></a>
 			<a href="#" class="streaminglink" target="_blank"><img class="streamingimg" id="soundcloud" src="assets/dsp/soundcloud.png" alt="Listen on Soundcloud"></a>
 			<br><a href="#" class="streaminglink" target="_blank"><img class="streamingimg" id="apple" src="assets/dsp/youtube.png" alt="Listen on YouTube"></a>
+		</div> -->
+
+		<div class="socials">
+			<a href="https://www.facebook.com/PopcaanMusic/" target="_blank"><div id="facebook" class="social_icon"></div></a>
+			<a href="https://www.youtube.com/channel/UCYGHSw2kacL589nNX4l0fMg" target="_blank"><div id="youtube" class="social_icon"></div></a>
+			<a href="https://twitter.com/PopcaanMusic" target="_blank"><div id="twitter" class="social_icon"></div></a>
+			<a href="https://www.instagram.com/popcaanmusic/" target="_blank"><div id="instagram" class="social_icon"></div></a>
+			<a href="https://www.tiktok.com/@popcaanofficial" target="_blank"><div id="tiktok" class="social_icon"></div></a>
 		</div>
 
 		<div class="footer">
 			<a href="https://www.ovosound.com/" class="footerlink" target="_blank">
-				<img id="ovosoundlogo" class="footerlogoimg alignright" src="assets/ovosoundlogo.png" alt="OVO Sound">
+				<img id="ovosoundlogo" class="footerlogoimg" src="assets/ovosoundlogo.png" alt="OVO Sound">
 			</a>
-			<br class="mobileonlybreak">
-			<a href="https://tacklebox.company" class="footerlink" target="_blank">
-				<img id="tackleboxlogo" class="footerlogoimg alignleft" src="assets/tackleboxlogo.png" alt="Powered by Tacklebox">
-			</a>
-			<div style="clear: both;"></div>
 		</div>
 
 		<!-- START INVISIBLE DIVS -->
@@ -162,83 +141,6 @@ by tacklebox / coded by lance encarnado (2023)
 			</div>
 		</div>
 		<!-- END PHOTO MODAL -->
-
-		<!-- CONTEST MODAL -->
-		<div id="myModal" class="contest-modal">
-			<!-- Modal content -->
-			<div class="contest-modal-content">
-				<span class="contest-modal-close">&times;</span>
-				<p>INSERT CONTEST COPY HERE</p>
-				<div class="contestform">
-					<form class="form" id="entryform" action="INSERT GOOGLE FORM LINK HERE">
-						<p>
-							<label>FIRST & LAST NAME</label>
-							<br><input required id="fname" name="INSERT ENTRY. HERE" type="text" placeholder="First Name">
-							<input required id="lname" name="INSERT ENTRY. HERE" type="text" placeholder="Last Name">
-						</p>
-
-						<p>
-							<label>BIRTHDAY</label>
-							<span class="birthdate_picker">
-								<br><span>
-									<select required id="month" name="INSERT ENTRY. HERE">
-										<option value="" disabled selected hidden>Month</option>
-										<option>January</option>
-										<option>February</option>
-										<option>March</option>
-										<option>April</option>
-										<option>May</option>
-										<option>June</option>
-										<option>July</option>
-										<option>August</option>
-										<option>September</option>
-										<option>October</option>
-										<option>November</option>
-										<option>December</option>
-									</select>
-								</span>
-								<span>
-									<select required id="day" name="INSERT ENTRY. HERE">
-										<option value="" disabled selected hidden>Day  </option>
-									</select>
-								</span>
-								<span>
-									<select required id="year" name="INSERT ENTRY. HERE">
-										<option value="" disabled selected hidden>Year  </option>
-									</select>
-								</span>
-							</span>
-						</p>
-
-						<p>
-							<label>COUNTRY</label>
-							<br><input required id="country" name="INSERT ENTRY. HERE" type="text" placeholder="Country">
-						</p>
-
-						<p>
-							<label>CITY, STATE/PROVINCE, ZIP CODE</label>
-							<br><input required id="city" name="INSERT ENTRY. HERE" type="text" placeholder="City">
-							<input required id="state" name="INSERT ENTRY. HERE" type="text" placeholder="State/Province">
-							<input required id="zipcode" name="INSERT ENTRY. HERE" type="text" placeholder="ZIP Code">
-						</p>
-
-						<p>
-							<label>EMAIL</label>
-							<br><input required id="email" name="INSERT ENTRY. HERE" type="email" placeholder="Email">
-						</p>
-
-						<p>
-							<label>PHONE NUMBER</label>
-							<br><input required class="fullwidth" name="INSERT ENTRY. HERE" type="tel" placeholder="Phone Number">
-						</p>
-
-						<p>
-							<input type="submit" value="SUBMIT">
-						</p>
-					</form>
-				</div>
-			</div>
-		</div>
 
 		<script src="js/jquery-3.5.1.min.js" charset="utf-8"></script>
 		<script src="js/croppie.min.js" charset="utf-8"></script>
