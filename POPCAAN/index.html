@@ -31,7 +31,15 @@
 		<meta property="twitter:description" content="New album from Popcaan “Great Is He” out now.">
 		<meta property="twitter:image" content="https://gihealbum.com/assets/popcaan_preview_image.jpg">
 
-		<!-- TODO: ADD GOOGLE ANALYTICS -->
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-JE4149EPQB"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-JE4149EPQB');
+		</script>
 
 		<link rel='stylesheet' href='js/croppie.css'>
 		<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
@@ -51,7 +59,7 @@
 			<img id="albumartimg" src="assets/greatishe_cover.jpg" alt="Popcaan - Great is He">
 		</div>
 
-		<div class="albumart">
+		<div class="albumart" id="tracklist">
 			<img id="tracklistimg" src="assets/greatishe_tracklist.jpg" alt="Popcaan - Great is He">
 		</div>
 
