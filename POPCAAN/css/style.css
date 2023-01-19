@@ -199,11 +199,28 @@ body {
 }
 
 .footer {
+	margin: auto;
+	text-align: center;
+}
+
+.footer > * {
+	display:inline-block;
+}
+
+.footerlogosvg {
 	width: 70px;
+	height: 70px;
 	margin: auto;
 	text-align: center;
 	margin-top: 50px;
 	margin-bottom: 30px;
+
+	background-color: white;
+}
+
+#ovosoundlogo {
+	mask: url("../assets/ovosoundlogo.svg") no-repeat center / contain;
+	-webkit-mask: url("../assets/ovosoundlogo.svg") no-repeat center / contain;
 }
 
 /* grid orders */
@@ -232,8 +249,14 @@ body {
 		-webkit-transition: opacity 0.3s;
 	}
 
-	.social_icon:hover {
+	.social_icon:hover, .footerlogosvg:hover {
 		background-color: #9b764c;
+		transition: background-color 0.1s;
+	}
+
+	.calltoaction a:hover, .enter a:hover {
+		color: #9b764c;
+		transition: color 0.1s;
 	}
 }
 
@@ -243,8 +266,12 @@ body {
 	-webkit-transition: opacity 0.3s;
 }
 
-.social_icon:active {
+.social_icon:active, .footerlogosvg:active {
 	background-color: #9b764c;
+}
+
+.calltoaction a:active, .enter a:active {
+	color: #9b764c;
 }
 
 /* LANDING PAGE */
