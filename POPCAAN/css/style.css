@@ -176,6 +176,10 @@ body {
 	margin-top: 30px;
 }
 
+#tracklist {
+	margin-top: 40px !important;
+}
+
 #albumartimg, #tracklistimg {
 	width: 100%;
 }
@@ -518,7 +522,7 @@ body {
 	}
 
 	#tracklist {
-		margin-top: 20px !important;
+		margin-top: 30px !important;
 	}
 
 	.popcaanvideo {
