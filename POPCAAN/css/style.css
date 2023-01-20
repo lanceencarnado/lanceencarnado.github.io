@@ -111,14 +111,22 @@ body {
 
 .calltoaction {
 	margin: auto;
-	margin-top: 40px;
+	/* margin-top: 40px; */
 	/* width: 100%;
 	min-width: 400px; */
 	font-size: 25px;
 	text-align: center;
 }
 
-.calltoaction p {
+.ctaheader {
+	margin-top: 0px;
+}
+
+.ctamidpage {
+	margin-top: 40px;
+}
+
+.ctamidpage p {
 	margin-top: 30px;
 }
 
@@ -218,6 +226,27 @@ body {
 	background-color: white;
 }
 
+/* LANDING PAGE */
+
+.enter {
+	text-align: center;
+	font-family: Arial, sans-serif;
+	font-size: 19px;
+	/* letter-spacing: 0.25rem; */
+	/* margin-top: 5px; */
+	margin-bottom: 10px;
+}
+
+.enter a {
+	color: white;
+	-webkit-text-decoration: underline;
+	text-decoration: underline;
+	-webkit-text-underline-offset: 5px;
+	text-underline-offset: 5px;
+}
+
+/* END LANDING PAGE */
+
 #ovosoundlogo {
 	mask: url("../assets/ovosoundlogo.svg") no-repeat center / contain;
 	-webkit-mask: url("../assets/ovosoundlogo.svg") no-repeat center / contain;
@@ -254,9 +283,19 @@ body {
 		transition: background-color 0.1s;
 	}
 
-	.calltoaction a:hover, .enter a:hover {
+	.calltoaction a:hover {
 		color: #9b764c;
 		transition: color 0.1s;
+		-webkit-text-decoration-color: #9b764c;
+		text-decoration-color: #9b764c;
+	}
+	.enter a:hover {
+		color: #9b764c;
+		transition: color 0.1s;
+		-webkit-text-underline-offset: 4px;
+		text-underline-offset: 4px;
+		-webkit-text-decoration-color: #9b764c;
+		text-decoration-color: #9b764c;
 	}
 }
 
@@ -268,30 +307,15 @@ body {
 
 .social_icon:active, .footerlogosvg:active {
 	background-color: #9b764c;
+	transition: background-color 0.1s;
 }
 
 .calltoaction a:active, .enter a:active {
 	color: #9b764c;
+	transition: color 0.1s;
+	-webkit-text-decoration-color: #9b764c;
+	text-decoration-color: #9b764c;
 }
-
-/* LANDING PAGE */
-
-.enter {
-	text-align: center;
-	font-family: Arial, sans-serif;
-	font-size: 19px;
-	/* letter-spacing: 0.25rem; */
-	/* margin-top: 5px; */
-	margin-bottom: 10px;
-}
-
-.enter a {
-	color: white;
-	text-decoration: underline;
-	text-underline-offset: 5px;
-}
-
-/* END LANDING PAGE */
 
 
 /* MODAL */
@@ -459,6 +483,10 @@ body {
 		width: 80vw;
 		font-size: 19px;
 		min-width: 150px;
+		/* margin-top: 33px; */
+	}
+
+	.ctamidpage {
 		margin-top: 33px;
 	}
 
@@ -485,7 +513,7 @@ body {
 
 	.albumart {
 		width: 80vw;
-		margin-top: 45px;
+		margin-top: 30px;
 	}
 
 	#tracklist {
