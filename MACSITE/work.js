@@ -202,12 +202,30 @@ var workWindows = [
 		logoSrc: "img/logos/greatishe.png",
 		role: "Coding",
 		client: "OVO Sound",
-		description: "<strong>Great is He</strong> is a promotional website for Popcaan's 2023 album of the same name. The site features an image generator that allows fans to upload a photo that is then transformed to look like the Great Is He album cover. The site also features streaming links and music videos from Great Is He.",
+		description: "<strong>Great is He</strong> is a promotional website for Popcaan's 2023 album of the same name. The site features an image generator that allows fans to upload a photo that is then transformed to look like the Great Is He album cover. The site also contains streaming links, music videos, and upcoming tour dates.",
 		screenshots: [
-			"img/screenshots/rodwavecontest1.jpg",
-			"img/screenshots/rodwavecontest2.jpg",
+			"img/screenshots/greatishe1.jpg",
+			"img/screenshots/greatishe2.jpg",
+			"img/screenshots/greatishe3.jpg",
 		],
 		iconTitle: "Great Is He",
+		iconSrc: "img/icons/rags2riches.png"
+	},
+	{
+		windowId: "theheadgumsoundboard",
+		title: "The Headgum Soundboard",
+		year: "2023",
+		url: "xx",
+		displayUrl: "xx",
+		logoSrc: "img/logos/greatishe.png",
+		role: "Concept, design, coding",
+		description: "<strong>Great is He</strong> is a promotional website for Popcaan's 2023 album of the same name. The site features an image generator that allows fans to upload a photo that is then transformed to look like the Great Is He album cover. The site also contains streaming links, music videos, and upcoming tour dates.",
+		screenshots: [
+			"img/screenshots/greatishe1.jpg",
+			"img/screenshots/greatishe2.jpg",
+			"img/screenshots/greatishe3.jpg",
+		],
+		iconTitle: "The Headgum<br>Soundboard",
 		iconSrc: "img/icons/rags2riches.png"
 	},
 ];
