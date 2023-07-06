@@ -37,3 +37,68 @@ function displayQuestion2b() {
 	fadeOutContainer("#container1");
 	fadeInContainer("#container2b");
 }
+
+function displayQuestion3a() {
+	fadeOutContainer("#container2a");
+	fadeInContainer("#container3a");
+}
+
+function displayQuestion3b() {
+	fadeOutContainer("#container2a");
+	fadeInContainer("#container3b");
+}
+
+function displayQuestion3c() {
+	fadeOutContainer("#container2b");
+	fadeInContainer("#container3c");
+}
+
+function displayQuestion3d() {
+	fadeOutContainer("#container2b");
+	fadeInContainer("#container3d");
+}
+
+function displayFinal1a1() {
+	fadeOutContainer("#container3a");
+	fadeInContainer("#containerfinal1a-1");
+}
+
+function displayFinal1a2() {
+	fadeOutContainer("#container3a");
+	fadeInContainer("#containerfinal1a-2");
+}
+
+function displayFinal1b1() {
+	fadeOutContainer("#container3b");
+	fadeInContainer("#containerfinal1b-1");
+}
+
+function displayFinal1b2() {
+	fadeOutContainer("#container3b");
+	fadeInContainer("#containerfinal1b-2");
+}
+
+function displayFinal2a1() {
+	fadeOutContainer("#container3c");
+	fadeInContainer("#containerfinal2a-1");
+}
+
+function displayFinal2a2() {
+	fadeOutContainer("#container3c");
+	fadeInContainer("#containerfinal2a-2");
+}
+
+function displayFinal2b1() {
+	fadeOutContainer("#container3d");
+	fadeInContainer("#containerfinal2b-1");
+}
+
+function displayFinal2b2() {
+	fadeOutContainer("#container3d");
+	fadeInContainer("#containerfinal2b-2");
+}
+
+// fade in the first container after the video
+// setTimeout(() => {
+// 	fadeInContainer("#container1");
+// }, 4000);

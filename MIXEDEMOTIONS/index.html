@@ -7,6 +7,10 @@
 		<link rel="stylesheet" href="css/base.css">
 	</head>
 	<body>
+		<!-- <video autoplay muted id="watercolorIntro">
+			<source src="assets/watercolor.mp4" type="video/mp4">
+		</video> -->
+
 		<div class="container" id="container1">
 			<div class="content">
 				<p>*Include a note or message from Roy: Why the album is named Mixed Emotions and how he wants his fans to go on a journey with him to learn about the album*
@@ -23,8 +27,8 @@
 				<p>I wanted to share something to make your day a little brighter. Here is my FULL tracklist for Mixed Emotions the album.
 				<div class="question">
 						What do you think?
-						<p><button class="button">MOD TING !!!</button>
-						<p><button class="button">Need more features</button>
+						<p><button class="button" id="button3a" onclick="displayQuestion3a()">MOD TING !!!</button>
+						<p><button class="button" id="button3b" onclick="displayQuestion3b()">Need more features</button>
 				</div>
 			</div>
 		</div>
@@ -34,11 +38,115 @@
 				<p>I wanted to share part of an unreleased song that will be on the album with you, to keep up the good vibes of your day.
 				<div class="question">
 						What do you think about {song title}
-						<p><button class="button">Let’s goooo, July 28th can’t come soon enough</button>
-						<p><button class="button">This reminds me of old school Roy Woods</button>
+						<p><button class="button" id="button3c" onclick="displayQuestion3c()">Let’s goooo, July 28th can’t come soon enough</button>
+						<p><button class="button" id="button3d" onclick="displayQuestion3d()">This reminds me of old school Roy Woods</button>
 				</div>
 			</div>
 		</div>
+
+		<div class="container" id="container3a">
+			<div class="content">
+				<p>So I’ve been working on this track {Song Title} and it’s about xxxx
+				<p>*10 seconds of song XXX*
+				<div class="question">
+						<!-- What do you think? -->
+						<p><button class="button" id="buttonfinal1a1" onclick="displayFinal1a1()">Option 1a-1</button>
+						<p><button class="button" id="buttonfinal1a2" onclick="displayFinal1a2()">Option 1a-2</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="container" id="container3b">
+			<div class="content">
+				<p>So I’ve been working on this track That Thing and Jada Kingdom is featured…
+				<p>*10 seconds of song That Thing*
+				<div class="question">
+						<!-- What do you think? -->
+						<p><button class="button" id="buttonfinal1b1" onclick="displayFinal1b1()">Option 1b-1</button>
+						<p><button class="button" id="buttonfinal1b2" onclick="displayFinal1b2()">Option 1b-2</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="container" id="container3c">
+			<div class="content">
+				<p>So I’ve been working on this track {Song Title} and it’s about xxxx
+				<p>*10 seconds of song XXX*
+				<div class="question">
+						<!-- What do you think? -->
+						<p><button class="button" id="buttonfinal2a1" onclick="displayFinal2a1()">Option 2a-1</button>
+						<p><button class="button" id="buttonfinal2a2" onclick="displayFinal2a2()">Option 2a-2</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="container" id="container3d">
+			<div class="content">
+				<p>I wanted to share an exclusive clip with you from the studio. This is when I was making Drama… crazy, right??!!
+				<p>*Exclusive BTS clip from making of Drama or other studio footage*
+				<div class="question">
+						<p><button class="button" id="buttonfinal2b1" onclick="displayFinal2b1()">I have a little bit of drama with my friends</button>
+						<p><button class="button" id="buttonfinal2b2" onclick="displayFinal2b2()">Drama? That’s not me…</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="container" id="containerfinal1a-1">
+			<div class="content">
+				<p>*OPTION 1A-1*
+				<p>Video message from Roy
+			</div>
+		</div>
+
+		<div class="container" id="containerfinal1a-2">
+			<div class="content">
+				<p>*OPTION 1A-2*
+				<p>Video message from Roy
+			</div>
+		</div>
+
+		<div class="container" id="containerfinal1b-1">
+			<div class="content">
+				<p>*OPTION 1B-1*
+				<p>Video message from Roy
+			</div>
+		</div>
+
+		<div class="container" id="containerfinal1b-2">
+			<div class="content">
+				<p>*OPTION 1B-2*
+				<p>Video message from Roy
+			</div>
+		</div>
+
+		<div class="container" id="containerfinal2a-1">
+			<div class="content">
+				<p>*OPTION 2A-1*
+				<p>Video message from Roy
+			</div>
+		</div>
+
+		<div class="container" id="containerfinal2a-2">
+			<div class="content">
+				<p>*OPTION 2A-2*
+				<p>Video message from Roy
+			</div>
+		</div>
+
+		<div class="container" id="containerfinal2b-1">
+			<div class="content">
+				<p>*OPTION 2B-1 ("A LITTLE DRAMA")*
+				<p>Video message from Roy
+			</div>
+		</div>
+
+		<div class="container" id="containerfinal2b-2">
+			<div class="content">
+				<p>*OPTION 2B-2 ("NOT ME")*
+				<p>Video message from Roy
+			</div>
+		</div>
+
 	</body>
 
 	<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
