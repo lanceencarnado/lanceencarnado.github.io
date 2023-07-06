@@ -143,23 +143,23 @@ var workWindows = [
 		iconTitle: "#MeetMeAt<br>TheLondon",
 		iconSrc: "img/icons/meetmeatthelondon1.png"
 	},
-	{
-		windowId: "numa",
-		title: "NUMA Architect",
-		year: "2020",
-		url: "xx",
-		displayUrl: "xx",
-		logoSrc: "img/logos/rodwavecontest.png",
-		role: "Coding, HTML5 animation",
-		client: "Ruriko Numazawa",
-		description: "<strong>NUMA Architect</strong> is the website for Ottawa-based architect Ruriko Numazawa. The site notably features an animated homepage, where over time, the site navigation and house blueprints fade in over a forest, culminating in the appearance of the final house.",
-		screenshots: [
-			"img/screenshots/rodwavecontest1.jpg",
-			"img/screenshots/rodwavecontest2.jpg",
-		],
-		iconTitle: "NUMA<br>Architect",
-		iconSrc: "img/icons/rags2riches.png"
-	},
+	// {
+	// 	windowId: "numa",
+	// 	title: "NUMA Architect",
+	// 	year: "2020",
+	// 	url: "xx",
+	// 	displayUrl: "xx",
+	// 	logoSrc: "img/logos/rodwavecontest.png",
+	// 	role: "Coding, HTML5 animation",
+	// 	client: "Ruriko Numazawa",
+	// 	description: "<strong>NUMA Architect</strong> is the website for Ottawa-based architect Ruriko Numazawa. The site notably features an animated homepage, where over time, the site navigation and house blueprints fade in over a forest, culminating in the appearance of the final house.",
+	// 	screenshots: [
+	// 		"img/screenshots/rodwavecontest1.jpg",
+	// 		"img/screenshots/rodwavecontest2.jpg",
+	// 	],
+	// 	iconTitle: "NUMA<br>Architect",
+	// 	iconSrc: "img/icons/rags2riches.png"
+	// },
 	{
 		windowId: "rags2riches",
 		title: "Rags2Riches",
@@ -209,7 +209,7 @@ var workWindows = [
 			"img/screenshots/greatishe3.jpg",
 		],
 		iconTitle: "Great Is He",
-		iconSrc: "img/icons/rags2riches.png"
+		iconSrc: "img/icons/greatishealt.png"
 	},
 	{
 		windowId: "theheadgumsoundboard",
