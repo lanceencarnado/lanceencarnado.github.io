@@ -12,6 +12,7 @@ html, body {
 	min-height: 100%;
 	z-index: 1;
 	mix-blend-mode: multiply;
+	pointer-events: none;
 }
 
 #openingLogoContainer {

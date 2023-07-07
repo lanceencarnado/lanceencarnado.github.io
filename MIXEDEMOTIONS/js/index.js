@@ -104,6 +104,7 @@ function getRandomInt(max) {
 
 // opening logo animation
 
+// add a random number to the logo img src to get it to play every time
 var randomNum = getRandomInt(2000);
 var openingLogoImgSrc = "assets/mixedemotionsanimated-noloop-crop.gif" + "?rnd=" + randomNum
 $("#openingLogo").attr("src", openingLogoImgSrc);
