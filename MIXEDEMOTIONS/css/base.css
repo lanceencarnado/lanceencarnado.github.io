@@ -12,7 +12,7 @@ html, body {
 	min-height: 100%;
 	z-index: 1;
 	mix-blend-mode: multiply;
-	pointer-events: none;
+	/* pointer-events: none; */
 }
 
 #openingLogoContainer {
@@ -107,6 +107,11 @@ html, body {
 
 	#openingLogo {
 		width: 80vw;
+	}
+
+	#watercolorIntro {
+		right: auto;
+		left: 0;
 	}
 
 	#startButton {
