@@ -98,7 +98,15 @@ function displayFinal2b2() {
 	fadeInContainer("#containerfinal2b-2");
 }
 
+function getRandomInt(max) {
+	return Math.floor(Math.random() * max);
+}
+
 // opening logo animation
+
+var randomNum = getRandomInt(2000);
+var openingLogoImgSrc = "assets/mixedemotionsanimated-noloop-crop.gif" + "?rnd=" + randomNum
+$("#openingLogo").attr("src", openingLogoImgSrc);
 
 setTimeout(() => {
 	$("#openingLogoContainer").css({'display': 'flex'});
