@@ -1,5 +1,5 @@
-body {
-	background-color: #000;
+html, body {
+	background-color: #00368C;
 	color: #fff;
 }
 
@@ -11,8 +11,36 @@ body {
 	min-width: 100%;
 	min-height: 100%;
 	z-index: 1;
+	mix-blend-mode: multiply;
 }
 
+#openingLogoContainer {
+	display: none;
+	mix-blend-mode: screen;
+	position: fixed;
+	z-index: 3;
+}
+
+#openingLogo {
+	width: 45vw;
+}
+
+#startButton {
+	opacity: 0;
+	cursor: pointer;
+	transition: opacity 1s;
+	-webkit-transition: opacity 1s;
+	font-weight: bold;
+	font-size: 2.5vw;
+	letter-spacing: 0.05vw;
+	padding: 20px;
+}
+
+#startButton:hover {
+	opacity: .5 !important;
+	transition: opacity 0.35s;
+	-webkit-transition: opacity 0.35s;
+}
 
 .container {
 	position: fixed;
@@ -58,7 +86,7 @@ body {
 }
 
 /* #container1, #container2a, #container2b { */
-#container2a, #container2b, #container3a, #container3b, #container3c, #container3d,
+#container1, #container2a, #container2b, #container3a, #container3b, #container3c, #container3d,
 #containerfinal1a-1, #containerfinal1a-2, #containerfinal1b-1, #containerfinal1b-2, #containerfinal2a-1, #containerfinal2a-2, #containerfinal2b-1, #containerfinal2b-2 {
 	display: none;
 	opacity: 0;
@@ -74,6 +102,14 @@ body {
 @media only screen and (max-width: 768px) {
 	.container {
 		font-size: 4vw;
+	}
+
+	#openingLogo {
+		width: 80vw;
+	}
+
+	#startButton {
+		font-size: 5vw;
 	}
 
 	.content {

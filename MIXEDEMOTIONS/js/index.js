@@ -98,7 +98,20 @@ function displayFinal2b2() {
 	fadeInContainer("#containerfinal2b-2");
 }
 
-// fade in the first container after the video
-// setTimeout(() => {
-// 	fadeInContainer("#container1");
-// }, 4000);
+// opening logo animation
+
+setTimeout(() => {
+	$("#openingLogoContainer").css({'display': 'flex'});
+}, 1000);
+
+setTimeout(() => {
+	$("#startButton").css({'opacity': '1'});
+}, 5600);
+
+// start button listener
+
+const startButton = document.getElementById("startButton");
+startButton.addEventListener("click", function() {
+	fadeOutContainer("#openingLogoContainer");
+	fadeInContainer("#container1");
+});
