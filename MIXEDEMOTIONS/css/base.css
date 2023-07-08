@@ -12,7 +12,7 @@ html, body {
 	min-height: 100%;
 	z-index: 1;
 	mix-blend-mode: multiply;
-	/* pointer-events: none; */
+	pointer-events: none;
 }
 
 #openingLogoContainer {
@@ -33,7 +33,7 @@ html, body {
 	-webkit-transition: opacity 1s;
 	font-weight: bold;
 	font-size: 2.5vw;
-	letter-spacing: 0.05vw;
+	letter-spacing: 0.15vw;
 	padding: 20px;
 }
 
@@ -55,8 +55,9 @@ html, body {
 	justify-content: center;
 	flex-direction: column;
 	text-align: center;
-	font-family: Helvetica, sans-serif;
+	font-family: 'Founders Grotesk', Helvetica, sans-serif;
 	font-size: 1.5vw;
+	letter-spacing: 0.06vw;
 	overflow: hidden;
 
 	transition: filter 1s, opacity 1.5s;
@@ -71,6 +72,7 @@ html, body {
 .question {
 	font-size: 2vw;
 	font-weight: bold;
+	text-transform: uppercase;
 }
 
 .button {
@@ -103,6 +105,7 @@ html, body {
 @media only screen and (max-width: 768px) {
 	.container {
 		font-size: 4vw;
+		letter-spacing: 0.15vw;
 	}
 
 	#openingLogo {
@@ -116,6 +119,7 @@ html, body {
 
 	#startButton {
 		font-size: 5vw;
+		letter-spacing: 0.2vw;
 	}
 
 	.content {
@@ -124,10 +128,91 @@ html, body {
 
 	.question {
 		font-size: 6vw;
+		letter-spacing: 0.23vw;
 	}
 
 	.button {
 		font-size: 5vw;
 		padding: 4vw 5vw;
 	}
+}
+
+@font-face {
+    font-family: 'Founders Grotesk';
+    src: url('css/FoundersGrotesk-Medium.woff2') format('woff2'),
+        url('css/FoundersGrotesk-Medium.woff') format('woff'),
+        url('css/FoundersGrotesk-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Founders Grotesk';
+    src: url('css/FoundersGrotesk-Semibold.woff2') format('woff2'),
+        url('css/FoundersGrotesk-Semibold.woff') format('woff'),
+        url('css/FoundersGrotesk-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Founders Grotesk';
+    src: url('css/FoundersGrotesk-SemiboldItalic.woff2') format('woff2'),
+        url('css/FoundersGrotesk-SemiboldItalic.woff') format('woff'),
+        url('css/FoundersGrotesk-SemiboldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Founders Grotesk Regular';
+    src: url('css/FoundersGrotesk-RegularItalic.woff2') format('woff2'),
+        url('css/FoundersGrotesk-RegularItalic.woff') format('woff'),
+        url('css/FoundersGrotesk-RegularItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Founders Grotesk';
+    src: url('css/FoundersGrotesk-Regular.woff2') format('woff2'),
+        url('css/FoundersGrotesk-Regular.woff') format('woff'),
+        url('css/FoundersGrotesk-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Founders Grotesk';
+    src: url('css/FoundersGrotesk-BoldItalic.woff2') format('woff2'),
+        url('css/FoundersGrotesk-BoldItalic.woff') format('woff'),
+        url('css/FoundersGrotesk-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Founders Grotesk';
+    src: url('css/FoundersGrotesk-Bold.woff2') format('woff2'),
+        url('css/FoundersGrotesk-Bold.woff') format('woff'),
+        url('css/FoundersGrotesk-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Founders Grotesk';
+    src: url('css/FoundersGrotesk-MediumItalic.woff2') format('woff2'),
+        url('css/FoundersGrotesk-MediumItalic.woff') format('woff'),
+        url('css/FoundersGrotesk-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
 }

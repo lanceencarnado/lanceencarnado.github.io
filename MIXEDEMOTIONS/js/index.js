@@ -115,7 +115,7 @@ setTimeout(() => {
 
 setTimeout(() => {
 	$("#startButton").css({'opacity': '1'});
-}, 5600);
+}, 6200);
 
 // start button listener
 
