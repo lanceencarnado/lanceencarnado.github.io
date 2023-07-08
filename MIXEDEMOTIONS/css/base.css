@@ -1,6 +1,8 @@
 html, body {
 	background-color: #00368C;
 	color: #fff;
+	font-family: 'Founders Grotesk', Helvetica, sans-serif;
+	font-weight: normal;
 }
 
 /* Style the video: 100% width and height to cover the entire window */
@@ -31,7 +33,7 @@ html, body {
 	cursor: pointer;
 	transition: opacity 1s;
 	-webkit-transition: opacity 1s;
-	font-weight: bold;
+	/* font-weight: bold; */
 	font-size: 2.5vw;
 	letter-spacing: 0.15vw;
 	padding: 20px;
@@ -55,9 +57,8 @@ html, body {
 	justify-content: center;
 	flex-direction: column;
 	text-align: center;
-	font-family: 'Founders Grotesk', Helvetica, sans-serif;
 	font-size: 1.5vw;
-	letter-spacing: 0.06vw;
+	letter-spacing: 0.05vw;
 	overflow: hidden;
 
 	transition: filter 1s, opacity 1.5s;
@@ -71,7 +72,7 @@ html, body {
 
 .question {
 	font-size: 2vw;
-	font-weight: bold;
+	/* font-weight: bold; */
 	text-transform: uppercase;
 }
 
@@ -139,9 +140,9 @@ html, body {
 
 @font-face {
     font-family: 'Founders Grotesk';
-    src: url('css/FoundersGrotesk-Medium.woff2') format('woff2'),
-        url('css/FoundersGrotesk-Medium.woff') format('woff'),
-        url('css/FoundersGrotesk-Medium.ttf') format('truetype');
+    src: url('font/FoundersGrotesk-Medium.woff2') format('woff2'),
+        url('font/FoundersGrotesk-Medium.woff') format('woff'),
+        url('font/FoundersGrotesk-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -149,9 +150,9 @@ html, body {
 
 @font-face {
     font-family: 'Founders Grotesk';
-    src: url('css/FoundersGrotesk-Semibold.woff2') format('woff2'),
-        url('css/FoundersGrotesk-Semibold.woff') format('woff'),
-        url('css/FoundersGrotesk-Semibold.ttf') format('truetype');
+    src: url('font/FoundersGrotesk-Semibold.woff2') format('woff2'),
+        url('font/FoundersGrotesk-Semibold.woff') format('woff'),
+        url('font/FoundersGrotesk-Semibold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -159,9 +160,9 @@ html, body {
 
 @font-face {
     font-family: 'Founders Grotesk';
-    src: url('css/FoundersGrotesk-SemiboldItalic.woff2') format('woff2'),
-        url('css/FoundersGrotesk-SemiboldItalic.woff') format('woff'),
-        url('css/FoundersGrotesk-SemiboldItalic.ttf') format('truetype');
+    src: url('font/FoundersGrotesk-SemiboldItalic.woff2') format('woff2'),
+        url('font/FoundersGrotesk-SemiboldItalic.woff') format('woff'),
+        url('font/FoundersGrotesk-SemiboldItalic.ttf') format('truetype');
     font-weight: 600;
     font-style: italic;
     font-display: swap;
@@ -169,9 +170,9 @@ html, body {
 
 @font-face {
     font-family: 'Founders Grotesk Regular';
-    src: url('css/FoundersGrotesk-RegularItalic.woff2') format('woff2'),
-        url('css/FoundersGrotesk-RegularItalic.woff') format('woff'),
-        url('css/FoundersGrotesk-RegularItalic.ttf') format('truetype');
+    src: url('font/FoundersGrotesk-RegularItalic.woff2') format('woff2'),
+        url('font/FoundersGrotesk-RegularItalic.woff') format('woff'),
+        url('font/FoundersGrotesk-RegularItalic.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
@@ -179,9 +180,9 @@ html, body {
 
 @font-face {
     font-family: 'Founders Grotesk';
-    src: url('css/FoundersGrotesk-Regular.woff2') format('woff2'),
-        url('css/FoundersGrotesk-Regular.woff') format('woff'),
-        url('css/FoundersGrotesk-Regular.ttf') format('truetype');
+    src: url('font/FoundersGrotesk-Regular.woff2') format('woff2'),
+        url('font/FoundersGrotesk-Regular.woff') format('woff'),
+        url('font/FoundersGrotesk-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -189,9 +190,9 @@ html, body {
 
 @font-face {
     font-family: 'Founders Grotesk';
-    src: url('css/FoundersGrotesk-BoldItalic.woff2') format('woff2'),
-        url('css/FoundersGrotesk-BoldItalic.woff') format('woff'),
-        url('css/FoundersGrotesk-BoldItalic.ttf') format('truetype');
+    src: url('font/FoundersGrotesk-BoldItalic.woff2') format('woff2'),
+        url('font/FoundersGrotesk-BoldItalic.woff') format('woff'),
+        url('font/FoundersGrotesk-BoldItalic.ttf') format('truetype');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
@@ -199,9 +200,9 @@ html, body {
 
 @font-face {
     font-family: 'Founders Grotesk';
-    src: url('css/FoundersGrotesk-Bold.woff2') format('woff2'),
-        url('css/FoundersGrotesk-Bold.woff') format('woff'),
-        url('css/FoundersGrotesk-Bold.ttf') format('truetype');
+    src: url('font/FoundersGrotesk-Bold.woff2') format('woff2'),
+        url('font/FoundersGrotesk-Bold.woff') format('woff'),
+        url('font/FoundersGrotesk-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -209,9 +210,9 @@ html, body {
 
 @font-face {
     font-family: 'Founders Grotesk';
-    src: url('css/FoundersGrotesk-MediumItalic.woff2') format('woff2'),
-        url('css/FoundersGrotesk-MediumItalic.woff') format('woff'),
-        url('css/FoundersGrotesk-MediumItalic.ttf') format('truetype');
+    src: url('font/FoundersGrotesk-MediumItalic.woff2') format('woff2'),
+        url('font/FoundersGrotesk-MediumItalic.woff') format('woff'),
+        url('font/FoundersGrotesk-MediumItalic.ttf') format('truetype');
     font-weight: 500;
     font-style: italic;
     font-display: swap;
