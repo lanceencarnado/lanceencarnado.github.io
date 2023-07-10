@@ -1,8 +1,14 @@
 html, body {
-	background-color: #00368C;
+	background-color: #000000;
 	color: #fff;
 	font-family: 'Founders Grotesk', Helvetica, sans-serif;
+	text-rendering: geometricPrecision;
 	font-weight: 400;
+}
+
+button {
+	font-family: 'Founders Grotesk', Helvetica, sans-serif;
+	text-rendering: geometricPrecision;
 }
 
 /* Style the video: 100% width and height to cover the entire window */
@@ -13,7 +19,7 @@ html, body {
 	min-width: 100%;
 	min-height: 100%;
 	z-index: 1;
-	mix-blend-mode: multiply;
+	/* mix-blend-mode: multiply; */
 	pointer-events: none;
 }
 
@@ -25,7 +31,7 @@ html, body {
 }
 
 #openingLogo {
-	width: 45vw;
+	width: 40vw;
 }
 
 #startButton {
@@ -34,9 +40,8 @@ html, body {
 	transition: opacity 1s;
 	-webkit-transition: opacity 1s;
 	/* font-weight: bold; */
-	font-size: 2.5vw;
-	letter-spacing: 0.11vw;
-	padding: 20px;
+	font-size: 1.6vw;
+	letter-spacing: 0.05vw;
 }
 
 #startButton:hover {
@@ -57,7 +62,7 @@ html, body {
 	justify-content: center;
 	flex-direction: column;
 	text-align: center;
-	font-size: 1.5vw;
+	font-size: 1.6vw;
 	letter-spacing: 0.05vw;
 	overflow: hidden;
 
@@ -68,12 +73,21 @@ html, body {
 
 .content {
 	margin: 4vw 15vw;
+	line-height: 2.5vw;
+}
+
+.content > *:not(.question) {
+	margin-left: 8vw;
+	margin-right: 8vw;
 }
 
 .question {
-	font-size: 4vw;
+	font-size: 4.3vw;
 	font-weight: 500;
 	text-transform: uppercase;
+	margin-top: 1vw;
+	margin-top: 3.5vw;
+	margin-bottom: 3.5vw;
 }
 
 .button {
@@ -81,12 +95,16 @@ html, body {
   border: none;
   border-radius: 11px;
   color: white;
-  padding: 1vw 2vw;
+  /* padding-left: 10vw;
+  padding-right: 10vw; */
+  width: 20vw;
+  padding-top: 1vw;
+  padding-bottom: 0.7vw;
+  margin-bottom: 1vw;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 1.45vw;
-  margin: 4px 2px;
   cursor: pointer;
   font-weight: 500;
 }
@@ -107,8 +125,8 @@ html, body {
 
 @media only screen and (max-width: 768px) {
 	.container {
-		font-size: 4vw;
-		letter-spacing: 0.15vw;
+		font-size: 4.3vw;
+		/* letter-spacing: 0.15vw; */
 	}
 
 	#openingLogo {
@@ -122,21 +140,26 @@ html, body {
 
 	#startButton {
 		font-size: 5vw;
-		letter-spacing: 0.2vw;
+		/* letter-spacing: 0.2vw; */
 	}
 
 	.content {
-		margin: 8vw;
+		margin: 6vw;
+		line-height: 4.4vw;
 	}
 
 	.question {
 		font-size: 6vw;
+		line-height: 6vw;
 		letter-spacing: 0.23vw;
 	}
 
 	.button {
 		font-size: 5vw;
-		padding: 4vw 5vw;
+		/* padding: 4vw 5vw; */
+		padding-top: 4vw;
+		padding-bottom: 3.6vw;
+		width: 64vw;
 	}
 }
 
