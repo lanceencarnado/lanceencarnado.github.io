@@ -104,12 +104,11 @@ function getRandomInt(max) {
 
 // opening logo animation
 
-// for iphone low power mode stopping autoplay video - set background to black
-// const videoElement = document.getElementById('watercolorIntro');
-// videoElement.play().then(() => {}).catch((error) => {
-// 	$("html").css("background-color", "#000000");
-//     $("body").css("background-color", "#000000");
-// });
+// for iphone low power mode stopping autoplay video - hide video
+const videoElement = document.getElementById('watercolorIntro');
+videoElement.play().then(() => {}).catch((error) => {
+	$("#watercolorIntro").css("display", "none");
+});
 
 // add a random number to the logo img src to get it to play every time
 var randomNum = getRandomInt(2000);
