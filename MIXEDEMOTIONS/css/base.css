@@ -42,6 +42,7 @@ button {
 	/* font-weight: bold; */
 	font-size: 1.6vw;
 	letter-spacing: 0.05vw;
+	pointer-events: none; /* this gets changed dynamically */
 }
 
 #startButton:hover {
@@ -88,6 +89,7 @@ button {
 	margin-top: 1vw;
 	margin-top: 3.5vw;
 	margin-bottom: 3.5vw;
+	line-height: 5.5vw;
 }
 
 .button {
@@ -114,11 +116,12 @@ button {
 #containerfinal1a-1, #containerfinal1a-2, #containerfinal1b-1, #containerfinal1b-2, #containerfinal2a-1, #containerfinal2a-2, #containerfinal2b-1, #containerfinal2b-2 {
 	display: none;
 	opacity: 0;
-	filter: blur(4px);
+	/* NO BLUR FOR NOW */
+	/* filter: blur(4px);
 	-webkit-filter: blur(4px);
 	-moz-filter: blur(4px);
 	-o-filter: blur(4px);
-	-ms-filter: blur(4px);
+	-ms-filter: blur(4px); */
 	transition: filter 1s, opacity 1.5s;
 	-webkit-transition: filter 1s, opacity 1.5s;
 }
@@ -150,7 +153,7 @@ button {
 
 	.question {
 		font-size: 6vw;
-		line-height: 6vw;
+		line-height: 7vw;
 		letter-spacing: 0.23vw;
 	}
 
