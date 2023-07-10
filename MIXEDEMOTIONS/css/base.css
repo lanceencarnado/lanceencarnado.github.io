@@ -102,7 +102,7 @@ button {
   width: 20vw;
   padding-top: 1vw;
   padding-bottom: 0.7vw;
-  margin-bottom: 1vw;
+  margin-bottom: 0.3vw;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -152,9 +152,9 @@ button {
 	}
 
 	.question {
-		font-size: 6vw;
-		line-height: 7vw;
-		letter-spacing: 0.23vw;
+		font-size: 8vw;
+		line-height: 8.5vw;
+		letter-spacing: 0.26vw;
 	}
 
 	.button {
