@@ -6,13 +6,16 @@
 		<title>ROY WOODS - MIXED EMOTIONS</title>
 		<!-- <link rel="stylesheet" href="css/base.css"> -->
 		<style media="screen">
+			body {
+				background-color: #000;
+			}
 			.wrapper {
 				align-items: center;
 				display: flex;
-				height: 90%;
+				height: 80%;
 				justify-content: center;
 				margin: auto;
-				width: 90%;
+				width: 60%;
 				max-width: 80vw;
 			}
 
@@ -42,15 +45,42 @@
 				user-select: none;
 			}
 			.flipbook .page {
+				/* border: 2px;
+				border-color: #000;
+				border-style: solid; */
 				height: 100%;
 				width: 100%;
 				background-color: #fff;
-				font-size: 2vw;
-				text-align: center;
+				font-family: 'best_wishesregular', serif;
+				font-size: 1.8vw;
+				line-height: 2.4vw;
+				text-align: left;
+				text-rendering: geometricPrecision;
 			}
+			.guestbook_text {
+				margin: 2.4vw;
+			}
+			.guestbook_name_and_area {
+				text-align: right;
+			}
+
 			.flipbook .page img {
 				max-width: 100%;
 				height: 100%;
+			}
+
+			.innerpage {
+				background-image: url("assets/guestbook_page_bg.jpg");
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+
+			@font-face {
+			    font-family: 'best_wishesregular';
+			    src: url('css/font/best_wishes-webfont.woff2') format('woff2'),
+			         url('css/font/best_wishes-webfont.woff') format('woff');
+			    font-weight: normal;
+			    font-style: normal;
 			}
 		</style>
 	</head>
@@ -60,14 +90,44 @@
 				<div class="aspect-inner">
 					<div class="flipbook" id="flipbook">
 						<div class="page hard">
-							<p>ROY WOODS
-							<p>MIXED EMOTIONS - GUESTBOOK
+							<img src="assets/guestbook_front.jpg" draggable="false" alt="" /><
 						</div>
-						<div class="page">First comment test. Page one</div>
-						<div class="page">Second comment test. Page two</div>
-						<div class="page"><img src="https://raw.github.com/blasten/turn.js/master/demos/magazine/pages/04.jpg" draggable="false" alt="" /></div>
-						<div class="page"><img src="https://raw.github.com/blasten/turn.js/master/demos/magazine/pages/05.jpg" draggable="false" alt="" /></div>
-						<div class="page"><img src="https://raw.github.com/blasten/turn.js/master/demos/magazine/pages/06.jpg" draggable="false" alt="" /></div>
+						<div class="page innerpage"></div>
+						<div class="page innerpage">
+							<div class="guestbook_text">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus sed metus sed vulputate.
+								Aenean et quam nec justo accumsan volutpat. Praesent bibendum pharetra libero ac efficitur.
+								Etiam porttitor erat eget enim iaculis, at porttitor arcu gravida. Donec fringilla ipsum et molestie viverra.
+								Morbi ut interdum orci. Donec porta vulputate convallis.
+								<div class="guestbook_name_and_area">
+									<br>- Jane Doe
+									<br>Toronto, ON
+								</div>
+							</div>
+						</div>
+						<div class="page innerpage">
+							<div class="guestbook_text">
+								Praesent bibendum pharetra libero ac efficitur.
+								Etiam porttitor erat eget enim iaculis, at porttitor arcu gravida. Donec fringilla ipsum et molestie viverra.
+								<div class="guestbook_name_and_area">
+									<br>- Jack
+									<br>New York, NY
+								</div>
+							</div>
+						</div>
+						<div class="page innerpage">
+							<div class="guestbook_text">
+								Vivamus condimentum sollicitudin convallis. Etiam id mauris odio. Etiam egestas et purus volutpat convallis.
+								Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.
+								<div class="guestbook_name_and_area">
+									<br>- John
+									<br>Ottawa, ON
+								</div>
+							</div>
+						</div>
+						<div class="page hard">
+							<img src="assets/guestbook_back.jpg" draggable="false" alt="" />
+						</div>
 					</div>
 				</div>
 			</div>
