@@ -143,9 +143,24 @@
 			flipbookEL.style.width = '';
 			flipbookEL.style.height = '';
 			$(flipbookEL).turn('size', flipbookEL.clientWidth, flipbookEL.clientHeight);
+			console.log("width: " + flipbookEL.clientWidth);
+			console.log("height: " + flipbookEL.clientHeight);
+
+			// if (window.innerWidth < 768) {
+			// 	$(flipbookEL).turn('display', 'single');
+			// }
+			// else {
+			// 	$(flipbookEL).turn('display', 'double');
+			// }
 		});
 		$(flipbookEL).turn({
 			autoCenter: true
 		});
+		// if (window.innerWidth < 768) {
+		// 	$(flipbookEL).turn('display', 'single');
+		// }
+		// else {
+		// 	$(flipbookEL).turn('display', 'double');
+		// }
 	</script>
 </html>
