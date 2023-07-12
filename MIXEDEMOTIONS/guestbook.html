@@ -142,25 +142,31 @@
 		window.addEventListener('resize', function (e) {
 			flipbookEL.style.width = '';
 			flipbookEL.style.height = '';
-			$(flipbookEL).turn('size', flipbookEL.clientWidth, flipbookEL.clientHeight);
-			console.log("width: " + flipbookEL.clientWidth);
-			console.log("height: " + flipbookEL.clientHeight);
+			// $(flipbookEL).turn('size', flipbookEL.clientWidth, flipbookEL.clientHeight);
 
-			// if (window.innerWidth < 768) {
-			// 	$(flipbookEL).turn('display', 'single');
-			// }
-			// else {
-			// 	$(flipbookEL).turn('display', 'double');
-			// }
+			if (window.innerWidth < 768) {
+				$(flipbookEL).turn('display', 'single');
+				$(flipbookEL).turn('size', flipbookEL.clientHeight, flipbookEL.clientWidth);
+				$(flipbookEL).css("margin", "auto");
+			}
+			else {
+				$(flipbookEL).turn('display', 'double');
+				$(flipbookEL).turn('size', flipbookEL.clientWidth, flipbookEL.clientHeight);
+				// $(flipbookEL).css("margin", "inherit");
+			}
 		});
 		$(flipbookEL).turn({
 			autoCenter: true
 		});
-		// if (window.innerWidth < 768) {
-		// 	$(flipbookEL).turn('display', 'single');
-		// }
-		// else {
-		// 	$(flipbookEL).turn('display', 'double');
-		// }
+		if (window.innerWidth < 768) {
+			$(flipbookEL).turn('display', 'single');
+			$(flipbookEL).turn('size', flipbookEL.clientHeight, flipbookEL.clientWidth);
+			$(flipbookEL).css("margin", "auto");
+		}
+		else {
+			$(flipbookEL).turn('display', 'double');
+			$(flipbookEL).turn('size', flipbookEL.clientWidth, flipbookEL.clientHeight);
+			// $(flipbookEL).css("margin", "inherit");
+		}
 	</script>
 </html>
