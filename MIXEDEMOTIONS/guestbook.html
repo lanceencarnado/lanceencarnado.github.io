@@ -4,107 +4,17 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>ROY WOODS - MIXED EMOTIONS</title>
-		<!-- <link rel="stylesheet" href="css/base.css"> -->
-		<style media="screen">
-			body {
-				background-color: #000;
-			}
-			.wrapper {
-				align-items: center;
-				display: flex;
-				height: 80%;
-				justify-content: center;
-				margin: auto;
-				width: 60%;
-				max-width: 80vw;
-			}
-
-			.aspect {
-				padding-bottom: 70%;
-				position: relative;
-				width: 100%;
-			}
-
-			.aspect-inner {
-				bottom: 0;
-				left: 0;
-				position: absolute;
-				right: 0;
-				top: 0;
-			}
-
-			.flipbook {
-				height: 100%;
-				transition: margin-left 0.25s ease-out;
-				width: 100%;
-				-webkit-touch-callout: none;
-				-webkit-user-select: none;
-				-khtml-user-select: none;
-				-moz-user-select: none;
-				-ms-user-select: none;
-				user-select: none;
-			}
-			.flipbook .page {
-				/* border: 2px;
-				border-color: #000;
-				border-style: solid; */
-				height: 100%;
-				width: 100%;
-				background-color: #fff;
-				font-family: 'best_wishesregular', serif;
-				font-size: 1.8vw;
-				line-height: 2.4vw;
-				text-align: left;
-				text-rendering: geometricPrecision;
-			}
-			.guestbook_text {
-				margin: 2.4vw;
-			}
-			.guestbook_name_and_area {
-				text-align: right;
-			}
-
-			.flipbook .page img {
-				max-width: 100%;
-				height: 100%;
-			}
-
-			.innerpage {
-				background-image: url("assets/guestbook_page_bg.jpg");
-				background-size: cover;
-				background-repeat: no-repeat;
-			}
-
-			@font-face {
-			    font-family: 'best_wishesregular';
-			    src: url('css/font/best_wishes-webfont.woff2') format('woff2'),
-			         url('css/font/best_wishes-webfont.woff') format('woff');
-			    font-weight: normal;
-			    font-style: normal;
-			}
-
-			@media only screen and (max-width: 768px) {
-				.wrapper {
-					width: 95vw;
-					max-width: 95vw;
-				}
-
-				.flipbook {
-					margin: auto !important;
-				}
-
-				.flipbook .page {
-					font-size: 3.8vw;
-					line-height: 4.5vw;
-				}
-
-				.guestbook_text {
-					margin: 4vw;
-				}
-			}
-		</style>
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/guestbook.css">
 	</head>
 	<body>
+		<div class="endpage_btn_div">
+			<button class="button" onclick="window.location.href='index.html';">
+				< Back to start
+			</button>
+		</div>
+
+		<!-- GUESTBOOK -->
 		<div class="wrapper">
 			<div class="aspect">
 				<div class="aspect-inner">
@@ -151,6 +61,13 @@
 					</div>
 				</div>
 			</div>
+		</div>
+
+		<!-- END GUESTBOOK -->
+		<div class="endpage_btn_div">
+			<button class="button" onclick="">
+				Leave a note for Roy Woods
+			</button>
 		</div>
 	</body>
 	<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>

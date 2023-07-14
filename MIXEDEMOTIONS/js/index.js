@@ -33,6 +33,9 @@ function fadeInContainer(containerID) {
 function displayQuestion2a() {
 	fadeOutContainer("#container1");
 	fadeInContainer("#container2a");
+	setTimeout(() => {
+		document.getElementById("container2a_audio").play();
+	}, 1000);
 }
 
 function displayQuestion2b() {
@@ -132,4 +135,7 @@ const startButton = document.getElementById("startButton");
 startButton.addEventListener("click", function() {
 	fadeOutContainer("#openingLogoContainer");
 	fadeInContainer("#container1");
+	setTimeout(() => {
+		document.getElementById("container1_audio").play();
+	}, 1000);
 });
