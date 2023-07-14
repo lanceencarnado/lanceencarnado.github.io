@@ -143,8 +143,9 @@ a {
 /* hover effects only on web - so no sticky hover on mobile */
 @media (hover: hover) {
 	.social_icon:hover, .footerlogosvg:hover {
-	background-color: #00368C;
-	transition: background-color 0.1s;
+		background-color: #00368C;
+		transition: background-color 0.1s;
+	}
 }
 
 .social_icon:active, .footerlogosvg:active {
