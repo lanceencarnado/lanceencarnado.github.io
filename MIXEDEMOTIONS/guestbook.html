@@ -82,6 +82,26 @@
 			    font-weight: normal;
 			    font-style: normal;
 			}
+
+			@media only screen and (max-width: 768px) {
+				.wrapper {
+					width: 90vw;
+					max-width: 90vw;
+				}
+
+				.flipbook {
+					margin: auto !important;
+				}
+
+				.flipbook .page {
+					font-size: 3.8vw;
+					line-height: 4.5vw;
+				}
+
+				.guestbook_text {
+					margin: 4vw;
+				}
+			}
 		</style>
 	</head>
 	<body>
@@ -152,7 +172,6 @@
 			else {
 				$(flipbookEL).turn('display', 'double');
 				$(flipbookEL).turn('size', flipbookEL.clientWidth, flipbookEL.clientHeight);
-				// $(flipbookEL).css("margin", "inherit");
 			}
 		});
 		$(flipbookEL).turn({
@@ -166,7 +185,6 @@
 		else {
 			$(flipbookEL).turn('display', 'double');
 			$(flipbookEL).turn('size', flipbookEL.clientWidth, flipbookEL.clientHeight);
-			// $(flipbookEL).css("margin", "inherit");
 		}
 	</script>
 </html>
