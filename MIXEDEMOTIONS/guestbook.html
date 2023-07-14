@@ -85,10 +85,16 @@
 				$(flipbookEL).turn('display', 'single');
 				$(flipbookEL).turn('size', flipbookEL.clientHeight, flipbookEL.clientWidth);
 				$(flipbookEL).css("margin", "auto");
+				var newHeight = $(flipbookEL).css("height");
+				$(".wrapper").css("height", newHeight);
+				$(".wrapper").css("align-items", "baseline");
 			}
 			else {
 				$(flipbookEL).turn('display', 'double');
 				$(flipbookEL).turn('size', flipbookEL.clientWidth, flipbookEL.clientHeight);
+				var newHeight = $(flipbookEL).css("height");
+				$(".wrapper").css("height", newHeight);
+				$(".wrapper").css("align-items", "center");
 			}
 		});
 		$(flipbookEL).turn({
@@ -98,10 +104,16 @@
 			$(flipbookEL).turn('display', 'single');
 			$(flipbookEL).turn('size', flipbookEL.clientHeight, flipbookEL.clientWidth);
 			$(flipbookEL).css("margin", "auto");
+			var newHeight = $(flipbookEL).css("height");
+			$(".wrapper").css("height", newHeight);
+			$(".wrapper").css("align-items", "baseline");
 		}
 		else {
 			$(flipbookEL).turn('display', 'double');
 			$(flipbookEL).turn('size', flipbookEL.clientWidth, flipbookEL.clientHeight);
+			var newHeight = $(flipbookEL).css("height");
+			$(".wrapper").css("height", newHeight);
+			$(".wrapper").css("align-items", "center");
 		}
 	</script>
 </html>
