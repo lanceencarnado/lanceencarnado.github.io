@@ -1,6 +1,12 @@
 body {
 	background-color: #000;
+	font-size: 1.6vw;
 }
+
+a {
+	color: inherit;
+}
+
 .wrapper {
 	align-items: center;
 	display: flex;
@@ -68,12 +74,124 @@ body {
 	background-repeat: no-repeat;
 }
 
-.endpage_btn_div {
-	width: 100vw;
+.endpage_btn_div, .endpage_albumcta, .endpage_videos {
+	width: 40vw;
 	margin: auto;
 	text-align: center;
 	margin-top: 30px;
 	margin-bottom: 30px;
+}
+
+.endpage_albumcta img {
+	width: 100%;
+}
+
+.endpage_videos h1 {
+	font-weight: 500;
+}
+
+.endpage_vid {
+	width: 40vw;
+	height: calc(40vw * (9/16));
+}
+
+/* SOCIAL ICONS */
+
+.socials {
+	margin-top: 50px;
+	text-align: center;
+}
+
+.socials > * {
+	display:inline-block;
+}
+
+.social_icon {
+	width: 30px;
+	height: 30px;
+	margin-left: 15px;
+	margin-right: 15px;
+	background-color: #FFFFFF;
+	text-align: center;
+}
+
+#facebook {
+	mask: url("../assets/socials/facebook.svg") no-repeat center / contain;
+	-webkit-mask: url("../assets/socials/facebook.svg") no-repeat center / contain;
+}
+
+#youtube {
+	mask: url("../assets/socials/youtube.svg") no-repeat center / contain;
+	-webkit-mask: url("../assets/socials/youtube.svg") no-repeat center / contain;
+}
+
+#twitter {
+	mask: url("../assets/socials/twitter.svg") no-repeat center / contain;
+	-webkit-mask: url("../assets/socials/twitter.svg") no-repeat center / contain;
+}
+
+#instagram {
+	mask: url("../assets/socials/instagram.svg") no-repeat center / contain;
+	-webkit-mask: url("../assets/socials/instagram.svg") no-repeat center / contain;
+}
+
+#tiktok {
+	mask: url("../assets/socials/tiktok.svg") no-repeat center / contain;
+	-webkit-mask: url("../assets/socials/tiktok.svg") no-repeat center / contain;
+}
+
+/* hover effects only on web - so no sticky hover on mobile */
+@media (hover: hover) {
+	.social_icon:hover, .footerlogosvg:hover {
+	background-color: #00368C;
+	transition: background-color 0.1s;
+}
+
+.social_icon:active, .footerlogosvg:active {
+	background-color: #00368C;
+	transition: background-color 0.1s;
+}
+
+/* END SOCIALS */
+
+/* sticky footer */
+.stickyfooter {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+
+.footer {
+	margin: auto;
+	text-align: center;
+}
+
+.footer > * {
+	display:inline-block;
+}
+
+.footerlogosvg {
+	width: 70px;
+	height: 70px;
+	margin: auto;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 30px;
+	margin-left: 20px;
+	margin-right: 20px;
+
+	background-color: white;
+}
+
+#ovosoundlogo {
+	mask: url("../assets/socials/ovosoundlogo.svg") no-repeat center / contain;
+	-webkit-mask: url("../assets/socials/ovosoundlogo.svg") no-repeat center / contain;
+}
+
+#utulogo {
+	mask: url("../assets/socials/UTU_white.svg") no-repeat center / contain;
+	-webkit-mask: url("../assets/socials/UTU_white.svg") no-repeat center / contain;
 }
 
 @font-face {
@@ -85,6 +203,11 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+	body {
+		background-color: #000;
+		font-size: 4vw;
+	}
+
 	.wrapper {
 		width: 95vw;
 		max-width: 95vw;
@@ -101,5 +224,19 @@ body {
 
 	.guestbook_text {
 		margin: 4vw;
+	}
+
+	.endpage_btn_div, .endpage_albumcta, .endpage_videos {
+		width: 80vw;
+	}
+
+	.endpage_vid {
+		width: 80vw;
+		height: calc(80vw * (9/16));
+	}
+
+	.social_icon {
+		margin-left: 18px;
+		margin-right: 18px;
 	}
 }

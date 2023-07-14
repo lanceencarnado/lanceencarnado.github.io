@@ -33,14 +33,19 @@ function fadeInContainer(containerID) {
 function displayQuestion2a() {
 	fadeOutContainer("#container1");
 	fadeInContainer("#container2a");
+	let audio = new Audio('assets/audio/2a_sharesomething.mp3');
 	setTimeout(() => {
-		document.getElementById("container2a_audio").play();
+		audio.play();
 	}, 1000);
 }
 
 function displayQuestion2b() {
 	fadeOutContainer("#container1");
 	fadeInContainer("#container2b");
+	let audio = new Audio('assets/audio/2b_unsettling.mp3');
+	setTimeout(() => {
+		audio.play();
+	}, 1000);
 }
 
 function displayQuestion3a() {
@@ -135,7 +140,11 @@ const startButton = document.getElementById("startButton");
 startButton.addEventListener("click", function() {
 	fadeOutContainer("#openingLogoContainer");
 	fadeInContainer("#container1");
+	let audio = new Audio('assets/audio/1_whatsup.mp3');
 	setTimeout(() => {
-		document.getElementById("container1_audio").play();
+		audio.play();
 	}, 1000);
+	// setTimeout(() => {
+	// 	document.getElementById("container1_audio").play();
+	// }, 1000);
 });

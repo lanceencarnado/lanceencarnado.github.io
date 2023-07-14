@@ -92,7 +92,7 @@ button {
 	line-height: 5.5vw;
 }
 
-.button {
+.button, input[type=submit] {
   background-color: #00368C;
   border: none;
   border-radius: 11px;
@@ -157,7 +157,7 @@ button {
 		letter-spacing: 0.26vw;
 	}
 
-	.button {
+	.button, input[type=submit] {
 		font-size: 5vw;
 		/* padding: 4vw 5vw; */
 		padding-top: 4vw;
