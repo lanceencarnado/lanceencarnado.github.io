@@ -45,7 +45,7 @@ button {
 	pointer-events: none; /* this gets changed dynamically */
 }
 
-#startButton:hover {
+.button:hover, input[type=submit]:hover {
 	opacity: .5 !important;
 	transition: opacity 0.35s;
 	-webkit-transition: opacity 0.35s;
