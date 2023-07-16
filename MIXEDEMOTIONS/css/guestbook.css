@@ -74,7 +74,7 @@ a {
 	background-repeat: no-repeat;
 }
 
-.endpage_btn_div, .endpage_albumcta, .endpage_videos {
+.endpage_btn_div, .endpage_albumcta, .endpage_videos, .guestbook_btns_div {
 	width: 40vw;
 	margin: auto;
 	text-align: center;
@@ -84,8 +84,24 @@ a {
 	position: relative;
 }
 
+.guestbook_btns_div {
+	margin-top: 15px;
+}
+
+.guestbook_btns_div button {
+	width: 20%;
+	margin-left: 1vw;
+	margin-right: 1vw;
+	padding-top: 0.7vw;
+	padding-bottom: 0.4vw;
+}
+
 .endpage_albumcta img {
 	width: 100%;
+}
+
+.endpage_albumcta img {
+	margin-bottom: 20px;
 }
 
 .endpage_videos h1 {
@@ -145,14 +161,28 @@ a {
 /* hover effects only on web - so no sticky hover on mobile */
 @media (hover: hover) {
 	.social_icon:hover, .footerlogosvg:hover {
-		background-color: #00368C;
-		transition: background-color 0.1s;
+		/* background-color: #00368C;
+		transition: background-color 0.1s; */
+		opacity: 0.5;
+		transition: opacity 0.1s;
+	}
+
+	.endpage_albumcta p a:hover {
+		opacity: 0.5;
+		transition: opacity 0.1s;
 	}
 }
 
 .social_icon:active, .footerlogosvg:active {
-	background-color: #00368C;
-	transition: background-color 0.1s;
+	/* background-color: #00368C;
+	transition: background-color 0.1s; */
+	opacity: 0.5;
+	transition: opacity 0.1s;
+}
+
+.endpage_albumcta p a:active {
+	opacity: 0.5;
+	transition: opacity 0.1s;
 }
 
 /* END SOCIALS */
@@ -229,7 +259,7 @@ a {
 		margin: 4vw;
 	}
 
-	.endpage_btn_div, .endpage_albumcta, .endpage_videos {
+	.endpage_btn_div, .endpage_albumcta, .endpage_videos, .guestbook_btns_div  {
 		width: 80vw;
 	}
 
@@ -241,5 +271,12 @@ a {
 	.social_icon {
 		margin-left: 18px;
 		margin-right: 18px;
+	}
+
+	.guestbook_btns_div button {
+		width: 25%;
+		padding-top: 3vw;
+		margin-left: 4vw;
+		margin-right: 4vw;
 	}
 }

@@ -1,5 +1,13 @@
 var flipbookEL = document.getElementById('flipbook');
 
+//disable corners
+
+$(flipbookEL).bind("start", function(event, pageObject, corner) {
+    if (corner=="tl" || corner=="tr" || corner=="bl" || corner=="br" ) {
+      event.preventDefault();
+    }
+ });
+
 window.addEventListener('resize', function (e) {
 	flipbookEL.style.width = '';
 	flipbookEL.style.height = '';
@@ -55,3 +63,11 @@ $("document").ready(function() {
 		}
 	});
 });
+
+function nextPage() {
+	$(flipbookEL).turn("next");
+}
+
+function prevPage() {
+	$(flipbookEL).turn("previous");
+}
