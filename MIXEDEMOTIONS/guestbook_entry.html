@@ -11,6 +11,7 @@
 				margin: auto;
 				text-align: center;
 				padding-top: 2vw;
+				position: relative;
 			}
 
 			.backtosite a {
@@ -23,6 +24,7 @@
 				margin: auto;
 				text-align: center;
 				font-size: 2.2vw;
+				position: relative;
 			}
 
 			#message_textarea, #name_label, #location_label {
@@ -72,6 +74,9 @@
 		</style>
 	</head>
 	<body>
+		<video playsinline autoplay muted loop disablepictureinpicture preload="auto" id="watercolorIntro">
+			<source src="assets/watercolorloop.mp4" type="video/mp4">
+		</video>
 		<div class="backtosite">
 			<a href="guestbook.html">
 				< Back to site
@@ -88,7 +93,7 @@
 				<p><label>Enter your message for Roy:</label>
 				<br><textarea required id="message_textarea" name="entry.110077291" maxlength="350" placeholder="Write your message..."></textarea>
 
-				<input id="submitButton" type="submit" value="SUBMIT" target="_blank">
+				<input id="submitButton" type="submit" value="Submit" target="_blank">
 			</form>
 		</div>
 	</body>
