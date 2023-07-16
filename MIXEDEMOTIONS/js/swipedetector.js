@@ -28,6 +28,7 @@
 	})();
 
 	function swipeStart(event) {
+
 	  if (options.useOnlyTouch && !event.originalEvent.touches)
 		return;
 

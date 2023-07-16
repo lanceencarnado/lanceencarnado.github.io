@@ -23,7 +23,7 @@ window.addEventListener('resize', function (e) {
 });
 
 $(flipbookEL).turn({
-	autoCenter: true,
+	autoCenter: true
 });
 
 if (window.innerWidth < 768) {
