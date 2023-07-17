@@ -15,7 +15,7 @@ window.addEventListener('resize', function (e) {
 
 	if (window.innerWidth < 768) {
 		$(flipbookEL).turn('display', 'single');
-		$(flipbookEL).turn('size', flipbookEL.clientHeight, flipbookEL.clientWidth);
+		$(flipbookEL).turn('size', flipbookEL.clientHeight * 1.15, flipbookEL.clientWidth*1.15);
 		$(flipbookEL).css("margin", "auto");
 		var newHeight = $(flipbookEL).css("height");
 		$(".wrapper").css("height", newHeight);
@@ -36,7 +36,7 @@ $(flipbookEL).turn({
 
 if (window.innerWidth < 768) {
 	$(flipbookEL).turn('display', 'single');
-	$(flipbookEL).turn('size', flipbookEL.clientHeight, flipbookEL.clientWidth);
+	$(flipbookEL).turn('size', flipbookEL.clientHeight *1.15, flipbookEL.clientWidth*1.15);
 	$(flipbookEL).css("margin", "auto");
 	var newHeight = $(flipbookEL).css("height");
 	$(".wrapper").css("height", newHeight);
@@ -71,3 +71,12 @@ function nextPage() {
 function prevPage() {
 	$(flipbookEL).turn("previous");
 }
+
+
+$( "#prevPageText" ).on( "click", function() {
+	prevPage();
+} );
+
+$( "#nextPageText" ).on( "click", function() {
+	nextPage();
+} );
