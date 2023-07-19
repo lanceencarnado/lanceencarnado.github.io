@@ -49,6 +49,13 @@
 				-webkit-appearance: none;
 			}
 
+			@media (hover: hover) {
+				.backtosite a:hover {
+					opacity: 0.5;
+					transition: opacity 0.1s;
+				}
+			}
+
 			@media only screen and (max-width: 768px) {
 				.entry_container {
 					width: 80vw;
@@ -100,7 +107,7 @@
 				<p><label>Enter your message for Roy:</label>
 				<br><textarea required id="message_textarea" name="entry.110077291" maxlength="350" placeholder="Write your message..."></textarea>
 
-				<input id="submitButton" type="submit" value="Submit" target="_blank">
+				<input id="submitButton" type="submit" value="Submit" formtarget="_blank">
 			</form>
 		</div>
 	</body>
