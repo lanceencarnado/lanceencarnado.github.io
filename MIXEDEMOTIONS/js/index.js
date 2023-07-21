@@ -206,8 +206,7 @@ setTimeout(() => {
 setTimeout(() => {
 	$("#startButton").css({'pointer-events': 'auto'});
 	$("#startButton").css({'opacity': '1'});
-// }, 6200); PUT THIS BACK
-}, 0);
+}, 6200);
 
 // start button listener
 
