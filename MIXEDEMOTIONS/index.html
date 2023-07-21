@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <!--
-roy woods -
-by @LScorrcho (2019)
-
-your dad took the bread and he like, absconded man
+mixed emotions - the journey
+by tacklebox / lance encarnado (2023)
 -->
 
 <html lang="en" dir="ltr">
@@ -11,7 +9,7 @@ your dad took the bread and he like, absconded man
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="theme-color" content="#000000">
-		<title>ROY WOODS - MIXED EMOTIONS</title>
+		<title>MIXED EMOTIONS - THE JOURNEY</title>
 		<link rel="stylesheet" href="css/base.css">
 	</head>
 	<body>
@@ -45,7 +43,8 @@ your dad took the bread and he like, absconded man
 				<source src="assets/audio/2a_sharesomething.mp3" type="audio/mpeg">
 			</audio> -->
 			<div class="content">
-				<p>I wanted to share something to make your day a little brighter. Here's the FULL tracklist for my album, Mixed Emotions.
+				<p>I wanted to share something to make your day a little brighter. Here's my FULL tracklist for my album, Mixed Emotions.
+				<p><img id="tracklistimg" src="assets/mixedemotions-tracklist.jpg" alt="">
 				<div class="question">
 					What do you think?
 				</div>
@@ -58,7 +57,7 @@ your dad took the bread and he like, absconded man
 			<div class="content">
 				<p>I wanted to share part of an unreleased song that will be on the album with you, to keep up the good vibes of your day.
 				<div class="question">
-					What do you think about this song: <br>Unsettling featuring Vory
+					What do you think about this song: <br>Unsettling ft. Vory?
 				</div>
 				<p><button class="button" id="button3c" onclick="displayQuestion3c()">Let’s goooo, July 28th can’t come soon enough</button>
 				<p><button class="button" id="button3d" onclick="displayQuestion3d()">This reminds me of old school Roy Woods</button>
@@ -67,44 +66,55 @@ your dad took the bread and he like, absconded man
 
 		<div class="container" id="container3a">
 			<div class="content">
-				<p>So I’ve been working on this track {Song Title} and it’s about xxxx
-				<p>*10 seconds of song XXX*
-				<div class="question">
-					<!-- What do you think? -->
+				<p>So I’ve been working on this track Hate Me with a mystery feature…
+				<div class="audiocontainer">
+					<img class="playpausebtn" id="playpause-3a" src="assets/playbtn.png" alt="">
+					<!-- <canvas class="wavecanvas" id="canvas-3a"></canvas> -->
+					<audio id="hateme_audio">
+						<source src="assets/audio/hateme.mp3" type="audio/mpeg">
+					</audio>
 				</div>
-				<p><button class="button" id="buttonfinal1a1" onclick="displayFinal1a1()">Option 1a-1</button>
-				<p><button class="button" id="buttonfinal1a2" onclick="displayFinal1a2()">Option 1a-2</button>
+				<div class="question">
+					What do you think?
+				</div>
+				<p><button class="button" id="buttonfinal1a1" onclick="displayFinal1a1()">FIREEEE</button>
+				<p><button class="button" id="buttonfinal1a2" onclick="displayFinal1a2()">I want to hear the full track with the feature</button>
 			</div>
 		</div>
 
 		<div class="container" id="container3b">
 			<div class="content">
-				<p>So I’ve been working on this track That Thing and Jada Kingdom is featured…
-				<p>*10 seconds of song That Thing*
+				<p>So I’ve been working on this track That Thing and Jada Kingdom is featured.
+				<p><img class="playpausebtn" id="playpause-3b" src="assets/playbtn.png" alt="">
+				<audio id="thatthing_audio">
+					<source src="assets/audio/thatthing.mp3" type="audio/mpeg">
+				</audio>
 				<div class="question">
-					<!-- What do you think? -->
+					What vibe does this put you in??
 				</div>
-				<p><button class="button" id="buttonfinal1b1" onclick="displayFinal1b1()">Option 1b-1</button>
-				<p><button class="button" id="buttonfinal1b2" onclick="displayFinal1b2()">Option 1b-2</button>
+				<p><button class="button" id="buttonfinal1b1" onclick="displayFinal1b1()">Summer vibezzzz</button>
+				<p><button class="button" id="buttonfinal1b2" onclick="displayFinal1b2()">Old school Roy vibezzz</button>
 			</div>
 		</div>
 
 		<div class="container" id="container3c">
 			<div class="content">
-				<p>So I’ve been working on this track {Song Title} and it’s about xxxx
-				<p>*10 seconds of song XXX*
+				<p>So I’ve been working on this track I Just Wanna Love… Give it a listen here.
+				<p><img class="playpausebtn" id="playpause-3c" src="assets/playbtn.png" alt="">
+				<audio id="ijustwannalove_audio">
+					<source src="assets/audio/ijustwannalove.mp3" type="audio/mpeg">
+				</audio>
 				<div class="question">
-					<!-- What do you think? -->
+					When’s the last time you were in your feelings?
 				</div>
-				<p><button class="button" id="buttonfinal2a1" onclick="displayFinal2a1()">Option 2a-1</button>
-				<p><button class="button" id="buttonfinal2a2" onclick="displayFinal2a2()">Option 2a-2</button>
+				<p><button class="button" id="buttonfinal2a1" onclick="displayFinal2a1()">Right now lol</button>
+				<p><button class="button" id="buttonfinal2a2" onclick="displayFinal2a2()">Been a minute</button>
 			</div>
 		</div>
 
 		<div class="container" id="container3d">
 			<div class="content">
-				<p>I wanted to share an exclusive clip with you from the studio. This is when I was making Drama… crazy, right??!!
-				<p>*Exclusive BTS clip from making of Drama or other studio footage*
+				<p>My fans have held me down with Drama!! Y’all still still play that song like it dropped yesterday…
 				<div class="question">
 				</div>
 				<p><button class="button" id="buttonfinal2b1" onclick="displayFinal2b1()">I have a little bit of drama with my friends</button>
@@ -112,10 +122,20 @@ your dad took the bread and he like, absconded man
 			</div>
 		</div>
 
-		<div class="container" id="containerfinal1a-1">
+		<div class="container" id="containerfinal">
+			<div class="content">
+				<p><img class="playpausebtn" id="playpause-final" src="assets/playbtn.png" alt="">
+				<audio id="final_audio">
+					<source src="assets/audio/final.mp3" type="audio/mpeg">
+				</audio>
+				<p><button class="button" onclick="window.location.href='guestbook.html';">Continue</button>
+			</div>
+		</div>
+
+		<!-- <div class="container" id="containerfinal1a-1">
 			<div class="content">
 				<p>*OPTION 1A-1*
-				<p>Video message from Roy
+				<p>
 				<p><button class="button" onclick="window.location.href='guestbook.html';">Continue</button>
 			</div>
 		</div>
@@ -123,7 +143,7 @@ your dad took the bread and he like, absconded man
 		<div class="container" id="containerfinal1a-2">
 			<div class="content">
 				<p>*OPTION 1A-2*
-				<p>Video message from Roy
+				<p>
 				<p><button class="button" onclick="window.location.href='guestbook.html';">Continue</button>
 			</div>
 		</div>
@@ -131,7 +151,7 @@ your dad took the bread and he like, absconded man
 		<div class="container" id="containerfinal1b-1">
 			<div class="content">
 				<p>*OPTION 1B-1*
-				<p>Video message from Roy
+				<p>
 				<p><button class="button" onclick="window.location.href='guestbook.html';">Continue</button>
 			</div>
 		</div>
@@ -139,7 +159,7 @@ your dad took the bread and he like, absconded man
 		<div class="container" id="containerfinal1b-2">
 			<div class="content">
 				<p>*OPTION 1B-2*
-				<p>Video message from Roy
+				<p>
 				<p><button class="button" onclick="window.location.href='guestbook.html';">Continue</button>
 			</div>
 		</div>
@@ -147,7 +167,7 @@ your dad took the bread and he like, absconded man
 		<div class="container" id="containerfinal2a-1">
 			<div class="content">
 				<p>*OPTION 2A-1*
-				<p>Video message from Roy
+				<p>
 				<p><button class="button" onclick="window.location.href='guestbook.html';">Continue</button>
 			</div>
 		</div>
@@ -155,7 +175,7 @@ your dad took the bread and he like, absconded man
 		<div class="container" id="containerfinal2a-2">
 			<div class="content">
 				<p>*OPTION 2A-2*
-				<p>Video message from Roy
+				<p>
 				<p><button class="button" onclick="window.location.href='guestbook.html';">Continue</button>
 			</div>
 		</div>
@@ -163,7 +183,7 @@ your dad took the bread and he like, absconded man
 		<div class="container" id="containerfinal2b-1">
 			<div class="content">
 				<p>*OPTION 2B-1 ("A LITTLE DRAMA")*
-				<p>Video message from Roy
+				<p>
 				<p><button class="button" onclick="window.location.href='guestbook.html';">Continue</button>
 			</div>
 		</div>
@@ -171,13 +191,14 @@ your dad took the bread and he like, absconded man
 		<div class="container" id="containerfinal2b-2">
 			<div class="content">
 				<p>*OPTION 2B-2 ("NOT ME")*
-				<p>Video message from Roy
+				<p>
 				<p><button class="button" onclick="window.location.href='guestbook.html';">Continue</button>
 			</div>
-		</div>
+		</div> -->
 
 	</body>
 
 	<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/gh/foobar404/wave.js/dist/bundle.js"></script>
 	<script src="js/index.js"></script>
 </html>

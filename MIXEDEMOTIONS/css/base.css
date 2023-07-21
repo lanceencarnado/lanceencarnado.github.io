@@ -45,15 +45,6 @@ button {
 	pointer-events: none; /* this gets changed dynamically */
 }
 
-/* hover effects only on web - so no sticky hover on mobile */
-@media (hover: hover) {
-	.button:hover, input[type=submit]:hover {
-		opacity: .5 !important;
-		transition: opacity 0.35s;
-		-webkit-transition: opacity 0.35s;
-	}
-}
-
 .container {
 	position: fixed;
 	top: 0;
@@ -76,8 +67,12 @@ button {
 }
 
 .content {
-	margin: 4vw 15vw;
+	/* margin: 4vw 15vw; */
+	margin: 0 15vw;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
 	line-height: 2.5vw;
+	overflow: scroll;
 }
 
 .content > *:not(.question) {
@@ -114,9 +109,21 @@ button {
   font-weight: 500;
 }
 
+/* .audiocontainer {
+	display: flex;
+    align-items: center;
+	width: 60vw;
+} */
+
+.wavecanvas {
+	width: 400px;
+	height: 200px;
+}
+
 /* #container1, #container2a, #container2b { */
 #container1, #container2a, #container2b, #container3a, #container3b, #container3c, #container3d,
-#containerfinal1a-1, #containerfinal1a-2, #containerfinal1b-1, #containerfinal1b-2, #containerfinal2a-1, #containerfinal2a-2, #containerfinal2b-1, #containerfinal2b-2 {
+#containerfinal1a-1, #containerfinal1a-2, #containerfinal1b-1, #containerfinal1b-2, #containerfinal2a-1, #containerfinal2a-2, #containerfinal2b-1, #containerfinal2b-2,
+#containerfinal {
 	display: none;
 	opacity: 0;
 	/* NO BLUR FOR NOW */
@@ -127,6 +134,29 @@ button {
 	-ms-filter: blur(4px); */
 	transition: filter 1s, opacity 1.5s;
 	-webkit-transition: filter 1s, opacity 1.5s;
+}
+
+#tracklistimg {
+	width: 35vw;
+}
+
+.playpausebtn {
+	width: 5vw;
+	cursor: pointer;
+}
+
+/* hover effects only on web - so no sticky hover on mobile */
+@media (hover: hover) {
+	.button:hover, input[type=submit]:hover {
+		opacity: .5 !important;
+		transition: opacity 0.35s;
+		-webkit-transition: opacity 0.35s;
+	}
+
+	.playpausebtn:hover {
+		opacity: .5 !important;
+		transition: opacity 0.2s;
+	}
 }
 
 @media only screen and (max-width: 768px) {
@@ -150,8 +180,10 @@ button {
 	}
 
 	.content {
-		margin: 6vw;
+		margin: 0 6vw;
 		line-height: 4.4vw;
+		padding-top: 2vw;
+		padding-bottom: 2vw;
 	}
 
 	.question {
@@ -166,6 +198,10 @@ button {
 		padding-top: 4vw;
 		padding-bottom: 3.1vw;
 		width: 64vw;
+	}
+
+	#tracklistimg {
+		width: 80vw;
 	}
 }
 

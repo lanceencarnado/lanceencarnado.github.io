@@ -70,47 +70,121 @@ function displayQuestion3d() {
 
 function displayFinal1a1() {
 	fadeOutContainer("#container3a");
-	fadeInContainer("#containerfinal1a-1");
+	// fadeInContainer("#containerfinal1a-1");
+	fadeInContainer("#containerfinal");
 }
 
 function displayFinal1a2() {
 	fadeOutContainer("#container3a");
-	fadeInContainer("#containerfinal1a-2");
+	// fadeInContainer("#containerfinal1a-2");
+	fadeInContainer("#containerfinal");
 }
 
 function displayFinal1b1() {
 	fadeOutContainer("#container3b");
-	fadeInContainer("#containerfinal1b-1");
+	// fadeInContainer("#containerfinal1b-1");
+	fadeInContainer("#containerfinal");
 }
 
 function displayFinal1b2() {
 	fadeOutContainer("#container3b");
-	fadeInContainer("#containerfinal1b-2");
+	// fadeInContainer("#containerfinal1b-2");
+	fadeInContainer("#containerfinal");
 }
 
 function displayFinal2a1() {
 	fadeOutContainer("#container3c");
-	fadeInContainer("#containerfinal2a-1");
+	// fadeInContainer("#containerfinal2a-1");
+	fadeInContainer("#containerfinal");
 }
 
 function displayFinal2a2() {
 	fadeOutContainer("#container3c");
-	fadeInContainer("#containerfinal2a-2");
+	// fadeInContainer("#containerfinal2a-2");
+	fadeInContainer("#containerfinal");
 }
 
 function displayFinal2b1() {
 	fadeOutContainer("#container3d");
-	fadeInContainer("#containerfinal2b-1");
+	// fadeInContainer("#containerfinal2b-1");
+	fadeInContainer("#containerfinal");
 }
 
 function displayFinal2b2() {
 	fadeOutContainer("#container3d");
-	fadeInContainer("#containerfinal2b-2");
+	// fadeInContainer("#containerfinal2b-2");
+	fadeInContainer("#containerfinal");
 }
 
 function getRandomInt(max) {
 	return Math.floor(Math.random() * max);
 }
+
+// AUDIO FUNCTIONS
+function handleAudioWithButton(audio, btn) {
+	if (audio.paused) {
+		audio.play();
+		$(btn).attr("src", "assets/pausebtn.png");
+	}
+	else {
+		audio.pause();
+		$(btn).attr("src", "assets/playbtn.png");
+	}
+}
+
+function handleWaveCanvas(audio, canvasEl) {
+	let wave = new Wave(audio, canvasEl);
+	wave.addAnimation(new wave.animations.Lines({
+	    lineColor: "white",
+		mirroredY: true,
+		center: true,
+		frequencyBand: "mids"
+	}));
+}
+
+// 3A - HATE ME
+var playpause3abtn = document.getElementById("playpause-3a");
+var hatemeAudio = document.getElementById("hateme_audio");
+hatemeAudio.onended = function() {
+    $("#playpause-3a").attr("src", "assets/playbtn.png");
+};
+playpause3abtn.addEventListener("click", () => { handleAudioWithButton(hatemeAudio, playpause3abtn) });
+var canvasElement = document.getElementById("canvas-3a");
+// handleWaveCanvas(hatemeAudio, canvasElement);
+
+// let wave = new Wave(hatemeAudio, canvasElement);
+// wave.addAnimation(new wave.animations.Lines({
+//     lineColor: "white",
+// 	mirroredY: true,
+// 	center: true,
+// 	frequencyBand: "mids"
+// }));
+
+// 3B - THAT THING
+var playpause3bbtn = document.getElementById("playpause-3b");
+var thatThingAudio = document.getElementById("thatthing_audio");
+thatThingAudio.onended = function() {
+    $("#playpause-3b").attr("src", "assets/playbtn.png");
+};
+playpause3bbtn.addEventListener("click", () => { handleAudioWithButton(thatThingAudio, playpause3bbtn) });
+
+// 3C - I JUST WANNA LOVE
+var playpause3cbtn = document.getElementById("playpause-3c");
+var iJustWannaLoveAudio = document.getElementById("ijustwannalove_audio");
+iJustWannaLoveAudio.onended = function() {
+    $("#playpause-3c").attr("src", "assets/playbtn.png");
+};
+playpause3cbtn.addEventListener("click", () => { handleAudioWithButton(iJustWannaLoveAudio, playpause3cbtn) });
+
+// FINAL MESSAGE
+var playpausefinalbtn = document.getElementById("playpause-final");
+var finalAudio = document.getElementById("final_audio");
+finalAudio.onended = function() {
+    $("#playpause-final").attr("src", "assets/playbtn.png");
+};
+playpausefinalbtn.addEventListener("click", () => { handleAudioWithButton(finalAudio, playpausefinalbtn) });
+
+// END AUDIO FUNCTIONS
 
 // opening logo animation
 
@@ -132,7 +206,8 @@ setTimeout(() => {
 setTimeout(() => {
 	$("#startButton").css({'pointer-events': 'auto'});
 	$("#startButton").css({'opacity': '1'});
-}, 6200);
+// }, 6200); PUT THIS BACK
+}, 0);
 
 // start button listener
 
