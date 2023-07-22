@@ -153,7 +153,8 @@ function handleWaveCanvas(audio, canvasEl) {
 
 // 3A - HATE ME
 var playpause3abtn = document.getElementById("playpause-3a");
-var hatemeAudio = document.getElementById("hateme_audio");
+// var hatemeAudio = document.getElementById("hateme_audio");
+let hatemeAudio = new Audio('assets/audio/hateme.mp3');
 hatemeAudio.onended = function() {
     $("#playpause-3a").attr("src", "assets/playbtn.png");
 };
