@@ -132,12 +132,13 @@ function handleAudioWithButton(audio, btn) {
 	if (audio.paused) {
 		audio.play();
 		$(btn).attr("src", "assets/pausebtn.png");
+		console.log("muted? " + audio.muted);
+		console.log("volume: " + audio.volume);
 	}
 	else {
 		audio.pause();
 		$(btn).attr("src", "assets/playbtn.png");
 	}
-	console.log("is this playing?");
 }
 
 function handleWaveCanvas(audio, canvasEl) {
