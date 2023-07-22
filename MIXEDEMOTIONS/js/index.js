@@ -1,3 +1,7 @@
+function stopAllAudio() {
+	 document.querySelectorAll('audio').forEach(el => el.pause());
+}
+
 function fadeOutContainer(containerID) {
 	// NO BLUR FOR NOW
 	// $(containerID).css({
@@ -9,8 +13,11 @@ function fadeOutContainer(containerID) {
 	// });
 	$(containerID).css({'opacity': '0'});
 	setTimeout(() => {
-	  $(containerID).css({'display': 'none'});
-  }, "1300");
+		$(containerID).css({'display': 'none'});
+  	}, "1300");
+
+	// stop all audio that's playing
+	stopAllAudio();
 }
 
 function fadeInContainer(containerID) {
