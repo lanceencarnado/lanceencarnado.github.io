@@ -137,6 +137,7 @@ function handleAudioWithButton(audio, btn) {
 		audio.pause();
 		$(btn).attr("src", "assets/playbtn.png");
 	}
+	console.log("is this playing?");
 }
 
 function handleWaveCanvas(audio, canvasEl) {
