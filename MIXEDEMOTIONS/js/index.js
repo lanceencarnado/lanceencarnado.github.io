@@ -149,16 +149,8 @@ hatemeAudio.onended = function() {
     $("#playpause-3a").attr("src", "assets/playbtn.png");
 };
 playpause3abtn.addEventListener("click", () => { handleAudioWithButton(hatemeAudio, playpause3abtn) });
-var canvasElement = document.getElementById("canvas-3a");
-// handleWaveCanvas(hatemeAudio, canvasElement);
-
-// let wave = new Wave(hatemeAudio, canvasElement);
-// wave.addAnimation(new wave.animations.Lines({
-//     lineColor: "white",
-// 	mirroredY: true,
-// 	center: true,
-// 	frequencyBand: "mids"
-// }));
+var canvasElement3a = document.getElementById("canvas-3a");
+handleWaveCanvas(hatemeAudio, canvasElement3a);
 
 // 3B - THAT THING
 var playpause3bbtn = document.getElementById("playpause-3b");
@@ -167,6 +159,8 @@ thatThingAudio.onended = function() {
     $("#playpause-3b").attr("src", "assets/playbtn.png");
 };
 playpause3bbtn.addEventListener("click", () => { handleAudioWithButton(thatThingAudio, playpause3bbtn) });
+var canvasElement3b = document.getElementById("canvas-3b");
+handleWaveCanvas(thatThingAudio, canvasElement3b);
 
 // 3C - I JUST WANNA LOVE
 var playpause3cbtn = document.getElementById("playpause-3c");
@@ -175,6 +169,8 @@ iJustWannaLoveAudio.onended = function() {
     $("#playpause-3c").attr("src", "assets/playbtn.png");
 };
 playpause3cbtn.addEventListener("click", () => { handleAudioWithButton(iJustWannaLoveAudio, playpause3cbtn) });
+var canvasElement3c = document.getElementById("canvas-3c");
+handleWaveCanvas(iJustWannaLoveAudio, canvasElement3c);
 
 // FINAL MESSAGE
 var playpausefinalbtn = document.getElementById("playpause-final");
@@ -183,6 +179,8 @@ finalAudio.onended = function() {
     $("#playpause-final").attr("src", "assets/playbtn.png");
 };
 playpausefinalbtn.addEventListener("click", () => { handleAudioWithButton(finalAudio, playpausefinalbtn) });
+var canvasElementFinal = document.getElementById("canvas-final");
+handleWaveCanvas(finalAudio, canvasElementFinal);
 
 // END AUDIO FUNCTIONS
 

@@ -109,15 +109,16 @@ button {
   font-weight: 500;
 }
 
-/* .audiocontainer {
+.audiocontainer {
 	display: flex;
     align-items: center;
-	width: 60vw;
-} */
+	justify-content: center;
+	gap: 3vw;
+}
 
 .wavecanvas {
-	width: 400px;
-	height: 200px;
+	width: 25vw;
+	height: 15vw;
 }
 
 /* #container1, #container2a, #container2b { */
@@ -202,6 +203,15 @@ button {
 
 	#tracklistimg {
 		width: 80vw;
+	}
+
+	.wavecanvas {
+		width: 50vw;
+		height: 30vw;
+	}
+
+	.playpausebtn {
+		width: 13vw;
 	}
 }
 
