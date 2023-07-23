@@ -6,6 +6,15 @@ html, body {
 	font-weight: 400;
 }
 
+/* audio player styling */
+:root {
+  --plyr-color-main: #9c9c9c;
+  --plyr-audio-controls-background: #000;
+  --plyr-audio-control-color: #fff;
+  --plyr-control-icon-size: 40px;
+  --plyr-control-spacing: 20px;
+}
+
 button {
 	font-family: 'Founders Grotesk', Helvetica, sans-serif;
 	text-rendering: geometricPrecision;
@@ -110,16 +119,19 @@ button {
 }
 
 .audiocontainer {
-	display: flex;
+	/* display: flex;
     align-items: center;
 	justify-content: center;
-	gap: 3vw;
+	gap: 3vw; */
+	margin: auto !important;
+	width: 40vw;
+	font-family: Helvetica, sans-serif;
 }
 
-.wavecanvas {
+/* .wavecanvas {
 	width: 25vw;
 	height: 15vw;
-}
+} */
 
 /* #container1, #container2a, #container2b { */
 #container1, #container2a, #container2b, #container3a, #container3b, #container3c, #container3d,
@@ -141,10 +153,10 @@ button {
 	width: 35vw;
 }
 
-.playpausebtn {
+/* .playpausebtn {
 	width: 5vw;
 	cursor: pointer;
-}
+} */
 
 /* hover effects only on web - so no sticky hover on mobile */
 @media (hover: hover) {
@@ -205,13 +217,17 @@ button {
 		width: 80vw;
 	}
 
-	.wavecanvas {
+	/* .wavecanvas {
 		width: 50vw;
 		height: 30vw;
 	}
 
 	.playpausebtn {
 		width: 13vw;
+	} */
+
+	.audiocontainer {
+		width: 80vw;
 	}
 }
 
