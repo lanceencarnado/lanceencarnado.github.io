@@ -128,6 +128,14 @@ button {
 	font-family: Helvetica, sans-serif;
 }
 
+#pwithspacing {
+	margin: 0 20vw;
+}
+
+#content2a {
+	width: 100%;
+}
+
 /* .wavecanvas {
 	width: 25vw;
 	height: 15vw;
@@ -228,6 +236,10 @@ button {
 
 	.audiocontainer {
 		width: 80vw;
+	}
+
+	#pwithspacing {
+		margin: 0 10vw;
 	}
 }
 
