@@ -29,7 +29,13 @@ by tacklebox / lance encarnado (2023)
 				<source src="assets/audio/1_whatsup.mp3" type="audio/mpeg">
 			</audio> -->
 			<div class="content">
-				<p>*Include a note or message from Roy: Why the album is named Mixed Emotions and how he wants his fans to go on a journey with him to learn about the album*
+				<div class="audiocontainer">
+					<img class="playpausebtn" id="playpause-1" src="assets/playbtn.png" alt="">
+					<canvas class="wavecanvas" id="canvas-1"></canvas>
+					<audio id="intro_audio">
+						<source src="assets/audio/intro.mp3" type="audio/mpeg">
+					</audio>
+				</div>
 				<div class="question">
 					What's up, how's your day going?
 				</div>
@@ -43,8 +49,8 @@ by tacklebox / lance encarnado (2023)
 				<source src="assets/audio/2a_sharesomething.mp3" type="audio/mpeg">
 			</audio> -->
 			<div class="content">
+				<img id="tracklistimg" src="assets/mixedemotions-tracklist.jpg" alt="MIXED EMOTIONS - TRACKLIST">
 				<p>I wanted to share something to make your day a little brighter. Here's my FULL tracklist for my album, Mixed Emotions.
-				<p><img id="tracklistimg" src="assets/mixedemotions-tracklist.jpg" alt="">
 				<div class="question">
 					What do you think?
 				</div>
@@ -57,7 +63,7 @@ by tacklebox / lance encarnado (2023)
 			<div class="content">
 				<p>I wanted to share part of an unreleased song that will be on the album with you, to keep up the good vibes of your day.
 				<div class="question">
-					What do you think about this song: <br>Unsettling ft. Vory?
+					What do you think of this song?
 				</div>
 				<p><button class="button" id="button3c" onclick="displayQuestion3c()">Let’s goooo, July 28th can’t come soon enough</button>
 				<p><button class="button" id="button3d" onclick="displayQuestion3d()">This reminds me of old school Roy Woods</button>
@@ -66,14 +72,14 @@ by tacklebox / lance encarnado (2023)
 
 		<div class="container" id="container3a">
 			<div class="content">
-				<p>So I’ve been working on this track Hate Me with a mystery feature…
 				<div class="audiocontainer">
 					<img class="playpausebtn" id="playpause-3a" src="assets/playbtn.png" alt="">
 					<canvas class="wavecanvas" id="canvas-3a"></canvas>
-					<audio id="hateme_audio">
+					<audio id="hateme_audio" preload="auto">
 						<source src="assets/audio/hateme.mp3" type="audio/mpeg">
 					</audio>
 				</div>
+				<p>So I’ve been working on this track Hate Me with a mystery feature…
 				<div class="question">
 					What do you think?
 				</div>
@@ -84,7 +90,6 @@ by tacklebox / lance encarnado (2023)
 
 		<div class="container" id="container3b">
 			<div class="content">
-				<p>So I’ve been working on this track That Thing and Jada Kingdom is featured.
 				<div class="audiocontainer">
 					<img class="playpausebtn" id="playpause-3b" src="assets/playbtn.png" alt="">
 					<canvas class="wavecanvas" id="canvas-3b"></canvas>
@@ -92,6 +97,7 @@ by tacklebox / lance encarnado (2023)
 						<source src="assets/audio/thatthing.mp3" type="audio/mpeg">
 					</audio>
 				</div>
+				<p>So I’ve been working on this track That Thing and Jada Kingdom is featured.
 				<div class="question">
 					What vibe does this put you in??
 				</div>
@@ -102,7 +108,6 @@ by tacklebox / lance encarnado (2023)
 
 		<div class="container" id="container3c">
 			<div class="content">
-			<p>So I’ve been working on this track I Just Wanna Love… Give it a listen here.
 				<div class="audiocontainer">
 					<img class="playpausebtn" id="playpause-3c" src="assets/playbtn.png" alt="">
 					<canvas class="wavecanvas" id="canvas-3c"></canvas>
@@ -110,6 +115,7 @@ by tacklebox / lance encarnado (2023)
 						<source src="assets/audio/ijustwannalove.mp3" type="audio/mpeg">
 					</audio>
 				</div>
+				<p>So I’ve been working on this track I Just Wanna Love… Give it a listen here.
 				<div class="question">
 					When’s the last time you were in your feelings?
 				</div>
@@ -208,6 +214,8 @@ by tacklebox / lance encarnado (2023)
 	</body>
 
 	<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/gh/foobar404/wave.js/dist/bundle.js"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/gh/foobar404/wave.js/dist/bundle.js"></script> -->
+	<script src="js/howler.core.min.js"></script>
+	<script src="js/wave.js"></script>
 	<script src="js/index.js"></script>
 </html>

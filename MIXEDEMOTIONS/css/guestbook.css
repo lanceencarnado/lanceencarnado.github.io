@@ -102,6 +102,11 @@ a {
 	cursor: pointer;
 }
 
+#roy_signature {
+	width: 50%;
+	padding-top: 2.5vw;
+}
+
 .endpage_albumcta img {
 	width: 100%;
 }
@@ -263,7 +268,7 @@ a {
 
 	.flipbook .page {
 		font-size: 4.5vw;
-		line-height: 5.2vw;
+		line-height: 6vw;
 	}
 
 	.guestbook_text {

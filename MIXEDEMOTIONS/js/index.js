@@ -40,19 +40,19 @@ function fadeInContainer(containerID) {
 function displayQuestion2a() {
 	fadeOutContainer("#container1");
 	fadeInContainer("#container2a");
-	let audio = new Audio('assets/audio/2a_sharesomething.mp3');
-	setTimeout(() => {
-		audio.play();
-	}, 1000);
+	// let audio = new Audio('assets/audio/2a_sharesomething.mp3');
+	// setTimeout(() => {
+	// 	audio.play();
+	// }, 1000);
 }
 
 function displayQuestion2b() {
 	fadeOutContainer("#container1");
 	fadeInContainer("#container2b");
-	let audio = new Audio('assets/audio/2b_unsettling.mp3');
-	setTimeout(() => {
-		audio.play();
-	}, 1000);
+	// let audio = new Audio('assets/audio/2b_unsettling.mp3');
+	// setTimeout(() => {
+	// 	audio.play();
+	// }, 1000);
 }
 
 function displayQuestion3a() {
@@ -151,10 +151,23 @@ function handleWaveCanvas(audio, canvasEl) {
 	}));
 }
 
+// 1 - INTRO
+var playpause1btn = document.getElementById("playpause-1");
+var introAudio = document.getElementById("intro_audio");
+introAudio.onended = function() {
+    $("#playpause-1").attr("src", "assets/playbtn.png");
+};
+playpause1btn.addEventListener("click", () => { handleAudioWithButton(introAudio, playpause1btn) });
+var canvasElement1 = document.getElementById("canvas-1");
+handleWaveCanvas(introAudio, canvasElement1);
+
 // 3A - HATE ME
 var playpause3abtn = document.getElementById("playpause-3a");
-// var hatemeAudio = document.getElementById("hateme_audio");
-let hatemeAudio = new Audio('assets/audio/hateme.mp3');
+var hatemeAudio = document.getElementById("hateme_audio");
+// let hatemeAudio = new Audio('assets/audio/hateme.mp3');
+// var hatemeAudio = new Howl({
+//   src: ['assets/audio/hateme.mp3']
+// });
 hatemeAudio.onended = function() {
     $("#playpause-3a").attr("src", "assets/playbtn.png");
 };
@@ -222,11 +235,8 @@ const startButton = document.getElementById("startButton");
 startButton.addEventListener("click", function() {
 	fadeOutContainer("#openingLogoContainer");
 	fadeInContainer("#container1");
-	let audio = new Audio('assets/audio/1_whatsup.mp3');
-	setTimeout(() => {
-		audio.play();
-	}, 1000);
+	// let audio = new Audio('assets/audio/1_whatsup.mp3');
 	// setTimeout(() => {
-	// 	document.getElementById("container1_audio").play();
+	// 	audio.play();
 	// }, 1000);
 });
