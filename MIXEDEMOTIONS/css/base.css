@@ -182,7 +182,7 @@ button {
 
 @media only screen and (max-width: 768px) {
 	.container {
-		font-size: 4.3vw;
+		font-size: 4.5vw;
 		/* letter-spacing: 0.15vw; */
 	}
 
@@ -202,7 +202,7 @@ button {
 
 	.content {
 		margin: 0 6vw;
-		line-height: 4.4vw;
+		line-height: 5.4vw;
 		padding-top: 2vw;
 		padding-bottom: 2vw;
 	}
