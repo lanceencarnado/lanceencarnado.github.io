@@ -241,6 +241,10 @@ button {
 	#pwithspacing {
 		margin: 0 10vw;
 	}
+
+	#content2a {
+		padding-bottom: 12vw;
+	}
 }
 
 @font-face {
