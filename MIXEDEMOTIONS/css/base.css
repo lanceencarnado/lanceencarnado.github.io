@@ -227,6 +227,7 @@ button {
 
 	#tracklistimg {
 		width: 80vw;
+		margin-top: 10vw;
 	}
 
 	/* .wavecanvas {
@@ -247,7 +248,11 @@ button {
 	}
 
 	#content2a {
-		padding-bottom: 12vw;
+		padding-bottom: 16vw;
+	}
+	
+	#button3b {
+		margin-bottom: 13vw;
 	}
 }
 
