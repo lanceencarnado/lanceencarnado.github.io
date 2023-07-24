@@ -102,6 +102,11 @@ const player1 = new Plyr('#intro_audio', {
 	controls: ['play-large', 'play', 'progress', 'current-time']
 });
 
+// 2B - UNSETTLING
+const player2b = new Plyr('#unsettling_audio', {
+	controls: ['play-large', 'play', 'progress', 'current-time']
+});
+
 // 3A - HATE ME
 const player3a = new Plyr('#hateme_audio', {
 	controls: ['play-large', 'play', 'progress', 'current-time']
