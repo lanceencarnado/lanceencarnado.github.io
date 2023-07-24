@@ -31,16 +31,16 @@ by tacklebox / lance encarnado (2023)
 			<div class="content">
 				<img id="openingLogo" src="assets/mixedemotionsanimated-noloop-crop.gif" alt="">
 				<p><button class="button" id="startButton">Start</button>
+				<div class="audiocontainer" id="introaudiocontainer">
+					<audio playsinline id="intro_audio">
+						<source src="assets/audio/intro.mp3" type="audio/mpeg">
+					</audio>
+				</div>
 			</div>
 		</div>
 
 		<div class="container" id="container1">
 			<div class="content">
-				<div class="audiocontainer">
-					<audio playsinline id="intro_audio">
-						<source src="assets/audio/intro.mp3" type="audio/mpeg">
-					</audio>
-				</div>
 				<div class="question">
 					What's up, how's your day going?
 				</div>
@@ -63,9 +63,11 @@ by tacklebox / lance encarnado (2023)
 
 		<div class="container" id="container2b">
 			<div class="content">
-				<audio id="unsettling_audio" preload="auto">
-					<source src="assets/audio/unsettling.mp3" type="audio/mpeg">
-				</audio>
+				<div class="audiocontainer">
+					<audio id="unsettling_audio" preload="auto">
+						<source src="assets/audio/unsettling.mp3" type="audio/mpeg">
+					</audio>
+				</div>
 				<p>I wanted to share part of an unreleased song that will be on the album with you, to keep up the good vibes of your day.
 				<div class="question">
 					What do you think of this song?
@@ -135,6 +137,9 @@ by tacklebox / lance encarnado (2023)
 
 		<div class="container" id="containerfinal">
 			<div class="content">
+				<div class="question">
+					A message from me to you… 
+				</div>
 				<div class="audiocontainer">
 					<audio id="final_audio">
 						<source src="assets/audio/final.mp3" type="audio/mpeg">

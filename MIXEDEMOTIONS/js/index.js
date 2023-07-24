@@ -144,6 +144,11 @@ $("#openingLogo").attr("src", openingLogoImgSrc);
 
 setTimeout(() => {
 	$("#openingLogoContainer").css({'display': 'flex'});
+	// make the intro audio box appear
+	$("#introaudiocontainer").css({'display': 'block'});
+	setTimeout(() => {
+		$("#introaudiocontainer").css({'opacity': '1'});
+	}, "50");
 }, 1000);
 
 setTimeout(() => {
