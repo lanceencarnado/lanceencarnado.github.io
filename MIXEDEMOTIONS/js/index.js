@@ -144,16 +144,16 @@ $("#openingLogo").attr("src", openingLogoImgSrc);
 
 setTimeout(() => {
 	$("#openingLogoContainer").css({'display': 'flex'});
-	// make the intro audio box appear
-	$("#introaudiocontainer").css({'display': 'block'});
-	setTimeout(() => {
-		$("#introaudiocontainer").css({'opacity': '1'});
-	}, "50");
 }, 1000);
 
 setTimeout(() => {
 	$("#startButton").css({'pointer-events': 'auto'});
 	$("#startButton").css({'opacity': '1'});
+	// make the intro audio box appear
+	setTimeout(() => {
+		$("#introaudiocontainer").css({'pointer-events': 'auto'});
+		$("#introaudiocontainer").css({'opacity': '1'});
+	}, "50");
 }, 6200);
 
 // start button listener

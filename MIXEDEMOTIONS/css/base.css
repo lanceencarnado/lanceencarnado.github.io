@@ -166,10 +166,11 @@ button {
 }
 
 #introaudiocontainer {
-	display: none;
+	display: block;
 	opacity: 0;
 	transition: opacity 1s;
 	-webkit-transition: opacity 1s;
+	pointer-events: none;
 }
 
 /* .playpausebtn {
