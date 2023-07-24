@@ -41,6 +41,7 @@ button {
 
 #openingLogo {
 	width: 40vw;
+	pointer-events: none;
 }
 
 #startButton {
@@ -94,9 +95,10 @@ button {
 }
 
 .question {
-	font-size: 4.3vw;
+	font-size: 4.5vw;
 	font-weight: 500;
-	text-transform: uppercase;
+	font-family: 'best_wishesregular';
+	/* text-transform: uppercase; */
 	margin-top: 1vw;
 	margin-top: 3.5vw;
 	margin-bottom: 3.5vw;
@@ -193,6 +195,13 @@ button {
 }
 
 @media only screen and (max-width: 768px) {
+	body {
+		/* mobile only bg */
+		background-image: url("assets/mobile_bg.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
 	.container {
 		font-size: 4.5vw;
 		/* letter-spacing: 0.15vw; */
@@ -342,4 +351,12 @@ button {
     font-weight: 500;
     font-style: italic;
     font-display: swap;
+}
+
+@font-face {
+	font-family: 'best_wishesregular';
+	src: url('font/best_wishes-webfont.woff2') format('woff2'),
+		 url('font/best_wishes-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
