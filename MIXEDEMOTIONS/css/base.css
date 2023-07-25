@@ -275,16 +275,21 @@ button {
 		margin-bottom: 13vw;
 	}
 
-	#container2b {
-		overflow: scroll;
+	#content2b {
+		width: 100%;
+	}
+
+	#content2b .question {
+		padding-left: 6vw;
+		padding-right: 6vw;
 	}
 
 	#audiocontainer2b {
-		padding-top: 16vw;
+		padding-top: 25vw;
 	}
 
 	#button3d {
-		margin-bottom: 16vw;
+		margin-bottom: 35vw;
 	}
 
 	/* end adding scroll */
