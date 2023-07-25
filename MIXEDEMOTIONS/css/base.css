@@ -195,9 +195,9 @@ button {
 }
 
 @media only screen and (max-width: 768px) {
-	body {
+	html, body {
 		/* mobile only bg */
-		background-image: url("assets/mobile_bg.jpg");
+		background-image: url("../assets/mobile_bg.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
