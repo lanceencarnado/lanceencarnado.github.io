@@ -267,7 +267,7 @@ a {
 	}
 
 	.flipbook .page {
-		font-size: 4.5vw;
+		font-size: 4.6vw;
 		line-height: 6vw;
 	}
 
@@ -299,5 +299,9 @@ a {
 	#prevPageText, #nextPageText {
 		margin-left: 7vw;
 		margin-right: 7vw;
+	}
+
+	#roy_signature {
+		padding-top: 8vw;
 	}
 }

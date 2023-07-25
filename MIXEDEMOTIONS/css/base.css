@@ -99,7 +99,6 @@ button {
 	font-weight: 500;
 	font-family: 'best_wishesregular';
 	/* text-transform: uppercase; */
-	margin-top: 1vw;
 	margin-top: 3.5vw;
 	margin-bottom: 3.5vw;
 	line-height: 5.5vw;
@@ -232,6 +231,8 @@ button {
 		font-size: 8vw;
 		line-height: 8.5vw;
 		letter-spacing: 0.26vw;
+		margin-top: 6.5vw;
+		margin-bottom: 6.5vw;
 	}
 
 	.button, input[type=submit] {
@@ -264,6 +265,8 @@ button {
 		margin: 0 10vw;
 	}
 
+	/* adding scroll to some longer divs */
+
 	#content2a {
 		padding-bottom: 16vw;
 	}
@@ -271,6 +274,20 @@ button {
 	#button3b {
 		margin-bottom: 13vw;
 	}
+
+	#container2b {
+		overflow: scroll;
+	}
+
+	#audiocontainer2b {
+		padding-top: 16vw;
+	}
+
+	#button3d {
+		margin-bottom: 16vw;
+	}
+
+	/* end adding scroll */
 }
 
 @font-face {
