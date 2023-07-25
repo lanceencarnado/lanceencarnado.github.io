@@ -275,20 +275,28 @@ button {
 		margin-bottom: 13vw;
 	}
 
-	#content2b {
+	#content2b, #content3a, #content3b, #content3c {
 		width: 100%;
 	}
 
-	#content2b .question {
+	#content2b .question, #content3a .question, #content3b .question, #content3c .question {
 		padding-left: 6vw;
 		padding-right: 6vw;
 	}
 
-	#audiocontainer2b {
+	/* #audiocontainer2b {
 		padding-top: 25vw;
 	}
 
 	#button3d {
+		margin-bottom: 35vw;
+	} */
+
+	#content2b > div:first-child, #content3a > div:first-child, #content3b > div:first-child, #content3c > div:first-child {
+		padding-top: 30vw;
+	}
+
+	#button3d, #buttonfinal1a2, #buttonfinal1b2, #buttonfinal2a2 {
 		margin-bottom: 35vw;
 	}
 
