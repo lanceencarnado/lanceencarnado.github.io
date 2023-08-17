@@ -70,8 +70,16 @@ body {
 	transform: translate(-50%, -50%);
 }
 
+#julientweet img {
+	width: 100%;
+}
+
 @media only screen and (max-width: 768px) {
 	span {
+		width: 80vw;
+	}
+
+	#julientweet {
 		width: 80vw;
 	}
 }

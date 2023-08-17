@@ -212,20 +212,19 @@ var workWindows = [
 		iconSrc: "img/icons/greatishealt.png"
 	},
 	{
-		windowId: "theheadgumsoundboard",
-		title: "The Headgum Soundboard",
+		windowId: "mixedemotions",
+		title: "Mixed Emotions - The Journey",
 		year: "2023",
-		url: "xx",
-		displayUrl: "xx",
-		logoSrc: "img/logos/greatishe.png",
-		role: "Concept, design, coding",
-		description: "<strong>Great is He</strong> is a promotional website for Popcaan's 2023 album of the same name. The site features an image generator that allows fans to upload a photo that is then transformed to look like the Great Is He album cover. The site also contains streaming links, music videos, and upcoming tour dates.",
+		url: "https://mixedemotions.roywoods.com",
+		displayUrl: "mixedemotions.roywoods.com",
+		logoSrc: "img/logos/mixedemotions.png",
+		role: "Coding",
+		client: "OVO Sound",
+		description: "<strong>Mixed Emotions - The Journey</strong> is a promotional website for Roy Woods' 2023 album <i>Mixed Emotions</i>. This experience takes the user on an audio \"journey\", allowing users to make choices that lead to unique outcomes, which include exclusive snippets from the new album as well as voice notes from Roy himself. <p>At the end of the experience, users can read and sign a guestbook with a message for Roy, as well as see more information on Mixed Emotions the album.",
 		screenshots: [
 			"img/screenshots/greatishe1.jpg",
-			"img/screenshots/greatishe2.jpg",
-			"img/screenshots/greatishe3.jpg",
 		],
-		iconTitle: "The Headgum<br>Soundboard",
+		iconTitle: "Mixed Emotions",
 		iconSrc: "img/icons/rags2riches.png"
 	},
 ];
