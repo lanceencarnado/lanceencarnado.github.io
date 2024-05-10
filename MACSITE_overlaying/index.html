@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>lance encarnado</title>
+	<link rel="shortcut icon" type="image/png" href="favicon_initials.png"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel="stylesheet" href="js/lightbox/css/lightbox.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="time()">
+	<!-- <div class="crt menu-bar"> -->
+	<div class="menu-bar">
+		<ul class="menu-items">
+			<li class="apple"><a href="index.html">lance encarnado</a></li>
+			<div class="dropdown">
+				<li class="dropdown-tab">File</li>
+				<div class="dropdown-content">
+				    <a id="bg1" href="#">Background 1</a>
+				    <a id="bg2" href="#">Background 2</a>
+				    <a id="bg3" href="#">Background 3</a>
+				</div>
+			</div>
+			<li id="menu-time"></li>
+		</ul>
+	</div>
+	<!-- <div class="crt desktop"> -->
+	<div class="desktop">
+		<div class="desktop-icons">
+			<div class="icon disk" data-window="twitter" data-is-open="false"><img src="img/icons/twitter.png" alt="Twitter"><span class="icon-label">Twitter</span></div>
+			<div class="icon disk" data-window="about" data-is-open="false"><img src="img/icons/todo.png" alt="About"><span class="icon-label">About</span></div>
+			<div class="icon disk" data-window="work" data-is-open="false"><img src="img/icons/folder.png" alt="Work"><span class="icon-label">Work</span></div>
+			<div class="icon disk" id="contact"><a href="mailto:lance.encarnado@gmail.com"><img src="img/icons/contact.png" alt="Work"><span class="icon-label">Contact</span></a></div>
+			<div class="icon disk" data-window="todo" data-is-open="false"><img src="img/icons/todo.png" alt="To-Do"><span class="icon-label">To-Do</span></div>
+		</div>
+
+		<div class="window" id="twitter" data-is-open="false">
+			<div class="title-bar">
+				<button class="close"><span class="hidden">Close</span></button>
+				<h1 class="title">Twitter</h1>
+				<button class="resize"><span class="hidden">Resize</span></button>
+			</div>
+			<div class="details-bar"><span>21 items</span><span>1,227K in disk</span><span>189K available</span></div>
+			<div class="window__pane">
+				<blockquote class="twitter-tweet" data-lang="en">
+					<p lang="en" dir="ltr">
+						“it is traumatic to be born and have to live” -<a href="https://twitter.com/lucydacus?ref_src=twsrc%5Etfw">@lucydacus</a>
+					</p>&mdash; Julien Baker (@julienrbaker) <a href="https://twitter.com/julienrbaker/status/1082128199348375552?ref_src=twsrc%5Etfw">January 7, 2019</a>
+				</blockquote>
+				<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			</div>
+		</div>
+
+		<div class="window" id="about" data-is-open="false">
+			<div class="title-bar">
+				<button class="close"><span class="hidden">Close</span></button>
+				<h1 class="title">About</h1>
+				<button class="resize"><span class="hidden">Resize</span></button>
+			</div>
+			<div class="details-bar"><span>21 items</span><span>1,227K in disk</span><span>189K available</span></div>
+			<div class="window__pane">
+				<img class="about-portrait" src="img/portrait_placeholder.jpg">
+				<p>My name is <span class="emphasis">Lance Encarnado</span>. I am a web and mobile developer based in Ottawa, ON, Canada. 🇨🇦
+				<p>I recieved a Bachelor of Computer Science from Carleton University in 2018.
+				<p>Currently, I specialize in developing <span class="emphasis">fun and experimental user-facing experiences</span> like games and meme generators (and this portfolio), as well as more "traditional" websites for companies and online stores.
+				<p>Past clients include <span class="emphasis">300 Entertainment</span>, <span class="emphasis">OVO Sound</span>, and <span class="emphasis">Alamo Records</span>.
+				<p>I am always interested in working on new and interesting freelance projects! To get an idea of what I've worked on previously, check out the "Work" section of this site. Feel free to reach out to me at lance.encarnado@gmail.com, or by clicking on the "Contact" icon.
+			</div>
+		</div>
+
+		<div class="window" id="work" data-is-open=false>
+			<div class="title-bar">
+				<button class="close"><span class="hidden">Close</span></button>
+				<h1 class="title">Work</h1>
+				<button class="resize"><span class="hidden">Resize</span></button>
+			</div>
+			<div class="details-bar"><span id="num-items">0 items</span><span>1,227K in disk</span><span>189K available</span></div>
+			<div class="window__pane icon_window_pane">
+				<div id="work-folder" class="desktop-icons window-icons">
+					<!-- icons here -->
+				</div>
+			</div>
+		</div>
+
+		<div class="window" id="todo" data-is-open="false">
+			<div class="title-bar">
+				<button class="close"><span class="hidden">Close</span></button>
+				<h1 class="title">To-Do</h1>
+				<button class="resize"><span class="hidden">Resize</span></button>
+			</div>
+			<div class="details-bar"><span>21 items</span><span>1,227K in disk</span><span>189K available</span></div>
+			<div class="window__pane">
+				- make windows 100% width and height on mobile
+				<br> - make windows overlap instead of flex
+				<br> - have windows appear in order of opening instead of pre-ordered according to html
+				<br> - add more projects
+				<br> <s>- write an about me</s>
+				<br> - fix desktop icons on mobile
+			</div>
+		</div>
+
+		<!-- work windows here -->
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src='js/draggabilly.pkgd.min.js'></script>
+	<script src="js/lightbox/js/lightbox.js"></script>
+	<script src="./work.js"></script>
+	<script src="./script.js"></script>
+
+</body>
+</html>
