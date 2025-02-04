@@ -258,6 +258,7 @@ html {
 }
 .window[data-is-open=true] {
   display: flex;
+  position: absolute;
 }
 .window__pane {
   overflow-y: scroll;
@@ -420,8 +421,9 @@ html {
 	}
 
 	.desktop-icons {
-		flex-direction: row;
+		/* flex-direction: row; */
 		align-items: flex-start;
+		flex-wrap: wrap;
 	}
 
 	.desktop-icons .icon-label {
