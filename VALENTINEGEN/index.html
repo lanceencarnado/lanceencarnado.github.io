@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALENTINE'S DAY CARD GENERATOR</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery.textfill.min.js"></script>
+
+    <script src="js/html2canvas.min.js"></script>
+</head>
+<body>
+    <div id="card_container">
+        <div class='card_textarea' id="card_tofield" style="width:45%; height:10%;" contenteditable>
+            <span>To: Your crush's name</span>
+        </div>
+        <div class='card_textarea' id="card_fromfield" style="width:45%; height:10%;" contenteditable>
+            <span>From: Your name</span>
+        </div>
+        <img id="card_bg" src="img/snoopyvdaycard.jpg" alt="">
+    </div>
+
+    <div>
+        <button id="btn_downloadcard" onclick="downloadCard()">DOWNLOAD CARD</button>
+    </div>
+    
+    <script>
+        var minfontpx = 0;
+        var maxfontpx = 35;
+
+        function textfillCardToField() {
+            $('#card_tofield').textfill({
+                minFontPixels: minfontpx,
+                maxFontPixels: maxfontpx,
+                changeLineHeight: false,
+            });
+        }
+
+        function textfillCardFromField() {
+            $('#card_fromfield').textfill({
+                minFontPixels: minfontpx,
+                maxFontPixels: maxfontpx,
+                changeLineHeight: false,
+            });
+        }
+
+        textfillCardToField();
+        textfillCardFromField();
+
+        // call textfill when text is added to the To field
+        document.querySelector('#card_tofield').addEventListener('input', (e) => {
+            textfillCardToField();
+        });
+
+        // call textfill when text is added to the From field
+        document.querySelector('#card_fromfield').addEventListener('input', (e) => {
+            textfillCardFromField();
+        });
+
+        // call textfill when window resized
+        window.addEventListener('resize', (e) => {
+            textfillCardToField();
+        });
+
+        window.addEventListener('resize', (e) => {
+            textfillCardFromField();
+        });
+    </script>
+
+    <script>
+        function downloadCard() {
+            html2canvas(document.querySelector("#card_container")).then(canvas => {
+                document.body.appendChild(canvas)
+            });
+        }
+    </script>
+</body>
+</html>

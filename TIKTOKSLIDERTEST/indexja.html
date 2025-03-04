@@ -39,14 +39,20 @@
             <section id="splidetest" class="splide" aria-label="Splide Basic HTML Example">
                 <div class="splide__track">
                     <ul class="splide__list">
-                        <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=5_F0YCqdxnM">
-                            <img src="https://img.youtube.com/vi/5_F0YCqdxnM/0.jpg" alt="">
+                        <li class="splide__slide" data-splide-vimeo="https://vimeo.com/2084867">
+                            <img src="https://i.vimeocdn.com/video/21000382-6ff2c3c039ccef9bcf13224268311e7c07ad791433205f4239b1195f834a3508-d_2400" alt="">
+                            <div class="share-btn">
+                                <a href="https://vimeo.com/2084867" target="_blank">SHARE</a>
+                            </div>
                         </li>
-                        <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=WsPfSXJaelk">
-                            <img src="https://img.youtube.com/vi/WsPfSXJaelk/0.jpg" alt="">
-                        <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=lXYq9ImJIN8">
-                            <img src="https://img.youtube.com/vi/lXYq9ImJIN8/0.jpg" alt="">
+                        <li class="splide__slide" data-splide-vimeo="https://vimeo.com/2057697">
+                            <img src="https://i.vimeocdn.com/video/20976202-bf7986b73f5c0ce27eda301dd9833916af3c5cc075ebe7145f2d64e3fd79fb77-d_2400" alt="">
                         </li>
+                        <li class="splide__slide" data-splide-vimeo="https://vimeo.com/2149014">
+                            <img src="https://i.vimeocdn.com/video/21054635-f3ac1c870277420edadbfa8336ec34951fc9dc5c1b2063cd8f925aaa57d02d04-d_2400" alt="">
+                        </li>
+                        <li class="splide__slide">Slide 02</li>
+                        <li class="splide__slide">Slide 03</li>
                     </ul>
                 </div>
             </section>
@@ -61,8 +67,7 @@
             video: {
                 loop: false,
                 autoplay: true,
-                mute: false,
-                disableOverlayUI: false,
+                disableOverlayUI: true,
                 // hideControls: true,
             },
         }, ).mount( window.splide.Extensions );

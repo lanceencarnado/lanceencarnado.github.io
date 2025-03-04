@@ -1,0 +1,42 @@
+body, html {
+    border: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#card_container {
+    width: 35vw;
+    min-width: 400px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+#card_container img {
+    width: 100%;
+    position: relative;
+    display: block; /* remove whitespace from img*/
+}
+
+.card_textarea {
+    position: absolute;
+    /* width: 40%;
+    height: 10%; */
+    z-index: 10;
+    /* overflow: scroll; */
+}
+
+#card_tofield {
+    top: 20%;
+    left: 7%;
+}
+
+#card_fromfield {
+    top: 50%;
+    left: 7%;
+}
