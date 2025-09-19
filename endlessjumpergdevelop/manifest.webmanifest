@@ -1,0 +1,12 @@
+{
+  "name": "Endless Up Runner",
+  "short_name": "Endless Up Runner",
+  "id": "com.example.endlessuprunner",
+  "description": "",
+  "orientation": "landscape",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "black",
+  "categories": ["games", "entertainment"],
+  "icons": []
+}
