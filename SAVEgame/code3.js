@@ -117,7 +117,7 @@ for (var i = 0, k = 0, l = gdjs.SettingsCode.GDBackToMainObjects2.length;i<l;++i
 gdjs.SettingsCode.GDBackToMainObjects2.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(20890116);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(20893444);
 }
 }
 if (isConditionTrue_0) {

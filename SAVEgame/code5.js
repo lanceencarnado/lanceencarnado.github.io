@@ -67,7 +67,7 @@ for (var i = 0, k = 0, l = gdjs.LeaderboardCode.GDSubmitViewObjects2.length;i<l;
 gdjs.LeaderboardCode.GDSubmitViewObjects2.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(20954740);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(20958068);
 }
 }
 if (isConditionTrue_0) {
@@ -162,9 +162,9 @@ for (var i = 0, k = 0, l = gdjs.LeaderboardCode.GDSubmitViewObjects1.length;i<l;
 gdjs.LeaderboardCode.GDSubmitViewObjects1.length = k;
 if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("LeaderboardName"), gdjs.LeaderboardCode.GDLeaderboardNameObjects1);
-{gdjs.evtTools.leaderboards.savePlayerScore(runtimeScene, "1239d70f-7c90-4ab2-ba86-2d0948ccc19b", gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("HighScore")), (( gdjs.LeaderboardCode.GDLeaderboardNameObjects1.length === 0 ) ? "" :gdjs.LeaderboardCode.GDLeaderboardNameObjects1[0].getText()));
+{gdjs.evtTools.leaderboards.savePlayerScore(runtimeScene, "a889fb0c-ddaa-4bef-85c5-92c90e8474e2", gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().get("HighScore")), (( gdjs.LeaderboardCode.GDLeaderboardNameObjects1.length === 0 ) ? "" :gdjs.LeaderboardCode.GDLeaderboardNameObjects1[0].getText()));
 }
-{gdjs.evtTools.leaderboards.displayLeaderboard(runtimeScene, "1239d70f-7c90-4ab2-ba86-2d0948ccc19b", true);
+{gdjs.evtTools.leaderboards.displayLeaderboard(runtimeScene, "a889fb0c-ddaa-4bef-85c5-92c90e8474e2", true);
 }
 }
 

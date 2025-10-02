@@ -32,7 +32,7 @@ for (var i = 0, k = 0, l = gdjs.CreditsCode.GDBackObjects2.length;i<l;++i) {
 gdjs.CreditsCode.GDBackObjects2.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(20927868);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(20931196);
 }
 }
 if (isConditionTrue_0) {

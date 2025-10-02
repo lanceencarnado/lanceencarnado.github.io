@@ -335,7 +335,7 @@ for (var i = 0, k = 0, l = gdjs.CharacterSelectionCode.GDBackObjects2.length;i<l
 gdjs.CharacterSelectionCode.GDBackObjects2.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(20643668);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(20646996);
 }
 }
 if (isConditionTrue_0) {

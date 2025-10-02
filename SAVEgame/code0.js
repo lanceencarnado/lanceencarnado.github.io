@@ -134,7 +134,7 @@ for (var i = 0, k = 0, l = gdjs.MenuCode.GDLeaderboardObjects2.length;i<l;++i) {
 gdjs.MenuCode.GDLeaderboardObjects2.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(20575276);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(20578604);
 }
 }
 if (isConditionTrue_0) {
@@ -182,7 +182,7 @@ for (var i = 0, k = 0, l = gdjs.MenuCode.GDLeaderboardObjects2.length;i<l;++i) {
 }
 gdjs.MenuCode.GDLeaderboardObjects2.length = k;
 if (isConditionTrue_0) {
-{gdjs.evtTools.leaderboards.displayLeaderboard(runtimeScene, "1239d70f-7c90-4ab2-ba86-2d0948ccc19b", true);
+{gdjs.evtTools.leaderboards.displayLeaderboard(runtimeScene, "a889fb0c-ddaa-4bef-85c5-92c90e8474e2", true);
 }
 }
 
