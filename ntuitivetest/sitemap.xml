@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://ntuitive.net/index.html</loc>
+    <lastmod>2021-03-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="http://ntuitive.net/phone/index.html"/>
+  </url>
+  <url>
+    <loc>http://ntuitive.net/shop.html</loc>
+    <lastmod>2020-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="http://ntuitive.net/phone/shop.html"/>
+  </url>
+  <url>
+    <loc>http://ntuitive.net/philosophy.html</loc>
+    <lastmod>2021-03-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="http://ntuitive.net/phone/philosophy.html"/>
+  </url>
+  <url>
+    <loc>http://ntuitive.net/shipping.html</loc>
+    <lastmod>2021-03-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="http://ntuitive.net/phone/shipping.html"/>
+  </url>
+  <url>
+    <loc>http://ntuitive.net/contact.html</loc>
+    <lastmod>2021-03-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="http://ntuitive.net/phone/contact.html"/>
+  </url>
+  <url>
+    <loc>http://ntuitive.net/photos.html</loc>
+    <lastmod>2021-03-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="http://ntuitive.net/phone/photos.html"/>
+  </url>
+  <url>
+    <loc>http://ntuitive.net/game.html</loc>
+    <lastmod>2021-03-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="http://ntuitive.net/phone/game.html"/>
+  </url>
+  <url>
+    <loc>http://ntuitive.net/block-tee.html</loc>
+    <lastmod>2020-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="http://ntuitive.net/phone/block-tee.html"/>
+  </url>
+  <url>
+    <loc>http://ntuitive.net/block-shorts.html</loc>
+    <lastmod>2020-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="http://ntuitive.net/phone/block-shorts.html"/>
+  </url>
+  <url>
+    <loc>http://ntuitive.net/lavender-shirt.html</loc>
+    <lastmod>2020-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="http://ntuitive.net/phone/lavender-shirt.html"/>
+  </url>
+  <url>
+    <loc>http://ntuitive.net/heather-shorts.html</loc>
+    <lastmod>2020-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="http://ntuitive.net/phone/heather-shorts.html"/>
+  </url>
+  <url>
+    <loc>http://ntuitive.net/nature-hoodie.html</loc>
+    <lastmod>2020-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="http://ntuitive.net/phone/nature-hoodie.html"/>
+  </url>
+  <url>
+    <loc>http://ntuitive.net/van-gogh-shirt.html</loc>
+    <lastmod>2020-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="http://ntuitive.net/phone/van-gogh-shirt.html"/>
+  </url>
+  <url>
+    <loc>http://ntuitive.net/miami-art-basel-hoodie.html</loc>
+    <lastmod>2020-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="http://ntuitive.net/phone/miami-art-basel-hoodie.html"/>
+  </url>
+  <url>
+    <loc>http://ntuitive.net/nature-shirt.html</loc>
+    <lastmod>2020-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="http://ntuitive.net/phone/nature-shirt.html"/>
+  </url>
+</urlset>
