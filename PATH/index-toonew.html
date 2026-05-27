@@ -88,6 +88,10 @@
     border: 1px solid #e8e8e8;
     display: block;
     cursor: default;
+
+    /* LANCE: OPERATION BACKGROUND*/
+    background-image: url("/operationbg.jpg");
+    background-size: cover;
   }
 
   /* shared buttons */
@@ -235,14 +239,14 @@ function showScreen(name) {
 //  Use null to fall back to the default circle.
 // ─────────────────────────────────────────────
 const LEVEL_IMAGES = [
-  'level1.png',
+  'null',
   'level2.png',
   'level3.png',
   'level4.png',
   'level5.png',
   'level6.png',
 ];
-const IMAGE_SIZE = 42;
+const IMAGE_SIZE = 40;
 // ─────────────────────────────────────────────
 
 // ─────────────────────────────────────────────
@@ -252,7 +256,7 @@ const IMAGE_SIZE = 42;
 //  Each entry corresponds to the level at the same index.
 // ─────────────────────────────────────────────
 const LEVEL_POSITIONS = [
-  { x: 50, y: 610, r: 36 },  // Level 1
+  { x: 100, y: 610, r: 36 },  // Level 1
   { x: 290, y: 500, r: 36 },  // Level 2
   { x: 110, y: 400, r: 36 },  // Level 3
   { x: 280, y: 310, r: 36 },  // Level 4
@@ -276,11 +280,11 @@ const LEVEL_NAMES = ['Alpha','Beta','Gamma','Delta','Epsilon','Zeta'];
 function getLevelPath(lvl) {
   const paths = [
     [ {x:195,y:640},{x:195,y:520},{x:100,y:440},{x:100,y:340},{x:195,y:260},{x:290,y:180},{x:290,y:90},{x:195,y:60} ],
-    [ {x:195,y:650},{x:290,y:580},{x:290,y:480},{x:100,y:380},{x:100,y:270},{x:290,y:170},{x:195,y:70} ],
-    [ {x:195,y:660},{x:100,y:580},{x:80,y:460},{x:195,y:380},{x:310,y:300},{x:310,y:200},{x:195,y:130},{x:80,y:80} ],
-    [ {x:195,y:660},{x:310,y:600},{x:310,y:490},{x:195,y:410},{x:80,y:330},{x:80,y:220},{x:195,y:150},{x:310,y:90} ],
-    [ {x:195,y:670},{x:100,y:590},{x:290,y:490},{x:100,y:390},{x:290,y:290},{x:100,y:190},{x:195,y:80} ],
-    [ {x:195,y:670},{x:310,y:590},{x:80,y:490},{x:310,y:390},{x:80,y:290},{x:310,y:190},{x:195,y:80} ],
+    [ {x:195,y:640},{x:290,y:580},{x:290,y:480},{x:100,y:380},{x:100,y:270},{x:290,y:170},{x:195,y:70} ],
+    [ {x:195,y:640},{x:100,y:580},{x:80,y:460},{x:195,y:380},{x:310,y:300},{x:310,y:200},{x:195,y:130},{x:80,y:80} ],
+    [ {x:195,y:640},{x:310,y:600},{x:310,y:490},{x:195,y:410},{x:80,y:330},{x:80,y:220},{x:195,y:150},{x:310,y:90} ],
+    [ {x:195,y:640},{x:100,y:590},{x:290,y:490},{x:100,y:390},{x:290,y:290},{x:100,y:190},{x:195,y:80} ],
+    [ {x:195,y:640},{x:310,y:590},{x:80,y:490},{x:310,y:390},{x:80,y:290},{x:310,y:190},{x:195,y:80} ],
   ];
   return paths[(lvl - 1) % paths.length];
 }
@@ -333,24 +337,24 @@ function drawLevelSelect() {
     lctx.save();
 
     // outer ring (hover / completed state)
-    if (done) {
-      lctx.beginPath();
-      lctx.arc(pos.x, pos.y, r + 5, 0, Math.PI * 2);
-      lctx.strokeStyle = hovered ? '#111' : '#ccc';
-      lctx.lineWidth = 1;
-      lctx.stroke();
-    } else if (hovered) {
-      lctx.beginPath();
-      lctx.arc(pos.x, pos.y, r + 5, 0, Math.PI * 2);
-      lctx.strokeStyle = '#ccc';
-      lctx.lineWidth = 1;
-      lctx.stroke();
-    }
+    // if (done) {
+    //   lctx.beginPath();
+    //   lctx.arc(pos.x, pos.y, r + 5, 0, Math.PI * 2);
+    //   lctx.strokeStyle = hovered ? '#111' : '#ccc';
+    //   lctx.lineWidth = 1;
+    //   lctx.stroke();
+    // } else if (hovered) {
+    //   lctx.beginPath();
+    //   lctx.arc(pos.x, pos.y, r + 5, 0, Math.PI * 2);
+    //   lctx.strokeStyle = '#ccc';
+    //   lctx.lineWidth = 1;
+    //   lctx.stroke();
+    // }
 
     // circle fill
     lctx.beginPath();
     lctx.arc(pos.x, pos.y, r, 0, Math.PI * 2);
-    lctx.fillStyle = done ? '#111' : (hovered ? '#f7f7f7' : '#fff');
+    lctx.fillStyle = done ? 'rgba(111, 194, 118,0.6)' : (hovered ? '#f7f7f7' : '#fff');
     lctx.fill();
     lctx.strokeStyle = done ? '#111' : '#ccc';
     lctx.lineWidth = 1.5;
@@ -444,7 +448,7 @@ const W = 390, H = 700;
 canvas.width = W; canvas.height = H;
 
 const BALL_R = 13;
-const PATH_W = 70;
+const PATH_W = 60;
 const MAX_LIVES = 3;
 
 let lives, level, gameState, dragging, ballX, ballY, particles, shakeT, animFrame, lastTime;
@@ -560,7 +564,8 @@ function drawBall() {
   ctx.save();
   if (useImg) {
     const half = IMAGE_SIZE / 2;
-    ctx.beginPath(); ctx.arc(ballX, ballY, half, 0, Math.PI * 2); ctx.clip();
+    ctx.beginPath(); ctx.arc(ballX, ballY, half, 0, Math.PI * 2); 
+    //ctx.clip();
     ctx.drawImage(img, ballX - half, ballY - half, IMAGE_SIZE, IMAGE_SIZE);
   } else {
     ctx.beginPath(); ctx.arc(ballX, ballY, BALL_R, 0, Math.PI * 2);
