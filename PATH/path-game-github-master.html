@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Path</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100dvh;
+    font-family: 'DM Sans', sans-serif;
+    overflow: hidden;
+    touch-action: none;
+    color: #111;
+  }
+
+  .screen { display: none; width: 100%; max-width: 420px; flex-direction: column; align-items: center; }
+  .screen.active { display: flex; }
+
+  /* TITLE */
+  #screen-title {
+    justify-content: center;
+    min-height: 100dvh;
+    gap: 28px;
+    padding: 48px 32px;
+  }
+  #screen-title h1 {
+    font-family: 'DM Mono', monospace;
+    font-size: 52px;
+    font-weight: 400;
+    color: #111;
+    letter-spacing: -1px;
+    text-align: center;
+    line-height: 1.1;
+  }
+  #screen-title .tagline {
+    font-size: 12px;
+    color: #aaa;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  #screen-title .instructions {
+    font-size: 13px;
+    color: #888;
+    text-align: center;
+    line-height: 2;
+    border: 1px solid #e8e8e8;
+    padding: 18px 28px;
+    border-radius: 8px;
+    width: 100%;
+  }
+  #screen-title .instructions strong { color: #111; font-weight: 500; }
+
+  /* LEVEL SELECT */
+  #screen-levels { min-height: 100dvh; justify-content: flex-start; }
+  #levels-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px 12px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  #levels-header span {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: #bbb;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  #levels-wrap {
+    width: 100%; flex: 1;
+    display: flex; align-items: center; justify-content: center;
+    padding: 16px;
+  }
+  #levels-canvas {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #e8e8e8;
+    display: block;
+    cursor: default;
+
+    /* LANCE: OPERATION BACKGROUND*/
+    background-image: url("/operationbg.jpg");
+    background-size: cover;
+  }
+
+  /* shared buttons */
+  .btn {
+    background: #111;
+    border: none;
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 14px 40px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+  }
+  .btn:hover { background: #333; }
+  .btn:active { transform: scale(0.97); }
+  .btn.ghost {
+    background: transparent;
+    border: 1px solid #e0e0e0;
+    color: #888;
+    font-size: 12px;
+    padding: 10px 28px;
+  }
+  .btn.ghost:hover { border-color: #bbb; color: #333; background: transparent; }
+
+  /* GAME SCREEN */
+  #screen-game { min-height: 100dvh; justify-content: flex-start; }
+  #ui {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px 12px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .ui-label {
+    font-size: 10px;
+    color: #bbb;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+  }
+  .ui-value { font-family: 'DM Mono', monospace; font-size: 20px; color: #111; }
+  #lives-display { display: flex; gap: 5px; margin-top: 5px; }
+  .life-pip {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #111; transition: background 0.3s;
+  }
+  .life-pip.dead { background: #e8e8e8; }
+  #game-wrap {
+    width: 100%; flex: 1;
+    display: flex; align-items: center; justify-content: center;
+    padding: 16px;
+  }
+  #game-canvas {
+    width: 100%; border-radius: 10px;
+    border: 1px solid #e8e8e8; display: block; cursor: default;
+  }
+
+  /* MODAL */
+  #modal {
+    position: fixed; inset: 0;
+    background: rgba(255,255,255,0.94);
+    display: none; flex-direction: column;
+    align-items: center; justify-content: center;
+    z-index: 100; gap: 20px;
+    backdrop-filter: blur(6px);
+  }
+  #modal.show { display: flex; }
+  #modal h1 {
+    font-family: 'DM Mono', monospace;
+    font-size: 36px; font-weight: 400; color: #111;
+    letter-spacing: -1px; text-align: center; line-height: 1.15;
+  }
+  #modal .sub { font-size: 13px; color: #888; text-align: center; line-height: 1.8; }
+  #modal .sub strong { color: #111; font-weight: 500; }
+</style>
+</head>
+<body>
+
+<!-- TITLE -->
+<div id="screen-title" class="screen active">
+  <h1>Path</h1>
+  <p class="tagline">Navigation challenge</p>
+  <div class="instructions">
+    <strong>Drag</strong> the object through the path<br>
+    without touching the walls<br>
+    <strong>3 lives</strong> per level
+  </div>
+  <button class="btn" id="title-play-btn">Select level</button>
+</div>
+
+<!-- LEVEL SELECT -->
+<div id="screen-levels" class="screen">
+  <div id="levels-header">
+    <span>Select level</span>
+    <button class="btn ghost" id="levels-back-btn" style="margin:0;padding:8px 16px">← Back</button>
+  </div>
+  <div id="levels-wrap">
+    <canvas id="levels-canvas"></canvas>
+  </div>
+</div>
+
+<!-- GAME -->
+<div id="screen-game" class="screen">
+  <div id="ui">
+    <div>
+      <div class="ui-label">Level</div>
+      <div class="ui-value" id="level-val">01</div>
+    </div>
+    <div style="text-align:center">
+      <div class="ui-label">Lives</div>
+      <div id="lives-display"></div>
+    </div>
+    <div style="text-align:right">
+      <button class="btn ghost" id="game-menu-btn" style="margin:0;padding:8px 16px">Menu</button>
+    </div>
+  </div>
+  <div id="game-wrap">
+    <canvas id="game-canvas"></canvas>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div id="modal">
+  <h1 id="modal-title">Level clear</h1>
+  <p class="sub" id="modal-sub"></p>
+  <button class="btn" id="modal-primary-btn">Retry</button>
+  <button class="btn ghost" id="modal-secondary-btn">Level select</button>
+</div>
+
+<script>
+// ── SCREENS ──
+function showScreen(name) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById('screen-' + name).classList.add('active');
+}
+
+// ─────────────────────────────────────────────
+//  LEVEL IMAGE CONFIG
+//  Filenames for the player image per level.
+//  Place .png files in the same folder as this HTML.
+//  Use null to fall back to the default circle.
+// ─────────────────────────────────────────────
+const LEVEL_IMAGES = [
+  'null',
+  'level2.png',
+  'level3.png',
+  'level4.png',
+  'level5.png',
+  'level6.png',
+];
+const IMAGE_SIZE = 40;
+// ─────────────────────────────────────────────
+
+// ─────────────────────────────────────────────
+//  LEVEL SELECT BUTTON POSITIONS
+//  x, y = centre of button on the level-select canvas (390 x 700).
+//  r    = radius of the tappable circle (default 36).
+//  Each entry corresponds to the level at the same index.
+// ─────────────────────────────────────────────
+const LEVEL_POSITIONS = [
+  { x: 100, y: 610, r: 36 },  // Level 1
+  { x: 290, y: 500, r: 36 },  // Level 2
+  { x: 110, y: 400, r: 36 },  // Level 3
+  { x: 280, y: 310, r: 36 },  // Level 4
+  { x: 120, y: 210, r: 36 },  // Level 5
+  { x: 270, y: 120, r: 36 },  // Level 6
+];
+// ─────────────────────────────────────────────
+
+const levelImgElements = LEVEL_IMAGES.map((src, i) => {
+  if (!src) return null;
+  const img = new Image();
+  img.src = src;
+  img.onerror = () => { levelImgElements[i] = null; };
+  return img;
+});
+
+// ── LEVEL DATA ──
+const TOTAL_LEVELS = 6;
+const LEVEL_NAMES = ['Alpha','Beta','Gamma','Delta','Epsilon','Zeta'];
+
+function getLevelPath(lvl) {
+  const paths = [
+    [ {x:195,y:640},{x:195,y:520},{x:100,y:440},{x:100,y:340},{x:195,y:260},{x:290,y:180},{x:290,y:90},{x:195,y:60} ],
+    [ {x:195,y:640},{x:290,y:580},{x:290,y:480},{x:100,y:380},{x:100,y:270},{x:290,y:170},{x:195,y:70} ],
+    [ {x:195,y:640},{x:100,y:580},{x:80,y:460},{x:195,y:380},{x:310,y:300},{x:310,y:200},{x:195,y:130},{x:80,y:80} ],
+    [ {x:195,y:640},{x:310,y:600},{x:310,y:490},{x:195,y:410},{x:80,y:330},{x:80,y:220},{x:195,y:150},{x:310,y:90} ],
+    [ {x:195,y:640},{x:100,y:590},{x:290,y:490},{x:100,y:390},{x:290,y:290},{x:100,y:190},{x:195,y:80} ],
+    [ {x:195,y:640},{x:310,y:590},{x:80,y:490},{x:310,y:390},{x:80,y:290},{x:310,y:190},{x:195,y:80} ],
+  ];
+  return paths[(lvl - 1) % paths.length];
+}
+
+// ── PERSISTENCE ──
+function getCompleted() {
+  try { return JSON.parse(localStorage.getItem('path-completed') || '[]'); } catch { return []; }
+}
+function markCompleted(lvl) {
+  const c = getCompleted();
+  if (!c.includes(lvl)) { c.push(lvl); localStorage.setItem('path-completed', JSON.stringify(c)); }
+}
+
+// ── LEVEL SELECT CANVAS ──
+const lc = document.getElementById('levels-canvas');
+const lctx = lc.getContext('2d');
+const LW = 390, LH = 700;
+lc.width = LW; lc.height = LH;
+
+let hoveredLevel = -1;
+
+function drawLevelSelect() {
+  const completed = getCompleted();
+  lctx.clearRect(0, 0, LW, LH);
+  lctx.fillStyle = '#fff';
+  lctx.fillRect(0, 0, LW, LH);
+
+  // Draw a faint connecting line between buttons in order
+  if (LEVEL_POSITIONS.length > 1) {
+    lctx.save();
+    lctx.strokeStyle = '#e8e8e8';
+    lctx.lineWidth = 1.5;
+    lctx.setLineDash([4, 6]);
+    lctx.beginPath();
+    lctx.moveTo(LEVEL_POSITIONS[0].x, LEVEL_POSITIONS[0].y);
+    for (let i = 1; i < LEVEL_POSITIONS.length; i++) {
+      lctx.lineTo(LEVEL_POSITIONS[i].x, LEVEL_POSITIONS[i].y);
+    }
+    lctx.stroke();
+    lctx.setLineDash([]);
+    lctx.restore();
+  }
+
+  LEVEL_POSITIONS.forEach((pos, i) => {
+    const lvl = i + 1;
+    const done = completed.includes(lvl);
+    const hovered = hoveredLevel === lvl;
+    const r = pos.r || 36;
+
+    lctx.save();
+
+    // outer ring (hover / completed state)
+    // if (done) {
+    //   lctx.beginPath();
+    //   lctx.arc(pos.x, pos.y, r + 5, 0, Math.PI * 2);
+    //   lctx.strokeStyle = hovered ? '#111' : '#ccc';
+    //   lctx.lineWidth = 1;
+    //   lctx.stroke();
+    // } else if (hovered) {
+    //   lctx.beginPath();
+    //   lctx.arc(pos.x, pos.y, r + 5, 0, Math.PI * 2);
+    //   lctx.strokeStyle = '#ccc';
+    //   lctx.lineWidth = 1;
+    //   lctx.stroke();
+    // }
+
+    // circle fill
+    lctx.beginPath();
+    lctx.arc(pos.x, pos.y, r, 0, Math.PI * 2);
+    lctx.fillStyle = done ? 'rgba(111, 194, 118,0.6)' : (hovered ? '#f7f7f7' : '#fff');
+    lctx.fill();
+    lctx.strokeStyle = done ? '#111' : '#ccc';
+    lctx.lineWidth = 1.5;
+    lctx.stroke();
+
+    // level number
+    lctx.fillStyle = done ? '#fff' : '#111';
+    lctx.font = '500 18px DM Mono, monospace';
+    lctx.textAlign = 'center';
+    lctx.textBaseline = 'middle';
+    lctx.fillText(String(lvl).padStart(2, '0'), pos.x, pos.y - 5);
+
+    // level name
+    lctx.fillStyle = done ? 'rgba(255,255,255,0.6)' : '#bbb';
+    lctx.font = '10px DM Sans, sans-serif';
+    lctx.fillText(LEVEL_NAMES[i], pos.x, pos.y + 12);
+
+    // checkmark
+    if (done) {
+      lctx.fillStyle = 'rgba(255,255,255,0.8)';
+      lctx.font = '10px DM Sans, sans-serif';
+      lctx.fillText('✓', pos.x + r - 8, pos.y - r + 8);
+    }
+
+    lctx.restore();
+  });
+}
+
+function getLevelAtPoint(x, y) {
+  for (let i = 0; i < LEVEL_POSITIONS.length; i++) {
+    const pos = LEVEL_POSITIONS[i];
+    const r = (pos.r || 36) + 6; // slightly larger hit area
+    const dx = x - pos.x, dy = y - pos.y;
+    if (dx*dx + dy*dy <= r*r) return i + 1;
+  }
+  return -1;
+}
+
+function lcCoords(clientX, clientY) {
+  const rect = lc.getBoundingClientRect();
+  return {
+    x: (clientX - rect.left) * (LW / rect.width),
+    y: (clientY - rect.top)  * (LH / rect.height),
+  };
+}
+
+lc.addEventListener('mousemove', e => {
+  const { x, y } = lcCoords(e.clientX, e.clientY);
+  const hit = getLevelAtPoint(x, y);
+  if (hit !== hoveredLevel) {
+    hoveredLevel = hit;
+    lc.style.cursor = hit > 0 ? 'pointer' : 'default';
+    drawLevelSelect();
+  }
+});
+
+lc.addEventListener('mouseleave', () => {
+  hoveredLevel = -1;
+  lc.style.cursor = 'default';
+  drawLevelSelect();
+});
+
+lc.addEventListener('click', e => {
+  const { x, y } = lcCoords(e.clientX, e.clientY);
+  const hit = getLevelAtPoint(x, y);
+  if (hit > 0) startLevel(hit);
+});
+
+lc.addEventListener('touchend', e => {
+  e.preventDefault();
+  const t = e.changedTouches[0];
+  const { x, y } = lcCoords(t.clientX, t.clientY);
+  const hit = getLevelAtPoint(x, y);
+  if (hit > 0) startLevel(hit);
+}, { passive: false });
+
+function openLevelSelect() {
+  hoveredLevel = -1;
+  drawLevelSelect();
+  showScreen('levels');
+}
+
+document.getElementById('title-play-btn').addEventListener('click', openLevelSelect);
+document.getElementById('levels-back-btn').addEventListener('click', () => showScreen('title'));
+document.getElementById('game-menu-btn').addEventListener('click', () => { hideModal(); openLevelSelect(); });
+
+// ── GAME CANVAS ──
+const canvas = document.getElementById('game-canvas');
+const ctx = canvas.getContext('2d');
+const W = 390, H = 700;
+canvas.width = W; canvas.height = H;
+
+const BALL_R = 13;
+const PATH_W = 60;
+const MAX_LIVES = 3;
+
+let lives, level, gameState, dragging, ballX, ballY, particles, shakeT, animFrame, lastTime;
+let pathPoints = [], segments = [];
+
+function buildPath(pts) {
+  pathPoints = pts; segments = [];
+  for (let i = 0; i < pts.length - 1; i++) {
+    const dx = pts[i+1].x - pts[i].x, dy = pts[i+1].y - pts[i].y;
+    const len = Math.sqrt(dx*dx + dy*dy);
+    segments.push({ x1: pts[i].x, y1: pts[i].y, x2: pts[i+1].x, y2: pts[i+1].y, len });
+  }
+}
+
+function getPathProgress(x, y) {
+  let minDist = Infinity, progress = 0, accLen = 0;
+  for (let i = 0; i < segments.length; i++) {
+    const s = segments[i];
+    const dx = s.x2 - s.x1, dy = s.y2 - s.y1;
+    const len2 = dx*dx + dy*dy;
+    let t = ((x-s.x1)*dx + (y-s.y1)*dy) / len2;
+    t = Math.max(0, Math.min(1, t));
+    const cx = s.x1 + t*dx, cy = s.y1 + t*dy;
+    const dist = Math.sqrt((x-cx)**2 + (y-cy)**2);
+    if (dist < minDist) { minDist = dist; progress = accLen + t * s.len; }
+    accLen += s.len;
+  }
+  return { minDist, progress };
+}
+
+function getPointAtProgress(prog) {
+  let acc = 0;
+  for (let i = 0; i < segments.length; i++) {
+    const s = segments[i];
+    if (acc + s.len >= prog || i === segments.length - 1) {
+      const t = Math.min(1, (prog - acc) / s.len);
+      return { x: s.x1 + t*(s.x2-s.x1), y: s.y1 + t*(s.y2-s.y1) };
+    }
+    acc += s.len;
+  }
+  return { x: segments[segments.length-1].x2, y: segments[segments.length-1].y2 };
+}
+
+function spawnParticles(x, y, color, count = 12) {
+  for (let i = 0; i < count; i++) {
+    const angle = Math.random() * Math.PI * 2;
+    const speed = 1.5 + Math.random() * 3;
+    particles.push({ x, y, vx: Math.cos(angle)*speed, vy: Math.sin(angle)*speed,
+      life: 1, decay: 0.03 + Math.random()*0.04, r: 2 + Math.random()*3, color });
+  }
+}
+
+function updateLivesUI() {
+  document.getElementById('level-val').textContent = String(level).padStart(2,'0');
+  const ld = document.getElementById('lives-display');
+  ld.innerHTML = '';
+  for (let i = 0; i < MAX_LIVES; i++) {
+    const pip = document.createElement('div');
+    pip.className = 'life-pip' + (i >= lives ? ' dead' : '');
+    ld.appendChild(pip);
+  }
+}
+
+// ── DRAWING ──
+function drawBackground() {
+  ctx.fillStyle = '#fff';
+  ctx.fillRect(0, 0, W, H);
+}
+
+function drawPath() {
+  const pts = pathPoints;
+  if (pts.length < 2) return;
+  ctx.save();
+  ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+  const stroke = (w, style) => {
+    ctx.lineWidth = w; ctx.strokeStyle = style;
+    ctx.beginPath(); ctx.moveTo(pts[0].x, pts[0].y);
+    for (let i = 1; i < pts.length; i++) ctx.lineTo(pts[i].x, pts[i].y);
+    ctx.stroke();
+  };
+  stroke(PATH_W, '#111');
+  stroke(PATH_W - 6, '#fff');
+  ctx.restore();
+}
+
+function drawGoal() {
+  const end = pathPoints[pathPoints.length - 1];
+  const pulse = 0.5 + 0.5 * Math.sin(Date.now() / 400);
+  ctx.save();
+  ctx.beginPath();
+  ctx.arc(end.x, end.y, 16 + pulse * 5, 0, Math.PI * 2);
+  ctx.strokeStyle = `rgba(0,0,0,${0.12 * pulse})`;
+  ctx.lineWidth = 1.5; ctx.stroke();
+  ctx.beginPath(); ctx.arc(end.x, end.y, 12, 0, Math.PI * 2);
+  ctx.strokeStyle = '#111'; ctx.lineWidth = 2; ctx.stroke();
+  ctx.beginPath(); ctx.arc(end.x, end.y, 5, 0, Math.PI * 2);
+  ctx.fillStyle = '#111'; ctx.fill();
+  ctx.restore();
+}
+
+function drawStart() {
+  const s = pathPoints[0];
+  ctx.save();
+  ctx.beginPath(); ctx.arc(s.x, s.y, 16, 0, Math.PI * 2);
+  ctx.strokeStyle = 'rgba(0,0,0,0.15)'; ctx.lineWidth = 1.5; ctx.stroke();
+  ctx.restore();
+}
+
+function drawBall() {
+  if (!isFinite(ballX) || !isFinite(ballY)) return;
+  const img = levelImgElements[level - 1];
+  const useImg = img && img.complete && img.naturalWidth > 0;
+  ctx.save();
+  if (useImg) {
+    const half = IMAGE_SIZE / 2;
+    ctx.beginPath(); ctx.arc(ballX, ballY, half, 0, Math.PI * 2); 
+    //ctx.clip();
+    ctx.drawImage(img, ballX - half, ballY - half, IMAGE_SIZE, IMAGE_SIZE);
+  } else {
+    ctx.beginPath(); ctx.arc(ballX, ballY, BALL_R, 0, Math.PI * 2);
+    ctx.fillStyle = '#111'; ctx.fill();
+    ctx.beginPath(); ctx.arc(ballX - 4, ballY - 4, 3, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(255,255,255,0.45)'; ctx.fill();
+  }
+  ctx.restore();
+}
+
+function drawParticles() {
+  particles.forEach(p => {
+    const r = Math.max(0.01, p.r * p.life);
+    const alpha = Math.max(0, Math.min(1, p.life));
+    if (!isFinite(p.x) || !isFinite(p.y) || !isFinite(r)) return;
+    ctx.save(); ctx.globalAlpha = alpha;
+    ctx.beginPath(); ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
+    ctx.fillStyle = p.color; ctx.fill(); ctx.restore();
+  });
+}
+
+// ── MODAL ──
+const modal = document.getElementById('modal');
+function showModal(title, sub, primaryLabel, primaryAction) {
+  document.getElementById('modal-title').innerHTML = title;
+  document.getElementById('modal-sub').innerHTML = sub;
+  const pb = document.getElementById('modal-primary-btn');
+  pb.textContent = primaryLabel; pb._action = primaryAction;
+  modal.classList.add('show');
+}
+function hideModal() { modal.classList.remove('show'); }
+
+document.getElementById('modal-primary-btn').addEventListener('click', function() {
+  hideModal(); if (this._action) this._action();
+});
+document.getElementById('modal-secondary-btn').addEventListener('click', () => {
+  hideModal(); openLevelSelect();
+});
+
+// ── GAME LOOP ──
+function gameLoop(ts) {
+  const dt = Math.min((ts - lastTime) / 16.67, 3);
+  lastTime = ts;
+  particles.forEach(p => { p.x+=p.vx; p.y+=p.vy; p.vx*=0.92; p.vy*=0.92; p.life-=p.decay; });
+  particles = particles.filter(p => p.life > 0);
+  ctx.save();
+  if (shakeT > 0) {
+    ctx.translate((Math.random()-0.5)*7*(shakeT/10), (Math.random()-0.5)*7*(shakeT/10));
+    shakeT = Math.max(0, shakeT - dt);
+  }
+  drawBackground(); drawPath(); drawGoal(); drawStart(); drawBall(); drawParticles();
+  ctx.restore();
+  animFrame = requestAnimationFrame(gameLoop);
+}
+
+// ── GAME CONTROL ──
+function startLevel(lvl) {
+  level = lvl; lives = MAX_LIVES; gameState = 'playing';
+  dragging = false; particles = []; shakeT = 0;
+  buildPath(getLevelPath(level));
+  ballX = pathPoints[0].x; ballY = pathPoints[0].y;
+  updateLivesUI();
+  showScreen('game');
+  hideModal();
+  if (animFrame) cancelAnimationFrame(animFrame);
+  lastTime = performance.now();
+  animFrame = requestAnimationFrame(gameLoop);
+}
+
+function retryLevel() { startLevel(level); }
+
+function loseLife() {
+  lives--; shakeT = 12;
+  spawnParticles(ballX, ballY, '#111', 14);
+  ballX = pathPoints[0].x; ballY = pathPoints[0].y;
+  dragging = false; updateLivesUI();
+  if (lives <= 0) {
+    gameState = 'dead';
+    setTimeout(() => showModal(
+      'Out',
+      `Level <strong>${String(level).padStart(2,'0')}</strong> failed`,
+      'Retry', retryLevel
+    ), 600);
+  }
+}
+
+function checkWin() {
+  const end = pathPoints[pathPoints.length-1];
+  const dx = ballX - end.x, dy = ballY - end.y;
+  if (Math.sqrt(dx*dx + dy*dy) < BALL_R + 12) {
+    dragging = false; gameState = 'won';
+    markCompleted(level);
+    spawnParticles(ballX, ballY, '#111', 20);
+    const isLast = level >= TOTAL_LEVELS;
+    setTimeout(() => showModal(
+      'Clear',
+      `Level <strong>${String(level).padStart(2,'0')}</strong> complete · ${lives} ${lives === 1 ? 'life' : 'lives'} remaining`,
+      isLast ? 'Level select' : 'Next level',
+      isLast ? openLevelSelect : () => startLevel(level + 1)
+    ), 500);
+  }
+}
+
+// ── GAME INPUT ──
+function handleStart(clientX, clientY) {
+  if (gameState !== 'playing') return;
+  const rect = canvas.getBoundingClientRect();
+  const x = (clientX - rect.left) * (W / rect.width);
+  const y = (clientY - rect.top)  * (H / rect.height);
+  if (Math.sqrt((x-ballX)**2 + (y-ballY)**2) < BALL_R + 20) dragging = true;
+}
+
+function handleMove(clientX, clientY) {
+  if (!dragging || gameState !== 'playing') return;
+  const rect = canvas.getBoundingClientRect();
+  const x = (clientX - rect.left) * (W / rect.width);
+  const y = (clientY - rect.top)  * (H / rect.height);
+  const halfWall = (PATH_W / 2) - BALL_R - 2;
+  const { minDist, progress } = getPathProgress(x, y);
+  if (minDist > halfWall) { loseLife(); return; }
+  const snapped = getPointAtProgress(progress);
+  const dx = x - snapped.x, dy = y - snapped.y;
+  const dist2 = Math.sqrt(dx*dx + dy*dy);
+  const maxOffset = halfWall - 1;
+  if (dist2 > 0.001 && dist2 > maxOffset) {
+    ballX = snapped.x + dx / dist2 * maxOffset;
+    ballY = snapped.y + dy / dist2 * maxOffset;
+  } else { ballX = x; ballY = y; }
+  if (!isFinite(ballX) || !isFinite(ballY)) { ballX = snapped.x; ballY = snapped.y; }
+  checkWin();
+}
+
+canvas.addEventListener('mousedown', e => handleStart(e.clientX, e.clientY));
+canvas.addEventListener('mousemove', e => handleMove(e.clientX, e.clientY));
+window.addEventListener('mouseup', () => { dragging = false; });
+canvas.addEventListener('touchstart', e => { e.preventDefault(); handleStart(e.touches[0].clientX, e.touches[0].clientY); }, { passive: false });
+canvas.addEventListener('touchmove',  e => { e.preventDefault(); handleMove(e.touches[0].clientX,  e.touches[0].clientY); }, { passive: false });
+canvas.addEventListener('touchend',   e => { e.preventDefault(); dragging = false; }, { passive: false });
+
+// idle preview
+(function idlePreview() {
+  buildPath(getLevelPath(1));
+  drawBackground();
+  ctx.save(); ctx.globalAlpha = 0.2; drawPath(); drawGoal(); ctx.restore();
+  if (document.getElementById('screen-title').classList.contains('active')) requestAnimationFrame(idlePreview);
+})();
+</script>
+</body>
+</html>
