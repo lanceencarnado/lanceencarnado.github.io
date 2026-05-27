@@ -447,7 +447,7 @@ const BALL_R = 13;
 const PATH_W = 60;
 const MAX_LIVES = 3;
 
-let lives, level, gameState, dragging, ballX, ballY, particles, shakeT, animFrame, lastTime;
+let lives, level, gameState, dragging, ballX, ballY, particles, trail, shakeT, animFrame, lastTime;
 let pathPoints = [], segments = [];
 
 function buildPath(pts) {
@@ -553,6 +553,25 @@ function drawStart() {
   ctx.restore();
 }
 
+function drawTrail() {
+  if (trail.length < 2) return;
+  ctx.save();
+  ctx.lineCap = 'round';
+  ctx.lineJoin = 'round';
+  for (let i = 1; i < trail.length; i++) {
+    const t = i / trail.length; // 0 at oldest, 1 at newest
+    ctx.beginPath();
+    ctx.moveTo(trail[i-1].x, trail[i-1].y);
+    ctx.lineTo(trail[i].x, trail[i].y);
+    // ctx.strokeStyle = `rgba(255, 210, 0, ${t * 0.85})`; // fading trail
+    ctx.strokeStyle = 'rgba(255, 210, 0, 0.85)';
+    // ctx.lineWidth = 4 * t + 1; // trail that gets progressively thicker
+    ctx.lineWidth = 5;
+    ctx.stroke();
+  }
+  ctx.restore();
+}
+
 function drawBall() {
   if (!isFinite(ballX) || !isFinite(ballY)) return;
   const img = levelImgElements[level - 1];
@@ -611,7 +630,13 @@ function gameLoop(ts) {
     ctx.translate((Math.random()-0.5)*7*(shakeT/10), (Math.random()-0.5)*7*(shakeT/10));
     shakeT = Math.max(0, shakeT - dt);
   }
-  drawBackground(); drawPath(); drawGoal(); drawStart(); drawBall(); drawParticles();
+  drawBackground(); 
+  drawPath(); 
+  drawGoal(); 
+  drawStart(); 
+  drawTrail(); 
+  drawBall(); 
+  drawParticles();
   ctx.restore();
   animFrame = requestAnimationFrame(gameLoop);
 }
@@ -619,7 +644,7 @@ function gameLoop(ts) {
 // ── GAME CONTROL ──
 function startLevel(lvl) {
   level = lvl; lives = MAX_LIVES; gameState = 'playing';
-  dragging = false; particles = []; shakeT = 0;
+  dragging = false; particles = []; trail = []; shakeT = 0;
   buildPath(getLevelPath(level));
   ballX = pathPoints[0].x; ballY = pathPoints[0].y;
   updateLivesUI();
@@ -636,6 +661,7 @@ function loseLife() {
   lives--; shakeT = 12;
   spawnParticles(ballX, ballY, '#111', 14);
   ballX = pathPoints[0].x; ballY = pathPoints[0].y;
+  trail = [];
   dragging = false; updateLivesUI();
   if (lives <= 0) {
     gameState = 'dead';
@@ -690,6 +716,11 @@ function handleMove(clientX, clientY) {
     ballY = snapped.y + dy / dist2 * maxOffset;
   } else { ballX = x; ballY = y; }
   if (!isFinite(ballX) || !isFinite(ballY)) { ballX = snapped.x; ballY = snapped.y; }
+
+  // record trail
+  trail.push({ x: ballX, y: ballY });
+  if (trail.length > 500) trail.shift();
+
   checkWin();
 }
 
