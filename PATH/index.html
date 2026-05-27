@@ -247,17 +247,17 @@ const IMAGE_SIZE = 42;
 
 // ─────────────────────────────────────────────
 //  LEVEL SELECT BUTTON POSITIONS
-//  x, y = centre of button on the level-select canvas (390 x 700).
+//  x, y = centre of button on the level-select canvas (390 x 650).
 //  r    = radius of the tappable circle (default 36).
 //  Each entry corresponds to the level at the same index.
 // ─────────────────────────────────────────────
 const LEVEL_POSITIONS = [
-  { x: 50, y: 610, r: 36 },  // Level 1
-  { x: 290, y: 500, r: 36 },  // Level 2
+  { x: 100, y: 600, r: 36 },  // Level 1
+  { x: 290, y: 540, r: 36 },  // Level 2
   { x: 110, y: 400, r: 36 },  // Level 3
-  { x: 280, y: 310, r: 36 },  // Level 4
-  { x: 120, y: 210, r: 36 },  // Level 5
-  { x: 270, y: 120, r: 36 },  // Level 6
+  { x: 280, y: 300, r: 36 },  // Level 4
+  { x: 120, y: 150, r: 36 },  // Level 5
+  { x: 270, y: 50, r: 36 },  // Level 6
 ];
 // ─────────────────────────────────────────────
 
@@ -275,12 +275,12 @@ const LEVEL_NAMES = ['Alpha','Beta','Gamma','Delta','Epsilon','Zeta'];
 
 function getLevelPath(lvl) {
   const paths = [
-    [ {x:195,y:640},{x:195,y:520},{x:100,y:440},{x:100,y:340},{x:195,y:260},{x:290,y:180},{x:290,y:90},{x:195,y:60} ],
-    [ {x:195,y:650},{x:290,y:580},{x:290,y:480},{x:100,y:380},{x:100,y:270},{x:290,y:170},{x:195,y:70} ],
-    [ {x:195,y:660},{x:100,y:580},{x:80,y:460},{x:195,y:380},{x:310,y:300},{x:310,y:200},{x:195,y:130},{x:80,y:80} ],
-    [ {x:195,y:660},{x:310,y:600},{x:310,y:490},{x:195,y:410},{x:80,y:330},{x:80,y:220},{x:195,y:150},{x:310,y:90} ],
-    [ {x:195,y:670},{x:100,y:590},{x:290,y:490},{x:100,y:390},{x:290,y:290},{x:100,y:190},{x:195,y:80} ],
-    [ {x:195,y:670},{x:310,y:590},{x:80,y:490},{x:310,y:390},{x:80,y:290},{x:310,y:190},{x:195,y:80} ],
+    [ {x:195,y:600},{x:195,y:520},{x:100,y:440},{x:100,y:340},{x:195,y:260},{x:290,y:180},{x:290,y:90},{x:195,y:60} ],
+    [ {x:195,y:600},{x:290,y:580},{x:290,y:480},{x:100,y:380},{x:100,y:270},{x:290,y:170},{x:195,y:70} ],
+    [ {x:195,y:600},{x:100,y:580},{x:80,y:460},{x:195,y:380},{x:310,y:300},{x:310,y:200},{x:195,y:130},{x:80,y:80} ],
+    [ {x:195,y:600},{x:310,y:600},{x:310,y:490},{x:195,y:410},{x:80,y:330},{x:80,y:220},{x:195,y:150},{x:310,y:90} ],
+    [ {x:195,y:600},{x:100,y:590},{x:290,y:490},{x:100,y:390},{x:290,y:290},{x:100,y:190},{x:195,y:80} ],
+    [ {x:195,y:600},{x:80,y:490},{x:310,y:390},{x:80,y:290},{x:310,y:190},{x:195,y:80} ],
   ];
   return paths[(lvl - 1) % paths.length];
 }
@@ -297,7 +297,7 @@ function markCompleted(lvl) {
 // ── LEVEL SELECT CANVAS ──
 const lc = document.getElementById('levels-canvas');
 const lctx = lc.getContext('2d');
-const LW = 390, LH = 700;
+const LW = 390, LH = 650;
 lc.width = LW; lc.height = LH;
 
 let hoveredLevel = -1;
@@ -440,11 +440,11 @@ document.getElementById('game-menu-btn').addEventListener('click', () => { hideM
 // ── GAME CANVAS ──
 const canvas = document.getElementById('game-canvas');
 const ctx = canvas.getContext('2d');
-const W = 390, H = 700;
+const W = 390, H = 650;
 canvas.width = W; canvas.height = H;
 
 const BALL_R = 13;
-const PATH_W = 70;
+const PATH_W = 60;
 const MAX_LIVES = 3;
 
 let lives, level, gameState, dragging, ballX, ballY, particles, shakeT, animFrame, lastTime;
