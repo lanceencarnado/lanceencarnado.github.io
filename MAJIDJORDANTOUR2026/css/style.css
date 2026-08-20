@@ -1,0 +1,25 @@
+body {
+    font-family: "Google Sans Flex", sans-serif;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.mjheader {
+    font-size: 2.5vw;
+}
+
+#header_section {
+    padding-top: 1.5vw;
+    padding-bottom: 1.5vw;
+}
+
+#mjlogo {
+    width: 3vw;
+    margin: 0.2vw;
+}
+
+#tour_widget {
+    margin: auto;
+    width: 50vw;
+}
