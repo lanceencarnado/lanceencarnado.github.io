@@ -23,3 +23,18 @@ body {
     margin: auto;
     width: 50vw;
 }
+
+#submission_section {
+    margin: auto;
+    width: 50vw;
+}
+
+@media only screen and (max-width: 768px) {
+    #tour_widget {
+        width: 80vw;
+    }
+
+    #submission_section {
+        width: 80vw;
+    }
+}
